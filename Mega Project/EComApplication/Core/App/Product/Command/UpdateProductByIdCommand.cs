@@ -27,7 +27,7 @@ namespace Core.App.Product.Command
         public async Task<bool> Handle(UpdateProductByIdCommand request, CancellationToken cancellationToken)
         {
             var id = request.Id;
-            var product = await _context.Set<Domain.Product>().FirstOrDefaultAsync(x => x.Id == id && x.Deleted == false);
+            var product = await _context.Set<Domain.Product>().FirstOrDefaultAsync(x => x.Id == id && x.IsDeleted == true);
             if (product == null)
             {
                 return false;
@@ -35,6 +35,7 @@ namespace Core.App.Product.Command
 
             product.ProductName = request.Product.ProductName;
             product.Category = request.Product.Category;
+            product.ProductCode = request.Product.ProductCode;
             product.Brand = request.Product.Brand;
             product.SellingPrice = request.Product.SellingPrice;
             product.PurchasePrice = request.Product.PurchasePrice;

@@ -5361,19 +5361,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vinitpathak\\.nuget\\packages\\": {}
+    "C:\\Users\\patha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\EComApplication\\EComApplication.csproj",
+      "projectUniqueName": "D:\\SmartData\\Mega Project\\EComApplication\\EComApplication\\EComApplication.csproj",
       "projectName": "EComApplication",
-      "projectPath": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\EComApplication\\EComApplication.csproj",
-      "packagesPath": "C:\\Users\\vinitpathak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\EComApplication\\obj\\",
+      "projectPath": "D:\\SmartData\\Mega Project\\EComApplication\\EComApplication\\EComApplication.csproj",
+      "packagesPath": "C:\\Users\\patha\\.nuget\\packages\\",
+      "outputPath": "D:\\SmartData\\Mega Project\\EComApplication\\EComApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vinitpathak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\patha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5388,8 +5388,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Infrastructure\\Infrastructure.csproj"
+            "D:\\SmartData\\Mega Project\\EComApplication\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\SmartData\\Mega Project\\EComApplication\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -5459,7 +5459,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

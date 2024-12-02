@@ -21,3 +21,15 @@ C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Domain\obj\D
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\ref\Domain.dll
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\SmartData\Mega Project\EComApplication\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\SmartData\Mega Project\EComApplication\Domain\bin\Debug\net8.0\Domain.dll
+D:\SmartData\Mega Project\EComApplication\Domain\bin\Debug\net8.0\Domain.pdb
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.dll
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\Domain.pdb
+D:\SmartData\Mega Project\EComApplication\Domain\obj\Debug\net8.0\ref\Domain.dll

@@ -29,7 +29,7 @@ namespace Core.App.Product.Command
             {
                 throw new Exception("Product not found");
             }
-            product.Deleted = true;
+            product.IsDeleted = false;
             await _context.SaveChangesAsync(cancellationToken);
             return true;
         }

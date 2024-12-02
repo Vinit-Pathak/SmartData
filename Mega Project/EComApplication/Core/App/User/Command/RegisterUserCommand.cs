@@ -33,12 +33,6 @@ namespace Core.App.User.Command
 
             var user = request.register;
 
-            if (user.DateOfBirth == null)
-            {
-                // Handle error for missing DateOfBirth
-                return false;
-            }
-
             var userExist = await _context.Set<Domain.User>().Where(x => x.Email == user.Email).FirstOrDefaultAsync();
 
             if (userExist != null)

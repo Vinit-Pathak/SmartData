@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj": {}
+    "D:\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj": {
+    "D:\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\vinitpathak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\obj\\",
+        "projectPath": "D:\\SmartData\\Mega Project\\EComApplication\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\patha\\.nuget\\packages\\",
+        "outputPath": "D:\\SmartData\\Mega Project\\EComApplication\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinitpathak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\patha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

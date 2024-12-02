@@ -27,7 +27,7 @@ namespace EComApplication.Controllers
         {
             using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                var query = "SELECT * FROM Products WHERE Deleted = 0";
+                var query = "SELECT * FROM Products WHERE IsDeleted = 1";
                 var users = await connection.QueryAsync<ProductDto>(query);
                 if (users == null)
                 {
@@ -46,7 +46,7 @@ namespace EComApplication.Controllers
         {
             using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                var query = "SELECT * FROM Products WHERE Id = @Id AND Deleted = 0";
+                var query = "SELECT * FROM Products WHERE Id = @Id AND IsDeleted = 1";
                 var user = await connection.QuerySingleOrDefaultAsync<ProductDto>(query, new { Id = id });
                 if (user == null)
                 {

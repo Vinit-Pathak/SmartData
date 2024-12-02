@@ -5,6 +5,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { UserType } from '../../models/user-type.enum';
+import { LoaderService } from '../../service/loader/loader.service';
 
 @Component({
   selector: 'app-login',
@@ -28,6 +29,7 @@ export class LoginComponent {
   router = inject(Router);
   toaster = inject(ToastrService);
   userService = inject(UserService);
+  loaderService = inject(LoaderService)
 
   loginForm: FormGroup = new FormGroup({
     userName: new FormControl('', Validators.required),
@@ -79,11 +81,13 @@ export class LoginComponent {
   
 
   onForgotPasswordSubmit() {
+    this.loaderService.show();
     if (this.forgotPasswordForm.invalid) {
       this.toaster.warning('Please enter a valid email address.', 'Warning', {
         timeOut: 3000,
         closeButton: true,
       });
+      this.loaderService.hide();
       return;
     }
 
@@ -93,14 +97,17 @@ export class LoginComponent {
         timeOut: 3000,
         closeButton: true,
       });
+      this.loaderService.hide();
       return;
     }
     this.userService.forgotPassword(email).subscribe({
       next: (res: any) => {
+        this.loaderService.hide();
         this.toaster.success('Password reset link sent to your email', 'Password Reset');
         this.closeForgotPassword();
       },
       error: (error: any) => {
+        this.loaderService.hide();
         const errorMessage = error.error?.message || 'An unexpected error occurred';
         this.toaster.error(errorMessage, 'Error', {
           timeOut: 3000,
@@ -127,14 +134,14 @@ export class LoginComponent {
       return;
     }
   
+    this.loaderService.show();
     this.loginData = this.loginForm.value;
-  
-    
     this.loginData.userType = parseInt(this.loginData.userType, 10);
   
     this.userService.login(this.loginData).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200 && res.data.isSuccess) {
+          this.loaderService.hide();
           sessionStorage.setItem('token', res.data.token);
           sessionStorage.setItem('role', res.data.role);
           sessionStorage.setItem('id', res.data.id);
@@ -146,16 +153,17 @@ export class LoginComponent {
             closeButton: true,
           });
 
-          if (res.data.role === 1) {
-        this.router.navigateByUrl('admin-dashboard');
-      } else if (res.data.role === 2) {
-        this.router.navigateByUrl('customer-dashboard');
-      } else {
-        this.toaster.error('Unexpected role', 'Error', {
-          timeOut: 3000,
-          closeButton: true,
-        });
-      }
+      //     if (res.data.role === 1) {
+      //   this.router.navigateByUrl('admin-dashboard');
+      // } else if (res.data.role === 2) {
+      //   this.router.navigateByUrl('customer-dashboard');
+      // } else {
+      //   this.toaster.error('Unexpected role', 'Error', {
+      //     timeOut: 3000,
+      //     closeButton: true,
+      //   });
+      // }
+      this.router.navigateByUrl('product')
     } else {
       this.toaster.error(res.message || 'Unexpected error', 'Error', {
         timeOut: 3000,
@@ -165,6 +173,7 @@ export class LoginComponent {
       },
       error: (error: any) => {
         if (error.status === 400 || error.status === 401) {
+          this.loaderService.hide();
           this.toaster.error(error.error.message || 'Invalid Credentials', 'Error', {
             timeOut: 3000,
             closeButton: true,
@@ -189,13 +198,14 @@ export class LoginComponent {
       });
       return;
     }
-
+    this.loaderService.show();
     this.registerData = this.registerForm.value;
     this.registerData.userType = parseInt(this.registerData.userType, 10);
 
     this.userService.register(this.registerData).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200) {
+          this.loaderService.hide();
           this.toaster.success('User Registered Successfully', 'Success', {
             timeOut: 3000,
             closeButton: true,
@@ -212,6 +222,7 @@ export class LoginComponent {
       error: (error: any) => {
         const errorMessage =
           error.error.message || 'An unexpected error occurred.';
+          this.loaderService.hide();
         this.toaster.error(errorMessage, 'Error', {
           timeOut: 3000,
           closeButton: true,
@@ -224,7 +235,7 @@ export class LoginComponent {
     if (this.countdown > 0) {
       return;
     }
-
+    this.loaderService.show();
     const userName = this.loginForm.get('userName')?.value;
     const password = this.loginForm.get('password')?.value;
 
@@ -233,12 +244,14 @@ export class LoginComponent {
         timeOut: 3000,
         closeButton: true,
       });
+      this.loaderService.hide();
       return;
     }
 
     this.userService.sendOtp(userName, password).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200) {
+          this.loaderService.hide();
           this.toaster.success('OTP Sent Successfully', 'Success', {
             timeOut: 3000,
             closeButton: true,
@@ -254,6 +267,7 @@ export class LoginComponent {
         }
       },
       error: (error: any) => {
+        this.loaderService.hide();
         this.toaster.error(
           error.error.message || 'Username & Password is invalid',
           'Error',

@@ -175,6 +175,7 @@ export class CustomerDashboardComponent {
   }
 
   logout() {
+    sessionStorage.clear();
     this.router.navigate(['/']);
   }
 }

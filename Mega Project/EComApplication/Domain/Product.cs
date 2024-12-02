@@ -19,6 +19,6 @@ namespace Domain
         public int Stock { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public bool Deleted { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

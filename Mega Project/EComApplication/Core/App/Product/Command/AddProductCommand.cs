@@ -50,9 +50,9 @@ namespace Core.App.Product.Command
                 Stock = product.Stock,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow,
-                Deleted = false
+                IsDeleted = true
             };
-            await _context.Set<Domain.Product>().AddAsync(newProduct, cancellationToken);
+            await _context.Set<Domain.Product>().AddAsync(newProduct);
             await _context.SaveChangesAsync(cancellationToken);
             return new { Message = "Product added successfully" };
         }

@@ -1,109 +1,315 @@
 <div class="main-container">
-    <div *ngIf="isUpdating" class="update-form-overlay">
-      <div class="update-form-container fade-in">
-        <form [formGroup]="updateForm" class="update-form">
-          <div class="form-header text-center">
-            <h3>Update Profile</h3>
-          </div>
+  <!-- Update Product Form -->
+  <div *ngIf="isUpdating" class="update-form-overlay">
+    <div class="update-form-container fade-in">
+      <form [formGroup]="updateForm" class="update-form">
+        <div class="form-header text-center">
+          <h3>Update Product</h3>
+        </div>
   
-          <button type="button" class="btn btn-secondary w-100 mb-4" (click)="OnBack()">
-            <i class="fas fa-arrow-left"></i> Back
-          </button>
+        <button type="button" class="btn btn-secondary w-100 mb-4" (click)="OnBack()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
   
+        <div class="form-grid">
           <div class="form-group">
-            <label for="registerFirstName" class="form-label">First Name</label>
+            <label for="productName" class="form-label">Product Name</label>
             <input
               type="text"
               class="form-control"
-              id="registerFirstName"
-              formControlName="firstName"
-              placeholder="Enter your first name"
+              id="productName"
+              formControlName="productName"
+              placeholder="Enter product name"
               required
             />
           </div>
   
           <div class="form-group">
-            <label for="registerLastName" class="form-label">Last Name</label>
+            <label for="productCode" class="form-label">Product Code</label>
             <input
               type="text"
               class="form-control"
-              id="registerLastName"
-              formControlName="lastName"
-              placeholder="Enter your last name"
-              required
-            />
-          </div>
-  
-          <div class="form-group">
-            <label for="roleSelect" class="form-label">Role</label>
-            <select id="roleSelect" class="form-control" formControlName="role">
-              <option value="Admin">Admin</option>
-              <option value="User">User</option>
-            </select>
-          </div>
-  
-          <div class="form-group">
-            <label for="registerEmail" class="form-label">Email Address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="registerEmail"
-              formControlName="email"
-              placeholder="Enter your email"
+              id="productCode"
+              formControlName="productCode"
+              placeholder="Enter product code"
               required
               readonly
             />
           </div>
   
-          <button
-            type="submit"
-            class="btn btn-primary w-100"
-            (click)="onUpdate()"
-            [disabled]="updateForm.invalid"
-          >
-            <i class="fas fa-save"></i> Update
-          </button>
-        </form>
-      </div>
+          <div class="form-group">
+            <label for="brand" class="form-label">Brand</label>
+            <input
+              type="text"
+              class="form-control"
+              id="brand"
+              formControlName="brand"
+              placeholder="Enter brand name"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="category" class="form-label">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              id="category"
+              formControlName="category"
+              placeholder="Enter category name"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="sellingPrice" class="form-label">Selling Price</label>
+            <input
+              type="number"
+              class="form-control"
+              id="sellingPrice"
+              formControlName="sellingPrice"
+              placeholder="Enter selling price"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="purchasePrice" class="form-label">Purchase Price</label>
+            <input
+              type="number"
+              class="form-control"
+              id="purchasePrice"
+              formControlName="purchasePrice"
+              placeholder="Enter purchase price"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="purchaseDate" class="form-label">Purchase Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="purchaseDate"
+              formControlName="purchaseDate"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="stock" class="form-label">Stock</label>
+            <input
+              type="number"
+              class="form-control"
+              id="stock"
+              formControlName="stock"
+              placeholder="Enter stock quantity"
+              required
+            />
+          </div>
+  
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="isDeleted"
+              formControlName="isDeleted"
+              required
+            />
+            <label for="isDeleted" class="form-check-label">IsDeleted</label>
+          </div>
+        </div>
+  
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          (click)="onUpdate()"
+          [disabled]="updateForm.invalid"
+        >
+          <i class="fas fa-save"></i> Update
+        </button>
+      </form>
     </div>
+  </div>
+
+  <!-- Add New Product Form -->
+  <div *ngIf="isAdding" class="update-form-overlay">
+    <div class="update-form-container fade-in">
+      <form [formGroup]="addForm" class="update-form">
+        <div class="form-header text-center">
+          <h3>Add New Product</h3>
+        </div>
   
-    <div *ngIf="!isUpdating">
-      <div *ngIf="role === 'Admin'">
-        <div *ngIf="users && users.length > 0; else noData">
-          <h2 class="text-center">User Data</h2>
+        <button type="button" class="btn btn-secondary w-100 mb-4" (click)="closeAddForm()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
   
-          <div class="user-cards-container row">
-            <div class="user-card col-md-3 mt-2" *ngFor="let user of users; let i = index">
-              <div class="user-card-body">
-                <h4>{{ user.firstName }} {{ user.lastName }}</h4>
-                <p>{{ user.email }}</p>
-                <span class="badge badge-role">{{ user.role }}</span>
-              </div>
+        <!-- Two-column layout -->
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="productName" class="form-label">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="productName"
+                formControlName="productName"
+                placeholder="Enter product name"
+                required
+              />
+            </div>
   
-              <div class="user-card-actions">
-                <button class="btn btn-info btn-sm" (click)="onEdit(user)">
-                  <i class="fas fa-edit"></i> Edit
-                </button>
-                <button class="btn btn-danger btn-sm" (click)="onDelete(user.id)">
-                  <i class="fas fa-trash-alt"></i> Delete
-                </button>
-              </div>
+            <!-- <div class="form-group">
+              <label for="productCode" class="form-label">Product Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="productCode"
+                formControlName="productCode"
+                placeholder="Enter product code"
+                required
+              />
+            </div> -->
+  
+            <div class="form-group">
+              <label for="brand" class="form-label">Brand</label>
+              <input
+                type="text"
+                class="form-control"
+                id="brand"
+                formControlName="brand"
+                placeholder="Enter brand name"
+                required
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="sellingPrice" class="form-label">Selling Price</label>
+              <input
+                type="number"
+                class="form-control"
+                id="sellingPrice"
+                formControlName="sellingPrice"
+                placeholder="Enter selling price"
+                required
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="stock" class="form-label">Stock</label>
+              <input
+                type="number"
+                class="form-control"
+                id="stock"
+                formControlName="stock"
+                placeholder="Enter stock quantity"
+                required
+              />
+            </div>
+          </div>
+  
+          <!-- Column 2 -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="category" class="form-label">Category</label>
+              <input
+                type="text"
+                class="form-control"
+                id="category"
+                formControlName="category"
+                placeholder="Enter category name"
+                required
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="purchasePrice" class="form-label">Purchase Price</label>
+              <input
+                type="number"
+                class="form-control"
+                id="purchasePrice"
+                formControlName="purchasePrice"
+                placeholder="Enter purchase price"
+                required
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="purchaseDate" class="form-label">Purchase Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="purchaseDate"
+                formControlName="purchaseDate"
+                required
+              />
+            </div>
+  
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="isDeleted"
+                formControlName="isDeleted"
+              />
+              <label for="isDeleted" class="form-check-label">isDeleted</label>
             </div>
           </div>
         </div>
   
-        <ng-template #noData>
-          <div class="alert alert-info text-center" role="alert">
-            No User Available
-          </div>
-        </ng-template>
-      </div>
-  
-      <div *ngIf="role !== 'Admin'">
-        <p class="alert alert-warning text-center">
-          You do not have the required permissions to view this content.
-        </p>
-      </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          (click)="onAdd()"
+          [disabled]="addForm.invalid"
+        >
+          <i class="fas fa-save"></i> Add Product
+        </button>
+      </form>
     </div>
   </div>
   
+
+  <!-- Product List -->
+  <div *ngIf="!isUpdating && !isAdding">
+    <h2 class="text-center">Product Details</h2>
+
+    <div *ngIf="products && products.length > 0; else noData">
+      <div class="product-cards-container row">
+        <div class="product-card col-md-3 mt-2" *ngFor="let product of products; let i = index">
+          <div class="product-card-body">
+            <h4>{{ product.productName }}</h4>
+            <p>Code: {{ product.productCode }}</p>
+            <p>Category: {{ product.category }}</p>
+            <p>Brand: {{ product.brand }}</p>
+            <p>Selling Price: ${{ product.sellingPrice }}</p>
+            <p>Stock: {{ product.stock }}</p>
+          </div>
+
+          <div class="product-card-actions">
+            <button class="btn btn-info btn-sm" (click)="onEdit(product)">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="onDelete(product.id)">
+              <i class="fas fa-trash-alt"></i> Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noData>
+      <div class="alert alert-info text-center" role="alert">
+        No Product Available
+      </div>
+    </ng-template>
+
+    <!-- Add New Product Button -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="openAddForm()">
+        <i class="fas fa-plus"></i> Add New Product
+      </button>
+    </div>
+  </div>
+</div>

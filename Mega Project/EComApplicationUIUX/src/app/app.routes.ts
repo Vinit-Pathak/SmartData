@@ -3,6 +3,10 @@ import { LoginComponent } from './components/login/login.component';
 import { CustomerDashboardComponent } from './components/customer-dashboard/customer-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProductsComponent } from './components/products/products.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { loginGuardGuard } from './guards/login-guard.guard';
+import { authGuardGuard } from './guards/auth-guard.guard';
 
 export const routes: Routes = [
     {
@@ -15,24 +19,26 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
-        path:'admin-dashboard',
-        component: AdminDashboardComponent
-    },
-    {
-        path:'customer-dashboard',
-        component: CustomerDashboardComponent,
+        path:'',
+        component: LayoutComponent,
         children:[
             {
-                path:'',
-                redirectTo:'profile',
-                pathMatch:'full'
+                path: 'product',
+                component:ProductsComponent,
+                canActivate:[loginGuardGuard, authGuardGuard]
             },
             {
-                path:"profile",
-                component:ProfileComponent
+                path:'profile',
+                component: ProfileComponent,
+                canActivate:[loginGuardGuard]
             }
-            
         ]
     },
+    // {
+    //     path:'product',
+    //     component:ProductsComponent,
+    //     canActivate:['loginGuardGuard', 'authGuardGuard']
+    // }
     
 ];
+

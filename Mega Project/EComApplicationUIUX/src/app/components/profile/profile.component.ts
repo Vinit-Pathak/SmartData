@@ -35,7 +35,7 @@ export class ProfileComponent {
     if (id) {
       this.userService.getUserById(id).subscribe({
         next: (res: any) => {
-          console.log('User Data:', res);  
+          // console.log('User Data:', res);  
           this.user = res;  
         },
         error: (error: any) => {

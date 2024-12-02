@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand custom-navbar-brand">EComApplication</a>
+    <a class="navbar-brand custom-navbar-brand" routerLink="/">EComApplication</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link custom-nav-link">
-            <i class="fas fa-store"></i> Profile
+        <li class="nav-item" *ngIf="userRole ==1">
+          <a class="nav-link custom-nav-link" [routerLink]="['product']">
+            <i class="fas fa-store"></i> Product
           </a>
         </li>
-        <li class="nav-item" *ngIf="userRole==1">
-          <a class="nav-link custom-nav-link">
-            <i class="fas fa-users"></i> Product
+        <li class="nav-item">
+          <a class="nav-link custom-nav-link" [routerLink]="['profile']">
+            <i class="fas fa-users" ></i> Profile
           </a>
         </li>
       </ul>
@@ -44,6 +44,305 @@
 </nav> 
 
 
-  
-  <router-outlet></router-outlet>
-  
+
+
+
+<div
+class="modal"
+id="updateProfileModal"
+#updateProfileModal
+tabindex="-1"
+aria-labelledby="updateProfileModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="updateProfileModalLabel">
+        Update Profile
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        (click)="closeUpdateProfileModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="updateProfileForm" (ngSubmit)="onUpdateProfile()" class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateFirstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateFirstName"
+                formControlName="firstName"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateLastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateLastName"
+                formControlName="lastName"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="updateEmail"
+                formControlName="email"
+                required
+                readonly
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateMobile" class="form-label">Mobile</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateMobile"
+                formControlName="mobile"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="dateOfBirth" class="form-label">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dateOfBirth"
+                formControlName="dateOfBirth"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="role" class="form-label">Usertype</label>
+              <select
+                class="form-control rounded-3"
+                id="userType"
+                formControlName="userType"
+                required
+              >
+                <option value="" disabled>Select Usertype</option>
+                <option [value]="UserType.Admin">Admin</option>
+                <option [value]="UserType.Customer">Customer</option>
+              </select>
+              <div
+                *ngIf="
+                  updateProfileForm.get('userType')?.invalid &&
+                  updateProfileForm.get('userType')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                UserType is required
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateAddress" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateAddress"
+                formControlName="address"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateProfileImage" class="form-label">Profile Image</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateProfileImage"
+                formControlName="profileImage"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateState" class="form-label">State</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateState"
+                formControlName="state"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="updateCountry" class="form-label">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateCountry"
+                formControlName="country"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="registerZipCode" class="form-label">Zip Code</label>
+              <input
+                type="number"
+                class="form-control rounded-3"
+                id="registerZipCode"
+                formControlName="zipCode"
+                placeholder="Enter your zip code"
+                required
+              />
+              <div
+                *ngIf="
+                  updateProfileForm.get('zipCode')?.invalid &&
+                  updateProfileForm.get('zipCode')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Zip Code is required
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-check mt-4">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="registerIsActive"
+                formControlName="isActive"
+                required
+              />
+              <label for="registerIsActive" class="form-check-label">
+                I agree to the Terms & Conditions
+              </label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100 mt-3">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div
+class="modal"
+id="changePasswordModal"
+#changePasswordModal
+tabindex="-1"
+aria-labelledby="changePasswordModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="changePasswordModalLabel">
+        Change Password
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        (click)="closeChangePasswordModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
+        <div class="mb-3">
+          <label for="userName" class="form-label">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            formControlName="userName"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="newPassword" class="form-label">New Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="newPassword"
+            formControlName="newPassword"
+            required
+            [(ngModel)]="newPassword"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            formControlName="confirmPassword"
+            required
+            [(ngModel)]="confirmPassword"
+          />
+          <div *ngIf="newPassword !== confirmPassword && confirmPassword" class="text-danger">
+            Passwords must match
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="changePasswordForm.invalid">
+          Update Password
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<router-outlet></router-outlet>

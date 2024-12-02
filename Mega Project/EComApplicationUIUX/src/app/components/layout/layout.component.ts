@@ -1,15 +1,16 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { UserService } from '../../service/user/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule, DatePipe } from '@angular/common';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { UserType } from '../../models/user-type.enum';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterLink, RouterOutlet,CommonModule],
+  imports: [RouterLink, RouterOutlet,CommonModule, ReactiveFormsModule],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
@@ -17,7 +18,7 @@ export class LayoutComponent {
 
   updateProfileForm: FormGroup;
   changePasswordForm: FormGroup;
-  customerDetails: any;
+  userDetails: any;
   newPassword:any;
   confirmPassword:any;
   isUpdating = false;
@@ -27,6 +28,9 @@ export class LayoutComponent {
   userService = inject(UserService);
   router = inject(Router);
   toaster = inject(ToastrService);
+
+  @ViewChild('updateProfileModal') updateProfileModal!: ElementRef;
+  @ViewChild('changePasswordModal') changePasswordModal!: ElementRef;
 
   constructor(private fb: FormBuilder) {
     this.updateProfileForm = this.fb.group({
@@ -55,15 +59,15 @@ export class LayoutComponent {
   }
 
   ngOnInit(): void {
-    this.fetchCustomerDetails();
+    this.fetchUserDetails();
     this.checkTokenExpiry();
   }
 
-  fetchCustomerDetails() {
+  fetchUserDetails() {
     const id = sessionStorage.getItem('id');
     this.userService.getUserById(id).subscribe({
       next: (res: any) => {
-        this.customerDetails = res;
+        this.userDetails = res;
       },
       error: (err: any) => {
         console.log(err);
@@ -71,40 +75,63 @@ export class LayoutComponent {
     });
   }
 
+  // openUpdateProfileModal() {
+  //   const modal = document.getElementById('updateProfileModal');
+  //   if (modal) {
+  //     modal.style.display = 'block';
+  //   }
+  //   this.OnProfileUpdate();
+  // }
+
   openUpdateProfileModal() {
-    const modal = document.getElementById('updateProfileModal');
-    if (modal) {
-      modal.style.display = 'block';
-    }
+    const modalInstance = new bootstrap.Modal(this.updateProfileModal.nativeElement);
+    modalInstance.show();
     this.OnProfileUpdate();
   }
 
   OnProfileUpdate() {
     this.isUpdating = true;
-    console.log('Customer Details:', this.customerDetails);
-    this.customerDetails.dateOfBirth = new DatePipe('en-US').transform(this.customerDetails.dateOfBirth, 'yyyy-MM-dd');
-    this.updateProfileForm.patchValue(this.customerDetails);
+    console.log('User Details:', this.userDetails);
+    this.userDetails.dateOfBirth = new DatePipe('en-US').transform(this.userDetails.dateOfBirth, 'yyyy-MM-dd');
+    this.updateProfileForm.patchValue(this.userDetails);
   }
+
+  // closeUpdateProfileModal() {
+  //   const modal = document.getElementById('updateProfileModal');
+  //   if (modal) {
+  //     modal.style.display = 'none';
+  //   }
+  // }
 
   closeUpdateProfileModal() {
-    const modal = document.getElementById('updateProfileModal');
-    if (modal) {
-      modal.style.display = 'none';
-    }
-  }
-  openChangePasswordModal() {
-    const modal = document.getElementById('changePasswordModal');
-    if (modal) {
-      modal.style.display = 'block';
-    }
-    this.fetchCustomerDetails();
+    const modalInstance = bootstrap.Modal.getInstance(this.updateProfileModal.nativeElement);
+    modalInstance.hide();
   }
 
+  // openChangePasswordModal() {
+  //   const modal = document.getElementById('changePasswordModal');
+  //   if (modal) {
+  //     modal.style.display = 'block';
+  //   }
+  //   this.fetchUserDetails();
+  // }
+
+  openChangePasswordModal() {
+    const modalInstance = new bootstrap.Modal(this.changePasswordModal.nativeElement);
+    modalInstance.show();
+    this.fetchUserDetails();
+  }
+
+  // closeChangePasswordModal() {
+  //   const modal = document.getElementById('changePasswordModal');
+  //   if (modal) {
+  //     modal.style.display = 'none';
+  //   }
+  // }
+
   closeChangePasswordModal() {
-    const modal = document.getElementById('changePasswordModal');
-    if (modal) {
-      modal.style.display = 'none';
-    }
+    const modalInstance = bootstrap.Modal.getInstance(this.changePasswordModal.nativeElement);
+    modalInstance.hide();
   }
 
   onUpdateProfile() {
@@ -131,7 +158,7 @@ export class LayoutComponent {
   onChangePassword() {
     this.formData = this.changePasswordForm.value;
     delete this.formData.confirmPassword;
-    if (this.formData.userName !== this.customerDetails.userName) {
+    if (this.formData.userName !== this.userDetails.userName) {
       this.toaster.error('Invalid Username', 'Error', {
         timeOut: 3000,
         closeButton: true,

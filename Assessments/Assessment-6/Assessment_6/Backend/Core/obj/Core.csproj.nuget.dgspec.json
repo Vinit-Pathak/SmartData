@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj": {}
+    "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj": {
+    "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\vinitpathak\\.nuget\\packages\\",
-        "outputPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\obj\\",
+        "projectPath": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\patha\\.nuget\\packages\\",
+        "outputPath": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinitpathak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\patha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj"
+              "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -97,21 +97,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj": {
+    "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\vinitpathak\\.nuget\\packages\\",
-        "outputPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\obj\\",
+        "projectPath": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\patha\\.nuget\\packages\\",
+        "outputPath": "D:\\SmartData\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinitpathak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\patha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
