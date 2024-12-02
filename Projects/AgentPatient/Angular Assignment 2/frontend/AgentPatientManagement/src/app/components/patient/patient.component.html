@@ -1,0 +1,276 @@
+<div class="container-fluid">
+    <div class="row p-2 bg-warning-subtle">
+        <div class="col-6">
+            <h3>Patient Management</h3>
+        </div>
+        <div class="col-6 text-end">
+            <button type="button" class="btn btn-danger mx-3 px-4 fw-medium" (click)="onAdd()">Add Patient</button>
+        </div>
+    </div>
+
+<div class="container-fluid">
+    
+    <div class="table table-bordered table-striped mt-3"  *ngIf="allPatient.length > 0; else noPatient">
+        <thead>
+            <tr>
+                <!-- <th>AId</th> -->
+                <th>PId</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <!-- <th>PhoneNumber</th> -->
+                <th>Country</th>
+                <!-- <th>CurrentMedication</th> -->
+                <!-- <th>Gender</th> -->
+                <!-- <th>City</th> -->
+                <!-- <th>State</th> -->
+                <th>Allergies</th>
+                <th>AppointmentDate</th>
+                <th>ReasonForVisit</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of allPatient; track $index) {
+                <tr>
+                    <!-- <td>{{item.aId}}</td> -->
+                    <td>{{item.patientId}}</td>
+                    <td>{{item.firstName}}</td>
+                    <td>{{item.lastName}}</td>
+                    <td>{{item.dateOfBirth | date : 'dd-MM-yyyy' }}</td>
+                    <td>{{item.email}}</td>
+                    <!-- <td>{{item.phoneNumber}}</td> -->
+                    <!-- <td>{{item.secondaryContactNumber}}</td> -->
+                    <!-- <td>{{item.gender}}</td> -->
+                    <!-- <td>{{item.city}}</td> -->
+                    <td>{{ getCountryName(item.country) }}</td>
+                    <!-- <td>{{ getStateName(item.state) }}</td> -->
+                    <!-- <td>{{item.currentMedications}}</td> -->
+                    <td>{{item.allergies}}</td>
+                    <td>{{item.nextAppointmentDate | date : 'dd-MM-yyyy'}}</td>
+                     <td>{{item.reasonForVisit}}</td>
+                    <td class="d-flex  text-center">
+                        <button class="btn btn-primary me-2 " (click)="onEdit(item)">Edit</button>
+                        <button class="btn btn-danger " (click)="onDelete(item.pId)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </div>
+
+    <ng-template #noPatient>
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3 class="text-center">
+                    No Patient Information Available
+                </h3>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+
+<!-- Modal -->
+<div class="modal mt-4" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!--Modal Header --> 
+        <div class="modal-header bg-info">
+            @if(updatedMode){
+                <h4 class="modal-title">Update Patient</h4>
+            }@else {
+                <h4 class="modal-title">Add Patient</h4>
+            }
+          <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()" ></button>
+        </div>
+  
+        <form [formGroup]="patientForm" (ngSubmit)="onSubmit()" >
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <label class="form-label" for="firstName">First Name</label>
+                        <input type="text" formControlName="firstName" name="firstName" class="form-control"
+                            placeholder="First Name">
+                            <div class="text-danger" *ngIf="patientForm.get('firstName')?.invalid && patientForm.get('firstName')?.touched">
+                                First Name is required.
+                            </div>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label class="form-label" for="lastName">Last Name</label>
+                        <input type="text" formControlName="lastName" name="lastName" class="form-control"
+                            placeholder="Last Name">
+                            <div class="text-danger" *ngIf="patientForm.get('lastName')?.invalid && patientForm.get('lastName')?.touched">
+                                Last Name is required.
+                            </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="text" formControlName="email" name="email" class="form-control"
+                            placeholder="Email">
+                            <div class="text-danger" *ngIf="patientForm.get('email')?.invalid && patientForm.get('email')?.touched">
+                                Email is required
+                             </div>   
+                    </div>
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="phoneNumber">PhoneNumber</label>
+                        <input type="text" formControlName="phoneNumber" name="phoneNumber" class="form-control"
+                            placeholder="PhoneNumber">
+                        <div class="text-danger" *ngIf="patientForm.get('phoneNumber')?.invalid && patientForm.get('phoneNumber')?.touched">
+                            Phone Number is required.
+                        </div>
+                    </div>
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="dateOfBirth">DateofBirth</label>
+                        <input type="date" formControlName="dateOfBirth" [max]="todayDate" name="dateOfBirth" class="form-control"
+                            placeholder="Date of Birth">
+                        <div class="text-danger" *ngIf="patientForm.get('dateOfBirth')?.invalid && patientForm.get('dateOfBirth')?.touched">
+                            Date of Birth is required.
+                            </div>
+                    </div>
+                </div>
+    
+                <div class="row mt-3">
+                        <div class="col-6 form-group">
+                            <label class="form-label" for="gender" >Gender</label>
+                            <select formControlName="gender" name="gender" class="form-select">
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="text-danger" *ngIf="patientForm.get('gender')?.invalid && patientForm.get('gender')?.touched">
+                                Gender is required.
+                                </div>  
+                        </div>
+                    
+                    <div class="col-6 form-group">
+                        <label class="form-label" for="address">Address</label>
+                        <input type="text" formControlName="address" name="address" class="form-control"
+                            placeholder="Address">
+                        <div class="text-danger" *ngIf="patientForm.get('address')?.invalid && patientForm.get('address')?.touched">
+                            Address is required.
+                            </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="country">Country</label>
+                        <select formControlName="country" (change)="onChange(this.patientForm.value.country)"   name="country" class="form-select">
+                            <option value="">Select Country</option>
+                            <option *ngFor="let item of allCountry"  [value]="item.countryId" >{{item.name}}</option>
+                        </select>
+                        <div class="text-danger" *ngIf="patientForm.get('country')?.invalid && patientForm.get('country')?.touched">
+                            Country is required.
+                            </div>
+                    </div>
+                        <div class="col-4 form-group">
+                            <label class="form-label" for="state">State</label>
+                            <select  formControlName="state" name="state" class="form-select">
+                                <option  value="">Select State</option>
+                                <option *ngFor="let item of allStateByCountryId"  [value]="item.stateId" >{{item.name}}</option>
+                            </select>
+                            <div class="text-danger" *ngIf="patientForm.get('state')?.invalid && patientForm.get('state')?.touched">
+                                Country is required.
+                            </div>
+                        </div>
+
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="postalCode">Postal Code</label>
+                        <input type="text" formControlName="postalCode" name="postalCode" class="form-control"
+                            placeholder="Postal Code">
+                            <div class="text-danger" *ngIf="patientForm.get('postalCode')?.invalid && patientForm.get('postalCode')?.touched">
+                                Postal Code is required.
+                                </div>
+                    </div>
+                </div> 
+                <div class="row mt-3">
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="bloodType">BloodType</label>
+                        <select formControlName="bloodType" name="bloodType" class="form-select">
+                            <option value="">Select Department</option>
+                            <option value="A+ve">A+ve</option>
+                            <option value="B+ve">B+ve</option>
+                            <option value="O+ve">O+ve</option>
+                            <option value="AB+ve">AB+ve</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="text-danger" *ngIf="patientForm.get('bloodType')?.invalid && patientForm.get('bloodType')?.touched">
+                            BloodType is required.
+                        </div>
+                    </div>
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="jobTicurrentMedicationstle">CurrentMedications</label>
+                        <input type="text" formControlName="currentMedications" name="currentMedications" class="form-control"
+                            placeholder="CurrentMedications">
+                        <div class="text-danger" *ngIf="patientForm.get('currentMedications')?.invalid && patientForm.get('currentMedications')?.touched">
+                            CurrentMedications is required.
+                            </div>
+                    </div>
+                    <div class="col-4 form-group">
+                        <label class="form-label" for="allergies">Allergies</label>
+                        <input type="text" formControlName="allergies" name="allergies" class="form-control"
+                            placeholder="Allergies">
+                        <div class="text-danger" *ngIf="patientForm.get('allergies')?.invalid && patientForm.get('allergies')?.touched">
+                            Allergies is required.
+                            </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 form-group">
+                        <label class="form-label" for="nextAppointmentDate">NextAppointmentDate</label>
+                        <input type="date" formControlName="nextAppointmentDate" [min]="todayDate" name="nextAppointmentDate" class="form-control"
+                            placeholder="NextAppointmentDate">
+                            <div class="text-danger" *ngIf="patientForm.get('nextAppointmentDate')?.invalid && patientForm.get('nextAppointmentDate')?.touched">
+                                NextAppointmentDate is required.
+                                </div>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label class="form-label" for="reasonForVisit">ReasonForVisit</label>
+                        <input type="text" formControlName="reasonForVisit" name="reasonForVisit" class="form-control"
+                            placeholder="ReasonForVisit">
+                            <div class="text-danger" *ngIf="patientForm.get('reasonForVisit')?.invalid && patientForm.get('reasonForVisit')?.touched">
+                                ReasonForVisit is required.
+                                </div>
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 form-group">
+                        <div class="form-group form-check">
+                            <input type="checkbox" formControlName="hasAgreeToTerms" name="hasAgreeToTerms" class="form-check-input"
+                                placeholder="hasAgreeToTerms" required>
+                            <label> Terms & Conditions </label>
+                        </div>
+                    </div>
+                    <div class="col-6 form-group">
+                        <div class="form-group form-check">
+                            <input type="checkbox" formControlName="isPatientActive" name="isPatientActive" class="form-check-input"
+                                placeholder="isisPatientActiveTermsAccepted" required>
+                            <label>Patient Active</label>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                @if (updatedMode) {
+                    <button type="submit" [disabled]="this.patientForm.invalid" class="btn btn-success" data-bs-dismiss="modal" >Update</button>
+                }@else {
+                    <button type="submit" [disabled]="this.patientForm.invalid" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+                }
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="resetForm()">Reset</button>
+            </div>
+            
+        </form>
+  
+      </div>
+    </div>
+  </div>

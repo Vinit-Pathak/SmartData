@@ -1,0 +1,31 @@
+#Automatically detect the user’s time zone using JavaScript
+const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+#Practitioner time zone saved in DB
+at the time of creation
+
+#Handle booking logic
+1)Get the user timezone --this will get at the time of user creation
+2)Retrieve practitioner's timezone  -- this will get from database
+3)Convert Appointment Time automatically --- for this we can use a library called luxon
+
+for ex:
+const { DateTime } = require('luxon');
+
+// User's selected local time (e.g., user intends to book for 3:00 PM local time)
+const userLocalTime = '2024-10-15T15:00:00'; // Local time input by user
+const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Automatically detected time zone
+
+// Practitioner’s time zone fetched from the database
+const practitionerTimeZone = 'Australia/Sydney'; // Example practitioner time zone
+
+// Convert the user's local time to UTC
+const utcAppointmentTime = DateTime.fromISO(userLocalTime, { zone: userTimeZone }).toUTC();
+
+// Store `utcAppointmentTime` in the database
+console.log(utcAppointmentTime.toISO()); // Store this in the database
+
+
+#Display Confirmation
+In this when we display appointment details back to user
+-- Convert the generated UTC Time to User's Time zone

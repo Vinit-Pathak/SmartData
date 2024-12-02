@@ -1,0 +1,237 @@
+<div class="container">
+    <h2>Employee Registration</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched">
+          First name is required and must be at least 3 characters long.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Middle Name</label>
+        <input type="text" formControlName="middleName" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('middleName')?.invalid && employeeForm.get('middleName')?.touched">
+          Middle name is required and must be at least 3 characters long.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('lastName')?.invalid && employeeForm.get('lastName')?.touched">
+          Last name is required and must be at least 3 characters long.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" formControlName="dateOfBirth" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('dateOfBirth')?.invalid && employeeForm.get('dateOfBirth')?.touched">
+          Date of birth is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched">
+          Valid email is required.
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label>Primary Contact Number</label>
+        <input type="number" formControlName="primaryContactNumber" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('primaryContactNumber')?.invalid && employeeForm.get('primaryContactNumber')?.touched">
+          Valid primary contact number is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Secondary Contact Number</label>
+        <input type="number" formControlName="secondaryContactNumber" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('secondaryContactNumber')?.invalid && employeeForm.get('secondaryContactNumber')?.touched">
+          Valid secondary contact number is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select formControlName="gender" class="form-control">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="text-danger" *ngIf="employeeForm.get('gender')?.invalid && employeeForm.get('gender')?.touched">
+          Gender is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address Line 1</label>
+        <input type="text" formControlName="addressLine1" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('addressLine1')?.invalid && employeeForm.get('addressLine1')?.touched">
+          Address Line 1 is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address Line 2</label>
+        <input type="text" formControlName="addressLine2" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" formControlName="city" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('city')?.invalid && employeeForm.get('city')?.touched">
+          City is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>State</label>
+        <input type="text" formControlName="state" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('state')?.invalid && employeeForm.get('state')?.touched">
+          State is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Zip Code</label>
+        <input type="number" formControlName="zipCode" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('zipCode')?.invalid && employeeForm.get('zipCode')?.touched">
+          Zip Code is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Country</label>
+        <input type="text" formControlName="country" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('country')?.invalid && employeeForm.get('country')?.touched">
+          Country is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Department</label>
+        <input type="text" formControlName="department" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('department')?.invalid && employeeForm.get('department')?.touched">
+          Department is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Job Title</label>
+        <input type="text" formControlName="jobTitle" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('jobTitle')?.invalid && employeeForm.get('jobTitle')?.touched">
+          Job Title is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Salary</label>
+        <input type="text" formControlName="salary" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('salary')?.invalid && employeeForm.get('salary')?.touched">
+          Salary is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" formControlName="startDate" class="form-control" />
+        <div class="text-danger" *ngIf="employeeForm.get('startDate')?.invalid && employeeForm.get('startDate')?.touched">
+          Start Date is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Employment Type</label>
+        <select formControlName="employmentType" class="form-control">
+          <option value="">Select Employment Type</option>
+          <option value="full-time">Full-Time</option>
+          <option value="part-time">Part-Time</option>
+          <option value="contract">Contract</option>
+        </select>
+        <div class="text-danger" *ngIf="employeeForm.get('employmentType')?.invalid && employeeForm.get('employmentType')?.touched">
+          Employment Type is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" formControlName="termsAccepted" />
+          Accept Terms and Conditions
+        </label>
+        <div class="text-danger" *ngIf="employeeForm.get('termsAccepted')?.invalid && employeeForm.get('termsAccepted')?.touched">
+          You must accept the terms and conditions.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">
+        {{ isEditing ? 'Update' : 'Register' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">
+        Reset
+      </button>
+    </form>
+  
+    <h3 class="mt-4">Employee List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Emp Id</th>  
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+          <th>Email</th>
+          <th>Primary Contact Number</th>
+          <th>Secondary Contact Number</th>
+          <th>Gender</th>
+          <th>Address Line 1</th>
+          <th>Address Line 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip Code</th>
+          <th>Country</th>
+          <th>Department</th>
+          <th>Job Title</th>
+          <th>Salary</th>
+          <th>Start Date</th>
+          <th>Employment Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <td>{{employee.employeeId}}</td>  
+          <td>{{ employee.firstName }}</td>
+            <td>{{ employee.middleName }}</td>
+          <td>{{ employee.lastName }}</td>
+            <td>{{ employee.dateOfBirth }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.primaryContactNumber }}</td>
+            <td>{{ employee.secondaryContactNumber }}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{ employee.addressLine1 }}</td>
+            <td>{{ employee.addressLine2 }}</td>
+            <td>{{ employee.city }}</td>
+            <td>{{ employee.state }}</td>
+            <td>{{ employee.zipCode }}</td>
+            <td>{{ employee.country }}</td>
+            <td>{{ employee.department }}</td>
+            <td>{{ employee.jobTitle }}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{ employee.startDate }}</td>
+            <td>{{ employee.employmentType }}</td>
+            
+          <td>
+            <button class="btn btn-warning" (click)="editEmployee(employee)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

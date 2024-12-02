@@ -1,0 +1,134 @@
+<div class="container mt-5 loginRegister">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title text-center">User Authentication</h5>
+      <div class="text-center mb-4">
+        <button
+          class="btn btn-outline-primary me-2"
+          (click)="toggleForm()"
+          [ngClass]="{ active: isLogin }"
+        >
+          Login
+        </button>
+        <button
+          class="btn btn-outline-primary"
+          (click)="toggleForm()"
+          [ngClass]="{ active: !isLogin }"
+        >
+          Register
+        </button>
+      </div>
+
+      <form
+        [formGroup]="isLogin ? loginForm : registerForm"
+        (ngSubmit)="isLogin ? onLoginSubmit() : onRegisterSubmit()"
+      >
+        <div *ngIf="isLogin">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="loginEmail"
+              formControlName="email"
+              placeholder="Enter email"
+              required
+            />
+            <div
+              *ngIf="
+                loginForm.get('email')?.invalid &&
+                loginForm.get('email')?.touched
+              "
+              class="text-danger"
+            >
+              Invalid email
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              formControlName="password"
+              placeholder="Password"
+              required
+            />
+            <div
+              *ngIf="
+                loginForm.get('password')?.invalid &&
+                loginForm.get('password')?.touched
+              "
+              class="text-danger"
+            >
+              Password is required
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="!isLogin">
+          <div class="mb-3">
+            <label for="registerFirstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerFirstName"
+              formControlName="firstName"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerLastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerLastName"
+              formControlName="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="registerEmail"
+              formControlName="email"
+              placeholder="Enter email"
+              required
+            />
+            <div
+              *ngIf="
+                registerForm.get('email')?.invalid &&
+                registerForm.get('email')?.touched
+              "
+              class="text-danger"
+            >
+              Invalid email
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="registerPassword" formControlName="password" [(ngModel)]="password" placeholder="Password" required>
+          </div>
+          <div class="mb-3">
+            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="registerConfirmPassword" formControlName="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirm Password" required>
+            <div *ngIf="password !== confirmPassword && confirmPassword" class="text-danger">
+              Passwords must match
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          [disabled]="isLogin ? loginForm.invalid : registerForm.invalid"
+          class="btn btn-primary w-100"
+        >
+          {{ isLogin ? "Login" : "Register" }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

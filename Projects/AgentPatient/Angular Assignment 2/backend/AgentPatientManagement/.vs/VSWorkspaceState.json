@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\App.Core",
+    "\\App.Core\\Apps",
+    "\\App.Core\\Apps\\User",
+    "\\App.Core\\Apps\\User\\Command"
+  ],
+  "SelectedNode": "\\RegisterLoginForget.sln",
+  "PreviewInSolutionExplorer": false
+}

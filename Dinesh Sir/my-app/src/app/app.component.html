@@ -1,0 +1,13 @@
+<h1>Hi</h1>
+<ng-container *ngIf="!isUserLoggedIn">
+  <input type="text" [(ngModel)]="userName" />
+  <button type="button" (click)="onLogin()" [disabled]="!userName">Login</button>
+</ng-container>
+
+<ng-container *ngIf="isUserLoggedIn">
+  <input type="text" [(ngModel)]="message" />
+  <button type="button" (click)="onMessageSent()" [disabled]="!message">Check Message</button>
+  <ul>
+    <li *ngFor="let msg of messages" [innerText]="msg"></li>
+  </ul>
+</ng-container>

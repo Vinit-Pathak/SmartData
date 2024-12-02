@@ -1,0 +1,68 @@
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Domain\obj\Debug\net8.0\ref\Domain.dll

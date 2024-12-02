@@ -1,0 +1,11 @@
+D:\CQRS_Practice\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\CQRS_Practice\Domain\bin\Debug\net8.0\Domain.dll
+D:\CQRS_Practice\Domain\bin\Debug\net8.0\Domain.pdb
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.dll
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\Domain.pdb
+D:\CQRS_Practice\Domain\obj\Debug\net8.0\ref\Domain.dll

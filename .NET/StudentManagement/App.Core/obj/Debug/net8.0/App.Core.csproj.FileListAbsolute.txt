@@ -1,0 +1,15 @@
+D:\StudentManagement\App.Core\bin\Debug\net8.0\App.Core.deps.json
+D:\StudentManagement\App.Core\bin\Debug\net8.0\App.Core.dll
+D:\StudentManagement\App.Core\bin\Debug\net8.0\App.Core.pdb
+D:\StudentManagement\App.Core\bin\Debug\net8.0\Domain.dll
+D:\StudentManagement\App.Core\bin\Debug\net8.0\Domain.pdb
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.csproj.AssemblyReference.cache
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.csproj.Up2Date
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.dll
+D:\StudentManagement\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+D:\StudentManagement\App.Core\obj\Debug\net8.0\App.Core.pdb
+D:\StudentManagement\App.Core\obj\Debug\net8.0\ref\App.Core.dll

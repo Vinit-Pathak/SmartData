@@ -1,0 +1,108 @@
+<div class="main-container">
+  <div *ngIf="isUpdating" class="update-form-overlay">
+    <div class="update-form-container fade-in">
+      <form [formGroup]="updateForm" class="update-form">
+        <div class="form-header text-center">
+          <h3>Update Profile</h3>
+        </div>
+
+        <button type="button" class="btn btn-secondary w-100 mb-4" (click)="OnBack()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+
+        <div class="form-group">
+          <label for="registerFirstName" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="registerFirstName"
+            formControlName="firstName"
+            placeholder="Enter your first name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="registerLastName" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="registerLastName"
+            formControlName="lastName"
+            placeholder="Enter your last name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="roleSelect" class="form-label">Role</label>
+          <select id="roleSelect" class="form-control" formControlName="role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="registerEmail"
+            formControlName="email"
+            placeholder="Enter your email"
+            required
+            readonly
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          (click)="onUpdate()"
+          [disabled]="updateForm.invalid"
+        >
+          <i class="fas fa-save"></i> Update
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="!isUpdating">
+    <div *ngIf="role === 'Admin'">
+      <div *ngIf="users && users.length > 0; else noData">
+        <h2 class="text-center">User Data</h2>
+
+        <div class="user-cards-container row">
+          <div class="user-card col-md-3 mt-2" *ngFor="let user of users; let i = index">
+            <div class="user-card-body">
+              <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+              <p>{{ user.email }}</p>
+              <span class="badge badge-role">{{ user.role }}</span>
+            </div>
+
+            <div class="user-card-actions">
+              <button class="btn btn-info btn-sm" (click)="onEdit(user)">
+                <i class="fas fa-edit"></i> Edit
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="onDelete(user.id)">
+                <i class="fas fa-trash-alt"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #noData>
+        <div class="alert alert-info text-center" role="alert">
+          No User Available
+        </div>
+      </ng-template>
+    </div>
+
+    <div *ngIf="role !== 'Admin'">
+      <p class="alert alert-warning text-center">
+        You do not have the required permissions to view this content.
+      </p>
+    </div>
+  </div>
+</div>

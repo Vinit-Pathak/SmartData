@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CQRS\\ExampleWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|d:\\cqrs\\examplewebapp\\app.core\\app.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|solutionrelative:app.core\\app.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{555DEE3C-304C-44F1-AC85-40E85AF6095E}|ExampleWebApp\\ExampleWebApp.csproj|d:\\cqrs\\examplewebapp\\examplewebapp\\examplewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{555DEE3C-304C-44F1-AC85-40E85AF6095E}|ExampleWebApp\\ExampleWebApp.csproj|solutionrelative:examplewebapp\\examplewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{555DEE3C-304C-44F1-AC85-40E85AF6095E}|ExampleWebApp\\ExampleWebApp.csproj|d:\\cqrs\\examplewebapp\\examplewebapp\\controllers\\studentscqrscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{555DEE3C-304C-44F1-AC85-40E85AF6095E}|ExampleWebApp\\ExampleWebApp.csproj|solutionrelative:examplewebapp\\controllers\\studentscqrscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|d:\\cqrs\\examplewebapp\\app.core\\apps\\student\\query\\getstudentsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|solutionrelative:app.core\\apps\\student\\query\\getstudentsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|d:\\cqrs\\examplewebapp\\app.core\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|solutionrelative:app.core\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|d:\\cqrs\\examplewebapp\\app.core\\apps\\student\\command\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D501B761-7417-4988-9328-F698516EF1FC}|App.Core\\App.Core.csproj|solutionrelative:app.core\\apps\\student\\command\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7997021C-56F8-41DF-9FD0-8A4312C2F770}|Domain\\Domain.csproj|d:\\cqrs\\examplewebapp\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7997021C-56F8-41DF-9FD0-8A4312C2F770}|Domain\\Domain.csproj|solutionrelative:domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 361,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExampleWebApp",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\ExampleWebApp\\ExampleWebApp.csproj",
+              "RelativeDocumentMoniker": "ExampleWebApp\\ExampleWebApp.csproj",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\ExampleWebApp\\ExampleWebApp.csproj",
+              "RelativeToolTip": "ExampleWebApp\\ExampleWebApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-27T06:51:03.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.Core",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\App.Core\\App.Core.csproj",
+              "RelativeDocumentMoniker": "App.Core\\App.Core.csproj",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\App.Core\\App.Core.csproj",
+              "RelativeToolTip": "App.Core\\App.Core.csproj",
+              "ViewState": "AgIAAAQAAAAo+yzsBeQwwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-27T06:50:48.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetStudentsQuery.cs",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\App.Core\\Apps\\Student\\Query\\GetStudentsQuery.cs",
+              "RelativeDocumentMoniker": "App.Core\\Apps\\Student\\Query\\GetStudentsQuery.cs",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\App.Core\\Apps\\Student\\Query\\GetStudentsQuery.cs",
+              "RelativeToolTip": "App.Core\\Apps\\Student\\Query\\GetStudentsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:39:16.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentsCQRSController.cs",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\ExampleWebApp\\Controllers\\StudentsCQRSController.cs",
+              "RelativeDocumentMoniker": "ExampleWebApp\\Controllers\\StudentsCQRSController.cs",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\ExampleWebApp\\Controllers\\StudentsCQRSController.cs",
+              "RelativeToolTip": "ExampleWebApp\\Controllers\\StudentsCQRSController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:35:13.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\App.Core\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "App.Core\\DependencyInjection.cs",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\App.Core\\DependencyInjection.cs",
+              "RelativeToolTip": "App.Core\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:18:58.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateStudentCommand.cs",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\App.Core\\Apps\\Student\\Command\\CreateStudentCommand.cs",
+              "RelativeDocumentMoniker": "App.Core\\Apps\\Student\\Command\\CreateStudentCommand.cs",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\App.Core\\Apps\\Student\\Command\\CreateStudentCommand.cs",
+              "RelativeToolTip": "App.Core\\Apps\\Student\\Command\\CreateStudentCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:15:03.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\CQRS\\ExampleWebApp\\Domain\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Student.cs",
+              "ToolTip": "D:\\CQRS\\ExampleWebApp\\Domain\\Student.cs",
+              "RelativeToolTip": "Domain\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:14:15.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

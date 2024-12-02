@@ -1,0 +1,29 @@
+create project web api- CleanArchitecturePattern
+-1)add new project(class library) - Domain Layer
+--three class files 
+	-Student
+	-Course
+	-StudentCourseMapping
+
+
+2)add new project(class library) - App.Core
+--add DependencyInjection class
+   -- add Apps folder
+	-add Student Folder
+		- add Command Folder
+		  -- add CreateStudentCommand.cs
+		-- add Query Folder
+		  -- GetStudentsQuery.cs
+  -- add Interface Folder
+	-- add IAppDbContext.cs
+  -- add Models Folder
+	-- add StudentDto.cs
+--add IStudentService.cs
+
+3)add new project(class library) - Infrastructure
+this will focus on external implementation like DB, Services
+-- add AppDbContext.cs
+-- add DependencyInjection.cs
+-- add Services Folder
+	- add StudentServices.cs
+-- this section will have the migration

@@ -1,0 +1,22 @@
+Customer Model
+
+1. First Name
+2. Middle Name
+3. Last Name
+4. DOB
+5. Address line 1
+6. Address line 2
+7. City
+8. State
+9. ZipCode
+10. Country
+11. Email
+12. Primary Contact No
+13. Secondary Contact No
+14. Gender
+15. Customer Id
+16. Department
+17. Marital Status
+18. Bank Name
+19. Bank Branch
+20. Qualification

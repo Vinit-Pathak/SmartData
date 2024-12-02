@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h1 class="display-4">Video Chat App</h1>
+        <p class="lead">Connect with others via video and share your screen!</p>
+      </div>
+    </div>
+  
+    <div class="row mb-4">
+      <div class="col text-center">
+        <button 
+          class="btn btn-success me-2" 
+          (click)="startCall()" 
+          [disabled]="isCallActive">
+          <i class="bi bi-camera-video"></i> Start Call
+        </button>
+        <button 
+          class="btn btn-danger me-2" 
+          (click)="endCall()" 
+          [disabled]="!isCallActive">
+          <i class="bi bi-camera-video-off"></i> End Call
+        </button>
+        <button 
+          class="btn btn-primary me-2" 
+          (click)="shareScreen()" 
+          [disabled]="!isCallActive">
+          <i class="bi bi-display"></i> Share Screen
+        </button>
+        <button 
+          class="btn btn-warning" 
+          (click)="stopScreenSharing()" 
+          [disabled]="!isCallActive">
+          <i class="bi bi-x-circle"></i> Stop Screen Share
+        </button>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div id="publisher" class="video-box border rounded shadow"></div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div id="subscriber" class="video-box border rounded shadow"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div id="screenPublisher" class="video-box border rounded shadow"></div>
+      </div>
+    </div>
+  </div>
+  

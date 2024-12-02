@@ -1,0 +1,15 @@
+D:\Full Stack Application\Backend\Core\bin\Debug\net8.0\Core.deps.json
+D:\Full Stack Application\Backend\Core\bin\Debug\net8.0\Core.dll
+D:\Full Stack Application\Backend\Core\bin\Debug\net8.0\Core.pdb
+D:\Full Stack Application\Backend\Core\bin\Debug\net8.0\Domain.dll
+D:\Full Stack Application\Backend\Core\bin\Debug\net8.0\Domain.pdb
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.csproj.Up2Date
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.dll
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\refint\Core.dll
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\Core.pdb
+D:\Full Stack Application\Backend\Core\obj\Debug\net8.0\ref\Core.dll

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand fw-bold fs-4 text-dark" routerLink="/patient">
+      <i class="bi bi-house-door-fill me-2"></i>MyApp
+    </a>
+    
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active text-dark" aria-current="page" routerLink="/profile">
+            <i class="bi bi-person-circle me-2"></i> User Profile
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <button class="btn btn-outline-primary mx-3 rounded-pill px-4 py-2" (click)="logout()">
+        <i class="bi bi-box-arrow-right me-2"></i> Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

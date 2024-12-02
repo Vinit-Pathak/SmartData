@@ -1,0 +1,93 @@
+/* General Layout */
+.login-register {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 3rem;
+  }
+  
+  h5.card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Tabs: Login and Register Buttons */
+  button.active {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+  }
+  
+  button {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Form Input Fields */
+  .form-control {
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Error Message */
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  
+  .text-danger small {
+    color: #dc3545;
+    font-weight: 500;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 576px) {
+    .card-body {
+      padding: 2rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+    }
+  
+    .form-control {
+      font-size: 0.9rem;
+      padding: 0.65rem;
+    }
+  }
+  

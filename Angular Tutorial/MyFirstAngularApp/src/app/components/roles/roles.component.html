@@ -1,0 +1,92 @@
+<!-- <h3 class="mb-5 text-center">Roles Works!</h3>
+
+// Interpolation  -- used when inside an element we need to print the data
+<h4>Interpolation</h4> 
+<div class="row">
+  <div class="col-3">
+    <p>My name is {{ fullName }}</p>
+  </div>
+  <div class="col-3">
+    <p>My age is {{ age }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ currentDate.toLocaleString() }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{selectedState}}</p>
+  </div>
+</div>
+
+// Property Binding
+<h4 class="mt-3">Property Binding</h4>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="fullName" class="form-control"/>
+    </div>
+    <div class="col-3">
+        <input [type]="radio">
+    </div>
+    <div class="col-3">
+        <input [type]="checkbox">
+    </div>
+
+    <div class="col-3">
+        <div [class]="myClassName">Hello...</div>
+    </div>
+    
+</div>
+
+
+//Two way Binding - this is only used in input element
+<h4 class="mt-3">Two Way Binding</h4>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="fullName" >
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="MH">MH</option>
+            <option value="MP">MP</option>
+            <option value="UP">UP</option>
+        </select>
+    </div>
+</div>
+
+
+//Event Binding - this is used when we want to listen to an event
+<h4 class="mt-3">Event Binding</h4>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlert()" >Show Welcome</button>
+    </div>
+
+    <div class="col-3">
+        <button class="btn btn-danger" (click)="showMessageAlert('This is alert message')">Show Message</button>
+    </div>
+</div> 
+
+//Signal Binding
+<h4 class="mt-3">Signal Binding</h4>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="changeName()">Change Name</button>
+    </div>
+    <div class="col-3">
+        <h4>{{Name}}</h4>
+    </div>
+</div>
+
+
+
+-->
+
+
+<div class="row">
+    <div class="col-4">
+        <ul>
+            <li *ngFor="let item of dataList">
+                {{item.Year}}
+            </li>
+        </ul>
+    </div>
+</div>

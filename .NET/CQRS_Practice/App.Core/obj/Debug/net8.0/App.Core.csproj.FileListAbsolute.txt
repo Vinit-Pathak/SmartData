@@ -1,0 +1,15 @@
+D:\CQRS_Practice\App.Core\bin\Debug\net8.0\App.Core.deps.json
+D:\CQRS_Practice\App.Core\bin\Debug\net8.0\App.Core.dll
+D:\CQRS_Practice\App.Core\bin\Debug\net8.0\App.Core.pdb
+D:\CQRS_Practice\App.Core\bin\Debug\net8.0\Domain.dll
+D:\CQRS_Practice\App.Core\bin\Debug\net8.0\Domain.pdb
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.csproj.AssemblyReference.cache
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.csproj.Up2Date
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.dll
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\App.Core.pdb
+D:\CQRS_Practice\App.Core\obj\Debug\net8.0\ref\App.Core.dll

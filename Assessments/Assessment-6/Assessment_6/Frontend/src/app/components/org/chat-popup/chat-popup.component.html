@@ -1,0 +1,27 @@
+<div class="card p-3">
+  <div class="card-body">
+    <div class="chat-container container-fluid p-3">
+      <div class="chat-section row">
+        <!-- Chat Header -->
+        <div class="chat-header col-12 mb-3">
+          <h3 class="text-center text-primary">Welcome, {{ userName }}!</h3>
+        </div>
+    
+        <!-- Messages Section -->
+        <div class="messages col-12 mb-4" style="max-height: 400px; overflow-y: auto;">
+          <div *ngFor="let msg of messages" class="message" [ngClass]="{'my-message': msg.user === userName, 'other-message': msg.user !== userName}">
+            <div class="message-content p-3 border rounded shadow-sm text-white" [ngClass]="{'bg-success': msg.user === userName, 'bg-primary': msg.user !== userName}">
+              {{ msg.user }}: {{ msg.text }}
+            </div>
+          </div>
+        </div>
+    
+        <!-- Message Input Section -->
+        <div class="message-input col-12 d-flex align-items-center">
+          <textarea [(ngModel)]="message" placeholder="Type a message..." rows="2" class="form-control me-2 custom-textarea"></textarea>
+          <button (click)="onMessageSent()" class="btn btn-primary custom-btn-send">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

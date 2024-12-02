@@ -1,0 +1,16 @@
+<div class="col-3">
+    <mat-calendar
+      [(selected)]="selectedDate"
+      (selectedChange)="onDateSelected($event)"
+      (monthSelected)="onMonthSelected($event)"
+      (yearSelected)="onYearSelected($event)"
+      (mouseover)="onDateHover($event)"
+      >
+    </mat-calendar>
+  
+    <!-- Hover message -->
+    <div *ngIf="hoverMessage" class="hover-message">
+      {{ hoverMessage }}
+    </div>
+  </div>
+  

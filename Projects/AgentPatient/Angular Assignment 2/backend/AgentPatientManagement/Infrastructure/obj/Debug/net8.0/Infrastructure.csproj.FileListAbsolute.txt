@@ -1,0 +1,116 @@
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\App.Core.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\App.Core.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\App.Core.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\bin\Debug\net8.0\Domain.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll

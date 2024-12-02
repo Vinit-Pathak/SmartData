@@ -1,0 +1,107 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Structural Directive</h1>
+    <p>*ngIf, *ngFor...</p>
+    <button class="btn btn-success" [routerLink]="['/attribute-dir']" >Go To Attribute Dir</button>
+ </div>
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDivVisible"  class="bg-danger p-3 text-center">
+           <h4>Div-1 </h4> 
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isToggle" class="bg-success p-3 text-center">
+            <h4>Div-2 </h4> 
+        </div>
+    </div> 
+    <div class="col-3">
+        <div *ngIf="text1 == text2" class="bg-secondary p-3 text-center">
+            <h4>Div-3 </h4> 
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="selectedState == 'India'" class="bg-primary p-3 text-center">
+            <h4>Div-4 </h4> 
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="hideDiv()" >Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showDiv()" >Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggle()" >Toggle</button>
+    </div> 
+    <div class="col-3">   
+          <div style="display: flex;align-items:center">
+            <input type="text" [(ngModel)]="text1" placeholder="Text-1" class="width-50">
+            <input type="text" [(ngModel)]="text2" placeholder="Text-2" class="width-50">
+          </div>
+    </div>
+    <div class="col-3 ">
+        <div style="display: flex;align-items:center">
+            <input type="checkbox" [(ngModel)]="isActive"  class="width-50">
+            <select [(ngModel)]="selectedState" >
+                <option value="">Select State</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="SriLanka">SriLanka</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArr " > {{city}} </li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let anime of animeArr " > {{anime.toLocaleUpperCase()}} </li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <select>
+            <option *ngFor="let city of cityArr">{{city}}</option>
+        </select>
+    </div>
+    <div class="col-3">
+        <select >
+            <option *ngFor="let stud of studentList" [value]="stud.studId">{{stud.name}}</option>
+        </select>
+    </div>
+
+</div>
+
+
+<div class="row d-flex align-items-center justify-content-center">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let stud of studentList; let srNo = index " >
+                    <td>{{srNo + 1}}</td>
+                    <td>{{stud.name}}</td>
+                    <td>{{stud.city}}</td>
+                    <td>
+                        <span *ngIf="stud.isActive" >Active</span>
+                        <span *ngIf="!stud.isActive" >De-Active</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="form-container mt-3">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" placeholder="Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" placeholder="Email" class="form-control">
+    </div>
+    <div formArrayName="phoneNumbers">
+        <div *ngFor="let phone of phoneNumbers.controls; let i = index" [formGroupName]="i" class="form-group">
+            <label for="phoneNumber">Phone Number {{i + 1}}:</label>
+            <input id="phoneNumber" formControlName="phoneNumber" placeholder="Phone Number" class="form-control">
+            <button type="button" (click)="removePhoneNumber(i)" *ngIf="phoneNumbers.length > 1" class="btn btn-danger">Remove</button>
+        </div>
+    </div>
+    <button type="button" (click)="addPhoneNumber()" [disabled]="phoneNumbers.length >= 2" class="btn btn-primary">Add Phone Number</button>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

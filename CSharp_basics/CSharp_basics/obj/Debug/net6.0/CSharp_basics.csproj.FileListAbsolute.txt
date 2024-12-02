@@ -1,0 +1,15 @@
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\bin\Debug\net6.0\CSharp_basics.exe
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\bin\Debug\net6.0\CSharp_basics.deps.json
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\bin\Debug\net6.0\CSharp_basics.runtimeconfig.json
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\bin\Debug\net6.0\CSharp_basics.dll
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\bin\Debug\net6.0\CSharp_basics.pdb
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.csproj.AssemblyReference.cache
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.GeneratedMSBuildEditorConfig.editorconfig
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.AssemblyInfoInputs.cache
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.AssemblyInfo.cs
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.csproj.CoreCompileInputs.cache
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.dll
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\refint\CSharp_basics.dll
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.pdb
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\CSharp_basics.genruntimeconfig.cache
+D:\Day Users\vijayp\Official\sdirect_2024\CSharp_basics\CSharp_basics\obj\Debug\net6.0\ref\CSharp_basics.dll

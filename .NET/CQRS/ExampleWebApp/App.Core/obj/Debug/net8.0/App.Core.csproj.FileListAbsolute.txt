@@ -1,0 +1,45 @@
+D:\Practice\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.deps.json
+D:\Practice\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.dll
+D:\Practice\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.pdb
+D:\Practice\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.dll
+D:\Practice\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.pdb
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.AssemblyReference.cache
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.CopyComplete
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.dll
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.pdb
+D:\Practice\ExampleWebApp\App.Core\obj\Debug\net8.0\ref\App.Core.dll
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.deps.json
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.dll
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.pdb
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.dll
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.pdb
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.AssemblyReference.cache
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.Up2Date
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.dll
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.pdb
+C:\Users\mayurramdham\Desktop\Mayur\Dinesh Sir\ExampleWebApp\App.Core\obj\Debug\net8.0\ref\App.Core.dll
+D:\CQRS\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.deps.json
+D:\CQRS\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.dll
+D:\CQRS\ExampleWebApp\App.Core\bin\Debug\net8.0\App.Core.pdb
+D:\CQRS\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.dll
+D:\CQRS\ExampleWebApp\App.Core\bin\Debug\net8.0\Domain.pdb
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.AssemblyReference.cache
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.csproj.Up2Date
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.dll
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\App.Core.pdb
+D:\CQRS\ExampleWebApp\App.Core\obj\Debug\net8.0\ref\App.Core.dll

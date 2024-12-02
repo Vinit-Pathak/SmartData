@@ -1,0 +1,162 @@
+/* Custom Styling for Admin Profile */
+.custom-card {
+  border-radius: 0px 0px 20px 20px;
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.mt-4 {
+  margin-top: 2.6rem !important;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+}
+
+.profile-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.profile-info strong {
+  font-weight: 600;
+}
+
+.profile-info span {
+  color: #555;
+}
+
+.profile-info i {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  color: #0d6efd;
+}
+
+.no-data-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e7f3fe;
+  border: 1px solid #a2d2f1;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+}
+
+/* Responsive Design Enhancements */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .profile-info p {
+    font-size: 1.1rem;
+  }
+
+  .profile-title {
+    font-size: 1.7rem;
+  }
+
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-info .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 576px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-title {
+    font-size: 1.4rem;
+  }
+
+  .profile-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .profile-info .col-md-6 {
+    margin-bottom: 10px;
+  }
+}
+
+/* Grid Layout Adjustments */
+.profile-info .col-12 {
+  padding-bottom: 10px;
+}

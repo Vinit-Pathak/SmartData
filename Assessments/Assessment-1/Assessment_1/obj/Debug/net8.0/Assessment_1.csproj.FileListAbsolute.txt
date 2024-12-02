@@ -1,0 +1,14 @@
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\bin\Debug\net8.0\Assessment_1.exe
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\bin\Debug\net8.0\Assessment_1.deps.json
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\bin\Debug\net8.0\Assessment_1.runtimeconfig.json
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\bin\Debug\net8.0\Assessment_1.dll
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\bin\Debug\net8.0\Assessment_1.pdb
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.AssemblyInfoInputs.cache
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.AssemblyInfo.cs
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.csproj.CoreCompileInputs.cache
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.dll
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\refint\Assessment_1.dll
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.pdb
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\Assessment_1.genruntimeconfig.cache
+C:\Users\vinitpathak\source\repos\Assessment_1\Assessment_1\obj\Debug\net8.0\ref\Assessment_1.dll

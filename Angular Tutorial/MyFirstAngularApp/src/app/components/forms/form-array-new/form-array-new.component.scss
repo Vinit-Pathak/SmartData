@@ -1,0 +1,29 @@
+/* Custom CSS */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h4 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  input[type="number"] {
+    max-width: 200px;
+  }
+  
+  .btn-danger, .btn-outline-danger {
+    font-weight: bold;
+  }
+  
+  input.form-control {
+    transition: border-color 0.3s ease;
+  }
+  
+  input.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  

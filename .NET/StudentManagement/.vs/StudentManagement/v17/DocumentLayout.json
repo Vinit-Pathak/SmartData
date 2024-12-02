@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\StudentManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|d:\\studentmanagement\\studentmanagement\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|d:\\studentmanagement\\infrastructure\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|d:\\studentmanagement\\studentmanagement\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|d:\\studentmanagement\\infrastructure\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|d:\\studentmanagement\\app.core\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|solutionrelative:app.core\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|d:\\studentmanagement\\app.core\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|solutionrelative:app.core\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|d:\\studentmanagement\\domain\\studentcoursemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|solutionrelative:domain\\studentcoursemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|d:\\studentmanagement\\app.core\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC97639B-A8D9-47BD-8C7F-0C69B4BC7B8D}|App.Core\\App.Core.csproj|solutionrelative:app.core\\models\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|d:\\studentmanagement\\domain\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|solutionrelative:domain\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|d:\\studentmanagement\\studentmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0906727F-B8AD-4348-BBC1-A82B72B71BD1}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|d:\\studentmanagement\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB9ABA-BD4F-41B8-8BE0-DF78D069A368}|Domain\\Domain.csproj|solutionrelative:domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|d:\\studentmanagement\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34C0C69-160D-4A45-ABE2-E011ECB5CB3E}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Domain\\Course.cs",
+              "RelativeDocumentMoniker": "Domain\\Course.cs",
+              "ToolTip": "D:\\StudentManagement\\Domain\\Course.cs",
+              "RelativeToolTip": "Domain\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T07:56:49.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentCourseMapping.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Domain\\StudentCourseMapping.cs",
+              "RelativeDocumentMoniker": "Domain\\StudentCourseMapping.cs",
+              "ToolTip": "D:\\StudentManagement\\Domain\\StudentCourseMapping.cs",
+              "RelativeToolTip": "Domain\\StudentCourseMapping.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:25:38.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\App.Core\\ICourseService.cs",
+              "RelativeDocumentMoniker": "App.Core\\ICourseService.cs",
+              "ToolTip": "D:\\StudentManagement\\App.Core\\ICourseService.cs",
+              "RelativeToolTip": "App.Core\\ICourseService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:26:24.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Infrastructure\\Services\\CourseService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\CourseService.cs",
+              "ToolTip": "D:\\StudentManagement\\Infrastructure\\Services\\CourseService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\CourseService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:25:38.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\StudentManagement\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\CourseController.cs",
+              "ToolTip": "D:\\StudentManagement\\StudentManagement\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "StudentManagement\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T11:26:40.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\StudentManagement\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\StudentManagement\\StudentManagement\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "StudentManagement\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwB8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:21:32.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Infrastructure\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\StudentService.cs",
+              "ToolTip": "D:\\StudentManagement\\Infrastructure\\Services\\StudentService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\StudentService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:00:07.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\App.Core\\IStudentService.cs",
+              "RelativeDocumentMoniker": "App.Core\\IStudentService.cs",
+              "ToolTip": "D:\\StudentManagement\\App.Core\\IStudentService.cs",
+              "RelativeToolTip": "App.Core\\IStudentService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAnwA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:57:10.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentDto.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\App.Core\\Models\\StudentDto.cs",
+              "RelativeDocumentMoniker": "App.Core\\Models\\StudentDto.cs",
+              "ToolTip": "D:\\StudentManagement\\App.Core\\Models\\StudentDto.cs",
+              "RelativeToolTip": "App.Core\\Models\\StudentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:20:24.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\StudentManagement\\Program.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Program.cs",
+              "ToolTip": "D:\\StudentManagement\\StudentManagement\\Program.cs",
+              "RelativeToolTip": "StudentManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:42:23.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\AppDbContext.cs",
+              "ToolTip": "D:\\StudentManagement\\Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:34:29.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\StudentManagement\\Domain\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Student.cs",
+              "ToolTip": "D:\\StudentManagement\\Domain\\Student.cs",
+              "RelativeToolTip": "Domain\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:24:35.226Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

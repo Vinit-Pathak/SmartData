@@ -1,0 +1,29 @@
+C# & .Net
+--Visual studio interaction, DLL and exe
+--Classes, Object, Interface, Record
+--anonymous type, function, lambda expression overview
+--delegates, generics, get, set
+--entities, attributes, relationship, normalization, denormalization
+-- REST principles and implementation, Interfaces and Dependency Injection
+-- Entities, Relationships
+-- CRUD Operations
+-- Clean Architecture(CQRS)
+-- CRUD APIs, Logging, Exception Handling
+
+
+SQL
+-- Relationship, Constraints, DataType Operator, Basic SQL Commands
+-- Variables, CASE..When, If, While, Stored Procedure
+-- IS NULL, IS NOT NULL, Group By, Joins    
+-- Views, Temp Table, Sorting, Paging, CTE(Common Table Expression)    
+
+
+
+
+Clg Project
+Technology -- Frontend - HTML, CSS, Bootstrap, Javascript
+	   -- Database - MySQL
+	   -- Backend  - Php
+
+
+Other skillset -- C/C++, Python(Basic), Git/Github (Mid Level)

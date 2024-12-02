@@ -1,0 +1,66 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h4>Control Flow Statement</h4>
+    <h3><span>&#64;</span>Switch <span>&amp;</span> Pipes</h3>
+</div>
+<div class="row mt-4">
+    <h4>Switch</h4>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="dayNum" >
+    </div>
+    <div class="col-3">
+        Day Name is : 
+        @switch (dayNum) {
+            @case ('1') {
+                <span>Monday</span>
+            }
+            @case ('2') {
+                <span>Tuesday</span>
+            }
+            @case ('3') {
+                <span>Wednesday</span>
+            }
+            @case ('4') {
+                <span>Thursday</span>
+            }
+            @case ('5') {
+                <span>Friday</span>
+            }
+            @case ('6') {
+                <span>Saturday</span>
+            }
+            @case ('7') {
+                <span>Sunday</span>
+            }
+            @default {
+                <span>Wrong Entry</span>
+            }
+        }
+    </div>
+</div>
+
+<div class="row mt-4">
+    <h4>Pipes</h4>
+    <div class="col-2">
+        Time - {{currentTime | async | date : 'hh:mm:ss'}}
+    </div>
+    <div class="col-2">
+        Date - {{currentDate | date : 'dd-MMM-yyyy'}}
+    </div>
+    <div class="col-4">
+        Original Value - {{text}} <br>
+        Text - {{text | uppercase}} - UpperCase Pipe <br>
+        Text - {{text | lowercase}} - LowerCase Pipe<br>
+        Text - {{text | titlecase}} - TitleCase Pipe
+    </div>
+    <div class="col-4">
+        Original Value - {{student}}
+        <br/>
+        After Pipe - {{student|json}}
+    </div>
+    <h4>Custom Pipe</h4>
+    <div class="col-3">
+        Original value - {{student.subject}}
+        <br>    
+        After Pipe - {{student.subject | na}}
+    </div>
+</div>

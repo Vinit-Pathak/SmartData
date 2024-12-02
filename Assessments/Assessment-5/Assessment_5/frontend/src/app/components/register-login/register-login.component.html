@@ -1,0 +1,109 @@
+<div class="container mt-5 pb-5 login-register">
+  <div class="card shadow-lg rounded-4">
+    <div class="card-body p-4">
+      <h5 class="card-title text-center mb-4">User Authentication</h5>
+
+      <!-- Tabs for Login/Register -->
+      <div class="text-center mb-4">
+        <button class="btn btn-outline-primary me-3 rounded-pill px-4 py-2 transition-all" (click)="toggleForm()"
+          [ngClass]="{ active: isLogin }">
+          Login
+        </button>
+        <button class="btn btn-outline-primary rounded-pill px-4 py-2 transition-all" (click)="toggleForm()"
+          [ngClass]="{ active: !isLogin }">
+          Register
+        </button>
+      </div>
+
+      <!-- Form for Login/Register -->
+      <form [formGroup]="isLogin ? loginForm : registerForm"
+        (ngSubmit)="isLogin ? onLoginSubmit() : onRegisterSubmit()">
+        <!-- Login Form -->
+        <div *ngIf="isLogin">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control rounded-3" id="loginEmail" formControlName="email"
+              placeholder="Enter your email" required />
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+              class="text-danger small mt-1">
+              Invalid email address
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control rounded-3" id="loginPassword" formControlName="password"
+              placeholder="Enter your password" required />
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+              class="text-danger small mt-1">
+              Password is required
+            </div>
+          </div>
+
+          <div *ngIf="otpSent" class="mb-3">
+            <label for="otp" class="form-label">Enter OTP</label>
+            <input type="text" class="form-control rounded-3" id="otp" formControlName="otp" placeholder="Enter OTP"
+              required />
+            <div *ngIf="loginForm.get('otp')?.invalid && loginForm.get('otp')?.touched" class="text-danger small mt-1">
+              OTP is required
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-secondary w-100 rounded-3 py-2 mb-3" (click)="sendOtp()"
+            [disabled]="loginForm.get('email')?.invalid || loginForm.get('password')?.invalid || countdown > 0">
+            {{ countdown > 0 ? 'Resend OTP (' + countdown + 's)' : 'Send OTP' }}
+          </button>
+        </div>
+
+        <!-- Register Form -->
+        <div *ngIf="!isLogin">
+          <div class="mb-3">
+            <label for="registerFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control rounded-3" id="registerFirstName" formControlName="firstName"
+              placeholder="Enter your first name" required />
+          </div>
+          <div class="mb-3">
+            <label for="registerLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control rounded-3" id="registerLastName" formControlName="lastName"
+              placeholder="Enter your last name" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control rounded-3" id="registerEmail" formControlName="email"
+              placeholder="Enter your email" required />
+            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
+              class="text-danger small mt-1">
+              Invalid email address
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input type="password" class="form-control rounded-3" id="registerPassword" formControlName="password"
+              placeholder="Create a password" required />
+            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+              class="text-danger small mt-1">
+              Password is required
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control rounded-3" id="registerConfirmPassword"
+              formControlName="confirmPassword" placeholder="Confirm your password" required />
+            <div *ngIf="password !== confirmPassword && confirmPassword" class="text-danger small mt-1">
+              Passwords must match
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" [disabled]="isLogin ? loginForm.invalid : registerForm.invalid"
+          class="btn btn-primary w-100 rounded-3 py-2 transition-all">
+          {{ isLogin ? "Login" : "Register" }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

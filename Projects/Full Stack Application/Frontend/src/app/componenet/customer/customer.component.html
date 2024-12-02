@@ -1,0 +1,230 @@
+<div class="container">
+  <h2>Customer Registration</h2>
+  <form [formGroup]="customerForm" (ngSubmit)="addOrUpdateCustomer()">
+      <div class="form-group">
+          <label>First Name</label>
+          <input type="text" formControlName="firstName" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('firstName')?.invalid && customerForm.get('firstName')?.touched">
+              First name is required and must be at least 3 characters long.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Middle Name</label>
+          <input type="text" formControlName="middleName" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('middleName')?.invalid && customerForm.get('middleName')?.touched">
+              Middle name is required and must be at least 3 characters long.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" formControlName="lastName" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('lastName')?.invalid && customerForm.get('lastName')?.touched">
+              Last name is required and must be at least 3 characters long.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" formControlName="dob" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('dob')?.invalid && customerForm.get('dob')?.touched">
+              Date of birth is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('email')?.invalid && customerForm.get('email')?.touched">
+              Valid email is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Primary Contact Number</label>
+          <input type="text" formControlName="primaryContactNo" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('primaryContactNo')?.invalid && customerForm.get('primaryContactNo')?.touched">
+              Valid primary contact number is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Secondary Contact Number</label>
+          <input type="text" formControlName="secondaryContactNo" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('secondaryContactNo')?.invalid && customerForm.get('secondaryContactNo')?.touched">
+              Valid secondary contact number is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Gender</label>
+          <select formControlName="gender" class="form-control">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+          <div class="text-danger" *ngIf="customerForm.get('gender')?.invalid && customerForm.get('gender')?.touched">
+              Gender is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Address Line 1</label>
+          <input type="text" formControlName="addressLine1" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('addressLine1')?.invalid && customerForm.get('addressLine1')?.touched">
+              Address Line 1 is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Address Line 2</label>
+          <input type="text" formControlName="addressLine2" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('city')?.invalid && customerForm.get('city')?.touched">
+              City is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>State</label>
+          <input type="text" formControlName="state" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('state')?.invalid && customerForm.get('state')?.touched">
+              State is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Zip Code</label>
+          <input type="number" formControlName="zipCode" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('zipCode')?.invalid && customerForm.get('zipCode')?.touched">
+              Zip Code is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Country</label>
+          <input type="text" formControlName="country" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('country')?.invalid && customerForm.get('country')?.touched">
+              Country is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Department</label>
+          <select formControlName="department" class="form-control">
+              <option value="">Select Department</option>
+              <option value="sales">Sales</option>
+              <option value="marketing">Marketing</option>
+              <option value="accounts">Accounts</option>
+              <option value="other">Other</option>
+          </select>
+          <div class="text-danger" *ngIf="customerForm.get('department')?.invalid && customerForm.get('department')?.touched">
+              Department is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Marital Status</label>
+          <select formControlName="maritalStatus" class="form-control">
+              <option value="">Select Marital Status</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widow">Widow</option>
+          </select>
+          <div class="text-danger" *ngIf="customerForm.get('maritalStatus')?.invalid && customerForm.get('maritalStatus')?.touched">
+              Marital Status is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Bank Name</label>
+          <input type="text" formControlName="bankName" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('bankName')?.invalid && customerForm.get('bankName')?.touched">
+              Bank Name is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Bank Branch</label>
+          <input type="text" formControlName="bankBranch" class="form-control" />
+          <div class="text-danger" *ngIf="customerForm.get('bankBranch')?.invalid && customerForm.get('bankBranch')?.touched">
+              Bank Branch is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Qualification</label>
+          <select formControlName="qualification" class="form-control">
+              <option value="">Select Qualification</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="graduate">Graduate</option>
+              <option value="other">Other</option>
+          </select>
+          <div class="text-danger" *ngIf="customerForm.get('qualification')?.invalid && customerForm.get('qualification')?.touched">
+              Qualification is required.
+          </div>
+      </div>
+      <div class="form-group my-3">
+          <label>
+              <input type="checkbox" formControlName="termsAccepted" />
+              Accept Terms and Conditions
+          </label>
+          <div class="text-danger" *ngIf="customerForm.get('termsAccepted')?.invalid && customerForm.get('termsAccepted')?.touched">
+              You must accept the terms and conditions.
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary me-3" [disabled]="customerForm.invalid">
+          {{ isEditing ? 'Update' : 'Register' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">
+          Reset
+      </button>
+  </form>
+
+  <h3 class="mt-4">Customer List</h3>
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Customer Id</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Last Name</th>
+              <th>Date of Birth</th>
+              <th>Address Line 1</th>
+              <th>Address Line 2</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip Code</th>
+              <th>Country</th>
+              <th>Email</th>
+              <th>Primary Contact Number</th>
+              <th>Secondary Contact Number</th>
+              <th>Gender</th>
+              <th>Department</th>
+              <th>Marital Status</th>
+              <th>Bank Name</th>
+              <th>Bank Branch</th>
+              <th>Qualification</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let customer of customers">
+              <td>{{customer.customerId}}</td>
+              <td>{{ customer.firstName }}</td>
+              <td>{{ customer.middleName }}</td>
+              <td>{{ customer.lastName }}</td>
+              <td>{{ customer.dob }}</td>
+              <td>{{ customer.addressLine1 }}</td>
+              <td>{{ customer.addressLine2 }}</td>
+              <td>{{ customer.city }}</td>
+              <td>{{ customer.state }}</td>
+              <td>{{ customer.zipCode }}</td>
+              <td>{{ customer.country }}</td>
+              <td>{{ customer.email }}</td>
+              <td>{{ customer.primaryContactNo }}</td>
+              <td>{{ customer.secondaryContactNo }}</td>
+              <td>{{customer.gender}}</td>
+              <td>{{ customer.department }}</td>
+              <td>{{ customer.maritalStatus }}</td>
+              <td>{{ customer.bankName }}</td>
+              <td>{{ customer.bankBranch }}</td>
+              <td>{{ customer.qualification }}</td>
+              <td>
+                  <button class="btn btn-warning" (click)="editCustomer(customer)">Edit</button>
+                  <button class="btn btn-danger" (click)="deleteCustomer(customer.customerId)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

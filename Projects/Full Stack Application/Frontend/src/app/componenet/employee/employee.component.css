@@ -1,0 +1,36 @@
+.container {
+    margin: 20px auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  .table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 10px;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #dee2e6;
+  }
+
+  .table th{
+    background-color: #343a40;
+    color: white;
+  }
+
+  .table td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  

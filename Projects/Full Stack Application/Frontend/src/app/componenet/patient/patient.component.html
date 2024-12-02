@@ -1,0 +1,226 @@
+<div class="container">
+  <h2>Patient Registration</h2>
+    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('firstName')?.invalid && patientForm.get('firstName')?.touched">
+          First name is required and must be at least 3 characters long.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Middle Name</label>
+        <input type="text" formControlName="middleName" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('middleName')?.invalid && patientForm.get('middleName')?.touched">
+          Middle name is required and must be at least 3 characters long.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('lastName')?.invalid && patientForm.get('lastName')?.touched">
+          Last name is required and must be at least 3 characters long.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" formControlName="dateOfBirth" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('dateOfBirth')?.invalid && patientForm.get('dateOfBirth')?.touched">
+          Date of birth is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select formControlName="gender" class="form-control">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="text-danger" *ngIf="patientForm.get('gender')?.invalid && patientForm.get('gender')?.touched">
+          Gender is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('email')?.invalid && patientForm.get('email')?.touched">
+          Valid email is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Primary Contact Number</label>
+        <input type="text" formControlName="primaryContactNumber" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('primaryContactNumber')?.invalid && patientForm.get('primaryContactNumber')?.touched">
+          Valid primary contact number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Secondary Contact Number</label>
+        <input type="text" formControlName="secondaryContactNumber" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('secondaryContactNumber')?.invalid && patientForm.get('secondaryContactNumber')?.touched">
+          Valid secondary contact number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Address Line 1</label>
+        <input type="text" formControlName="addressLine1" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('addressLine1')?.invalid && patientForm.get('addressLine1')?.touched">
+          Address Line 1 is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="addressLine2">Address Line 2</label>
+        <input type="text" id="addressLine2" formControlName="addressLine2" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" formControlName="city" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('city')?.invalid && patientForm.get('city')?.touched">
+          City is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>State</label>
+        <input type="text" formControlName="state" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('state')?.invalid && patientForm.get('state')?.touched">
+          State is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Zip Code</label>
+        <input type="text" formControlName="zipCode" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('zipCode')?.invalid && patientForm.get('zipCode')?.touched">
+          Zip Code is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Country</label>
+        <input type="text" formControlName="country" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('country')?.invalid && patientForm.get('country')?.touched">
+          Country is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Insurance Provider</label>
+        <input type="text" formControlName="insuranceProvider" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('insuranceProvider')?.invalid && patientForm.get('insuranceProvider')?.touched">
+          Insurance Provider is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Insurance Policy Number</label>
+        <input type="text" formControlName="insuranceProvider" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('insuranceProvider')?.invalid && patientForm.get('insuranceProvider')?.touched">
+          Insurance Policy Number is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Blood Group</label>
+        <select formControlName="bloodGroup" class="form-control">
+          <option value="">Select Blood Group</option>
+          <option value="o+ve">O+ve</option>
+          <option value="o-ve">O-ve</option>
+          <option value="a+ve">A+ve</option>
+          <option value="a-ve">A-ve</option>
+          <option value="b+ve">B+ve</option>
+          <option value="b-ve">B-ve</option>
+          <option value="ab+ve">AB+ve</option>
+          <option value="ab-ve">AB-ve</option>
+        </select>
+        <div class="text-danger" *ngIf="patientForm.get('bloodGroup')?.invalid && patientForm.get('bloodGroup')?.touched">
+          Blood Group is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Allergies</label>
+        <input type="text" formControlName="allergies" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('allergies')?.invalid && patientForm.get('allergies')?.touched">
+          Allergies are required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Current Medications</label>
+        <input type="text" formControlName="currentMedications" class="form-control" />
+        <div class="text-danger" *ngIf="patientForm.get('allergies')?.invalid && patientForm.get('allergies')?.touched">
+          Current Medications are required.
+        </div>
+      </div>
+     
+      <div class="form-group my-3">
+        <label>
+          <input type="checkbox" formControlName="termsAccepted" />
+          Accept Terms and Conditions
+        </label>
+        <div class="text-danger" *ngIf="patientForm.get('termsAccepted')?.invalid && patientForm.get('termsAccepted')?.touched">
+          You must accept the terms and conditions.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary me-3" [disabled]="patientForm.invalid">
+        {{ isEditMode ? 'Update' : 'Register' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm(patientForm)">
+        Reset
+      </button>
+    </form>
+
+    <h3 class="mt-4">Patient List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>Primary Contact Number</th>
+          <th>Secondary Contact Number</th>
+          <th>Address Line 1</th>
+          <th>Address Line 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip Code</th>
+          <th>Country</th>
+          <th>Insurance Provider</th>
+          <th>Insurance Policy Number</th>
+          <th>Blood Group</th>
+          <th>Allergies</th>
+          <th>Current Medications</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients; let i = index">
+          <td>{{ patient.firstName }}</td>
+          <td>{{ patient.middleName }}</td>
+          <td>{{ patient.lastName }}</td>
+          <td>{{ patient.dateOfBirth | date }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.email }}</td>
+          <td>{{ patient.primaryContactNumber }}</td>
+          <td>{{ patient.secondaryContactNumber }}</td>
+          <td>{{ patient.addressLine1 }}</td>
+          <td>{{ patient.addressLine2 }}</td>
+          <td>{{ patient.city }}</td>
+          <td>{{ patient.state }}</td>
+          <td>{{ patient.zipCode }}</td>
+          <td>{{ patient.country }}</td>
+          <td>{{ patient.insuranceProvider }}</td>
+          <td>{{ patient.insurancePolicyNumber }}</td>
+          <td>{{ patient.bloodGroup }}</td>
+          <td>{{ patient.allergies }}</td>
+          <td>{{ patient.currentMedications }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="editPatient(patient)">Edit</button>
+            <button class="btn btn-danger" (click)="deletePatient(patient.patientId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

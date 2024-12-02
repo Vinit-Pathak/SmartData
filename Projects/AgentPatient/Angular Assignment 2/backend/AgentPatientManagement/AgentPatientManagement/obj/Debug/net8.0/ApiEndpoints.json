@@ -1,0 +1,191 @@
+[
+  {
+    "ContainingType": "CustomerEmployeePatientManagement.Controllers.StateController",
+    "Method": "GetAllState",
+    "RelativePath": "all-state",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegisterLoginForget.Controllers.AgentController",
+    "Method": "RegisterAgent",
+    "RelativePath": "api/Agent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Domain.ModelDto.AgentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegisterLoginForget.Controllers.AgentController",
+    "Method": "GetAgentById",
+    "RelativePath": "api/Agent/get-agent-by-email/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerEmployeePatientManagement.Controllers.CountryController",
+    "Method": "GetAllCountry",
+    "RelativePath": "api/Country",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "AddPatient",
+    "RelativePath": "api/Patient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Domain.ModelDto.PatientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "UpdatePatientById",
+    "RelativePath": "api/Patient/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Domain.ModelDto.PatientDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "DeletePatientById",
+    "RelativePath": "api/Patient/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "GetActivePatient",
+    "RelativePath": "api/Patient/activePatients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "GetAllPatient",
+    "RelativePath": "api/Patient/allPatient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientEmployeePatientManagement.Controllers.PatientController",
+    "Method": "GetPatientByAgentId",
+    "RelativePath": "api/Patient/getActivePatientByAgentId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerEmployeePatientManagement.Controllers.StateController",
+    "Method": "GetAllStateByCountryId",
+    "RelativePath": "api/State/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegisterLoginForget.Controllers.AgentController",
+    "Method": "ChangePassword",
+    "RelativePath": "change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Domain.ModelDto.ChangeAgentPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegisterLoginForget.Controllers.AgentController",
+    "Method": "LoginAgent",
+    "RelativePath": "login-agent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Domain.ModelDto.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

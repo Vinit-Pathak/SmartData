@@ -1,0 +1,35 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="container mt-5">
+    <div formArrayName="forms">
+        <div *ngFor="let form of forms.controls; let i = index" [formGroupName]="i" class="card p-4 mb-4">
+            <h4 class="mb-3">{{ 'Form ' + (i + 1) }}</h4>
+
+            <div class="form-group">
+                <label for="userName" class="form-label">{{'User Name ' + (i+1) }}</label>
+                <input id="userName" formControlName="userName" placeholder="Enter User Name" class="form-control">
+            </div>
+
+            <div formArrayName="phoneNumbers" class="mb-3">
+                <div *ngFor="let phone of getPhoneNumbers(i).controls; let j = index" [formGroupName]="j"
+                    class="input-group mb-2">
+                    <div class="form-group w-100">
+                        <label for="phone" class="form-label mt-1">{{'Phone Number ' + (j + 1) }}</label>
+                        <div class="input-group">
+                            <input type="number" formControlName="phone" placeholder="Enter Phone Number"
+                                class="form-control">
+                            <button *ngIf="getPhoneNumbers(i).length > 1" type="button" class="btn btn-danger ms-2"
+                                (click)="removePhoneNumber(i, j)">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-outline-primary mb-3" (click)="addPhoneNumber(i)">Add Phone
+                Number</button>
+
+            <button type="button" class="btn btn-outline-danger" (click)="removeForm(i)">Remove Form</button>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-outline-success" (click)="addForm()">Add Form</button>
+    <button type="submit" class="btn btn-primary ms-2" >Submit</button>
+</form>

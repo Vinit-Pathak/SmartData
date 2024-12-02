@@ -1,0 +1,180 @@
+<div class="container-fluid">
+    <div class="row p-2 bg-warning-subtle">
+        <div class="col-6">
+            <h3>Employee Management</h3>
+        </div>
+        <div class="col-6 text-end">
+            <button type="button" class="btn btn-danger" (click)="onAdd()">Add Employee</button>
+        </div>
+    </div>
+
+    <div class="table table-bordered table-striped mt-1">
+        <thead>
+            <tr>
+                <th>Emp Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Primary Contact No</th>
+                <!-- <th>Secondary Contact No</th> -->
+                <th>Gender</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Department</th>
+                <th>Job Title</th>
+                <!-- <th>Salary</th> -->
+                <!-- <th>Status</th> -->
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of employees; track $index) {
+                <tr>
+                    <td>{{item.employeeId}}</td>
+                    <td>{{item.firstName}}</td>
+                    <td>{{item.lastName}}</td>
+                    <td>{{item.dob | date : 'dd-MM-yyyy' }}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.primaryContactNumber}}</td>
+                    <!-- <td>{{item.secondaryContactNumber}}</td> -->
+                    <td>{{item.gender}}</td>
+                    <td>{{item.city}}</td>
+                    <td>{{item.state}}</td>
+                    <td>{{item.department}}</td>
+                    <td>{{item.jobTitle}}</td>
+                    <!-- <td>{{item.salary}}</td> -->
+                    <!-- <td>{{item.isTermsAccepted}}</td> -->
+                    <td class="">
+                        <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+                        <button class="btn btn-danger" (click)="onDelete(item.employeeId)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal mt-4" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header bg-info">
+            @if(isEditing){
+                <h4 class="modal-title">Update Employee</h4>
+            }@else {
+                <h4 class="modal-title">Add Employee</h4>
+            }
+          <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()" ></button>
+        </div>
+  
+        <form [formGroup]="employeeForm" (ngSubmit)="OnSubmit()" >
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" formControlName="firstName" name="firstName" class="form-control"
+                            placeholder="First Name">
+                    </div>
+                    <!-- <div class="col-4">
+                        <input type="text" formControlName="middleName" name="middleName" class="form-control"
+                            placeholder="Middle Name">
+                    </div> -->
+                    <div class="col-6">
+                        <input type="text" formControlName="lastName" name="lastName" class="form-control"
+                            placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <input type="text" formControlName="email" name="email" class="form-control"
+                            placeholder="Email">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" formControlName="primaryContactNumber" name="primaryContactNumber" class="form-control"
+                            placeholder="Pri Mob No">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" formControlName="secondaryContactNumber" name="secondaryContactNumber" class="form-control"
+                            placeholder="Sec Mob No">
+                    </div>
+                </div>
+    
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <input type="date" formControlName="dob" name="dob" class="form-control"
+                            placeholder="Date of Birth">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" formControlName="gender" name="gender" class="form-control"
+                            placeholder="Gender">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" formControlName="salary" name="salary" class="form-control"
+                            placeholder="Salary">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <input type="text" formControlName="city" name="city" class="form-control"
+                            placeholder="City">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" formControlName="state" name="state" class="form-control"
+                            placeholder="State">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" formControlName="zipCode" name="zipCode" class="form-control"
+                            placeholder="Zip Code">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <input type="text" formControlName="department" name="department" class="form-control"
+                            placeholder="Department">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" formControlName="jobTitle" name="jobTitle" class="form-control"
+                            placeholder="Job Title">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <input type="date" formControlName="startDate" name="startDate" class="form-control"
+                            placeholder="Start Date">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" formControlName="employementType" name="employementType" class="form-control"
+                            placeholder="Employement Type">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="form-group form-check">
+                            <input type="checkbox" formControlName="isTermsAccepted" name="isTermsAccepted" class="form-check-input"
+                                placeholder="isTermsAccepted">
+                            <label> Terms & Conditions </label>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                @if (isEditing) {
+                    <button type="submit" [disabled]="this.employeeForm.invalid" class="btn btn-success" data-bs-dismiss="modal">Update</button>
+                }@else {
+                    <button type="submit" [disabled]="this.employeeForm.invalid" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+                }
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+            </div>
+            
+        </form>
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,97 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Assessment_5\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0587EE84-98E4-4E3B-8E9B-C7C773B6B861}|core\\core.csproj|d:\\assessment_5\\backend\\core\\app\\user\\command\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0587EE84-98E4-4E3B-8E9B-C7C773B6B861}|core\\core.csproj|solutionrelative:core\\app\\user\\command\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48652A76-21E0-4A58-B105-8E4793CAF168}|backend\\backend.csproj|d:\\assessment_5\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48652A76-21E0-4A58-B105-8E4793CAF168}|backend\\backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0587EE84-98E4-4E3B-8E9B-C7C773B6B861}|core\\core.csproj|d:\\assessment_5\\backend\\core\\app\\user\\query\\userloginquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0587EE84-98E4-4E3B-8E9B-C7C773B6B861}|core\\core.csproj|solutionrelative:core\\app\\user\\query\\userloginquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "D:\\Assessment_5\\backend\\core\\App\\User\\Command\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "core\\App\\User\\Command\\CreateUserCommand.cs",
+              "ToolTip": "D:\\Assessment_5\\backend\\core\\App\\User\\Command\\CreateUserCommand.cs",
+              "RelativeToolTip": "core\\App\\User\\Command\\CreateUserCommand.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T11:13:53.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserLoginQuery.cs",
+              "DocumentMoniker": "D:\\Assessment_5\\backend\\core\\App\\User\\Query\\UserLoginQuery.cs",
+              "RelativeDocumentMoniker": "core\\App\\User\\Query\\UserLoginQuery.cs",
+              "ToolTip": "D:\\Assessment_5\\backend\\core\\App\\User\\Query\\UserLoginQuery.cs",
+              "RelativeToolTip": "core\\App\\User\\Query\\UserLoginQuery.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T12:52:25.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Assessment_5\\backend\\backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Assessment_5\\backend\\backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCUAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T11:57:47.219Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

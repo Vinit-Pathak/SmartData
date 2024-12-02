@@ -1,0 +1,16 @@
+each process runs one application
+to run the code inside the application process use Thead
+Thread: A thread is a unit which executes the code(logic) under an application
+every application is by default having one thread to execute the program(logic) i.e main thread
+every application is by default a single threaded model
+
+Multi-Threading
+a process in which we can have multiple threads in our program
+execution takes place simultaneously
+advantage- maximum utilization of CPU resources.
+
+
+
+var data = _dbContext.students.FirstOrDefault(x => x.StudentId == id);
+var temp = _dbContext.studentCourseMappings.FirstOrDefault(x => x.CourseId == id);
+data.StudentCourseMappings.Add(temp);

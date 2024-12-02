@@ -1,0 +1,116 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Template Form</h1>
+    <p style="color: black;" class="bg-warning">While using ngModel in Form. An input inside form tags should necessarily have <b><i>name</i></b> attribute</p>
+    <p>{{currentRole}}</p>
+</div>
+<div class="row">
+    <div class="col-8">
+        <form class="row g-3" #form="ngForm">
+            <div class="col-md-4">
+                <label for="form-label">First Name</label>
+                <input #fname="ngModel" name="FirstName" required minlength="3" [(ngModel)]="studentObj.FirstName" type="text" class="form-label">
+                <div class="text-danger">
+                    @if ((fname.touched || fname.dirty)&&fname.errors?.['required']) {
+                        <span>This is required</span>   
+                    }
+                    @else if ((fname.touched || fname.dirty)&&fname.errors?.['minlength']) {
+                        <span>Minimum length should be 3</span>
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="form-label">Last Name</label>
+                <input name="LastName" #lname="ngModel" required minlength="3" [(ngModel)]="studentObj.LastName" type="text" class="form-label">
+                <div class="text-danger">
+                    @if ((lname.touched || lname.dirty)&&lname.errors?.['required']) {
+                        <span>This is required</span>   
+                    }
+                    @else if ((lname.touched || lname.dirty)&&lname.errors?.['minlength']) {
+                        <span>Minimum length should be 3</span>
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="form-label">Username</label>
+                <div class="input-group">
+                    <span class="input-group-text"><span>&#64;</span></span>
+                    <input #username="ngModel" required minlength="3" name="UserName" [(ngModel)]="studentObj.UserName" type="text" class="form-label">
+                    <div class="text-danger">
+                        @if ((username.touched || username.dirty)&&username.errors?.['required']) {
+                            <span>This is required</span>   
+                        }
+                        @else if ((username.touched || username.dirty)&&username.errors?.['minlength']) {
+                            <span>Minimum length should be 3</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label  for="form-label">City&nbsp;&nbsp; &nbsp;&nbsp;</label>
+                <input #city="ngModel" required minlength="3" name="City" [(ngModel)]="studentObj.City" type="text" class="form-label">
+                <div class="text-danger">
+                    @if ((city.touched || city.dirty)&&city.errors?.['required']) {
+                        <span>This is required</span>   
+                    }
+                    @else if ((city.touched || city.dirty)&&city.errors?.['minlength']) {
+                        <span>Minimum length should be 3</span>
+                    }
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="form-label">State</label>
+                <select #state="ngModel" required name="State" [(ngModel)]="studentObj.State" class="form-select">
+                    <option selected disabled value="">choose...</option>
+                    <option>Maharashtra</option>
+                    <option>Goa</option>
+                    <option>Punjab</option>
+                </select>    
+                <div class="text-danger">
+                    @if ((state.touched || state.dirty)&&state.errors?.['required']) {
+                        <span>This is required</span>   
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="form-label">Zip Code</label>
+                <input  #ZipCode="ngModel" required [(ngModel)]="studentObj.ZipCode" name="ZipCode" type="text" class="form-label">
+                <div class="text-danger">
+                    @if ((ZipCode.touched || ZipCode.dirty)&&ZipCode.errors?.['required']) {
+                        <span>This is required</span>   
+                    }
+                    @else if ((ZipCode.touched || ZipCode.dirty)&&ZipCode.errors?.['minlength']) {
+                        <span>Minimum length should be 3</span>
+                    }
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input #isAcceptTerms="ngModel"  required id="invalidCheck" [(ngModel)]="studentObj.isAcceptTerms" name="isAcceptTerms" type="checkbox" class="form-check-input">
+                    <label for="invalidCheck" class="form-check-label">
+                        Agree to terms and condition
+                    </label>
+                    <div class="text-danger">
+                        @if ((isAcceptTerms.touched || isAcceptTerms.dirty)&&isAcceptTerms.errors?.['required']) {
+                            <span>This is required</span>   
+                        }
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <button class="btn btn-secondary" (click)="onReset()" type="button">Reset Form</button>
+                @if(form.invalid){
+                    <button class="btn btn-primary mx-2" disabled (click)="onSubmit()" type="button">Submit</button>
+                }
+                @else if (form.valid) {
+                    <button class="btn btn-primary mx-2" (click)="onSubmit()" type="button">Submit</button>
+                }
+                
+            </div>
+        </form>
+    </div>
+    <div *ngIf="formValue" class="col-4">
+        {{formValue | json}}
+    </div>
+</div>

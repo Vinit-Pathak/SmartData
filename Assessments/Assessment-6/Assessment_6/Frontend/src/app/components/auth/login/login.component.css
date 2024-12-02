@@ -1,0 +1,234 @@
+/* General Layout */
+.login-register {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem; 
+}
+
+.card {
+  background: linear-gradient(145deg, #e0eafc, #f9f9f9); 
+  border-radius: 1.75rem; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h5.card-title {
+  font-size: 1.8rem; 
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+button.active {
+  background: linear-gradient(145deg, #007bff, #0056b3); 
+  border-color: #0d6efd;
+  transform: translateY(-2px); 
+}
+
+button {
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #0056b3, #007bff); 
+  color: white;
+  border-color: #0056b3;
+  transform: translateY(-2px); 
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.form-control {
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+  background-color: #fff;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border-color: #dc3545; 
+  background-color: #f8d7da; 
+}
+
+.text-danger {
+  font-size: 0.875rem;
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.text-danger small {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+select.ng-touched.ng-invalid {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 576px) {
+  .card-body {
+      padding: 1.5rem;
+  }
+
+  .btn {
+      font-size: 0.95rem;
+      padding: 0.75rem;
+  }
+
+  .form-control {
+      font-size: 0.95rem;
+      padding: 0.75rem;
+  }
+
+  .form-label {
+      font-size: 0.9rem;
+  }
+
+  .card-title {
+      font-size: 1.5rem;
+  }
+
+  .login-register {
+      max-width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+
+/* Responsive Design for Tablets (Medium Devices) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .login-register {
+      max-width: 90%;
+  }
+
+  .card-body {
+      padding: 2rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+
+  .form-control {
+      font-size: 1rem;
+  }
+
+  .form-label {
+      font-size: 1rem;
+  }
+
+  .card-title {
+      font-size: 1.5rem;
+  }
+}
+
+/* Large Screen Styling */
+@media (min-width: 992px) {
+  .login-register {
+      max-width: 480px;
+  }
+
+  .card-body {
+      padding: 3rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+
+  .form-control {
+      font-size: 1rem;
+  }
+
+  .form-label {
+      font-size: 1rem;
+  }
+
+  .card-title {
+      font-size: 1.6rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+button[type="button"]:disabled {
+  background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.2);
+}
+
+label[for="registerIsActive"] {
+  font-size: 0.95rem;
+  color: #555;
+  display: inline-block;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+label[for="registerIsActive"]:hover {
+  color: #007bff;
+}

@@ -1,0 +1,250 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Full Stack Application\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|d:\\full stack application\\backend\\core\\app\\country\\query\\getallcountriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|solutionrelative:core\\app\\country\\query\\getallcountriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|d:\\full stack application\\backend\\core\\app\\user\\command\\usersignupcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\usersignupcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|d:\\full stack application\\backend\\core\\app\\employee\\command\\createemployeecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|solutionrelative:core\\app\\employee\\command\\createemployeecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|d:\\full stack application\\backend\\domain\\dto\\usersignupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\usersignupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|d:\\full stack application\\backend\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|d:\\full stack application\\backend\\domain\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C97E5BA-EE64-4E6C-B983-E35C3E7A590F}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|d:\\full stack application\\backend\\backend\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|d:\\full stack application\\backend\\core\\app\\user\\command\\userlogincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\userlogincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|d:\\full stack application\\backend\\backend\\controllers\\usersignupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\usersignupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|d:\\full stack application\\backend\\backend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CF36CC-9A4C-4FAC-9A6C-65BD123F9E18}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|d:\\full stack application\\backend\\core\\app\\user\\query\\getalluserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A609845-5EE4-4C1B-BE89-8533657C89FA}|Core\\Core.csproj|solutionrelative:core\\app\\user\\query\\getalluserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46B6C378-D92D-46DD-8032-B040FFD49550}|Infrastructure\\Infrastructure.csproj|d:\\full stack application\\backend\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46B6C378-D92D-46DD-8032-B040FFD49550}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllCountriesQuery.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Core\\App\\Country\\Query\\GetAllCountriesQuery.cs",
+              "RelativeDocumentMoniker": "Core\\App\\Country\\Query\\GetAllCountriesQuery.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Core\\App\\Country\\Query\\GetAllCountriesQuery.cs",
+              "RelativeToolTip": "Core\\App\\Country\\Query\\GetAllCountriesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T09:32:29.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserSignUpDto.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Domain\\DTO\\UserSignUpDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\UserSignUpDto.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Domain\\DTO\\UserSignUpDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\UserSignUpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T06:14:15.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserLoginController.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\UserLoginController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\UserLoginController.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\UserLoginController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\UserLoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T05:30:51.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserLoginCommand.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Command\\UserLoginCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\UserLoginCommand.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Command\\UserLoginCommand.cs",
+              "RelativeToolTip": "Core\\App\\User\\Command\\UserLoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T05:26:26.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Domain\\DTO\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\UserLoginDto.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Domain\\DTO\\UserLoginDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T05:25:37.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAllUserQuery.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Query\\GetAllUserQuery.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Query\\GetAllUserQuery.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Query\\GetAllUserQuery.cs",
+              "RelativeToolTip": "Core\\App\\User\\Query\\GetAllUserQuery.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T05:05:37.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserSignUpCommand.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Command\\UserSignUpCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\UserSignUpCommand.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Core\\App\\User\\Command\\UserSignUpCommand.cs",
+              "RelativeToolTip": "Core\\App\\User\\Command\\UserSignUpCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:56:49.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\AppDbContext.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:45:57.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserSignUpController.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\UserSignUpController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\UserSignUpController.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\UserSignUpController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\UserSignUpController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:41:40.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Domain\\models\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\models\\User.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Domain\\models\\User.cs",
+              "RelativeToolTip": "Domain\\models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:35:55.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateEmployeeCommand.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Core\\App\\Employee\\Command\\CreateEmployeeCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\Employee\\Command\\CreateEmployeeCommand.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Core\\App\\Employee\\Command\\CreateEmployeeCommand.cs",
+              "RelativeToolTip": "Core\\App\\Employee\\Command\\CreateEmployeeCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T09:50:12.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\Full Stack Application\\Backend\\Backend\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T07:43:42.537Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

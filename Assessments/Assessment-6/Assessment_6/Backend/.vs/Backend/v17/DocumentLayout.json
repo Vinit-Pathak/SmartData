@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\core\\app\\user\\command\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA88485B-A25F-4136-BE73-0D84BD125FF9}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\core\\app\\user\\command\\sendotpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\sendotpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEEDCA2-4A3E-4A1F-82B6-58FCA26B5A32}|Domain\\Domain.csproj|d:\\assessments\\assessment-6\\assessment_6\\backend\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CEEDCA2-4A3E-4A1F-82B6-58FCA26B5A32}|Domain\\Domain.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\App\\User\\Command\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\UpdateUserCommand.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\App\\User\\Command\\UpdateUserCommand.cs",
+              "RelativeToolTip": "Core\\App\\User\\Command\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T09:32:14.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wCcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:41:08.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv2EAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:05:15.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwHoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:28:03.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\User.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Domain\\User.cs",
+              "RelativeToolTip": "Domain\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T04:43:54.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SendOtpCommand.cs",
+              "DocumentMoniker": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\App\\User\\Command\\SendOtpCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\SendOtpCommand.cs",
+              "ToolTip": "D:\\Assessments\\Assessment-6\\Assessment_6\\Backend\\Core\\App\\User\\Command\\SendOtpCommand.cs",
+              "RelativeToolTip": "Core\\App\\User\\Command\\SendOtpCommand.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:58:00.458Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

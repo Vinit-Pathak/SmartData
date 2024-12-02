@@ -1,0 +1,970 @@
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\appsettings.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.staticwebassets.endpoints.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.exe
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.deps.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\App.Core.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Domain.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\App.Core.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Domain.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.sourcelink.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\Register.F1487456.Up2Date
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\ref\RegisterLoginForget.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mapster.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\MediatR.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Humanizer.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\smartDataLearning\assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\appsettings.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.exe
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.deps.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Humanizer.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mapster.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\MediatR.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\App.Core.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\App.Core.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.sourcelink.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\Register.F1487456.Up2Date
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+C:\Users\karanmandve\Desktop\karan mandve notes\Assignment\Angular Assignment\login project\backend\RegisterLoginForget\RegisterLoginForget\obj\Debug\net8.0\ref\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.exe
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.deps.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Humanizer.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\Register.F1487456.Up2Date
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+C:\Users\karanmandve\Desktop\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\ref\RegisterLoginForget.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.exe
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.deps.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Humanizer.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\Register.F1487456.Up2Date
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.pdb
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\ref\RegisterLoginForget.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\patha\Downloads\Angular Assignment 2\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cs
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.Development.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.exe
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.deps.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Core.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Identity.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Humanizer.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.Core.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.CodeDom.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.dll
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.pdb
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.build.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.development.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\Register.F1487456.Up2Date
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+D:\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\ref\RegisterLoginForget.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.AssemblyReference.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfoInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.AssemblyInfo.cs
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.csproj.CoreCompileInputs.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cs
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.MvcApplicationPartsAssemblyInfo.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\refint\RegisterLoginForget.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.Development.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\appsettings.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.exe
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.deps.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.runtimeconfig.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\RegisterLoginForget.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Core.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Azure.Identity.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Humanizer.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mapster.Core.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.CodeDom.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.dll
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Infrastructure.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\App.Core.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\bin\Debug\net8.0\Domain.pdb
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.build.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.development.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.RegisterLoginForget.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.build.RegisterLoginForget.props
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegisterLoginForget.props
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegisterLoginForget.props
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\scopedcss\bundle\RegisterLoginForget.styles.css
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\Register.F1487456.Up2Date
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\RegisterLoginForget.genruntimeconfig.cache
+D:\Angular Projects\AgentPatient\Angular Assignment 2\backend\AgentPatientManagement\AgentPatientManagement\obj\Debug\net8.0\ref\RegisterLoginForget.dll

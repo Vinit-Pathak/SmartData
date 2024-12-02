@@ -1,0 +1,18 @@
+/* Custom Navbar Styles */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link.active {
+  background-color: rgba(0, 123, 255, 0.1); 
+  border-radius: 5px;
+}
+
+.navbar-brand i {
+  font-size: 1.5rem; 
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.25);
+}

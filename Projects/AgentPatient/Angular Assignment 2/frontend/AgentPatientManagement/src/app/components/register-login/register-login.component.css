@@ -1,0 +1,17 @@
+.loginRegister{
+  padding-top: 5rem;
+}
+.card {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  .btn.active {
+    background-color: #007bff; /* Primary color */
+    color: white;
+  }
+  .text-danger {
+    font-size: 0.9rem;
+  }
+  
