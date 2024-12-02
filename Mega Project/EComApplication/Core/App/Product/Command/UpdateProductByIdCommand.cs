@@ -40,7 +40,6 @@ namespace Core.App.Product.Command
             product.PurchasePrice = request.Product.PurchasePrice;
             product.PurchaseDate = request.Product.PurchaseDate;
             product.Stock = request.Product.Stock;
-            product.UpdatedAt = DateTime.Now;
 
             await _context.SaveChangesAsync(cancellationToken);
             return true;

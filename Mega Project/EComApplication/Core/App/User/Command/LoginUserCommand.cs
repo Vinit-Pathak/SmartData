@@ -69,7 +69,7 @@ namespace Core.App.User.Command
                 _configuration["Jwt:Issuer"],
                 _configuration["Jwt:Audience"],
                 claims,
-                expires: DateTime.UtcNow.AddMinutes(30),
+                expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: creds
             );
 

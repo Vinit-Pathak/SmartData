@@ -362,3 +362,4 @@ C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\EComApplicat
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\EComApplication\obj\Debug\net8.0\EComApplication.pdb
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\EComApplication\obj\Debug\net8.0\EComApplication.genruntimeconfig.cache
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\EComApplication\obj\Debug\net8.0\ref\EComApplication.dll
+C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\EComApplication\obj\Debug\net8.0\EComApplication.sourcelink.json

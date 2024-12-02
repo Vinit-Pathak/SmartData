@@ -16,8 +16,6 @@ namespace Core.Models
         public float PurchasePrice { get; set; }
         public DateTime PurchaseDate { get; set; }
         public int Stock { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
         public bool Deleted { get; set; }
     }
 }

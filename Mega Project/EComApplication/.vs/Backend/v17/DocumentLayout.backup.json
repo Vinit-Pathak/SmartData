@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\user\\command\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\product\\command\\updateproductbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\product\\command\\updateproductbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{699B8200-1E83-4C59-89A2-2F161221418A}|EComApplication\\EComApplication.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\ecomapplication\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{699B8200-1E83-4C59-89A2-2F161221418A}|EComApplication\\EComApplication.csproj|solutionrelative:ecomapplication\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEEDCA2-4A3E-4A1F-82B6-58FCA26B5A32}|Domain\\Domain.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEEDCA2-4A3E-4A1F-82B6-58FCA26B5A32}|Domain\\Domain.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\user\\command\\sendotpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\sendotpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\user\\command\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\user\\command\\forgetpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\forgetpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|c:\\users\\vinitpathak\\desktop\\smartdata\\mega project\\ecomapplication\\core\\app\\user\\command\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DFA3C70-720A-44F5-BFF1-A30F7882A24F}|Core\\Core.csproj|solutionrelative:core\\app\\user\\command\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,9 +44,35 @@
               "RelativeDocumentMoniker": "Core\\App\\User\\Command\\LoginUserCommand.cs",
               "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\LoginUserCommand.cs",
               "RelativeToolTip": "Core\\App\\User\\Command\\LoginUserCommand.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAewFYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:37:15.715Z",
+              "WhenOpened": "2024-12-02T12:52:42.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateProductByIdCommand.cs",
+              "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\Product\\Command\\UpdateProductByIdCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\Product\\Command\\UpdateProductByIdCommand.cs",
+              "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\Product\\Command\\UpdateProductByIdCommand.cs",
+              "RelativeToolTip": "Core\\App\\Product\\Command\\UpdateProductByIdCommand.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T12:49:42.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\RegisterUserCommand.cs",
+              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\RegisterUserCommand.cs",
+              "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\RegisterUserCommand.cs",
+              "RelativeToolTip": "Core\\App\\User\\Command\\RegisterUserCommand.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T12:45:24.258Z",
               "EditorCaption": ""
             },
             {
@@ -79,33 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\User.cs",
-              "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Domain\\User.cs",
-              "RelativeToolTip": "Domain\\User.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:21:59.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SendOtpCommand.cs",
-              "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\SendOtpCommand.cs",
-              "RelativeDocumentMoniker": "Core\\App\\User\\Command\\SendOtpCommand.cs",
-              "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\SendOtpCommand.cs",
-              "RelativeToolTip": "Core\\App\\User\\Command\\SendOtpCommand.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAcwC0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:46:27.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ChangePasswordCommand.cs",
               "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\ChangePasswordCommand.cs",
               "RelativeDocumentMoniker": "Core\\App\\User\\Command\\ChangePasswordCommand.cs",
@@ -113,11 +113,12 @@
               "RelativeToolTip": "Core\\App\\User\\Command\\ChangePasswordCommand.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T06:37:59.7Z"
+              "WhenOpened": "2024-12-02T06:37:59.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ForgetPasswordCommand.cs",
               "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\Core\\App\\User\\Command\\ForgetPasswordCommand.cs",
               "RelativeDocumentMoniker": "Core\\App\\User\\Command\\ForgetPasswordCommand.cs",
@@ -129,13 +130,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\EComApplication\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "EComApplication\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\vinitpathak\\Desktop\\SmartData\\Mega Project\\EComApplication\\EComApplication\\Controllers\\UserController.cs",
               "RelativeToolTip": "EComApplication\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAASwCwAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAArwBkAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T06:03:28.197Z",
               "EditorCaption": ""

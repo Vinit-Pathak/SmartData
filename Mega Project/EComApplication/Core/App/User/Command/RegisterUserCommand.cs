@@ -25,7 +25,20 @@ namespace Core.App.User.Command
         }
         public async Task<bool> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
+            if (request.register == null)
+            {
+                // Handle error, for example by returning false or throwing a specific exception
+                return false;
+            }
+
             var user = request.register;
+
+            if (user.DateOfBirth == null)
+            {
+                // Handle error for missing DateOfBirth
+                return false;
+            }
+
             var userExist = await _context.Set<Domain.User>().Where(x => x.Email == user.Email).FirstOrDefaultAsync();
 
             if (userExist != null)
@@ -33,16 +46,15 @@ namespace Core.App.User.Command
                 return false;
             }
 
-            //Username
+            // Generate username
             string newDOB = user.DateOfBirth.ToString("ddMMyy");
             string username = $"EC_{user.LastName.ToUpper()}{user.FirstName[0].ToString().ToUpper()}{newDOB}";
-
 
             // Generate Random Password
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             string password = new string(Enumerable.Repeat(chars, 8).Select(s => s[new Random().Next(s.Length)]).ToArray());
 
-            if (userExist.UserName == username)
+            if (userExist != null && userExist.UserName == username)
             {
                 username = $"{username}_1";
             }
@@ -74,8 +86,9 @@ namespace Core.App.User.Command
             return true;
         }
 
-        
 
-        
+
+
+
     }
 }

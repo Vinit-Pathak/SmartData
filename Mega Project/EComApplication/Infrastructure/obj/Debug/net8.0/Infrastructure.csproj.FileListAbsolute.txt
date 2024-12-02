@@ -36,3 +36,4 @@ C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Infrastructu
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

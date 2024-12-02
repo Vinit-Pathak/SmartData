@@ -32,3 +32,4 @@ C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Core\obj\Deb
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Core\obj\Debug\net8.0\Core.pdb
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
 C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Core\obj\Debug\net8.0\ref\Core.dll
+C:\Users\vinitpathak\Desktop\SmartData\Mega Project\EComApplication\Core\obj\Debug\net8.0\Core.sourcelink.json

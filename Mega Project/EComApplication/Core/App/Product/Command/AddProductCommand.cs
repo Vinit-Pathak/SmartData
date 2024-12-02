@@ -26,7 +26,7 @@ namespace Core.App.Product.Command
         public async Task<object> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             var product = request.Product;
-            if (product.SellingPrice <= product.PurchasePrice)
+            if (product.SellingPrice < product.PurchasePrice)
             {
                 return new { Message = "Selling Price must be greater than Purchase Price" };
             }
