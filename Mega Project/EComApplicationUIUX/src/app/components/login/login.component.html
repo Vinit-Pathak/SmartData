@@ -1,0 +1,484 @@
+<div class="container mt-5 pb-5 login-register">
+  <div class="card shadow-lg rounded-4">
+    <div class="card-body p-4">
+      <h5 class="card-title text-center mb-4">User Authentication</h5>
+
+      <div class="text-center mb-4">
+        <button
+          class="btn btn-outline-primary me-3 rounded-pill px-4 py-2"
+          (click)="toggleForm()"
+          [ngClass]="{ active: isLogin }"
+        >
+          Login
+        </button>
+        <button
+          class="btn btn-outline-primary rounded-pill px-4 py-2"
+          (click)="toggleForm()"
+          [ngClass]="{ active: !isLogin }"
+        >
+          Register
+        </button>
+      </div>
+
+      <form
+        [formGroup]="isLogin ? loginForm : registerForm"
+        (ngSubmit)="isLogin ? onLoginSubmit() : onRegisterSubmit()"
+      >
+        <!-- Login Form -->
+        <div *ngIf="isLogin">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="username"
+              formControlName="userName"
+              placeholder="Enter your username"
+              required
+            />
+            <div
+              *ngIf="
+                loginForm.get('userName')?.invalid &&
+                loginForm.get('userName')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              Invalid Username
+            </div>
+          </div>
+
+          <div class="mb-3 position-relative">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input
+              [type]="showPassword ? 'text' : 'password'"
+              class="form-control rounded-3"
+              id="loginPassword"
+              formControlName="password"
+              placeholder="Enter your password"
+              required
+            />
+            <i
+              class="bi"
+              [ngClass]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"
+              (click)="togglePasswordVisibility()"
+              style="
+                position: absolute;
+                right: 14px;
+                top: 54px;
+                cursor: pointer;
+              "
+            ></i>
+            <div
+              *ngIf="
+                loginForm.get('password')?.invalid &&
+                loginForm.get('password')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              Password is required
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="role" class="form-label">Usertype</label>
+            <select
+              class="form-control rounded-3"
+              id="userType"
+              formControlName="userType"
+              required
+            >
+              <option value="" disabled>Select Usertype</option>
+              <option [value]="UserType.Admin">Admin</option>
+              <option [value]="UserType.Customer">Customer</option>
+            </select>
+            <div
+              *ngIf="
+                loginForm.get('userType')?.invalid &&
+                loginForm.get('userType')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              UserType is required
+            </div>
+          </div>
+
+          <div class="text-end mb-4">
+            <a
+              href="javascript:void(0)"
+              (click)="openForgotPassword()"
+              class="text-primary"
+            >
+              Forgot Password?
+            </a>
+          </div>
+
+          <div *ngIf="otpSent" class="mb-3">
+            <label for="otp" class="form-label">Enter OTP</label>
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="otp"
+              formControlName="otp"
+              placeholder="Enter OTP"
+              required
+            />
+            <div
+              *ngIf="
+                loginForm.get('otp')?.invalid && loginForm.get('otp')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              OTP is required
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-secondary w-100 rounded-3 py-2 mb-3"
+            (click)="sendOtp()"
+            [disabled]="
+              loginForm.get('userName')?.invalid ||
+              loginForm.get('password')?.invalid ||
+              loginForm.get('userType')?.invalid ||
+              countdown > 0
+            "
+          >
+            {{ countdown > 0 ? "Resend OTP (" + countdown + "s)" : "Send OTP" }}
+          </button>
+        </div>
+
+        <!-- Register Form -->
+        <div *ngIf="!isLogin" class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="registerFirstName" class="form-label"
+                >First Name</label
+              >
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="registerFirstName"
+                formControlName="firstName"
+                placeholder="Enter your first name"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('firstName')?.invalid &&
+                  registerForm.get('firstName')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                First Name is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerLastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="registerLastName"
+                formControlName="lastName"
+                placeholder="Enter your last name"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('lastName')?.invalid &&
+                  registerForm.get('lastName')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Last Name is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control rounded-3"
+                id="registerEmail"
+                formControlName="email"
+                placeholder="Enter your email"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('email')?.invalid &&
+                  registerForm.get('email')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Invalid email address
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerMobile" class="form-label">Mobile</label>
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="registerMobile"
+                formControlName="mobile"
+                placeholder="Enter your mobile number"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('mobile')?.invalid &&
+                  registerForm.get('mobile')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Mobile number is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerCountry" class="form-label">Country</label>
+              <input
+                type="number"
+                class="form-control rounded-3"
+                id="registerCountry"
+                formControlName="country"
+                placeholder="Enter your country"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('country')?.invalid &&
+                  registerForm.get('country')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Country is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerZipCode" class="form-label">Zip Code</label>
+              <input
+                type="number"
+                class="form-control rounded-3"
+                id="registerZipCode"
+                formControlName="zipCode"
+                placeholder="Enter your zip code"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('zipCode')?.invalid &&
+                  registerForm.get('zipCode')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Zip Code is required
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="registerUserType" class="form-label">User Type</label>
+              <select
+                class="form-control rounded-3"
+                id="registerUserType"
+                formControlName="userType"
+                required
+              >
+                <option value="" disabled>Select User Type</option>
+                <option [value]="UserType.Admin">Admin</option>
+                <option [value]="UserType.Customer">Customer</option>
+              </select>
+              <div
+                *ngIf="
+                  registerForm.get('userType')?.invalid &&
+                  registerForm.get('userType')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                User Type is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerProfileImage" class="form-label"
+                >Profile Image</label
+              >
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="registerProfileImage"
+                formControlName="profileImage"
+                placeholder="Enter profile image URL"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('profileImage')?.invalid &&
+                  registerForm.get('profileImage')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Profile Image is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerAddress" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="registerAddress"
+                formControlName="address"
+                placeholder="Enter your address"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('address')?.invalid &&
+                  registerForm.get('address')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Address is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerDateOfBirth" class="form-label"
+                >Date of Birth</label
+              >
+              <input
+                type="date"
+                class="form-control rounded-3"
+                id="registerDateOfBirth"
+                formControlName="dateOfBirth"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('dateOfBirth')?.invalid &&
+                  registerForm.get('dateOfBirth')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Date of Birth is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="registerState" class="form-label">State</label>
+              <input
+                type="number"
+                class="form-control rounded-3"
+                id="registerState"
+                formControlName="state"
+                placeholder="Enter your state"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.get('state')?.invalid &&
+                  registerForm.get('state')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                State is required
+              </div>
+            </div>
+
+            <div class="form-check mt-3">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="registerIsActive"
+                formControlName="isActive"
+              />
+              <label for="registerIsActive" class="form-check-label"
+                >I agree to the Terms & Conditions</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="isLogin ? loginForm.invalid : registerForm.invalid"
+          class="btn btn-primary w-100 rounded-3 py-2"
+        >
+          {{ isLogin ? "Login" : "Register" }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div id="overlay" class="overlay"></div>
+
+<!-- Forgot Password Modal -->
+<div
+  class="modal"
+  id="forgotPasswordModal"
+  tabindex="-1"
+  aria-labelledby="forgotPasswordModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="forgotPasswordModalLabel">
+          Forgot Password
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeForgotPassword()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          [formGroup]="forgotPasswordForm"
+          (ngSubmit)="onForgotPasswordSubmit()"
+        >
+          <div class="mb-3">
+            <label for="forgotPasswordEmail" class="form-label"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              class="form-control rounded-3"
+              id="forgotPasswordEmail"
+              formControlName="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div
+              *ngIf="
+                forgotPasswordForm.get('email')?.invalid &&
+                forgotPasswordForm.get('email')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              Invalid email address
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 rounded-3 py-2"
+            [disabled]="forgotPasswordForm.invalid"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

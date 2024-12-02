@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand custom-navbar-brand">EComApplication</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link custom-nav-link">
+            <i class="fas fa-store"></i> Profile
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="userRole==1">
+          <a class="nav-link custom-nav-link">
+            <i class="fas fa-users"></i> Product
+          </a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <a class="dropdown-toggle d-flex align-items-center text-decoration-none" role="button"
+          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="default.png" alt="User" class="rounded-circle custom-profile-img" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+          <li>
+            <a class="dropdown-item" (click)="openUpdateProfileModal()">Update Profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="openChangePasswordModal()">Change Password</a>
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <!-- <button class="dropdown-item" (click)="logout('manual')">Logout</button> -->
+            <button class="dropdown-item" (click)="logout('manual')">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+
+  
+  <router-outlet></router-outlet>
+  
