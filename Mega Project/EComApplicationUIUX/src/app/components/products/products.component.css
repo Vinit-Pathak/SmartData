@@ -1,4 +1,4 @@
-/* General Styles */
+
 .main-container {
   position: relative;
   padding: 20px;
@@ -16,7 +16,7 @@
 
 
 
-/* Form Overlay */
+
 .update-form-overlay {
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@
   z-index: 100;
 }
 
-/* Form Container */
+
 .update-form-container {
   max-width: 800px;
   margin: auto;
@@ -47,13 +47,13 @@
   margin-bottom: 24px;
 }
 
-/* Fade-in effect */
+
 .update-form-container.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Header Styling */
+
 .form-header h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
@@ -62,14 +62,14 @@
   margin-bottom: 20px;
 }
 
-/* Label Styling */
+
 .form-label {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
 }
 
-/* Input Styling */
+
 .form-control {
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
@@ -79,13 +79,13 @@
   transition: all 0.3s ease;
 }
 
-/* Input Focus */
+
 .form-control:focus {
   border-color: #3498db;
   box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
 }
 
-/* Button Styling */
+
 .btn-primary {
   background-color: #3498db;
   border: none;
@@ -97,17 +97,17 @@
   transition: all 0.3s ease;
 }
 
-/* Disabled Button Styling */
+
 .btn-primary:disabled {
   background-color: #bdc3c7;
 }
 
-/* Button Hover Effect */
+
 .btn-primary:hover {
   background-color: #2980b9;
 }
 
-/* Form Layout: Two-column Grid */
+
 .row {
   display: flex;
   gap: 20px;
@@ -117,19 +117,19 @@
   flex: 1;
 }
 
-/* Responsiveness */
+
 @media (max-width: 768px) {
   .col-md-6 {
       width: 100%;
   }
 }
 
-/* Additional Button Styles */
+
 .product-card-actions .btn {
   margin: 5px;
 }
 
-/* Product Card */
+
 .product-card {
   background: #ffffff;
   border-radius: 12px;
@@ -160,7 +160,7 @@
   margin-top: 15px;
 }
 
-/* Alert Styling for No Data */
+
 .alert-info {
   background-color: #f39c12;
   color: white;
@@ -170,7 +170,7 @@
   text-align: center;
 }
 
-/* Form Validation Errors */
+
 .form-control.is-invalid {
   border-color: #e74c3c;
   box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
@@ -181,7 +181,7 @@
   font-size: 0.875rem;
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 576px) {
   .form-control {
       font-size: 0.9rem;

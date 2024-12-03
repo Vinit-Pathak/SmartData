@@ -17,11 +17,12 @@
             <input
               type="text"
               class="form-control"
-              id="productName"
+              id="updateProductName"
               formControlName="productName"
               placeholder="Enter product name"
               required
             />
+            
           </div>
   
           <div class="form-group">
@@ -108,7 +109,7 @@
             />
           </div>
   
-          <div class="form-group form-check">
+          <!-- <div class="form-group form-check">
             <input
               type="checkbox"
               class="form-check-input"
@@ -117,7 +118,7 @@
               required
             />
             <label for="isDeleted" class="form-check-label">IsDeleted</label>
-          </div>
+          </div> -->
         </div>
   
         <button
@@ -160,7 +161,7 @@
               />
             </div>
   
-            <!-- <div class="form-group">
+            <div class="form-group">
               <label for="productCode" class="form-label">Product Code</label>
               <input
                 type="text"
@@ -170,7 +171,7 @@
                 placeholder="Enter product code"
                 required
               />
-            </div> -->
+            </div>
   
             <div class="form-group">
               <label for="brand" class="form-label">Brand</label>
@@ -246,7 +247,7 @@
               />
             </div>
   
-            <div class="form-group form-check">
+            <!-- <div class="form-group form-check">
               <input
                 type="checkbox"
                 class="form-check-input"
@@ -254,7 +255,7 @@
                 formControlName="isDeleted"
               />
               <label for="isDeleted" class="form-check-label">isDeleted</label>
-            </div>
+            </div> -->
           </div>
         </div>
   
@@ -280,6 +281,7 @@
         <div class="product-card col-md-3 mt-2" *ngFor="let product of products; let i = index">
           <div class="product-card-body">
             <h4>{{ product.productName }}</h4>
+            <img [src]="product.productImage" alt="{{ product.productName }}" class="img-fluid">
             <p>Code: {{ product.productCode }}</p>
             <p>Category: {{ product.category }}</p>
             <p>Brand: {{ product.brand }}</p>

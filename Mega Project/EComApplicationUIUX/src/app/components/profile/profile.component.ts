@@ -31,9 +31,9 @@ export class ProfileComponent {
 
 
   loadUserProfile() {
-    const id = sessionStorage.getItem('id');
-    if (id) {
-      this.userService.getUserById(id).subscribe({
+    const email = sessionStorage.getItem('email');
+    if (email) {
+      this.userService.getUserByEmail(email).subscribe({
         next: (res: any) => {
           // console.log('User Data:', res);  
           this.user = res;  

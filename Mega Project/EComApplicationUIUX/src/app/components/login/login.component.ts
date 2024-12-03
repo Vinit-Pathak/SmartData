@@ -39,20 +39,26 @@ export class LoginComponent {
   });
 
   registerForm = new FormGroup({
-    id: new FormControl(0),
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     mobile: new FormControl('', Validators.required),
     dateOfBirth: new FormControl('', Validators.required),
     userType: new FormControl(UserType.Customer, Validators.required),
-    profileImage: new FormControl('', Validators.required),
+    file: new FormControl<File | null>(null),
     address: new FormControl('', Validators.required),
     zipCode: new FormControl(0, Validators.required),
     state: new FormControl(0, Validators.required),
     country: new FormControl(0, Validators.required),
     isActive: new FormControl(false, Validators.required),
   });
+
+
+  onFileSelected(event: Event) {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    this.registerForm.patchValue({ file });
+    this.registerForm.get('file')?.updateValueAndValidity();
+  }
 
 
   forgotPasswordForm = new FormGroup({
@@ -143,8 +149,10 @@ export class LoginComponent {
         if (res.statusCode === 200 && res.data.isSuccess) {
           this.loaderService.hide();
           sessionStorage.setItem('token', res.data.token);
-          sessionStorage.setItem('role', res.data.role);
-          sessionStorage.setItem('id', res.data.id);
+          sessionStorage.setItem('userData', JSON.stringify(res.data.data));
+          sessionStorage.setItem('role', res.data.data.userType);
+          sessionStorage.setItem('email', res.data.data.email);
+
           const expiry = new Date(res.data.expiration);
           sessionStorage.setItem('expiry', expiry.toISOString());
   
@@ -152,18 +160,19 @@ export class LoginComponent {
             timeOut: 3000,
             closeButton: true,
           });
+          console.log(typeof(res.data.data.userType));
+          console.log(res.data.data.userType);
 
-      //     if (res.data.role === 1) {
-      //   this.router.navigateByUrl('admin-dashboard');
-      // } else if (res.data.role === 2) {
-      //   this.router.navigateByUrl('customer-dashboard');
-      // } else {
-      //   this.toaster.error('Unexpected role', 'Error', {
-      //     timeOut: 3000,
-      //     closeButton: true,
-      //   });
-      // }
-      this.router.navigateByUrl('product')
+          if (res.data.data.userType === 1) {
+        this.router.navigateByUrl('product');
+      } else if (res.data.data.userType === 2) {
+        this.router.navigateByUrl('customer-dashboard');
+      } else {
+        this.toaster.error('Unexpected role', 'Error', {
+          timeOut: 3000,
+          closeButton: true,
+        });
+      }
     } else {
       this.toaster.error(res.message || 'Unexpected error', 'Error', {
         timeOut: 3000,
@@ -191,18 +200,14 @@ export class LoginComponent {
   
 
   onRegisterSubmit() {
-    if (this.registerForm.invalid) {
-      this.toaster.warning('Please fill in all required fields.', 'Warning', {
-        timeOut: 3000,
-        closeButton: true,
-      });
-      return;
-    }
-    this.loaderService.show();
-    this.registerData = this.registerForm.value;
-    this.registerData.userType = parseInt(this.registerData.userType, 10);
 
-    this.userService.register(this.registerData).subscribe({
+    const formData = new FormData();
+    Object.keys(this.registerForm.controls).forEach(field => {
+      const value = this.registerForm.get(field)?.value;
+      formData.append(field, value);
+    });
+    
+    this.userService.register(formData).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200) {
           this.loaderService.hide();
@@ -240,7 +245,7 @@ export class LoginComponent {
     const password = this.loginForm.get('password')?.value;
 
     if (!userName) {
-      this.toaster.warning('Please enter a username to send OTP.', 'Warning', {
+      this.toaster.warning('Please enter a correct username to send OTP.', 'Warning', {
         timeOut: 3000,
         closeButton: true,
       });

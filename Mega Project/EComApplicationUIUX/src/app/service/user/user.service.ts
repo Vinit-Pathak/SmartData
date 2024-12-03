@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { LoggedUserDto } from '../../models/userLogged.model';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  
   http = inject(HttpClient)
 
   login(credentials: any): Observable<any> {
@@ -30,10 +33,9 @@ export class UserService {
     return this.http.post('https://localhost:7053/api/User/changePassword', data);
   }
 
-  getUserById(Id: any):Observable<any>{
-    return this.http.get(`https://localhost:7053/api/User/getUserById/${Id}`);
+  getUserByEmail(email: any):Observable<any>{
+    return this.http.get(`https://localhost:7053/api/User/getUserByEmail/${email}`);
   }
-
   updateUser(user:any):Observable<any>{
     return this.http.put(`https://localhost:7053/api/User/updateUser/${user.id}`, user);
   }

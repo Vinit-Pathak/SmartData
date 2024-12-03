@@ -22,6 +22,7 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.getAllProducts();
+    
   }
 
   // Fetch all products
@@ -29,6 +30,7 @@ export class ProductsComponent implements OnInit {
     this.productService.getAllProducts().subscribe({
       next: (res: any) => {
         this.products = res;
+        console.log(this.products)
       },
       error: (err: any) => {
         console.error('Error fetching products:', err);
@@ -47,20 +49,19 @@ export class ProductsComponent implements OnInit {
     purchasePrice: new FormControl(0, Validators.required),
     purchaseDate: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required),
-    isDeleted: new FormControl(true, Validators.required)
   });
 
   // Add Form
   addForm = new FormGroup({
     productName: new FormControl('', Validators.required),
-    // productCode: new FormControl('', Validators.required),
+    productCode: new FormControl('', Validators.required),
     category: new FormControl('', Validators.required),
     brand: new FormControl('', Validators.required),
+    productImage: new FormControl('', Validators.required),
     sellingPrice: new FormControl(0, Validators.required),
     purchasePrice: new FormControl(0, Validators.required),
     purchaseDate: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required),
-    isDeleted: new FormControl(false, Validators.required)
   });
 
   // Open Edit Form
@@ -77,18 +78,19 @@ export class ProductsComponent implements OnInit {
       purchasePrice: product.purchasePrice,
       purchaseDate: datePipe.transform(product.purchaseDate, 'yyyy-MM-dd'),
       stock: product.stock,
-      isDeleted: product.deleted
     });
   }
 
   // Update Product
   onUpdate() {
+    console.log('Updating product:', this.updateForm.value);
     this.productService.updateProduct(this.updateForm.value).subscribe({
       next: (res: any) => {
         console.log(res)
         this.toastr.success('Product Updated Successfully');
         this.isUpdating = false;
         this.getAllProducts();
+        this.closeAddForm();
       },
       error: (err: any) => {
         console.error('Error updating product:', err);
@@ -124,6 +126,8 @@ export class ProductsComponent implements OnInit {
 
   // Delete Product
   onDelete(id: number) {
+    console.log('Deleting product:', id);
+    console.log('Products: ', this.products);
     const isConfirmed = confirm('Are you sure you want to delete this product?');
     if (isConfirmed) {
       this.productService.deleteProduct(id).subscribe({

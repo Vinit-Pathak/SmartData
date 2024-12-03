@@ -306,21 +306,22 @@
             </div>
 
             <div class="mb-3">
-              <label for="registerProfileImage" class="form-label"
+              <label for="registerfile" class="form-label"
                 >Profile Image</label
               >
               <input
-                type="text"
+                type="file"
                 class="form-control rounded-3"
-                id="registerProfileImage"
-                formControlName="profileImage"
+                id="registerfile"
+                formControlName="file"
                 placeholder="Enter profile image URL"
+                (change)="onFileSelected($event)"
                 required
               />
               <div
                 *ngIf="
-                  registerForm.get('profileImage')?.invalid &&
-                  registerForm.get('profileImage')?.touched
+                  registerForm.get('file')?.invalid &&
+                  registerForm.get('file')?.touched
                 "
                 class="text-danger small mt-1"
               >

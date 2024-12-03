@@ -18,9 +18,9 @@ export class LayoutComponent {
 
   updateProfileForm: FormGroup;
   changePasswordForm: FormGroup;
-  userDetails: any;
   newPassword:any;
   confirmPassword:any;
+  userDetails: any;
   isUpdating = false;
   UserType = UserType;
   formData: any;
@@ -28,9 +28,12 @@ export class LayoutComponent {
   userService = inject(UserService);
   router = inject(Router);
   toaster = inject(ToastrService);
+  imgUrl:string = "";
 
   @ViewChild('updateProfileModal') updateProfileModal!: ElementRef;
   @ViewChild('changePasswordModal') changePasswordModal!: ElementRef;
+
+  // userDetails = JSON.parse(sessionStorage.getItem('userData') || '{}');
 
   constructor(private fb: FormBuilder) {
     this.updateProfileForm = this.fb.group({
@@ -61,11 +64,13 @@ export class LayoutComponent {
   ngOnInit(): void {
     this.fetchUserDetails();
     this.checkTokenExpiry();
+    var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
+    this.imgUrl = data.profileImage;
   }
 
   fetchUserDetails() {
-    const id = sessionStorage.getItem('id');
-    this.userService.getUserById(id).subscribe({
+    const email = sessionStorage.getItem('email');
+    this.userService.getUserByEmail(email).subscribe({
       next: (res: any) => {
         this.userDetails = res;
       },
@@ -75,13 +80,6 @@ export class LayoutComponent {
     });
   }
 
-  // openUpdateProfileModal() {
-  //   const modal = document.getElementById('updateProfileModal');
-  //   if (modal) {
-  //     modal.style.display = 'block';
-  //   }
-  //   this.OnProfileUpdate();
-  // }
 
   openUpdateProfileModal() {
     const modalInstance = new bootstrap.Modal(this.updateProfileModal.nativeElement);
@@ -96,25 +94,12 @@ export class LayoutComponent {
     this.updateProfileForm.patchValue(this.userDetails);
   }
 
-  // closeUpdateProfileModal() {
-  //   const modal = document.getElementById('updateProfileModal');
-  //   if (modal) {
-  //     modal.style.display = 'none';
-  //   }
-  // }
 
   closeUpdateProfileModal() {
     const modalInstance = bootstrap.Modal.getInstance(this.updateProfileModal.nativeElement);
     modalInstance.hide();
   }
 
-  // openChangePasswordModal() {
-  //   const modal = document.getElementById('changePasswordModal');
-  //   if (modal) {
-  //     modal.style.display = 'block';
-  //   }
-  //   this.fetchUserDetails();
-  // }
 
   openChangePasswordModal() {
     const modalInstance = new bootstrap.Modal(this.changePasswordModal.nativeElement);
@@ -122,12 +107,6 @@ export class LayoutComponent {
     this.fetchUserDetails();
   }
 
-  // closeChangePasswordModal() {
-  //   const modal = document.getElementById('changePasswordModal');
-  //   if (modal) {
-  //     modal.style.display = 'none';
-  //   }
-  // }
 
   closeChangePasswordModal() {
     const modalInstance = bootstrap.Modal.getInstance(this.changePasswordModal.nativeElement);

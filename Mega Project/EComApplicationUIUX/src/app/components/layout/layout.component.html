@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand custom-navbar-brand" routerLink="/">EComApplication</a>
+    <a class="navbar-brand custom-navbar-brand" >EComApplication</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,6 +12,11 @@
             <i class="fas fa-store"></i> Product
           </a>
         </li>
+        <li class="nav-item" *ngIf="userRole ==2">
+          <a class="nav-link custom-nav-link" [routerLink]="['customer-dashboard']">
+            <i class="fas fa-store"></i> Home
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link custom-nav-link" [routerLink]="['profile']">
             <i class="fas fa-users" ></i> Profile
@@ -21,7 +26,7 @@
       <div class="dropdown">
         <a class="dropdown-toggle d-flex align-items-center text-decoration-none" role="button"
           id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="default.png" alt="User" class="rounded-circle custom-profile-img" />
+          <img [src]="imgUrl" alt="User" class="rounded-circle custom-profile-img" />
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
           <li>
