@@ -1,0 +1,93 @@
+/* Base Styles for the Button */
+.add-to-cart-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff4c68, #ff2f94);
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    flex-direction: row; /* Default order: label first, icon second */
+  }
+  
+  /* Icon and Label Style */
+  .add-to-cart-btn .icon {
+    margin-left: 12px;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .add-to-cart-btn .label {
+    flex-grow: 1;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .add-to-cart-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .add-to-cart-btn:hover .icon {
+    transform: translateX(10px);
+  }
+  
+  .add-to-cart-btn.added {
+    background: linear-gradient(45deg, #4caf50, #2e7d32);
+    box-shadow: 0 8px 15px rgba(0, 255, 0, 0.2);
+  }
+  
+  .add-to-cart-btn.added .label {
+    opacity: 1;
+  }
+  
+  .add-to-cart-btn.added .icon {
+    font-size: 1.8rem;
+    animation: bounce 0.6s ease-in-out;
+  }
+  
+  /* Reverse order: move icon to the right when item is added to cart */
+  .add-to-cart-btn.reverse-order {
+    flex-direction: row-reverse;
+  }
+  
+  .add-to-cart-btn:active {
+    animation: pulse 0.6s ease-in-out;
+  }
+  
+  /* Bounce Effect for Checkmark */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Pulse Effect when Added */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

@@ -40,5 +40,9 @@ export class UserService {
     return this.http.put(`https://localhost:7053/api/User/updateUser/${userId}`, user);
   }
 
+  getUserById(userId: any):Observable<any>{
+    return this.http.get(`https://localhost:7053/api/User/getUserById/${userId}`);
+  }
+
 
 }

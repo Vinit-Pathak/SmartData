@@ -11,11 +11,21 @@ import { CommonModule } from '@angular/common';
 })
 export class ProfileComponent {
   user: any;
-
+  imgUrl: string = '';
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.loadUserProfile();
+    var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
+    this.imgUrl = data.profileImage
+  }
+
+  // Default fallback image URL
+  defaultImageUrl: string = 'assets/images/default-user-image.png';
+
+  // Handling image error
+  onImageError(event: any) {
+    event.target.src = this.defaultImageUrl;
   }
 
   getUserType(userType: number): string {

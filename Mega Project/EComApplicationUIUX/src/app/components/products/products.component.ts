@@ -59,7 +59,7 @@ export class ProductsComponent implements OnInit {
     productCode: new FormControl('', Validators.required),
     category: new FormControl('', Validators.required),
     brand: new FormControl('', Validators.required),
-    file: new FormControl('', Validators.required),
+    file: new FormControl<File | null>(null),
     sellingPrice: new FormControl(0, Validators.required),
     purchasePrice: new FormControl(0, Validators.required),
     purchaseDate: new FormControl('', Validators.required),
@@ -71,6 +71,12 @@ export class ProductsComponent implements OnInit {
     const file = (event.target as HTMLInputElement).files?.[0];
     this.updateForm.patchValue({ file });
     this.updateForm.get('file')?.updateValueAndValidity();
+  }
+
+  onFileSelectedAdd(event:Event){
+    const file = (event.target as HTMLInputElement).files?.[0];
+    this.addForm.patchValue({ file });
+    this.addForm.get('file')?.updateValueAndValidity();
   }
 
   // Open Edit Form
@@ -161,6 +167,8 @@ export class ProductsComponent implements OnInit {
       formData.append(field, value);
     });
 
+    console.log('Adding product:', formData);
+    
     this.productService.addProduct(formData).subscribe({
       next: (res: any) => {
         this.toastr.success('Product Added Successfully', 'Success', {
@@ -180,6 +188,7 @@ export class ProductsComponent implements OnInit {
   // Close Add Form
   closeAddForm() {
     this.isAdding = false;
+    this.addForm.reset();
   }
 
   // Delete Product

@@ -1,37 +1,123 @@
-.custom-navbar {
-    background-color: #f8f9fa;
-    padding: 0.5rem 1rem;
-  }
-  
-  .custom-navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .custom-nav-link {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    color: #555;
-  }
-  
-  .custom-nav-link:hover {
-    color: #007bff;
-  }
-  
-  .custom-logout-btn {
-    font-size: 1rem;
-  }
-  
-  .custom-profile-img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    margin-right: 10px;
+/* Navbar Styles */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Cart Badge */
+.cart-badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+}
+
+/* Navbar Dropdown Styles */
+.dropdown-menu {
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  z-index: 1050;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Display the dropdown on hover over the profile image */
+.profile-img-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* Navbar Mobile Responsiveness */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.5rem 0;
   }
 
-  .dropdown-item{
-    font-size: 1rem;
-    cursor: pointer;
+  .navbar-brand {
+    font-size: 1.4rem;
   }
-  
+
+  /* Make dropdown align to right on mobile */
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Adjustments for profile image in the dropdown */
+.navbar-nav .profile-img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
+.navbar-toggler {
+  border-color: #007bff;
+}
+
+/* Body padding to avoid navbar overlap */
+body {
+  padding-top: 70px;
+}
+
+/* Cart icon position adjustment */
+.nav-item.position-relative {
+  margin-right: 20px;
+}
+
+/* Dropdown hover effect */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  transition: opacity 0.2s ease;
+}

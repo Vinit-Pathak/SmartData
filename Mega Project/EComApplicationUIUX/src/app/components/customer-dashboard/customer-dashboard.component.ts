@@ -15,7 +15,7 @@ export class CustomerDashboardComponent {
   products:any[] = [];
   userId:any;
   quantity: number = 1;
-  productId: number = 0;
+  productId?: number = 0;
 
   productService = inject(ProductService);
   toasterService = inject(ToastrService);
@@ -44,12 +44,12 @@ export class CustomerDashboardComponent {
 
   addToCart(prodId:number){
     const payload = {
-      prId: prodId,
+      productId: prodId,
       userId: Number(this.userId),
       quantity: 1,
     };
     console.log(payload);
-    
+    debugger;
     if (this.cart.has(prodId)) {
       this.toasterService.error('Item is already in the cart');
       return;
@@ -57,7 +57,7 @@ export class CustomerDashboardComponent {
 
     this.cartService.addToCart(payload).subscribe({
       next: (res: any) => {
-        if(res.success == 200){
+        if(res.statusCode == 200){
           this.cart.add(prodId);
           this.updateCartInLocalStorage();
           this.toasterService.success('Item Added Successfully');

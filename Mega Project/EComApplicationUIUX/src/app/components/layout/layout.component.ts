@@ -11,6 +11,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { UserType } from '../../models/user-type.enum';
+import { CartService } from '../../service/cart/cart.service';
 declare var bootstrap: any;
 
 @Component({
@@ -29,10 +30,12 @@ export class LayoutComponent {
   UserType = UserType;
   formData: any;
   userRole: any;
-  userService = inject(UserService);
   router = inject(Router);
-  toaster = inject(ToastrService);
   imgUrl: string = '';
+  cartItemCount = 0;
+  toaster = inject(ToastrService);
+  userService = inject(UserService);
+  cartService = inject(CartService);
 
   @ViewChild('updateProfileModal') updateProfileModal!: ElementRef;
   @ViewChild('changePasswordModal') changePasswordModal!: ElementRef;
@@ -66,6 +69,10 @@ export class LayoutComponent {
     this.checkTokenExpiry();
     var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
     this.imgUrl = data.profileImage;
+    this.cartService.cartItemCount$.subscribe((count) => {
+      this.cartItemCount = count;
+    });
+    this.cartService.updateCartItemCount();
   }
 
 

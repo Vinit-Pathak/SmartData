@@ -1,59 +1,61 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand custom-navbar-brand" >EComApplication</a>
+    <a class="navbar-brand" href="#">EComApplication</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" *ngIf="userRole ==1">
-          <a class="nav-link custom-nav-link" [routerLink]="['product']">
+      <ul class="navbar-nav ms-auto">
+        <!-- Admin Link -->
+        <li class="nav-item" *ngIf="userRole == 1">
+          <a class="nav-link" [routerLink]="['product']">
             <i class="fas fa-store"></i> Product
           </a>
         </li>
-        <li class="nav-item" *ngIf="userRole ==2">
-          <a class="nav-link custom-nav-link" [routerLink]="['customer-dashboard']">
+        <!-- Customer Link -->
+        <li class="nav-item" *ngIf="userRole == 2">
+          <a class="nav-link" [routerLink]="['customer-dashboard']">
             <i class="fas fa-store"></i> Market
           </a>
         </li>
+        <!-- Profile Link -->
         <li class="nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['profile']">
-            <i class="fas fa-users" ></i> Profile
+          <a class="nav-link" [routerLink]="['profile']">
+            <i class="fas fa-users"></i> Profile
           </a>
         </li>
       </ul>
-      <ul style="list-style-type: none;" class="me-3 mt-2">
-        <li class="nav-item " *ngIf="userRole == 2">
-          <a class="nav-link custom-nav-link text-decoration-none" [routerLink]="['cart']">
-            <i class="fas fa-shopping-cart" ></i>
+
+      <!-- Cart for Customers -->
+      <ul class="navbar-nav me-3 mt-2">
+        <li class="nav-item position-relative" *ngIf="userRole == 2">
+          <a class="nav-link" [routerLink]="['cart']">
+            <i class="fas fa-shopping-cart text-dark"></i>
+            <span class="badge bg-danger rounded-circle position-absolute top-9 start-100 translate-middle">
+              {{ cartItemCount }}
+            </span>
           </a>
         </li>
       </ul>
+
+      <!-- User Dropdown - Triggered by Hover over Profile Image -->
       <div class="dropdown">
-        <a class="dropdown-toggle d-flex align-items-center text-decoration-none" role="button"
-          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          <img [src]="imgUrl || 'assets/images/default-placeholder.png'" alt="User" class="rounded-circle custom-profile-img" />
+        <a class="nav-link d-flex align-items-center profile-img-container">
+          <img [src]="imgUrl || 'assets/images/default-placeholder.png'" alt="User" class="rounded-circle profile-img" />
         </a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-          <li>
-            <a class="dropdown-item" (click)="openUpdateProfileModal()">Update Profile</a>
-          </li>
-          <li>
-            <a class="dropdown-item" (click)="openChangePasswordModal()">Change Password</a>
-          </li>
-          <li>
-            <hr class="dropdown-divider" />
-          </li>
-          <li>
-            <!-- <button class="dropdown-item" (click)="logout('manual')">Logout</button> -->
-            <button class="dropdown-item" (click)="logout('manual')">Logout</button>
-          </li>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openUpdateProfileModal()">Update Profile</a></li>
+          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openChangePasswordModal()">Change Password</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item" (click)="logout('manual')">Logout</button></li>
         </ul>
       </div>
     </div>
   </div>
-</nav> 
+</nav>
+
+
 
 
 
@@ -356,5 +358,7 @@ aria-hidden="true"
   </div>
 </div>
 </div>
+
+
 
 <router-outlet></router-outlet>
