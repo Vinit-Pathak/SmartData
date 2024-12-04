@@ -1,0 +1,101 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">My Cart</h2>
+
+  <!-- Empty Cart Message -->
+  <div *ngIf="cartItems.length === 0" class="text-center">
+    <p>Your cart is empty.</p>
+  </div>
+
+  <!-- Cart Items -->
+  <div *ngIf="cartItems.length > 0" class="row g-3">
+    <!-- Cart Section -->
+    <div class="col-md-8">
+      <div class="card mb-3" *ngFor="let item of cartItems">
+        <div class="row g-0 align-items-center">
+          <div class="col-3">
+            <img
+              [src]="item.productImage"
+              (error)="
+                item.productImage =
+                  'https://cdn.pixabay.com/photo/2022/08/01/07/59/vegetables-7357585_640.png'
+              "
+              class="img-fluid rounded"
+              alt="Product Image"
+            />
+          </div>
+          <div class="col-9">
+            <div class="card-body py-2">
+              <h6 class="card-title mb-1 text-truncate">
+                {{ item.productName }}
+              </h6>
+              <p class="card-text small text-muted mb-1">
+                Category: {{ item.category }}
+              </p>
+              <p class="card-text small text-muted mb-1">
+                Brand: {{ item.brand }}
+              </p>
+              <p class="card-text small text-success fw-bold">
+                Price: ${{ item.sellingPrice }}
+              </p>
+              <div class="d-flex align-items-center">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  (click)="decreaseQuantity(item)"
+                >
+                  <i class="bi bi-dash"></i>
+                </button>
+                <span class="mx-2">{{ item.quantity }}</span>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  (click)="increaseQuantity(item)"
+                >
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+              <button class="btn btn-danger btn-sm mt-2">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Summary</h5>
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <tbody>
+              <tr>
+                <td>Total Items:</td>
+                <td class="text-end">{{ cartItems.length }}</td>
+              </tr>
+              <tr>
+                <td>Total Price:</td>
+                <td class="text-end">${{ calculateTotalPrice() }}</td>
+              </tr>
+              <tr>
+                <td>Delivery Charges:</td>
+                <td class="text-end">$10</td>
+              </tr>
+              <tr class="fw-bold">
+                <td>Grand Total:</td>
+                <td class="text-end">${{ calculateTotalPrice() + 10 }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <h6>Delivery Address</h6>
+          <p class="small">
+            <strong>John Doe</strong><br />
+            123, Elm Street<br />
+            Springfield, IL 62704
+          </p>
+          <button class="btn btn-success w-100">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

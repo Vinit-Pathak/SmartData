@@ -16,13 +16,14 @@ export class ProductsComponent implements OnInit {
   role = sessionStorage.getItem('role');
   isUpdating = false;
   isAdding = false;
+  imgUrl: string = '';
 
   productService = inject(ProductService);
   toastr = inject(ToastrService);
 
   ngOnInit() {
     this.getAllProducts();
-    
+
   }
 
   // Fetch all products
@@ -41,14 +42,15 @@ export class ProductsComponent implements OnInit {
   // Update Form
   updateForm = new FormGroup({
     id: new FormControl(0),
-    productName: new FormControl('', Validators.required),
-    productCode: new FormControl('', Validators.required),
-    category: new FormControl('', Validators.required),
-    brand: new FormControl('', Validators.required),
-    sellingPrice: new FormControl(0, Validators.required),
-    purchasePrice: new FormControl(0, Validators.required),
-    purchaseDate: new FormControl('', Validators.required),
-    stock: new FormControl(0, Validators.required),
+    productName: new FormControl(''),
+    productCode: new FormControl(''),
+    category: new FormControl(''),
+    brand: new FormControl(''),
+    file: new FormControl<File | null>(null),
+    sellingPrice: new FormControl(0),
+    purchasePrice: new FormControl(0),
+    purchaseDate: new FormControl(''),
+    stock: new FormControl(0),
   });
 
   // Add Form
@@ -57,17 +59,26 @@ export class ProductsComponent implements OnInit {
     productCode: new FormControl('', Validators.required),
     category: new FormControl('', Validators.required),
     brand: new FormControl('', Validators.required),
-    productImage: new FormControl('', Validators.required),
+    file: new FormControl('', Validators.required),
     sellingPrice: new FormControl(0, Validators.required),
     purchasePrice: new FormControl(0, Validators.required),
     purchaseDate: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required),
   });
 
+
+  onFileSelected(event: Event) {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    this.updateForm.patchValue({ file });
+    this.updateForm.get('file')?.updateValueAndValidity();
+  }
+
   // Open Edit Form
   onEdit(product: any) {
     const datePipe = new DatePipe('en-US');
     this.isUpdating = true;
+  
+    // Set the form values to the existing product data
     this.updateForm.patchValue({
       id: product.id,
       productName: product.productName,
@@ -83,18 +94,56 @@ export class ProductsComponent implements OnInit {
 
   // Update Product
   onUpdate() {
+    // First, check if the form is valid
+    if (this.updateForm.invalid) {
+      this.toastr.error('Please fill in all required fields.', 'Error', {
+        timeOut: 3000,
+        closeButton: true,
+      });
+      return;
+    }
+  
+    // Log the form value for debugging
     console.log('Updating product:', this.updateForm.value);
-    this.productService.updateProduct(this.updateForm.value).subscribe({
+  
+    // Prepare the form data for the API call
+    const formData = new FormData();
+    Object.keys(this.updateForm.controls).forEach((field) => {
+      const value = this.updateForm.get(field)?.value;
+      if (field !== 'file') {
+        formData.append(field, value !== undefined ? value : '');
+      } else {
+        const fileInput = this.updateForm.get('file')?.value;
+        if (fileInput) {
+          formData.append('file', fileInput, fileInput.name);
+        }
+      }
+    });
+  
+    // Call the productService to update the product
+    const productId = this.updateForm.get('id')?.value;
+    
+    this.productService.updateProduct(productId, formData).subscribe({
       next: (res: any) => {
-        console.log(res)
-        this.toastr.success('Product Updated Successfully');
+        // Display success message and update the UI
+        this.toastr.success('Product Updated Successfully', 'Success', {
+          timeOut: 3000,
+          closeButton: true,
+        });
+  
+        // Reset the updating flag and refresh the product list
         this.isUpdating = false;
-        this.getAllProducts();
-        this.closeAddForm();
+        this.getAllProducts();  // Reload the product list
+        this.closeAddForm();    // Close the form/modal
       },
       error: (err: any) => {
+        // Display error message if the update failed
+        this.toastr.error('Product Update Failed', 'Error', {
+          timeOut: 3000,
+          closeButton: true,
+        });
         console.error('Error updating product:', err);
-      }
+      },
     });
   }
 
@@ -106,9 +155,18 @@ export class ProductsComponent implements OnInit {
 
   // Add Product
   onAdd() {
-    this.productService.addProduct(this.addForm.value).subscribe({
+    const formData = new FormData();
+    Object.keys(this.addForm.controls).forEach(field => {
+      const value = this.addForm.get(field)?.value;
+      formData.append(field, value);
+    });
+
+    this.productService.addProduct(formData).subscribe({
       next: (res: any) => {
-        this.toastr.success('Product Added Successfully');
+        this.toastr.success('Product Added Successfully', 'Success', {
+          timeOut: 3000,
+          closeButton: true,
+        });
         this.isAdding = false;
         this.getAllProducts();
         this.closeAddForm();

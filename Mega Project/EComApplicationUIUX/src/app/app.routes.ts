@@ -6,6 +6,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { loginGuardGuard } from './guards/login-guard.guard';
 import { authGuardGuard } from './guards/auth-guard.guard';
 import { CustomerDashboardComponent } from './components/customer-dashboard/customer-dashboard.component';
+import { CartComponent } from './components/cart/cart.component';
 
 export const routes: Routes = [
     {
@@ -34,6 +35,12 @@ export const routes: Routes = [
             {
                 path:'customer-dashboard',
                 component: CustomerDashboardComponent,
+                canActivate:[loginGuardGuard]
+            },
+            {
+                path:'cart',
+                component:CartComponent,
+                canActivate:[loginGuardGuard]
             }
         ]
     },

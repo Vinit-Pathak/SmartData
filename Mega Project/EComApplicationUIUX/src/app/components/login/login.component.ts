@@ -152,7 +152,7 @@ export class LoginComponent {
           sessionStorage.setItem('userData', JSON.stringify(res.data.data));
           sessionStorage.setItem('role', res.data.data.userType);
           sessionStorage.setItem('email', res.data.data.email);
-
+          localStorage.setItem('id', res.data.id)
           const expiry = new Date(res.data.expiration);
           sessionStorage.setItem('expiry', expiry.toISOString());
   
@@ -160,8 +160,6 @@ export class LoginComponent {
             timeOut: 3000,
             closeButton: true,
           });
-          console.log(typeof(res.data.data.userType));
-          console.log(res.data.data.userType);
 
           if (res.data.data.userType === 1) {
         this.router.navigateByUrl('product');

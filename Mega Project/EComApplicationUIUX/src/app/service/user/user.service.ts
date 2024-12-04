@@ -36,8 +36,8 @@ export class UserService {
   getUserByEmail(email: any):Observable<any>{
     return this.http.get(`https://localhost:7053/api/User/getUserByEmail/${email}`);
   }
-  updateUser(user:any):Observable<any>{
-    return this.http.put(`https://localhost:7053/api/User/updateUser/${user.id}`, user);
+  updateUser(userId: any, user: any):Observable<any>{
+    return this.http.put(`https://localhost:7053/api/User/updateUser/${userId}`, user);
   }
 
 

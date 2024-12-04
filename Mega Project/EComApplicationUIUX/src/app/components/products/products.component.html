@@ -20,7 +20,7 @@
               id="updateProductName"
               formControlName="productName"
               placeholder="Enter product name"
-              required
+              
             />
             
           </div>
@@ -33,8 +33,8 @@
               id="productCode"
               formControlName="productCode"
               placeholder="Enter product code"
-              required
-              readonly
+              
+              
             />
           </div>
   
@@ -46,7 +46,7 @@
               id="brand"
               formControlName="brand"
               placeholder="Enter brand name"
-              required
+              
             />
           </div>
   
@@ -58,9 +58,24 @@
               id="category"
               formControlName="category"
               placeholder="Enter category name"
-              required
+              
             />
           </div>
+
+          <div class="form-group">
+            <label for="category" class="form-label">Product Image</label>
+            <input
+              type="file"
+              class="form-control"
+              id="productImage"
+              formControlName="file"
+              placeholder="Enter product Image"
+              (change)="onFileSelected($event)"
+              
+            />
+          </div>
+
+
   
           <div class="form-group">
             <label for="sellingPrice" class="form-label">Selling Price</label>
@@ -70,7 +85,7 @@
               id="sellingPrice"
               formControlName="sellingPrice"
               placeholder="Enter selling price"
-              required
+              
             />
           </div>
   
@@ -82,7 +97,7 @@
               id="purchasePrice"
               formControlName="purchasePrice"
               placeholder="Enter purchase price"
-              required
+              
             />
           </div>
   
@@ -93,7 +108,7 @@
               class="form-control"
               id="purchaseDate"
               formControlName="purchaseDate"
-              required
+              
             />
           </div>
   
@@ -105,7 +120,7 @@
               id="stock"
               formControlName="stock"
               placeholder="Enter stock quantity"
-              required
+              
             />
           </div>
   
@@ -184,6 +199,20 @@
                 required
               />
             </div>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="addImage" class="form-label">Product Image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="addImage"
+                  formControlName="file"
+                  (change)="onFileSelected($event)"
+                  
+                />
+              </div>
+            </div>
   
             <div class="form-group">
               <label for="sellingPrice" class="form-label">Selling Price</label>
@@ -197,17 +226,7 @@
               />
             </div>
   
-            <div class="form-group">
-              <label for="stock" class="form-label">Stock</label>
-              <input
-                type="number"
-                class="form-control"
-                id="stock"
-                formControlName="stock"
-                placeholder="Enter stock quantity"
-                required
-              />
-            </div>
+           
           </div>
   
           <!-- Column 2 -->
@@ -246,16 +265,19 @@
                 required
               />
             </div>
-  
-            <!-- <div class="form-group form-check">
+
+            <div class="form-group">
+              <label for="stock" class="form-label">Stock</label>
               <input
-                type="checkbox"
-                class="form-check-input"
-                id="isDeleted"
-                formControlName="isDeleted"
+                type="number"
+                class="form-control"
+                id="stock"
+                formControlName="stock"
+                placeholder="Enter stock quantity"
+                required
               />
-              <label for="isDeleted" class="form-check-label">isDeleted</label>
-            </div> -->
+            </div>
+
           </div>
         </div>
   

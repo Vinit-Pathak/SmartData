@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item" *ngIf="userRole ==2">
           <a class="nav-link custom-nav-link" [routerLink]="['customer-dashboard']">
-            <i class="fas fa-store"></i> Home
+            <i class="fas fa-store"></i> Market
           </a>
         </li>
         <li class="nav-item">
@@ -23,10 +23,17 @@
           </a>
         </li>
       </ul>
+      <ul style="list-style-type: none;" class="me-3 mt-2">
+        <li class="nav-item " *ngIf="userRole == 2">
+          <a class="nav-link custom-nav-link text-decoration-none" [routerLink]="['cart']">
+            <i class="fas fa-shopping-cart" ></i>
+          </a>
+        </li>
+      </ul>
       <div class="dropdown">
         <a class="dropdown-toggle d-flex align-items-center text-decoration-none" role="button"
           id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          <img [src]="imgUrl" alt="User" class="rounded-circle custom-profile-img" />
+          <img [src]="imgUrl || 'assets/images/default-placeholder.png'" alt="User" class="rounded-circle custom-profile-img" />
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
           <li>
@@ -85,7 +92,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateFirstName"
                 formControlName="firstName"
-                required
+                
               />
             </div>
           </div>
@@ -97,7 +104,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateLastName"
                 formControlName="lastName"
-                required
+                
               />
             </div>
           </div>
@@ -112,8 +119,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateEmail"
                 formControlName="email"
-                required
-                readonly
+                
               />
             </div>
           </div>
@@ -125,13 +131,13 @@ aria-hidden="true"
                 class="form-control"
                 id="updateMobile"
                 formControlName="mobile"
-                required
+                
               />
             </div>
           </div>
         </div>
       
-        <div class="row">
+        <div class="row"> 
           <div class="col-md-6">
             <div class="mb-3">
               <label for="dateOfBirth" class="form-label">Date of Birth</label>
@@ -140,7 +146,7 @@ aria-hidden="true"
                 class="form-control"
                 id="dateOfBirth"
                 formControlName="dateOfBirth"
-                required
+                
               />
             </div>
           </div>
@@ -151,7 +157,7 @@ aria-hidden="true"
                 class="form-control rounded-3"
                 id="userType"
                 formControlName="userType"
-                required
+                
               >
                 <option value="" disabled>Select Usertype</option>
                 <option [value]="UserType.Admin">Admin</option>
@@ -179,7 +185,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateAddress"
                 formControlName="address"
-                required
+                
               />
             </div>
           </div>
@@ -187,11 +193,12 @@ aria-hidden="true"
             <div class="mb-3">
               <label for="updateProfileImage" class="form-label">Profile Image</label>
               <input
-                type="text"
+                type="file"
                 class="form-control"
                 id="updateProfileImage"
-                formControlName="profileImage"
-                required
+                formControlName="file"
+                (change)="onFileSelected($event)"
+                
               />
             </div>
           </div>
@@ -206,7 +213,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateState"
                 formControlName="state"
-                required
+                
               />
             </div>
           </div>
@@ -218,7 +225,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateCountry"
                 formControlName="country"
-                required
+                
               />
             </div>
           </div>
@@ -234,7 +241,7 @@ aria-hidden="true"
                 id="registerZipCode"
                 formControlName="zipCode"
                 placeholder="Enter your zip code"
-                required
+                
               />
               <div
                 *ngIf="
@@ -265,7 +272,7 @@ aria-hidden="true"
       
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary w-100 mt-3">
+            <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="updateProfileForm.invalid">
               Save Changes
             </button>
           </div>

@@ -47,6 +47,83 @@
   margin-bottom: 24px;
 }
 
+.update-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.update-form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.3s ease-out;
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100%;
+}
+
+.update-form-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .update-form-container {
+    width: 100%;
+    max-width: none;
+    margin: 0 10px;
+    padding: 15px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-control, .btn-primary {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .form-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+.product-card {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
 
 .update-form-container.fade-in {
   opacity: 1;

@@ -3,121 +3,187 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { UserService } from '../../service/user/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule, DatePipe } from '@angular/common';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  ReactiveFormsModule,
+  FormControl,
+} from '@angular/forms';
 import { UserType } from '../../models/user-type.enum';
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterLink, RouterOutlet,CommonModule, ReactiveFormsModule],
+  imports: [RouterLink, RouterOutlet, CommonModule, ReactiveFormsModule],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrl: './layout.component.css',
 })
 export class LayoutComponent {
 
-  updateProfileForm: FormGroup;
-  changePasswordForm: FormGroup;
-  newPassword:any;
-  confirmPassword:any;
+  newPassword: any;
+  confirmPassword: any;
   userDetails: any;
   isUpdating = false;
   UserType = UserType;
   formData: any;
-  userRole :any;
+  userRole: any;
   userService = inject(UserService);
   router = inject(Router);
   toaster = inject(ToastrService);
-  imgUrl:string = "";
+  imgUrl: string = '';
 
   @ViewChild('updateProfileModal') updateProfileModal!: ElementRef;
   @ViewChild('changePasswordModal') changePasswordModal!: ElementRef;
 
-  // userDetails = JSON.parse(sessionStorage.getItem('userData') || '{}');
 
-  constructor(private fb: FormBuilder) {
-    this.updateProfileForm = this.fb.group({
-      id: [0],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      mobile: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
-      userType: [UserType, Validators.required],
-      address: ['', Validators.required],
-      profileImage: ['', Validators.required],
-      state: [0, Validators.required],
-      country: [0, Validators.required],
-      zipCode: [0, Validators.required],
-      isActive: [true, Validators.required],
-    });
+  updateProfileForm = new FormGroup({
+    id: new FormControl(0),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    mobile: new FormControl(''),
+    dateOfBirth: new FormControl(''),
+    userType: new FormControl(UserType),
+    address: new FormControl(''),
+    file: new FormControl<File | null>(null),
+    state: new FormControl(0),
+    country: new FormControl(0),
+    zipCode: new FormControl(0),
+    isActive: new FormControl(true),
+  });
 
-    this.changePasswordForm = this.fb.group({
-      userName: ['', Validators.required],
-      newPassword: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
-    });
-
-    this.userRole = sessionStorage.getItem('role') || '';
-  }
+  changePasswordForm = new FormGroup({
+    userName: new FormControl('', Validators.required),
+    newPassword: new FormControl('', Validators.required),
+    confirmPassword: new FormControl('', Validators.required),
+  });
 
   ngOnInit(): void {
+    this.userRole = sessionStorage.getItem('role') || '';
     this.fetchUserDetails();
     this.checkTokenExpiry();
     var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
     this.imgUrl = data.profileImage;
   }
 
+
+  onFileSelected(event: Event) {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    this.updateProfileForm.patchValue({ file });
+    this.updateProfileForm.get('file')?.updateValueAndValidity();
+  }
   fetchUserDetails() {
     const email = sessionStorage.getItem('email');
     this.userService.getUserByEmail(email).subscribe({
       next: (res: any) => {
         this.userDetails = res;
+        // console.log('User Details:', this.userDetails);
       },
       error: (err: any) => {
         console.log(err);
       },
     });
   }
-
+  
 
   openUpdateProfileModal() {
-    const modalInstance = new bootstrap.Modal(this.updateProfileModal.nativeElement);
+    const modalInstance = new bootstrap.Modal(
+      this.updateProfileModal.nativeElement
+    );
     modalInstance.show();
     this.OnProfileUpdate();
   }
 
   OnProfileUpdate() {
     this.isUpdating = true;
-    console.log('User Details:', this.userDetails);
-    this.userDetails.dateOfBirth = new DatePipe('en-US').transform(this.userDetails.dateOfBirth, 'yyyy-MM-dd');
-    this.updateProfileForm.patchValue(this.userDetails);
+
+    if (this.userDetails) {
+      this.userDetails.dateOfBirth = new DatePipe('en-US').transform(
+        this.userDetails.dateOfBirth,
+        'yyyy-MM-dd'
+      );
+
+      
+      const userId = this.userDetails.id || 0; 
+
+      this.updateProfileForm.patchValue({
+        id: userId,
+        firstName: this.userDetails.firstName || '',
+        lastName: this.userDetails.lastName || '',
+        email: this.userDetails.email || '',
+        mobile: this.userDetails.mobile || '',
+        dateOfBirth: this.userDetails.dateOfBirth || '',
+        userType: this.userDetails.userType || UserType.Customer, 
+        address: this.userDetails.address || '',
+        state: this.userDetails.state || 0,
+        country: this.userDetails.country || 0,
+        zipCode: this.userDetails.zipCode || 0,
+        isActive: this.userDetails.isActive ?? true, 
+      });
+    } else {
+      console.error('User details are not available.');
+    }
   }
 
-
   closeUpdateProfileModal() {
-    const modalInstance = bootstrap.Modal.getInstance(this.updateProfileModal.nativeElement);
+    const modalInstance = bootstrap.Modal.getInstance(
+      this.updateProfileModal.nativeElement
+    );
+    this.updateProfileForm.reset();
     modalInstance.hide();
   }
 
-
   openChangePasswordModal() {
-    const modalInstance = new bootstrap.Modal(this.changePasswordModal.nativeElement);
+    const modalInstance = new bootstrap.Modal(
+      this.changePasswordModal.nativeElement
+    );
     modalInstance.show();
     this.fetchUserDetails();
   }
 
-
   closeChangePasswordModal() {
-    const modalInstance = bootstrap.Modal.getInstance(this.changePasswordModal.nativeElement);
+    const modalInstance = bootstrap.Modal.getInstance(
+      this.changePasswordModal.nativeElement
+    );
     modalInstance.hide();
   }
 
+
   onUpdateProfile() {
-    this.userService.updateUser(this.updateProfileForm.value).subscribe({
+    if (this.updateProfileForm.invalid) {
+      this.toaster.error('Please fill in all required fields.', 'Error', {
+        timeOut: 3000,
+        closeButton: true,
+      });
+      return;
+    }
+  
+    
+    const userId = this.userDetails?.id || 0; 
+    this.updateProfileForm.patchValue({ id: userId });
+  
+    
+    console.log('Form Value:', this.updateProfileForm.value);
+  
+    const formData = new FormData();
+    Object.keys(this.updateProfileForm.controls).forEach((field) => {
+      const value = this.updateProfileForm.get(field)?.value;
+      if (field !== 'file') {
+        formData.append(field, value !== undefined ? value : '');
+      } else {
+        const fileInput = this.updateProfileForm.get('file')?.value;
+        if (fileInput) {
+          formData.append('file', fileInput, fileInput.name);
+        }
+      }
+    });
+
+    const idOfUser = this.userDetails.id;
+  
+    this.userService.updateUser(idOfUser,formData).subscribe({
       next: (res: any) => {
-        console.log('Profile Updated:', res);
-        this.isUpdating = !this.isUpdating;
         this.toaster.success('Profile Updated Successfully', 'Success', {
           timeOut: 3000,
           closeButton: true,
@@ -133,6 +199,7 @@ export class LayoutComponent {
       },
     });
   }
+  
 
   onChangePassword() {
     this.formData = this.changePasswordForm.value;
@@ -144,7 +211,6 @@ export class LayoutComponent {
       });
       return;
     }
-
 
     this.userService.changePassword(this.formData).subscribe({
       next: (res: any) => {
@@ -179,40 +245,42 @@ export class LayoutComponent {
     });
   }
 
-  userProfileImage: string = "default.png";
+  userProfileImage: string = 'default.png';
 
   checkTokenExpiry() {
     const expiryTime = sessionStorage.getItem('expiry');
-    
+
     if (expiryTime) {
-      const expireIn = new Date(expiryTime);  
-      const currentTime = new Date();  
+      const expireIn = new Date(expiryTime);
+      const currentTime = new Date();
 
       if (currentTime >= expireIn) {
-        this.logout('auto'); 
+        this.logout('auto');
       } else {
-        
         const timeRemaining = expireIn.getTime() - currentTime.getTime();
         setTimeout(() => {
-          this.logout('auto'); 
+          this.logout('auto');
         }, timeRemaining);
       }
-    } else {  
+    } else {
       this.logout('auto');
     }
   }
-  
 
   logout(type: 'manual' | 'auto') {
-    
     sessionStorage.clear();
-    this.router.navigate(["/"]);  
+    this.router.navigate(['/']);
 
     if (type === 'auto') {
-      this.toaster.info("Your session has expired. You have been logged out automatically.", "Session Expired");
+      this.toaster.info(
+        'Your session has expired. You have been logged out automatically.',
+        'Session Expired'
+      );
     } else if (type === 'manual') {
-      this.toaster.success("You have successfully logged out.", "Logout Successful");
+      this.toaster.success(
+        'You have successfully logged out.',
+        'Logout Successful'
+      );
     }
   }
-
 }
