@@ -25,7 +25,7 @@
             <div class="card-body">
               <h5 class="card-title text-truncate">{{ item.productName }}</h5>
               <p class="card-text text-muted">{{ item.category }} | {{ item.brand }}</p>
-              <p class="card-text text-success fs-5">Price: ${{ item.sellingPrice }}</p>
+              <p class="card-text text-success fs-5">Price: ${{ item.price }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
                   <button class="btn btn-outline-secondary btn-sm" (click)="decreaseQuantity(item)">
@@ -77,11 +77,61 @@
           <h6 class="mb-3">Delivery Address</h6>
           <p class="small text-muted">
             <strong>{{users.firstName}} {{users.lastName}}</strong><br />
-            123, Elm Street<br />
-            Springfield, IL 62704
+            {{users.address}}<br />
+            {{users.state}}, {{users.country}}<br />
+            {{users.zipCode}}
           </p>
-          <button class="btn btn-success w-100">Proceed to Checkout</button>
+          <button class="btn btn-success w-100" (click)="openPaymentModal()">Proceed to Checkout</button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="paymentModal" #paymentModal tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModalLabel">Payment Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closePaymentModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="paymentForm" >
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input type="text" formControlName="cardNumber" class="form-control" id="cardNumber" placeholder="Enter your card number" required>
+            <div *ngIf="paymentForm.get('cardNumber')?.touched && paymentForm.get('cardNumber')?.invalid" class="text-danger">
+              <small *ngIf="paymentForm.get('cardNumber')?.errors?.['required']">Card number is required.</small>
+              <small *ngIf="paymentForm.get('cardNumber')?.errors?.['pattern']">Card number must be 16 digits.</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="expiryDate" class="form-label">Expiry Date (MM/YY)</label>
+              <input type="text" formControlName="expiryDate" class="form-control" id="expiryDate"
+              placeholder="Enter expiry date" required>
+              <div *ngIf="paymentForm.get('expiryDate')?.touched && paymentForm.get('expiryDate')?.invalid" class="text-danger">
+                <small *ngIf="paymentForm.get('expiryDate')?.errors?.['required']">Expiry date is required.</small>
+                <small *ngIf="paymentForm.get('expiryDate')?.errors?.['pattern']">Expiry date must be in MM/YY format.</small>
+              </div>
+            </div>
+            <div class="col">
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="text" formControlName="cvv" class="form-control" id="cvv" placeholder="CVV" required>
+              <div *ngIf="paymentForm.get('cvv')?.touched && paymentForm.get('cvv')?.invalid" class="text-danger">
+                <small *ngIf="paymentForm.get('cvv')?.errors?.['required']">CVV is required.</small>
+                <small *ngIf="paymentForm.get('cvv')?.errors?.['pattern']">CVV must be 3 digits.</small>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closePaymentModal()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="onPaymentSubmit()" >Submit Payment</button>
       </div>
     </div>
   </div>

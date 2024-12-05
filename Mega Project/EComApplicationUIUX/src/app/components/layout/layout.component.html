@@ -62,7 +62,7 @@
 
 
 <div
-class="modal"
+class="modal fade"
 id="updateProfileModal"
 #updateProfileModal
 tabindex="-1"
@@ -210,25 +210,31 @@ aria-hidden="true"
           <div class="col-md-6">
             <div class="mb-3">
               <label for="updateState" class="form-label">State</label>
-              <input
-                type="text"
-                class="form-control"
-                id="updateState"
+              <select
+                class="form-control rounded-3"
+                id="registerState"
                 formControlName="state"
-                
-              />
+                required
+              >
+                <option value="" disabled>Select State</option>
+                <option *ngFor="let item of allStateByCountryId " [value]="item.stateId">{{item.name}}</option>
+              </select>
             </div>
           </div>
           <div class="col-md-6">
             <div class="mb-3">
               <label for="updateCountry" class="form-label">Country</label>
-              <input
-                type="text"
-                class="form-control"
-                id="updateCountry"
+              <select
+                (change)="onChange(this.updateProfileForm.value.country)" 
+                name="country"
+                class="form-control rounded-3"
+                id="registerCountry"
                 formControlName="country"
-                
-              />
+                required
+              >
+                <option value="" disabled>Select Country</option>
+                <option *ngFor="let item of allCountry " [value]="item.countryId" >{{item.name}}</option>
+              </select>
             </div>
           </div>
         </div>
@@ -288,7 +294,7 @@ aria-hidden="true"
 
 
 <div
-class="modal"
+class="modal fade"
 id="changePasswordModal"
 #changePasswordModal
 tabindex="-1"

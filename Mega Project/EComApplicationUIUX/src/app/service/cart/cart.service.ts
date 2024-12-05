@@ -28,23 +28,35 @@ export class CartService {
     return this.http.delete(`https://localhost:7053/api/Cart/removeFromCart/${cartId}`);
   }
 
+  decrementFromCart(payload: any): Observable<any> {
+    return this.http.post(`https://localhost:7053/api/Cart/decrementFromCart`, payload);
+  }
+  
+  validateCard(data:any):Observable<any>{
+    return this.http.post('https://localhost:7053/api/Cart/validateCard',data);
+  }
+
+  invoice(data:any):Observable<any>{
+    return this.http.post('https://localhost:7053/api/Invoice/generateInvoice',data);
+  }
+
 
   private cartItemCountSubject = new BehaviorSubject<number>(0);
-  // Expose the cart item count as an observable
+
   cartItemCount$ = this.cartItemCountSubject.asObservable();
 
   updateCartItemCount(): void {
     const storedCart = localStorage.getItem('cart');
     const cartArray = storedCart ? JSON.parse(storedCart) : [];
-    this.cartItemCountSubject.next(cartArray.length); // Emit the updated count
+    this.cartItemCountSubject.next(cartArray.length); 
   }
 
   addItemToCart(item: any): void {
     const storedCart = localStorage.getItem('cart');
     let cartArray = storedCart ? JSON.parse(storedCart) : [];
-    cartArray.push(item); // Add the new item
-    localStorage.setItem('cart', JSON.stringify(cartArray)); // Save to localStorage
-    this.updateCartItemCount(); // Update the count
+    cartArray.push(item); 
+    localStorage.setItem('cart', JSON.stringify(cartArray)); 
+    this.updateCartItemCount(); 
   }
 
   removeItemFromCart(itemToRemove: any): void {
@@ -53,16 +65,16 @@ export class CartService {
       let cartArray = JSON.parse(storedCart);
       cartArray = cartArray.filter(
         (item: any) => item.cartId !== itemToRemove.cartId
-      ); // Remove by cartId
-      localStorage.setItem('cart', JSON.stringify(cartArray)); // Save to localStorage
-      this.updateCartItemCount(); // Update the count
+      ); 
+      localStorage.setItem('cart', JSON.stringify(cartArray)); 
+      this.updateCartItemCount(); 
     }
   }
 
-  // Clear the cart completely
+
   clearCart(): void {
     localStorage.removeItem('cart');
-    this.updateCartItemCount(); // Set count to 0 after clearing the cart
+    this.updateCartItemCount(); 
   }
 
 

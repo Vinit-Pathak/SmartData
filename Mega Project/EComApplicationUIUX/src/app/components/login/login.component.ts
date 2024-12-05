@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { UserType } from '../../models/user-type.enum';
 import { LoaderService } from '../../service/loader/loader.service';
+import { CountryStateService } from '../../service/countryState/country-state.service';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +31,7 @@ export class LoginComponent {
   toaster = inject(ToastrService);
   userService = inject(UserService);
   loaderService = inject(LoaderService)
+  countryStateService = inject(CountryStateService)
 
   loginForm: FormGroup = new FormGroup({
     userName: new FormControl('', Validators.required),
@@ -58,6 +60,10 @@ export class LoginComponent {
     const file = (event.target as HTMLInputElement).files?.[0];
     this.registerForm.patchValue({ file });
     this.registerForm.get('file')?.updateValueAndValidity();
+  }
+
+  constructor(){
+    this.getAllCountry();
   }
 
 
@@ -129,6 +135,43 @@ export class LoginComponent {
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
+  }
+
+
+  allCountry : any [] = []
+  getAllCountry(){
+    this.countryStateService.getAllCountry().subscribe({
+      next : (res: any) => {
+        this.allCountry = res
+        // console.log(this.allCountry)
+      },
+      error : (error: any) =>{
+        alert("I am in error")
+      }
+      
+    })
+  }
+
+  allState : any [] = []
+
+  allStateByCountryId: any[] = []
+
+
+  loadState(countryId: number){
+    this.countryStateService.getStateByCountryId(countryId).subscribe((data: any)=>{
+          this.allState = data;
+        });
+  }
+
+  onChange(countrId : any){
+    this.countryStateService.getStateByCountryId(countrId).subscribe({
+      next : (res:any) => {
+        this.allStateByCountryId = res
+      },
+      error : (error: any) => {
+        console.log("I am in error")
+      }
+    })
   }
 
   onLoginSubmit() {

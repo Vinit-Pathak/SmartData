@@ -238,16 +238,20 @@
               </div>
             </div>
 
+
             <div class="mb-3">
               <label for="registerCountry" class="form-label">Country</label>
-              <input
-                type="number"
+              <select
+                (change)="onChange(this.registerForm.value.country)" 
+                name="country"
                 class="form-control rounded-3"
                 id="registerCountry"
                 formControlName="country"
-                placeholder="Enter your country"
                 required
-              />
+              >
+                <option value="" disabled>Select Country</option>
+                <option *ngFor="let item of allCountry " [value]="item.countryId" >{{item.name}}</option>
+              </select>
               <div
                 *ngIf="
                   registerForm.get('country')?.invalid &&
@@ -255,9 +259,11 @@
                 "
                 class="text-danger small mt-1"
               >
-                Country is required
+              Country is required
               </div>
             </div>
+
+
 
             <div class="mb-3">
               <label for="registerZipCode" class="form-label">Zip Code</label>
@@ -374,14 +380,15 @@
 
             <div class="mb-3">
               <label for="registerState" class="form-label">State</label>
-              <input
-                type="number"
+              <select
                 class="form-control rounded-3"
                 id="registerState"
                 formControlName="state"
-                placeholder="Enter your state"
                 required
-              />
+              >
+                <option value="" disabled>Select State</option>
+                <option *ngFor="let item of allStateByCountryId " [value]="item.stateId">{{item.name}}</option>
+              </select>
               <div
                 *ngIf="
                   registerForm.get('state')?.invalid &&

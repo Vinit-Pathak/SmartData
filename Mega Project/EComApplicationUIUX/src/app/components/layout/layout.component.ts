@@ -12,6 +12,7 @@ import {
 } from '@angular/forms';
 import { UserType } from '../../models/user-type.enum';
 import { CartService } from '../../service/cart/cart.service';
+import { CountryStateService } from '../../service/countryState/country-state.service';
 declare var bootstrap: any;
 
 @Component({
@@ -36,6 +37,7 @@ export class LayoutComponent {
   toaster = inject(ToastrService);
   userService = inject(UserService);
   cartService = inject(CartService);
+  countryStateService = inject(CountryStateService);
 
   @ViewChild('updateProfileModal') updateProfileModal!: ElementRef;
   @ViewChild('changePasswordModal') changePasswordModal!: ElementRef;
@@ -73,6 +75,8 @@ export class LayoutComponent {
       this.cartItemCount = count;
     });
     this.cartService.updateCartItemCount();
+    this.getAllCountry();
+    this.loadState(0);
   }
 
 
@@ -94,14 +98,61 @@ export class LayoutComponent {
     });
   }
   
+  allCountry : any [] = []
 
-  openUpdateProfileModal() {
-    const modalInstance = new bootstrap.Modal(
-      this.updateProfileModal.nativeElement
-    );
-    modalInstance.show();
-    this.OnProfileUpdate();
+
+  getAllCountry(){
+    this.countryStateService.getAllCountry().subscribe({
+      next : (res: any) => {
+        this.allCountry = res
+        // console.log(this.allCountry)
+      },
+      error : (error: any) =>{
+        alert("I am in error")
+      }
+      
+    })
   }
+
+  allState : any [] = []
+
+  allStateByCountryId: any[] = []
+
+
+  loadState(countryId: number){
+    this.countryStateService.getStateByCountryId(countryId).subscribe((data: any)=>{
+          this.allState = data;
+          // console.log(data)
+          // Set the selected state in the form
+          if (this.formData) {
+            this.updateProfileForm.patchValue({
+              state: this.formData.state
+            });
+          }
+        });
+  }
+
+  onChange(countrId : any){
+    // console.log(countrId)
+    this.countryStateService.getStateByCountryId(countrId).subscribe({
+      next : (res:any) => {
+        this.allStateByCountryId = res
+      },
+      error : (error: any) => {
+        console.log("I am in error")
+      }
+    })
+  }
+
+
+
+    openUpdateProfileModal() {
+      const modalInstance = new bootstrap.Modal(
+        this.updateProfileModal.nativeElement
+      );
+      modalInstance.show();
+      this.OnProfileUpdate();
+    }
 
   OnProfileUpdate() {
     this.isUpdating = true;
