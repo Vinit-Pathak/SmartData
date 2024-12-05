@@ -66,18 +66,25 @@ export class LayoutComponent {
   });
 
   ngOnInit(): void {
+    debugger;
+    this.cartService.cartItemCount$.subscribe((cartItem)=>{
+      this.cartItemCount = cartItem.length;
+      console.log("Cart: ",cartItem);
+      
+    })
     this.userRole = sessionStorage.getItem('role') || '';
     this.fetchUserDetails();
     this.checkTokenExpiry();
     var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
     this.imgUrl = data.profileImage;
-    this.cartService.cartItemCount$.subscribe((count) => {
-      this.cartItemCount = count;
-    });
+    // this.cartService.cartItemCount$.subscribe((count) => {
+    //   this.cartItemCount = count;
+    // });
     this.cartService.updateCartItemCount();
     this.getAllCountry();
     this.loadState(0);
   }
+
 
 
   onFileSelected(event: Event) {

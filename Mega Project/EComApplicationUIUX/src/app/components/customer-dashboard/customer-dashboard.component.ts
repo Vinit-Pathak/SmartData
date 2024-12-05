@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { ProductService } from '../../service/product/product.service';
 import { CartService } from '../../service/cart/cart.service';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-customer-dashboard',
@@ -16,6 +17,7 @@ export class CustomerDashboardComponent {
   userId:any;
   quantity: number = 1;
   productId?: number = 0;
+  cartItemList:number[] = [];
 
   productService = inject(ProductService);
   toasterService = inject(ToastrService);
@@ -27,8 +29,18 @@ export class CustomerDashboardComponent {
     this.loadCartFromLocalStorage();
     this.userId = localStorage.getItem('id');
     console.log("UserID : ",this.userId);
+    this.cartService.cartItemCount$.subscribe({
+      next:(res:any)=>{
+        this.cartItemList = res;
+      }
+    })
   }
 
+  isExistInCart(productId:number):boolean{
+    console.log(this.cartItemList.includes(productId));
+    
+    return this.cartItemList.includes(productId);
+  }
 
   getAllProducts() {
     this.productService.getAllProducts().subscribe({
@@ -51,22 +63,44 @@ export class CustomerDashboardComponent {
     console.log(payload);
     debugger;
     if (this.cart.has(prodId)) {
-      this.toasterService.error('Item is already in the cart');
+      this.toasterService.error('Item is already in the cart', 'Error', {
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
+        closeButton: true}
+      );
       return;
     }
 
     this.cartService.addToCart(payload).subscribe({
       next: (res: any) => {
         if(res.statusCode == 200){
+          this.cartService.resetCartItemCount()
           this.cart.add(prodId);
-          this.updateCartInLocalStorage();
-          this.toasterService.success('Item Added Successfully');
+          // this.updateCartInLocalStorage();
+          this.toasterService.success('Item Added Successfully', 'Success',{
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
+            closeButton: true
+          });
         }else{
-          this.toasterService.error('Error while adding the item');
+          this.toasterService.error('Error while adding the item','Error', {
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
+            closeButton: true
+          });
         }
       },
       error: (err: any) => {
         console.error('Error adding to cart:', err);
+        this.toasterService.error('Error while adding the item','Error', {
+          timeOut: 2000,
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true
+        });
       }
     })
   }

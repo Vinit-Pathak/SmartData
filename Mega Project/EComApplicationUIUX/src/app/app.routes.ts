@@ -7,6 +7,7 @@ import { loginGuardGuard } from './guards/login-guard.guard';
 import { authGuardGuard } from './guards/auth-guard.guard';
 import { CustomerDashboardComponent } from './components/customer-dashboard/customer-dashboard.component';
 import { CartComponent } from './components/cart/cart.component';
+import { InvoiceComponent } from './components/invoice/invoice.component';
 
 export const routes: Routes = [
     {
@@ -41,14 +42,14 @@ export const routes: Routes = [
                 path:'cart',
                 component:CartComponent,
                 canActivate:[loginGuardGuard]
+            },
+            {
+                path:'invoice',
+                component: InvoiceComponent,
+                canActivate:[loginGuardGuard]
             }
         ]
     },
-    // {
-    //     path:'product',
-    //     component:ProductsComponent,
-    //     canActivate:['loginGuardGuard', 'authGuardGuard']
-    // }
     
 ];
 

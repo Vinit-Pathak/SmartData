@@ -35,25 +35,35 @@ export class LoginComponent {
 
   loginForm: FormGroup = new FormGroup({
     userName: new FormControl('', Validators.required),
-    password: new FormControl('', [Validators.required]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+    ]),    
     userType: new FormControl(UserType.Customer, Validators.required),
-    otp: new FormControl('', Validators.required),
+    otp: new FormControl('', [Validators.required, Validators.pattern(/^\d{6}$/)]),
   });
 
   registerForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
+    firstName: new FormControl('', [Validators.required,Validators.minLength(5)] ),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    mobile: new FormControl('', Validators.required),
+    mobile: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d{10}$/)
+    ]),
     dateOfBirth: new FormControl('', Validators.required),
     userType: new FormControl(UserType.Customer, Validators.required),
     file: new FormControl<File | null>(null),
-    address: new FormControl('', Validators.required),
-    zipCode: new FormControl(0, Validators.required),
+    address: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    zipCode: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d{6}$/) 
+    ]),
     state: new FormControl(0, Validators.required),
     country: new FormControl(0, Validators.required),
     isActive: new FormControl(false, Validators.required),
   });
+  
 
 
   onFileSelected(event: Event) {

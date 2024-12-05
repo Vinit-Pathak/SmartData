@@ -10,6 +10,27 @@ export class CartService {
   http = inject(HttpClient);
   constructor(){
     this.updateCartItemCount();
+    this.setItemCount();
+  }
+
+  cartItemCount$ : BehaviorSubject<number[]> = new BehaviorSubject<number[]>([]);
+
+  setItemCount(){
+    debugger;
+    const UserId = localStorage.getItem('id')
+    this.getCartItemCount(Number(UserId)).subscribe({
+      next: (res: any) => {
+        this.cartItemCount$.next(res.cartProductId);
+      },
+      error: (err: any) => {
+        this.cartItemCount$.next([]);
+        console.error('Error fetching cart items:', err);
+      }
+    })
+  }
+
+  resetCartItemCount(){
+    this.setItemCount();
   }
 
   addToCart(data:any):Observable<any>{
@@ -18,6 +39,10 @@ export class CartService {
 
   getProductFromCart(prId: number): Observable<any> {
     return this.http.get(`https://localhost:7053/api/Cart/getCartDetails/${prId}`);
+  }
+
+  getCartItemCount(id:number):Observable<any>{
+    return this.http.get(`https://localhost:7053/api/Cart/getCartItemCount/${id}`);
   }
 
   incrementToCart(quantity: any):Observable<any>{
@@ -43,7 +68,7 @@ export class CartService {
 
   private cartItemCountSubject = new BehaviorSubject<number>(0);
 
-  cartItemCount$ = this.cartItemCountSubject.asObservable();
+  // cartItemCount$ = this.cartItemCountSubject.asObservable();
 
   updateCartItemCount(): void {
     const storedCart = localStorage.getItem('cart');

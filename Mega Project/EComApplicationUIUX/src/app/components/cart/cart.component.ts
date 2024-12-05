@@ -3,7 +3,7 @@ import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { CartService } from '../../service/cart/cart.service';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../../service/user/user.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {
   FormControl,
   FormGroup,
@@ -23,6 +23,7 @@ export class CartComponent {
   cartService = inject(CartService);
   toasterService = inject(ToastrService);
   userService = inject(UserService);
+  router = inject(Router)
   cartItems: any[] = [];
   userId: number = 0;
   cart = new Set<number>();
@@ -39,7 +40,7 @@ export class CartComponent {
     this.getCartDetails();
     this.getUserAddress(this.userId);
     this.cartService.cartItemCount$.subscribe((count) => {
-      this.cartItemCount = count;
+      // this.cartItemCount = count;
     });
 
     this.cartService.updateCartItemCount();
@@ -90,6 +91,7 @@ export class CartComponent {
           this.clearCart();
           this.getCartDetails();
           this.closePaymentModal();
+
         } else {
           this.toasterService.error('Payment failed');
         }
@@ -102,9 +104,11 @@ export class CartComponent {
   }
 
   userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
+  Id = sessionStorage.getItem('id');
+  invoiceData:any;
   generateInvoice() {
     var payload = {
-      userId: this.userData.userId,
+      userId: this.userId,
       address: this.userData.address,
       state: this.userData.state,
       country: this.userData.country,
@@ -118,12 +122,17 @@ export class CartComponent {
         };
       }),
     };
-
+    debugger;
+    console.log('Payload for generating invoice:', payload);
+    
     this.cartService.invoice(payload).subscribe({
       next:(res:any)=>{
         if(res.statusCode === 200){
           this.toasterService.success('Invoice generated successfully');
           console.log('Invoice generated successfully',res);
+          this.invoiceData = res.data;
+          this.invoiceData.localStorage.setItem('invoiceData', JSON.stringify(this.invoiceData));
+          this.router.navigateByUrl('invoice')
           this.clearCart();
           this.getCartDetails();
         }else{
@@ -316,9 +325,10 @@ export class CartComponent {
         next: (res: any) => {
           if (res.statusCode === 200) {
             console.log('I am in remove', res);
-            this.cartService.updateCartItemCount();
-            this.removeCartFromLocalStorage(cartId); // Pass the cartId to remove only that item
-            this.cartService.updateCartItemCount();
+            this.cartService.resetCartItemCount();
+            // this.cartService.updateCartItemCount();
+            // this.removeCartFromLocalStorage(cartId);
+            // this.cartService.updateCartItemCount();
             this.getCartDetails();
             this.toasterService.success('Item removed from cart');
           } else {

@@ -70,12 +70,14 @@
             ></i>
             <div
               *ngIf="
-                loginForm.get('password')?.invalid &&
+                loginForm.get('password')?.hasError('pattern') &&
                 loginForm.get('password')?.touched
               "
               class="text-danger small mt-1"
             >
-              Password is required
+              Password must be at least 8 characters long, with at least 1
+              uppercase letter, 1 lowercase letter, 1 digit, and 1 special
+              character.
             </div>
           </div>
 
@@ -151,9 +153,7 @@
         <div *ngIf="!isLogin" class="row">
           <div class="col-md-6">
             <div class="mb-3">
-              <label for="registerFirstName" class="form-label"
-                >First Name</label
-              >
+              <label for="registerFirstName" class="form-label">First Name</label>
               <input
                 type="text"
                 class="form-control rounded-3"
@@ -163,13 +163,16 @@
                 required
               />
               <div
-                *ngIf="
-                  registerForm.get('firstName')?.invalid &&
-                  registerForm.get('firstName')?.touched
-                "
+                *ngIf="registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched"
                 class="text-danger small mt-1"
               >
-                First Name is required
+                First Name is required.
+              </div>
+              <div
+                *ngIf="registerForm.get('firstName')?.hasError('minlength') && registerForm.get('firstName')?.touched"
+                class="text-danger small mt-1"
+              >
+                First Name must be at least 5 characters long.
               </div>
             </div>
 
@@ -226,23 +229,26 @@
                 formControlName="mobile"
                 placeholder="Enter your mobile number"
                 required
-              />
+              />  
               <div
-                *ngIf="
-                  registerForm.get('mobile')?.invalid &&
-                  registerForm.get('mobile')?.touched
-                "
+                *ngIf="registerForm.get('mobile')?.hasError('required') && registerForm.get('mobile')?.touched"
                 class="text-danger small mt-1"
               >
-                Mobile number is required
+                Mobile number is required.
+              </div>
+              <div
+                *ngIf="registerForm.get('mobile')?.hasError('pattern') && registerForm.get('mobile')?.touched"
+                class="text-danger small mt-1"
+              >
+                Mobile number must be a valid 10-digit number.
               </div>
             </div>
-
+        
 
             <div class="mb-3">
               <label for="registerCountry" class="form-label">Country</label>
               <select
-                (change)="onChange(this.registerForm.value.country)" 
+                (change)="onChange(this.registerForm.value.country)"
                 name="country"
                 class="form-control rounded-3"
                 id="registerCountry"
@@ -250,7 +256,12 @@
                 required
               >
                 <option value="" disabled>Select Country</option>
-                <option *ngFor="let item of allCountry " [value]="item.countryId" >{{item.name}}</option>
+                <option
+                  *ngFor="let item of allCountry"
+                  [value]="item.countryId"
+                >
+                  {{ item.name }}
+                </option>
               </select>
               <div
                 *ngIf="
@@ -259,11 +270,9 @@
                 "
                 class="text-danger small mt-1"
               >
-              Country is required
+                Country is required
               </div>
             </div>
-
-
 
             <div class="mb-3">
               <label for="registerZipCode" class="form-label">Zip Code</label>
@@ -312,9 +321,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="registerfile" class="form-label"
-                >Profile Image</label
-              >
+              <label for="registerfile" class="form-label">Profile Image</label>
               <input
                 type="file"
                 class="form-control rounded-3"
@@ -387,7 +394,12 @@
                 required
               >
                 <option value="" disabled>Select State</option>
-                <option *ngFor="let item of allStateByCountryId " [value]="item.stateId">{{item.name}}</option>
+                <option
+                  *ngFor="let item of allStateByCountryId"
+                  [value]="item.stateId"
+                >
+                  {{ item.name }}
+                </option>
               </select>
               <div
                 *ngIf="
@@ -425,7 +437,6 @@
     </div>
   </div>
 </div>
-
 
 <div id="overlay" class="overlay"></div>
 

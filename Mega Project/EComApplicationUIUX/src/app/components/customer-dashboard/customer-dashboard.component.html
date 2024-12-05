@@ -22,7 +22,7 @@
             <strong>Price:</strong> ${{ product.sellingPrice }}
           </p>
           <div class="position-relative">
-            <button
+            <!-- <button
               class="btn add-to-cart-btn mt-auto"
               [ngClass]="{
                 'added': isProductInCart(product.id),
@@ -38,7 +38,17 @@
               <span class="icon">
                 <i class="bi bi-cart-plus"></i>
               </span>
-            </button>
+            </button> -->
+            <ng-container *ngIf="!isExistInCart(product.id), else addedToCart">
+              <button class="btn add-to-cart-btn mt-auto" (click)="addToCart(product.id)" >
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </ng-container>
+            <ng-template #addedToCart>
+              <button class="btn add-to-cart-btn mt-auto" >
+                <i class="bi bi-cart-plus"></i> Added to Cart
+              </button>
+            </ng-template>
           </div>
         </div>
       </div>
