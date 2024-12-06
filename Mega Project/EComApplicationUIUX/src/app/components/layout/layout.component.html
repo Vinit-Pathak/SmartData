@@ -7,19 +7,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <!-- Admin Link -->
         <li class="nav-item" *ngIf="userRole == 1">
           <a class="nav-link" [routerLink]="['product']">
             <i class="fas fa-store"></i> Product
           </a>
         </li>
-        <!-- Customer Link -->
         <li class="nav-item" *ngIf="userRole == 2">
           <a class="nav-link" [routerLink]="['customer-dashboard']">
             <i class="fas fa-store"></i> Market
           </a>
         </li>
-        <!-- Profile Link -->
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['profile']">
             <i class="fas fa-users"></i> Profile
@@ -27,7 +24,6 @@
         </li>
       </ul>
 
-      <!-- Cart for Customers -->
       <ul class="navbar-nav me-3 mt-2">
         <li class="nav-item position-relative" *ngIf="userRole == 2">
           <a class="nav-link" [routerLink]="['cart']">
@@ -39,10 +35,9 @@
         </li>
       </ul>
 
-      <!-- User Dropdown - Triggered by Hover over Profile Image -->
       <div class="dropdown">
         <a class="nav-link d-flex align-items-center profile-img-container">
-          <img [src]="imgUrl || 'assets/images/default-placeholder.png'" alt="User" class="rounded-circle profile-img" />
+          <img [src]="imgUrl || 'https://ecomapplicationstorage.blob.core.windows.net/ecomapplication/profile-images/d74cd525-d4e0-4c09-b094-2aa50f375d42'" alt="User" class="rounded-circle profile-img" />
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item" style="cursor: pointer;" (click)="openUpdateProfileModal()">Update Profile</a></li>
@@ -94,8 +89,13 @@ aria-hidden="true"
                 class="form-control"
                 id="updateFirstName"
                 formControlName="firstName"
-                
               />
+              <div *ngIf="updateProfileForm.get('firstName')?.hasError('required') && updateProfileForm.get('firstName')?.touched" class="text-danger small mt-1">
+                First Name is required.
+              </div>
+              <div *ngIf="updateProfileForm.get('firstName')?.hasError('minlength') && updateProfileForm.get('firstName')?.touched" class="text-danger small mt-1">
+                First Name must be at least 5 characters long.
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -106,8 +106,13 @@ aria-hidden="true"
                 class="form-control"
                 id="updateLastName"
                 formControlName="lastName"
-                
               />
+              <div *ngIf="updateProfileForm.get('lastName')?.hasError('required') && updateProfileForm.get('lastName')?.touched" class="text-danger small mt-1">
+                Last Name is required.
+              </div>
+              <div *ngIf="updateProfileForm.get('lastName')?.hasError('minlength') && updateProfileForm.get('lastName')?.touched" class="text-danger small mt-1">
+                Last Name must be at least 5 characters long.
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +126,7 @@ aria-hidden="true"
                 class="form-control"
                 id="updateEmail"
                 formControlName="email"
-                
+                readonly
               />
             </div>
           </div>
@@ -135,6 +140,12 @@ aria-hidden="true"
                 formControlName="mobile"
                 
               />
+              <div *ngIf="updateProfileForm.get('mobile')?.hasError('required') && updateProfileForm.get('mobile')?.touched" class="text-danger small mt-1">
+                Mobile number is required.
+              </div>
+              <div *ngIf="updateProfileForm.get('mobile')?.hasError('pattern') && updateProfileForm.get('mobile')?.touched" class="text-danger small mt-1">
+                Mobile number must be a valid 10-digit number.
+              </div>
             </div>
           </div>
         </div>
@@ -148,8 +159,11 @@ aria-hidden="true"
                 class="form-control"
                 id="dateOfBirth"
                 formControlName="dateOfBirth"
-                
+                [max]="todayDate"
               />
+              <div *ngIf="updateProfileForm.get('dateOfBirth')?.hasError('required') && updateProfileForm.get('dateOfBirth')?.touched" class="text-danger small mt-1">
+                Date of Birth is required.
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -189,6 +203,12 @@ aria-hidden="true"
                 formControlName="address"
                 
               />
+              <div *ngIf="updateProfileForm.get('address')?.hasError('required') && updateProfileForm.get('address')?.touched" class="text-danger small mt-1">
+                Address is required.
+              </div>
+              <div *ngIf="updateProfileForm.get('address')?.hasError('minlength') && updateProfileForm.get('address')?.touched" class="text-danger small mt-1">
+                Address must be at least 10 characters long.
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -202,6 +222,9 @@ aria-hidden="true"
                 (change)="onFileSelected($event)"
                 
               />
+              <div *ngIf="updateProfileForm.get('file')?.hasError('required') && updateProfileForm.get('file')?.touched" class="text-danger small mt-1">
+                Profile Image is required.
+              </div>
             </div>
           </div>
         </div>
@@ -219,6 +242,9 @@ aria-hidden="true"
                 <option value="" disabled>Select State</option>
                 <option *ngFor="let item of allStateByCountryId " [value]="item.stateId">{{item.name}}</option>
               </select>
+              <div *ngIf="updateProfileForm.get('state')?.hasError('required') && updateProfileForm.get('state')?.touched" class="text-danger small mt-1">
+                State is required.
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -235,6 +261,9 @@ aria-hidden="true"
                 <option value="" disabled>Select Country</option>
                 <option *ngFor="let item of allCountry " [value]="item.countryId" >{{item.name}}</option>
               </select>
+              <div *ngIf="updateProfileForm.get('country')?.hasError('required') && updateProfileForm.get('country')?.touched" class="text-danger small mt-1">
+                Country is required.
+              </div>
             </div>
           </div>
         </div>
@@ -251,14 +280,11 @@ aria-hidden="true"
                 placeholder="Enter your zip code"
                 
               />
-              <div
-                *ngIf="
-                  updateProfileForm.get('zipCode')?.invalid &&
-                  updateProfileForm.get('zipCode')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Zip Code is required
+              <div *ngIf="updateProfileForm.get('zipCode')?.hasError('required') && updateProfileForm.get('zipCode')?.touched" class="text-danger small mt-1">
+                Zip Code is required.
+              </div>
+              <div *ngIf="updateProfileForm.get('zipCode')?.hasError('pattern') && updateProfileForm.get('zipCode')?.touched" class="text-danger small mt-1">
+                Zip Code must be a valid 6-digit number.
               </div>
             </div>
           </div>
@@ -338,6 +364,17 @@ aria-hidden="true"
             required
             [(ngModel)]="newPassword"
           />
+          <div
+              *ngIf="
+                changePasswordForm.get('newPassword')?.hasError('pattern') &&
+                changePasswordForm.get('newPassword')?.touched 
+              "
+              class="text-danger small mt-1"
+            >
+              Password must be at least 8 characters long, with at least 1
+              uppercase letter, 1 lowercase letter, 1 digit, and 1 special
+              character.
+            </div>
         </div>
 
         <div class="mb-3">
@@ -350,7 +387,11 @@ aria-hidden="true"
             required
             [(ngModel)]="confirmPassword"
           />
-          <div *ngIf="newPassword !== confirmPassword && confirmPassword" class="text-danger">
+          <div *ngIf="
+          changePasswordForm.get('newPassword')?.hasError('pattern') &&
+          changePasswordForm.get('newPassword')?.touched && (newPassword !== confirmPassword && confirmPassword) 
+        "
+        class="text-danger small mt-1">
             Passwords must match
           </div>
 

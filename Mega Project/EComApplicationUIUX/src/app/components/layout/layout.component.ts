@@ -34,6 +34,7 @@ export class LayoutComponent {
   router = inject(Router);
   imgUrl: string = '';
   cartItemCount = 0;
+  todayDate=new Date().toISOString().split('T')[0];
   toaster = inject(ToastrService);
   userService = inject(UserService);
   cartService = inject(CartService);
@@ -45,31 +46,43 @@ export class LayoutComponent {
 
   updateProfileForm = new FormGroup({
     id: new FormControl(0),
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    firstName: new FormControl('',[Validators.required,Validators.minLength(5)]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
     email: new FormControl(''),
-    mobile: new FormControl(''),
-    dateOfBirth: new FormControl(''),
+    mobile: new FormControl('',new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d{10}$/)
+    ])),
+    dateOfBirth: new FormControl('', Validators.required),
     userType: new FormControl(UserType),
-    address: new FormControl(''),
+    address: new FormControl('', [Validators.required, Validators.minLength(10)]),
     file: new FormControl<File | null>(null),
-    state: new FormControl(0),
-    country: new FormControl(0),
-    zipCode: new FormControl(0),
+    state: new FormControl(0, Validators.required),
+    country: new FormControl(0, Validators.required),
+    zipCode: new FormControl(0, [
+      Validators.required,
+      Validators.pattern(/^\d{6}$/) 
+    ]),
     isActive: new FormControl(true),
   });
 
   changePasswordForm = new FormGroup({
     userName: new FormControl('', Validators.required),
-    newPassword: new FormControl('', Validators.required),
-    confirmPassword: new FormControl('', Validators.required),
+    newPassword: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+    ]),
+    confirmPassword: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+    ]),
   });
 
   ngOnInit(): void {
     debugger;
     this.cartService.cartItemCount$.subscribe((cartItem)=>{
       this.cartItemCount = cartItem.length;
-      console.log("Cart: ",cartItem);
+      // console.log("Cart: ",cartItem);
       
     })
     this.userRole = sessionStorage.getItem('role') || '';

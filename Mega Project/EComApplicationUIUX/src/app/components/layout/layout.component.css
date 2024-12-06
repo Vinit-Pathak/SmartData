@@ -1,4 +1,4 @@
-/* Navbar Styles */
+
 .navbar {
   background-color: #f8f9fa;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -33,13 +33,13 @@
   margin-right: 10px;
 }
 
-/* Cart Badge */
+
 .cart-badge {
   font-size: 0.75rem;
   padding: 0.3rem 0.5rem;
 }
 
-/* Navbar Dropdown Styles */
+
 .dropdown-menu {
   display: none;
   background-color: #fff;
@@ -63,12 +63,12 @@
   color: #007bff;
 }
 
-/* Display the dropdown on hover over the profile image */
+
 .profile-img-container:hover .dropdown-menu {
   display: block;
 }
 
-/* Navbar Mobile Responsiveness */
+
 @media (max-width: 767px) {
   .navbar {
     padding: 0.5rem 0;
@@ -78,7 +78,7 @@
     font-size: 1.4rem;
   }
 
-  /* Make dropdown align to right on mobile */
+ 
   .dropdown-menu {
     position: absolute;
     right: 0;
@@ -88,7 +88,7 @@
   }
 }
 
-/* Adjustments for profile image in the dropdown */
+
 .navbar-nav .profile-img {
   width: 35px;
   height: 35px;
@@ -107,17 +107,17 @@
   border-color: #007bff;
 }
 
-/* Body padding to avoid navbar overlap */
+
 body {
   padding-top: 70px;
 }
 
-/* Cart icon position adjustment */
+
 .nav-item.position-relative {
   margin-right: 20px;
 }
 
-/* Dropdown hover effect */
+
 .dropdown:hover .dropdown-menu {
   display: block;
   transition: opacity 0.2s ease;

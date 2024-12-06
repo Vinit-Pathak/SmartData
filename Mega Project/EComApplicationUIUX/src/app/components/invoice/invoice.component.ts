@@ -1,11 +1,11 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [DatePipe, CommonModule],
+  imports: [DatePipe, CommonModule, RouterLink],
   templateUrl: './invoice.component.html',
   styleUrls: ['./invoice.component.css'],
 })
@@ -18,9 +18,8 @@ export class InvoiceComponent implements OnInit {
   ngOnInit(): void {
     this.invoiceData = JSON.parse(localStorage.getItem('invoiceData') || '{}');
     this.userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
-
+    console.log('Invoice Data:', this.invoiceData); 
     if (!this.invoiceData || Object.keys(this.invoiceData).length === 0) {
-      // Redirect to cart if no invoice data exists
       this.router.navigate(['/cart']);
     }
   }
@@ -28,9 +27,9 @@ export class InvoiceComponent implements OnInit {
   downloadInvoice(): void {
     const element = document.createElement('a');
     const invoiceDetails = JSON.stringify(this.invoiceData, null, 2);
-    const file = new Blob([invoiceDetails], { type: 'application/json' });
+    const file = new Blob([invoiceDetails], { type: 'application/pdf' });
     element.href = URL.createObjectURL(file);
-    element.download = `invoice_${this.invoiceData.invoiceId}.json`;
+    element.download = `invoice_${this.invoiceData.invoiceId}.pdf`;
     element.click();
   }
 }

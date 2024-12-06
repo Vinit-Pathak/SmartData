@@ -73,7 +73,6 @@
     </div>
   </div>
 
-  <!-- Add New Product Form -->
   <div *ngIf="isAdding" class="form-overlay">
     <div class="form-container fade-in">
       <form [formGroup]="addForm" class="form">
@@ -89,52 +88,145 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="productName" class="form-label">Product Name</label>
-              <input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Enter product name" required />
+              <input 
+                type="text" 
+                class="form-control" 
+                id="productName" 
+                formControlName="productName" 
+                placeholder="Enter product name" 
+                maxlength="8"
+                [ngClass]="{ 'is-invalid': addForm.get('productName')?.invalid && addForm.get('productName')?.touched }"
+              />
+              <div *ngIf="addForm.get('productName')?.invalid && addForm.get('productName')?.touched" class="invalid-feedback">
+                <div *ngIf="addForm.get('productName')?.hasError('required')">Product name is required.</div>
+                <div *ngIf="addForm.get('productName')?.hasError('minlength')">Product name must be at least 5 characters long.</div>
+              </div>
             </div>
-
-            <div class="form-group">
+        
+            <!-- <div class="form-group">
               <label for="productCode" class="form-label">Product Code</label>
-              <input type="text" class="form-control" id="productCode" formControlName="productCode" placeholder="Enter product code" required />
-            </div>
-
+              <input 
+                type="text" 
+                class="form-control" 
+                id="productCode" 
+                formControlName="productCode" 
+                placeholder="Enter product code" 
+                [ngClass]="{ 'is-invalid': addForm.get('productCode')?.invalid && addForm.get('productCode')?.touched }"
+              />
+              <div *ngIf="addForm.get('productCode')?.invalid && addForm.get('productCode')?.touched" class="invalid-feedback">
+                Product code is required.
+              </div>
+            </div> -->
+        
             <div class="form-group">
               <label for="brand" class="form-label">Brand</label>
-              <input type="text" class="form-control" id="brand" formControlName="brand" placeholder="Enter brand name" required />
+              <input 
+                type="text" 
+                class="form-control" 
+                id="brand" 
+                formControlName="brand" 
+                placeholder="Enter brand name" 
+                [ngClass]="{ 'is-invalid': addForm.get('brand')?.invalid && addForm.get('brand')?.touched }"
+              />
+              <div *ngIf="addForm.get('brand')?.invalid && addForm.get('brand')?.touched" class="invalid-feedback">
+                Brand is required.
+              </div>
             </div>
-
+        
             <div class="form-group">
               <label for="productImage" class="form-label">Product Image</label>
-              <input type="file" class="form-control" id="productImage" formControlName="file" (change)="onFileSelectedAdd($event)" />
+              <input 
+                type="file" 
+                class="form-control" 
+                id="productImage" 
+                formControlName="file" 
+                (change)="onFileSelectedAdd($event)" 
+                [ngClass]="{ 'is-invalid': addForm.get('file')?.invalid && addForm.get('file')?.touched }"
+              />
+              <div *ngIf="addForm.get('file')?.invalid && addForm.get('file')?.touched" class="invalid-feedback">
+                Product image is required.
+              </div>
             </div>
-
+        
             <div class="form-group">
               <label for="sellingPrice" class="form-label">Selling Price</label>
-              <input type="number" class="form-control" id="sellingPrice" formControlName="sellingPrice" placeholder="Enter selling price" required />
+              <input 
+                type="number" 
+                class="form-control" 
+                id="sellingPrice" 
+                formControlName="sellingPrice" 
+                placeholder="Enter selling price" 
+                [ngClass]="{ 'is-invalid': addForm.get('sellingPrice')?.invalid && addForm.get('sellingPrice')?.touched }"
+              />
+              <div *ngIf="addForm.get('sellingPrice')?.invalid && addForm.get('sellingPrice')?.touched" class="invalid-feedback">
+                <div *ngIf="addForm.get('sellingPrice')?.hasError('required')">Selling price is required.</div>
+              </div>
             </div>
           </div>
-
+        
           <div class="col-md-6">
             <div class="form-group">
               <label for="category" class="form-label">Category</label>
-              <input type="text" class="form-control" id="category" formControlName="category" placeholder="Enter category name" required />
+              <input 
+                type="text" 
+                class="form-control" 
+                id="category" 
+                formControlName="category" 
+                placeholder="Enter category name" 
+                [ngClass]="{ 'is-invalid': addForm.get('category')?.invalid && addForm.get('category')?.touched }"
+              />
+              <div *ngIf="addForm.get('category')?.invalid && addForm.get('category')?.touched" class="invalid-feedback">
+                <div *ngIf="addForm.get('category')?.hasError('required')">Category is required.</div>
+                <div *ngIf="addForm.get('category')?.hasError('minlength')">Category must be at least 5 characters long.</div>
+              </div>
             </div>
-
+        
             <div class="form-group">
               <label for="purchasePrice" class="form-label">Purchase Price</label>
-              <input type="number" class="form-control" id="purchasePrice" formControlName="purchasePrice" placeholder="Enter purchase price" required />
+              <input 
+                type="number" 
+                class="form-control" 
+                id="purchasePrice" 
+                formControlName="purchasePrice" 
+                placeholder="Enter purchase price" 
+                [ngClass]="{ 'is-invalid': addForm.get('purchasePrice')?.invalid && addForm.get('purchasePrice')?.touched }"
+              />
+              <div *ngIf="addForm.get('purchasePrice')?.invalid && addForm.get('purchasePrice')?.touched" class="invalid-feedback">
+                <div *ngIf="addForm.get('purchasePrice')?.hasError('required')">Purchase price is required.</div>
+              </div>
             </div>
-
+        
             <div class="form-group">
               <label for="purchaseDate" class="form-label">Purchase Date</label>
-              <input type="date" class="form-control" id="purchaseDate" formControlName="purchaseDate" required />
+              <input 
+                type="date" 
+                class="form-control" 
+                id="purchaseDate" 
+                formControlName="purchaseDate" 
+                [ngClass]="{ 'is-invalid': addForm.get('purchaseDate')?.invalid && addForm.get('purchaseDate')?.touched }"
+              />
+              <div *ngIf="addForm.get('purchaseDate')?.invalid && addForm.get('purchaseDate')?.touched" class="invalid-feedback">
+                Purchase date is required.
+              </div>
             </div>
-
+        
             <div class="form-group">
               <label for="stock" class="form-label">Stock</label>
-              <input type="number" class="form-control" id="stock" formControlName="stock" placeholder="Enter stock quantity" required />
+              <input 
+                type="number" 
+                class="form-control" 
+                id="stock" 
+                formControlName="stock" 
+                placeholder="Enter stock quantity" 
+                [ngClass]="{ 'is-invalid': addForm.get('stock')?.invalid && addForm.get('stock')?.touched }"
+              />
+              <div *ngIf="addForm.get('stock')?.invalid && addForm.get('stock')?.touched" class="invalid-feedback">
+                <div *ngIf="addForm.get('stock')?.hasError('required')">Stock is required.</div>
+              </div>
             </div>
           </div>
         </div>
+        
 
         <button type="submit" class="btn btn-submit" (click)="onAdd()" [disabled]="addForm.invalid">
           <i class="fas fa-save"></i> Add Product
@@ -143,7 +235,6 @@
     </div>
   </div>
 
-  <!-- Product List -->
   <div *ngIf="!isUpdating && !isAdding">
     <h2 class="text-center mt-3">Product Details</h2>
 

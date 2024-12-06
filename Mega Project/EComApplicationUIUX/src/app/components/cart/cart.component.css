@@ -1,35 +1,41 @@
-/* General Styles */
+
 body {
-  background-color: #f4f7fa;
+  background-color: #e9f2f5; 
   font-family: 'Arial', sans-serif;
 }
+
 
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  color: #333;
+  color: #2e3a59; 
 }
+
 
 .card {
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
+
 .card-header {
-  background: linear-gradient(45deg, #007bff, #6610f2);
+  background: linear-gradient(45deg, #00796b, #26a69a); 
   color: #fff;
   border-radius: 10px 10px 0 0;
 }
 
+
 .card-body {
   padding: 20px;
 }
+
 
 .card-title {
   font-size: 1.1rem;
@@ -37,27 +43,28 @@ h2 {
   color: #333;
 }
 
+
 .card-text {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #6c757d; 
 }
 
 .card-text.text-success {
   font-size: 1rem;
   font-weight: bold;
-  color: #28a745;
+  color: #43a047; 
 }
 
-/* Cart Item Styling */
+
 .card-body .btn-outline-secondary {
   border-radius: 50%;
   padding: 5px 10px;
-  background-color: #f8f9fa;
+  background-color: #f1f1f1; 
   transition: background-color 0.3s ease;
 }
 
 .card-body .btn-outline-secondary:hover {
-  background-color: #007bff;
+  background-color: #00796b; 
   color: #fff;
 }
 
@@ -65,14 +72,14 @@ h2 {
   border-radius: 5px;
   padding: 8px 20px;
   font-size: 0.9rem;
-  background-color: #dc3545;
+  background-color: #f44336; 
   color: white;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .card-body .btn-danger:hover {
-  background-color: #c82333;
+  background-color: #d32f2f;
 }
 
 .card-body .btn-danger:focus {
@@ -85,7 +92,7 @@ h2 {
   font-weight: 500;
 }
 
-/* Product Image */
+
 img {
   border-radius: 8px;
   object-fit: cover;
@@ -98,7 +105,7 @@ img:hover {
   transform: scale(1.05);
 }
 
-/* Cart Summary Section */
+
 .table tbody tr td {
   padding: 10px;
   font-size: 1rem;
@@ -114,23 +121,15 @@ img:hover {
   font-weight: 600;
 }
 
+
 h6.mb-3 {
   font-size: 1.1rem;
   color: #333;
 }
 
-/* Delivery Address Section */
-.card-body p {
-  color: #6c757d;
-}
-
-.card-body .small {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
 
 .card-body .btn-success {
-  background-color: #28a745;
+  background-color: #00796b; 
   border: none;
   font-size: 1rem;
   padding: 12px;
@@ -141,17 +140,17 @@ h6.mb-3 {
 }
 
 .card-body .btn-success:hover {
-  background-color: #218838;
+  background-color: #004d40; 
 }
 
-/* Empty Cart Message */
+
 .text-center p {
   font-size: 1.2rem;
   color: #6c757d;
 }
 
 .text-center a {
-  background-color: #007bff;
+  background-color: #00796b; 
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -161,10 +160,44 @@ h6.mb-3 {
 }
 
 .text-center a:hover {
-  background-color: #0056b3;
+  background-color: #004d40;
 }
 
-/* Responsive Design */
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  background: linear-gradient(45deg, #00796b, #26a69a);
+  color: white;
+}
+
+.modal-footer {
+  border-top: 1px solid #e9f2f5;
+}
+
+
+.modal-body .form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.modal-body .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.modal-body .btn-primary {
+  background-color: #00796b;
+  border: none;
+}
+
+.modal-body .btn-primary:hover {
+  background-color: #004d40;
+}
+
 @media (max-width: 767px) {
   .col-md-8, .col-md-4 {
     width: 100%;

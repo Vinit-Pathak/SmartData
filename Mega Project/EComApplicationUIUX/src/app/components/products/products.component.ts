@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  // Fetch all products
+  
   getAllProducts() {
     this.productService.getAllProducts().subscribe({
       next: (res: any) => {
@@ -39,7 +39,7 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  // Update Form
+  
   updateForm = new FormGroup({
     id: new FormControl(0),
     productName: new FormControl(''),
@@ -53,14 +53,14 @@ export class ProductsComponent implements OnInit {
     stock: new FormControl(0),
   });
 
-  // Add Form
+  
   addForm = new FormGroup({
-    productName: new FormControl('', Validators.required),
-    productCode: new FormControl('', Validators.required),
-    category: new FormControl('', Validators.required),
+    productName: new FormControl('',[ Validators.required, Validators.minLength(5)]),
+    productCode: new FormControl(''),
+    category: new FormControl('', [Validators.required,Validators.minLength(5)]),
     brand: new FormControl('', Validators.required),
     file: new FormControl<File | null>(null),
-    sellingPrice: new FormControl(0, Validators.required),
+    sellingPrice: new FormControl(0,Validators.required),
     purchasePrice: new FormControl(0, Validators.required),
     purchaseDate: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required),
@@ -79,12 +79,12 @@ export class ProductsComponent implements OnInit {
     this.addForm.get('file')?.updateValueAndValidity();
   }
 
-  // Open Edit Form
+  
   onEdit(product: any) {
     const datePipe = new DatePipe('en-US');
     this.isUpdating = true;
   
-    // Set the form values to the existing product data
+    
     this.updateForm.patchValue({
       id: product.id,
       productName: product.productName,
@@ -98,9 +98,9 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  // Update Product
+  
   onUpdate() {
-    // First, check if the form is valid
+    
     if (this.updateForm.invalid) {
       this.toastr.error('Please fill in all required fields.', 'Error', {
         timeOut: 3000,
@@ -109,10 +109,10 @@ export class ProductsComponent implements OnInit {
       return;
     }
   
-    // Log the form value for debugging
+    
     console.log('Updating product:', this.updateForm.value);
   
-    // Prepare the form data for the API call
+    
     const formData = new FormData();
     Object.keys(this.updateForm.controls).forEach((field) => {
       const value = this.updateForm.get(field)?.value;
@@ -126,24 +126,24 @@ export class ProductsComponent implements OnInit {
       }
     });
   
-    // Call the productService to update the product
+    
     const productId = this.updateForm.get('id')?.value;
     
     this.productService.updateProduct(productId, formData).subscribe({
       next: (res: any) => {
-        // Display success message and update the UI
+        
         this.toastr.success('Product Updated Successfully', 'Success', {
           timeOut: 3000,
           closeButton: true,
         });
   
-        // Reset the updating flag and refresh the product list
+        
         this.isUpdating = false;
-        this.getAllProducts();  // Reload the product list
-        this.closeAddForm();    // Close the form/modal
+        this.getAllProducts();  
+        this.closeAddForm();    
       },
       error: (err: any) => {
-        // Display error message if the update failed
+        
         this.toastr.error('Product Update Failed', 'Error', {
           timeOut: 3000,
           closeButton: true,
@@ -153,13 +153,13 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  // Open Add Form
+  
   openAddForm() {
     this.isAdding = true;
     this.addForm.reset();
   }
 
-  // Add Product
+  
   onAdd() {
     const formData = new FormData();
     Object.keys(this.addForm.controls).forEach(field => {
@@ -185,13 +185,13 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  // Close Add Form
+  
   closeAddForm() {
     this.isAdding = false;
     this.addForm.reset();
   }
 
-  // Delete Product
+  
   onDelete(id: number) {
     console.log('Deleting product:', id);
     console.log('Products: ', this.products);
@@ -199,8 +199,8 @@ export class ProductsComponent implements OnInit {
     if (isConfirmed) {
       this.productService.deleteProduct(id).subscribe({
         next: (res: any) => {
-          this.toastr.error('Product Deleted Successfully', 'Deleted', { timeOut: 3000, closeButton: true });
           this.getAllProducts();
+          this.toastr.error('Product Deleted Successfully', 'Deleted', { timeOut: 3000, closeButton: true });
         },
         error: (err: any) => {
           console.error('Error deleting product:', err);
@@ -209,7 +209,7 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  // Close Update Form
+  
   OnBack() {
     this.isUpdating = false;
   }

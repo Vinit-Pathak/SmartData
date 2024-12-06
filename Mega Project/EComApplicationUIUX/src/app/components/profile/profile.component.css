@@ -1,4 +1,4 @@
-/* Container for the profile card */
+
 .profile-container {
   background-color: #fff;
   padding: 30px;
@@ -13,7 +13,7 @@
   transform: translateY(-10px);
 }
 
-/* Profile Header Styling */
+
 .profile-header {
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@
   color: #777;
 }
 
-/* Profile Details Styling */
+
 .profile-details {
   margin-bottom: 30px;
 }
@@ -90,7 +90,7 @@
   background-color: #0056b3;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .profile-container {
     padding: 20px;

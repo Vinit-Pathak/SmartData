@@ -162,20 +162,14 @@
                 placeholder="Enter your first name"
                 required
               />
-              <div
-                *ngIf="registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched"
-                class="text-danger small mt-1"
-              >
+              <div *ngIf="registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched" class="text-danger small mt-1">
                 First Name is required.
               </div>
-              <div
-                *ngIf="registerForm.get('firstName')?.hasError('minlength') && registerForm.get('firstName')?.touched"
-                class="text-danger small mt-1"
-              >
+              <div *ngIf="registerForm.get('firstName')?.hasError('minlength') && registerForm.get('firstName')?.touched" class="text-danger small mt-1">
                 First Name must be at least 5 characters long.
               </div>
             </div>
-
+        
             <div class="mb-3">
               <label for="registerLastName" class="form-label">Last Name</label>
               <input
@@ -186,21 +180,16 @@
                 placeholder="Enter your last name"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('lastName')?.invalid &&
-                  registerForm.get('lastName')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Last Name is required
+              <div *ngIf="registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched" class="text-danger small mt-1">
+                Last Name is required.
+              </div>
+              <div *ngIf="registerForm.get('lastName')?.hasError('minlength') && registerForm.get('lastName')?.touched" class="text-danger small mt-1">
+                Last Name must be at least 5 characters long.
               </div>
             </div>
-
+        
             <div class="mb-3">
-              <label for="registerEmail" class="form-label"
-                >Email Address</label
-              >
+              <label for="registerEmail" class="form-label">Email Address</label>
               <input
                 type="email"
                 class="form-control rounded-3"
@@ -209,17 +198,14 @@
                 placeholder="Enter your email"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('email')?.invalid &&
-                  registerForm.get('email')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Invalid email address
+              <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched" class="text-danger small mt-1">
+                Email is required.
+              </div>
+              <div *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched" class="text-danger small mt-1">
+                Invalid email address.
               </div>
             </div>
-
+        
             <div class="mb-3">
               <label for="registerMobile" class="form-label">Mobile</label>
               <input
@@ -229,51 +215,32 @@
                 formControlName="mobile"
                 placeholder="Enter your mobile number"
                 required
-              />  
-              <div
-                *ngIf="registerForm.get('mobile')?.hasError('required') && registerForm.get('mobile')?.touched"
-                class="text-danger small mt-1"
-              >
+              />
+              <div *ngIf="registerForm.get('mobile')?.hasError('required') && registerForm.get('mobile')?.touched" class="text-danger small mt-1">
                 Mobile number is required.
               </div>
-              <div
-                *ngIf="registerForm.get('mobile')?.hasError('pattern') && registerForm.get('mobile')?.touched"
-                class="text-danger small mt-1"
-              >
+              <div *ngIf="registerForm.get('mobile')?.hasError('pattern') && registerForm.get('mobile')?.touched" class="text-danger small mt-1">
                 Mobile number must be a valid 10-digit number.
               </div>
             </div>
         
-
             <div class="mb-3">
               <label for="registerCountry" class="form-label">Country</label>
               <select
                 (change)="onChange(this.registerForm.value.country)"
-                name="country"
                 class="form-control rounded-3"
                 id="registerCountry"
                 formControlName="country"
                 required
               >
                 <option value="" disabled>Select Country</option>
-                <option
-                  *ngFor="let item of allCountry"
-                  [value]="item.countryId"
-                >
-                  {{ item.name }}
-                </option>
+                <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
               </select>
-              <div
-                *ngIf="
-                  registerForm.get('country')?.invalid &&
-                  registerForm.get('country')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Country is required
+              <div *ngIf="registerForm.get('country')?.hasError('required') && registerForm.get('country')?.touched" class="text-danger small mt-1">
+                Country is required.
               </div>
             </div>
-
+        
             <div class="mb-3">
               <label for="registerZipCode" class="form-label">Zip Code</label>
               <input
@@ -284,18 +251,15 @@
                 placeholder="Enter your zip code"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('zipCode')?.invalid &&
-                  registerForm.get('zipCode')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Zip Code is required
+              <div *ngIf="registerForm.get('zipCode')?.hasError('required') && registerForm.get('zipCode')?.touched" class="text-danger small mt-1">
+                Zip Code is required.
+              </div>
+              <div *ngIf="registerForm.get('zipCode')?.hasError('pattern') && registerForm.get('zipCode')?.touched" class="text-danger small mt-1">
+                Zip Code must be a valid 6-digit number.
               </div>
             </div>
           </div>
-
+        
           <div class="col-md-6">
             <div class="mb-3">
               <label for="registerUserType" class="form-label">User Type</label>
@@ -309,39 +273,26 @@
                 <option [value]="UserType.Admin">Admin</option>
                 <option [value]="UserType.Customer">Customer</option>
               </select>
-              <div
-                *ngIf="
-                  registerForm.get('userType')?.invalid &&
-                  registerForm.get('userType')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                User Type is required
+              <div *ngIf="registerForm.get('userType')?.hasError('required') && registerForm.get('userType')?.touched" class="text-danger small mt-1">
+                User Type is required.
               </div>
             </div>
-
+        
             <div class="mb-3">
-              <label for="registerfile" class="form-label">Profile Image</label>
+              <label for="registerFile" class="form-label">Profile Image</label>
               <input
                 type="file"
                 class="form-control rounded-3"
-                id="registerfile"
+                id="registerFile"
                 formControlName="file"
-                placeholder="Enter profile image URL"
                 (change)="onFileSelected($event)"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('file')?.invalid &&
-                  registerForm.get('file')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Profile Image is required
+              <div *ngIf="registerForm.get('file')?.hasError('required') && registerForm.get('file')?.touched" class="text-danger small mt-1">
+                Profile Image is required.
               </div>
             </div>
-
+        
             <div class="mb-3">
               <label for="registerAddress" class="form-label">Address</label>
               <input
@@ -352,39 +303,29 @@
                 placeholder="Enter your address"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('address')?.invalid &&
-                  registerForm.get('address')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Address is required
+              <div *ngIf="registerForm.get('address')?.hasError('required') && registerForm.get('address')?.touched" class="text-danger small mt-1">
+                Address is required.
+              </div>
+              <div *ngIf="registerForm.get('address')?.hasError('minlength') && registerForm.get('address')?.touched" class="text-danger small mt-1">
+                Address must be at least 10 characters long.
               </div>
             </div>
-
+        
             <div class="mb-3">
-              <label for="registerDateOfBirth" class="form-label"
-                >Date of Birth</label
-              >
+              <label for="registerDateOfBirth" class="form-label">Date of Birth</label>
               <input
                 type="date"
                 class="form-control rounded-3"
                 id="registerDateOfBirth"
                 formControlName="dateOfBirth"
+                [max]="todayDate"
                 required
               />
-              <div
-                *ngIf="
-                  registerForm.get('dateOfBirth')?.invalid &&
-                  registerForm.get('dateOfBirth')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                Date of Birth is required
+              <div *ngIf="registerForm.get('dateOfBirth')?.hasError('required') && registerForm.get('dateOfBirth')?.touched" class="text-danger small mt-1">
+                Date of Birth is required.
               </div>
             </div>
-
+        
             <div class="mb-3">
               <label for="registerState" class="form-label">State</label>
               <select
@@ -394,38 +335,23 @@
                 required
               >
                 <option value="" disabled>Select State</option>
-                <option
-                  *ngFor="let item of allStateByCountryId"
-                  [value]="item.stateId"
-                >
-                  {{ item.name }}
-                </option>
+                <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}</option>
               </select>
-              <div
-                *ngIf="
-                  registerForm.get('state')?.invalid &&
-                  registerForm.get('state')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                State is required
+              <div *ngIf="registerForm.get('state')?.hasError('required') && registerForm.get('state')?.touched" class="text-danger small mt-1">
+                State is required.
               </div>
             </div>
-
+        
             <div class="form-check mt-3">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="registerIsActive"
-                formControlName="isActive"
-              />
-              <label for="registerIsActive" class="form-check-label"
-                >I agree to the Terms & Conditions</label
-              >
+              <input type="checkbox" class="form-check-input" id="registerIsActive" formControlName="isActive" />
+              <label for="registerIsActive" class="form-check-label">I agree to the Terms & Conditions</label>
+              <div *ngIf="registerForm.get('isActive')?.invalid && registerForm.get('isActive')?.touched" class="text-danger small mt-1">
+                You must agree to the Terms & Conditions.
+                </div>
             </div>
           </div>
         </div>
-
+        
         <button
           type="submit"
           [disabled]="isLogin ? loginForm.invalid : registerForm.invalid"
@@ -440,7 +366,6 @@
 
 <div id="overlay" class="overlay"></div>
 
-<!-- Forgot Password Modal -->
 <div
   class="modal"
   id="forgotPasswordModal"

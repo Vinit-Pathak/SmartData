@@ -26,7 +26,7 @@ export class LoginComponent {
   otpSent: boolean = false;
   countdown: number = 0;
   countdownInterval: any;
-
+  todayDate=new Date().toISOString().split('T')[0];
   router = inject(Router);
   toaster = inject(ToastrService);
   userService = inject(UserService);
@@ -34,7 +34,7 @@ export class LoginComponent {
   countryStateService = inject(CountryStateService)
 
   loginForm: FormGroup = new FormGroup({
-    userName: new FormControl('', Validators.required),
+    userName: new FormControl('', [Validators.required, Validators.maxLength(8)]),
     password: new FormControl('', [
       Validators.required,
       Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)

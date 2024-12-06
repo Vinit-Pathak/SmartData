@@ -1,22 +1,19 @@
 <div class="container mt-5">
   <h2 class="text-center mb-5">Shopping Cart</h2>
 
-  <!-- Empty Cart Message -->
   <div *ngIf="cartItems.length === 0" class="text-center">
     <p class="fs-4 text-muted">Your cart is empty!</p>
     <a [routerLink]="['/customer-dashboard']" class="btn btn-outline-primary">Browse Products</a>
   </div>
 
-  <!-- Cart Items -->
   <div *ngIf="cartItems.length > 0" class="row g-4">
-    <!-- Cart Items List -->
     <div class="col-lg-8">
       <div class="card shadow-sm mb-4" *ngFor="let item of cartItems">
         <div class="row g-0 align-items-center">
           <div class="col-md-4">
             <img
               [src]="item.productImage"
-              (error)="item.productImage = 'https://cdn.pixabay.com/photo/2022/08/01/07/59/vegetables-7357585_640.png'"
+              (error)="item.productImage = 'https://ecomapplicationstorage.blob.core.windows.net/ecomapplication/profile-images/2dc40b7c-f132-4de7-91bd-641fc4f586a9'"
               class="img-fluid rounded-start"
               alt="Product Image"
             />
@@ -46,7 +43,6 @@
       </div>
     </div>
 
-    <!-- Cart Summary Section -->
     <div class="col-lg-4">
       <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
@@ -78,7 +74,6 @@
           <p class="small text-muted">
             <strong>{{users.firstName}} {{users.lastName}}</strong><br />
             {{users.address}}<br />
-            {{users.state}}, {{users.country}}<br />
             {{users.zipCode}}
           </p>
           <button class="btn btn-success w-100" (click)="openPaymentModal()">Proceed to Checkout</button>
