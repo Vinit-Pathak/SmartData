@@ -44,7 +44,7 @@ export const routes: Routes = [
                 canActivate:[loginGuardGuard]
             },
             {
-                path:'invoice',
+                path:'invoice/:id',
                 component: InvoiceComponent,
                 canActivate:[loginGuardGuard]
             }

@@ -25,6 +25,14 @@
         <span>{{ user.address }}</span>
       </div>
       <div class="detail-item">
+        <strong>Country: </strong>
+        <span>{{ user.countryName }}</span>
+      </div>
+      <div class="detail-item">
+        <strong>State: </strong>
+        <span>{{ user.stateName }}</span>
+      </div>
+      <div class="detail-item">
         <strong>Date of Birth: </strong>
         <span>{{ user.dateOfBirth | date: 'mediumDate' }}</span>
       </div>

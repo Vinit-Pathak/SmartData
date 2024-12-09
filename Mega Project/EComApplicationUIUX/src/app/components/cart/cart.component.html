@@ -106,11 +106,10 @@
           <div class="row">
             <div class="col">
               <label for="expiryDate" class="form-label">Expiry Date (MM/YY)</label>
-              <input type="text" formControlName="expiryDate" class="form-control" id="expiryDate"
+              <input type="date" formControlName="expiryDate" class="form-control" id="expiryDate"
               placeholder="Enter expiry date" required>
               <div *ngIf="paymentForm.get('expiryDate')?.touched && paymentForm.get('expiryDate')?.invalid" class="text-danger">
                 <small *ngIf="paymentForm.get('expiryDate')?.errors?.['required']">Expiry date is required.</small>
-                <small *ngIf="paymentForm.get('expiryDate')?.errors?.['pattern']">Expiry date must be in MM/YY format.</small>
               </div>
             </div>
             <div class="col">

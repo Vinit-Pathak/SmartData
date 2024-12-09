@@ -29,6 +29,7 @@ export class CartComponent {
   cart = new Set<number>();
   cartItemCount = 0;
   users: any = {};
+  invoiceData: any[] = [];
   cartItemCountSubject: any;
   imgURL: string = ''
 
@@ -56,8 +57,7 @@ export class CartComponent {
       Validators.pattern(/^\d{16}$/),
     ]),
     expiryDate: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d{2}\/\d{2}$/),
+      Validators.required
     ]),
     cvv: new FormControl('', [
       Validators.required,
@@ -80,79 +80,120 @@ export class CartComponent {
   }
 
   onPaymentSubmit() {
-    if (this.paymentForm.invalid) {
-      this.toasterService.error('Please enter valid card details.');
-      return;
-    }
+    // if (this.paymentForm.invalid) {
+    //   this.toasterService.error('Please enter valid card details.');
+    //   return;
+    // }
+    if(this.paymentForm.valid){
+      const expiryDate = this.paymentForm.get('expiryDate')?.value;
+      const formattdExpiryDate = new Date (
+        expiryDate + 'T00:00:00.000Z'
+      ).toISOString();
 
-    const card = this.paymentForm.value;
-
-    this.cartService.validateCard(card).subscribe({
-      next: (res: any) => {
-        if (res.statusCode === 200) {
-          this.toasterService.success('Payment successful');
-          this.generateInvoice();
-          // this.clearCart();
-          // this.RemoveCartItem(this.cartItems.map((item) => item.cartId));
-          this.getCartDetails();
-          this.closePaymentModal();
-          this.router.navigateByUrl('invoice');
-
-        } else {
-          this.toasterService.error('Payment failed');
-        }
-      },
-      error: (error) => {
-        console.log(error);
-        this.toasterService.error('Error processing payment');
-      },
-    });
-  }
-
-  userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
-  Id = localStorage.getItem('id');
-  invoiceData:any;
-  generateInvoice() {
-    var payload = {
-      userId: Number(this.Id),
-      address: this.userData.address,
-      state: this.userData.state,
-      country: this.userData.country,
-      zipCode: this.userData.zipCode,
-      Items : this.cartItems.map((item) => ({
-          productCode: item.productCode,
-          productName: item.productName,
-          productId: item.productId,
-          quantity: item.quantity,
-          price: item.price,
-        
-      })),
-    };
-    console.log('Payload for generating invoice:', payload);
-    
-    this.cartService.invoice(payload).subscribe({
-      next:(res:any)=>{
-        if(res.statusCode === 200){
-          debugger;
-          this.invoiceData = res.data;
-          console.log('Invoice generated successfully',res);
-          this.toasterService.success('Invoice generated successfully');
-          localStorage.setItem('invoiceData', JSON.stringify(this.invoiceData));
-          // this.clearCart();
-          this.cartItems.forEach((item:any)=>{
-            this.removeCartItem(item.cartId);
-          })
-          this.getCartDetails();
-          this.router.navigateByUrl('/invoice')
-        }else{
-          this.toasterService.error('Failed to generate invoice');
-        }
-      },
-      error:(error)=>{
-        console.log(error);
-        this.toasterService.error('Error generating invoice');
+      const payload = {
+        cardNumber: this.paymentForm.get('cardNumber')?.value,
+        expiryDate: formattdExpiryDate,
+        cvv: this.paymentForm.get('cvv')?.value,
+        userId: this.users.id,
+        zipCode: this.users.zipCode,
+        address: this.users.address,
+        state: this.users.state,
+        country: this.users.country,
       }
-    })
+
+      console.log('Payload for validating card:', payload);
+
+      this.cartService.validateCard(payload).subscribe({
+        next:(res:any)=>{
+          if(res.statusCode == 200){
+            console.log("Payment", res);
+            this.cartService.resetCartItemCount();
+            this.toasterService.success('Payment successful');
+
+            this.closePaymentModal();
+            this.router.navigateByUrl(`/invoice/${res.data.salesId}`)
+            this.paymentForm.reset();
+          }else{
+            this.toasterService.error(res.message)
+          }
+        },
+        error:(error)=>{
+          console.log(error);
+          this.toasterService.error('Error processing payment');
+        }
+      })
+      
+    }else{
+      this.paymentForm.markAllAsTouched()
+    }
+  //   const card = this.paymentForm.value;
+
+  //   this.cartService.validateCard(card).subscribe({
+  //     next: (res: any) => {
+  //       if (res.statusCode === 200) {
+  //         this.toasterService.success('Payment successful');
+  //         this.generateInvoice();
+  //         // this.clearCart();
+  //         // this.RemoveCartItem(this.cartItems.map((item) => item.cartId));
+  //         this.getCartDetails();
+  //         this.closePaymentModal();
+  //         this.router.navigateByUrl('invoice');
+
+  //       } else {
+  //         this.toasterService.error('Payment failed');
+  //       }
+  //     },
+  //     error: (error) => {
+  //       console.log(error);
+  //       this.toasterService.error('Error processing payment');
+  //     },
+  //   });
+  // }
+
+  // userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
+  // Id = localStorage.getItem('id');
+  // invoiceData:any;
+  // generateInvoice() {
+  //   var payload = {
+  //     userId: Number(this.Id),
+  //     address: this.userData.address,
+  //     state: this.userData.state,
+  //     country: this.userData.country,
+  //     zipCode: this.userData.zipCode,
+  //     Items : this.cartItems.map((item) => ({
+  //         productCode: item.productCode,
+  //         productName: item.productName,
+  //         productId: item.productId,
+  //         quantity: item.quantity,
+  //         price: item.price,
+        
+  //     })),
+  //   };
+  //   console.log('Payload for generating invoice:', payload);
+    
+  //   this.cartService.invoice(payload).subscribe({
+  //     next:(res:any)=>{
+  //       if(res.statusCode === 200){
+  //         debugger;
+  //         this.invoiceData = res.data;
+  //         console.log('Invoice generated successfully',res);
+  //         this.toasterService.success('Invoice generated successfully');
+  //         localStorage.setItem('invoiceData', JSON.stringify(this.invoiceData));
+  //         // this.clearCart();
+  //         this.cartItems.forEach((item:any)=>{
+  //           this.RemoveCartItem(item.cartId);
+  //         })
+  //         this.getCartDetails();
+  //         this.router.navigateByUrl('/invoice')
+  //       }else{
+  //         this.toasterService.error('Failed to generate invoice');
+  //       }
+  //     },
+  //     error:(error)=>{
+  //       console.log(error);
+  //       this.toasterService.error('Error generating invoice');
+  //     }
+  //   })
   }
 
   addItemToCart(item: any): void {
@@ -373,27 +414,5 @@ export class CartComponent {
     }
   }
   
-  removeAllCartItem(cartId: any): void {
-    console.log('cartId', cartId);
-      this.cartService.removeFromCart(cartId).subscribe({
-        next: (res: any) => {
-          if (res.statusCode === 200) {
-            console.log('I am in remove', res);
-            this.cartService.resetCartItemCount();
-            // this.cartService.updateCartItemCount();
-            // this.removeCartFromLocalStorage(cartId);
-            // this.cartService.updateCartItemCount();
-            this.getCartDetails();
-            this.toasterService.success('Item removed from cart');
-          } else {
-            this.toasterService.error('Failed to remove item from cart');
-          }
-        },
-        error: (error: Error) => {
-          console.log(error);
-          this.toasterService.error('Error removing item from cart');
-        },
-      });
-    }
   }
 

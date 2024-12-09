@@ -55,15 +55,15 @@ export class ProductsComponent implements OnInit {
 
   
   addForm = new FormGroup({
-    productName: new FormControl('',[ Validators.required, Validators.minLength(5)]),
+    productName: new FormControl(''),
     productCode: new FormControl(''),
-    category: new FormControl('', [Validators.required,Validators.minLength(5)]),
-    brand: new FormControl('', Validators.required),
+    category: new FormControl(''),
+    brand: new FormControl(''),
     file: new FormControl<File | null>(null),
-    sellingPrice: new FormControl(0,Validators.required),
-    purchasePrice: new FormControl(0, Validators.required),
-    purchaseDate: new FormControl('', Validators.required),
-    stock: new FormControl(0, Validators.required),
+    sellingPrice: new FormControl(0),
+    purchasePrice: new FormControl(0),
+    purchaseDate: new FormControl(''),
+    stock: new FormControl(0),
   });
 
 

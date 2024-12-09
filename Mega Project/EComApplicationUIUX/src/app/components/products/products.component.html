@@ -27,7 +27,7 @@
 
           <div class="form-group">
             <label for="productCode" class="form-label">Product Code</label>
-            <input type="text" class="form-control" id="productCode" formControlName="productCode" placeholder="Enter product code" />
+            <input type="text" class="form-control" id="productCode" formControlName="productCode" readonly placeholder="Enter product code" />
           </div>
 
           <div class="form-group">
@@ -94,7 +94,6 @@
                 id="productName" 
                 formControlName="productName" 
                 placeholder="Enter product name" 
-                maxlength="8"
                 [ngClass]="{ 'is-invalid': addForm.get('productName')?.invalid && addForm.get('productName')?.touched }"
               />
               <div *ngIf="addForm.get('productName')?.invalid && addForm.get('productName')?.touched" class="invalid-feedback">

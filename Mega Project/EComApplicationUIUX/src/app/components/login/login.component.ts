@@ -34,10 +34,10 @@ export class LoginComponent {
   countryStateService = inject(CountryStateService)
 
   loginForm: FormGroup = new FormGroup({
-    userName: new FormControl('', [Validators.required, Validators.maxLength(8)]),
+    userName: new FormControl('', [Validators.required]),
     password: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+      
     ]),    
     userType: new FormControl(UserType.Customer, Validators.required),
     otp: new FormControl('', [Validators.required, Validators.pattern(/^\d{6}$/)]),
@@ -59,8 +59,8 @@ export class LoginComponent {
       Validators.required,
       Validators.pattern(/^\d{6}$/) 
     ]),
-    state: new FormControl(0, Validators.required),
-    country: new FormControl(0, Validators.required),
+    state: new FormControl("", Validators.required),
+    country: new FormControl("", Validators.required),
     isActive: new FormControl(false, Validators.required),
   });
   

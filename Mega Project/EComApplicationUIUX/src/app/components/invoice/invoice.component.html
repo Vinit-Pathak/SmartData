@@ -1,82 +1,62 @@
-<div class="container py-5">
-    <div class="card shadow-lg">
-      <div class="card-header bg-primary text-white text-center">
-        <h2 class="mb-0">Invoice</h2>
+<div *ngIf="invoice" id="invoice-details" class="invoice-page container">
+  <div class="invoice-header text-blue">
+    <h1 class="invoice-title">
+      Invoice <span class="invoice-id">ID: {{ invoice.invoiceId }}</span>
+    </h1>
+    <div class="invoice-tools">
+      <a class="btn btn-print" href="javascript:window.print()" title="Print">
+        <i class="fa fa-print"></i> Print
+      </a>
+      <a class="btn btn-export" (click)="downloadPDF()" title="Export">
+        <i class="fa fa-file-pdf-o"></i> Export as PDF
+      </a>
+    </div>
+  </div>
+
+  <div class="invoice-body">
+    <div class="invoice-info">
+      <div class="to-section">
+        <h3 class="section-title">To:</h3>
+        <p class="info">{{ invoice.firstName }} {{ invoice.lastName }}</p>
+        <p class="info">{{ invoice.address }}, {{ invoice.state }}, {{ invoice.country }}</p>
+        <p class="info">ZipCode: <strong>{{ invoice.zipCode }}</strong></p>
+        <p class="info"><i class="fa fa-phone"></i> Mobile: <strong>{{ invoice.mobile }}</strong></p>
       </div>
-      <div class="card-body">
-        <div class="row mb-4">
-          <div class="col-md-6">
-            <h5>Billing Information:</h5>
-            <p>
-              <strong>{{ userData.firstName }} {{ userData.lastName }}</strong><br />
-              {{ userData.address }}<br />
-              {{ userData.state }}, {{ userData.country }}<br />
-              ZIP: {{ userData.zipCode }}
-            </p>
-          </div>
-          <div class="col-md-6 text-end">
-            <h5>Invoice Details:</h5>
-            <p>
-              <strong>Invoice ID:</strong> {{ invoiceData.invoiceId }}<br />
-              <strong>Date:</strong> {{ invoiceData.orderDate | date: 'mediumDate' }}<br />
-            </p>
-          </div>
-        </div>
-  
-        <h5>Purchased Items:</h5>
-        <div class="table-responsive">
-          <table class="table table-bordered text-center">
-            <thead class="table-light">
-              <tr>
-                <th>#</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of invoiceData.Items; index as i">
-                <td>{{ i + 1 }}</td>
-                <td>{{ item.productName }}</td>
-                <td>{{ item.quantity }}</td>
-                <td>${{ item.price }}</td>
-                <td>${{ item.quantity * item.price }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-  
-        <div class="row justify-content-end">
-          <div class="col-md-6">
-            <table class="table table-borderless">
-              <tr>
-                <td class="text-end"><strong>Subtotal:</strong></td>
-                <td class="text-end">${{ invoiceData.totalAmount
- }}</td>
-              </tr>
-              <tr>
-                <td class="text-end"><strong>Delivery Charges:</strong></td>
-                <td class="text-end">$10</td>
-              </tr>
-              <tr class="fw-bold">
-                <td class="text-end"><strong>Total:</strong></td>
-                <td class="text-end">${{ invoiceData.totalAmount
- + 10 }}</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-  
-        <div class="text-center mt-4">
-          <button class="btn btn-success me-3" (click)="downloadInvoice()">
-            <i class="fas fa-download"></i> Download Invoice
-          </button>
-          <a routerLink="/customer-dashboard" class="btn btn-primary">
-            <i class="fas fa-arrow-left"></i> Continue Shopping
-          </a>
+
+      <div class="invoice-details">
+        <h3 class="section-title">Invoice Details</h3>
+        <p><strong>Order Date:</strong> {{ invoice.orderDate | date: "dd/MM/yyyy" }}</p>
+        <p><strong>Total Amount:</strong> {{ invoice.totalAmount | currency }}</p>
+      </div>
+    </div>
+
+    <div class="products-section">
+      <div class="table-header">
+        <div>#</div>
+        <div>Product Name</div>
+        <div>Qty</div>
+        <div>Unit Price</div>
+        <div>Amount</div>
+      </div>
+
+      <div class="table-body">
+        <div *ngFor="let product of invoice.products; let i = index" class="table-row">
+          <div>{{ i + 1 }}</div>
+          <div>{{ product.productName }}</div>
+          <div>{{ product.salesQty }}</div>
+          <div>{{ product.sellingPrice | currency }}</div>
+          <div>{{ product.salesQty * product.sellingPrice | currency }}</div>
         </div>
       </div>
     </div>
+
+    <div class="grand-total">
+      <div class="total-text">Grand Total:</div>
+      <div class="total-amount">{{ invoice.totalAmount | currency }}</div>
+    </div>
   </div>
-  
+
+  <div class="footer">
+    <p>Thank you for your business!</p>
+  </div>
+</div>

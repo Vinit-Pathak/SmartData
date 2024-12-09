@@ -45,8 +45,9 @@ export class ProfileComponent {
     if (email) {
       this.userService.getUserByEmail(email).subscribe({
         next: (res: any) => {
-          // console.log('User Data:', res);  
-          this.user = res;  
+          this.user = res.data[0];
+          localStorage.setItem('data', JSON.stringify(res.data));  
+          console.log('User Data:', this.user);  
         },
         error: (error: any) => {
           console.error('Failed to load user profile', error);

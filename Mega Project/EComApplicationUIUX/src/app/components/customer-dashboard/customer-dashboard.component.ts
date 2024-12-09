@@ -1,9 +1,10 @@
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { ProductService } from '../../service/product/product.service';
 import { CartService } from '../../service/cart/cart.service';
 import { timeout } from 'rxjs';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-customer-dashboard',
@@ -23,6 +24,7 @@ export class CustomerDashboardComponent {
   toasterService = inject(ToastrService);
   cartService = inject(CartService);
 
+  @ViewChild('productDetailsModal') productDetailsModal!: ElementRef;
 
   ngOnInit() {
     this.getAllProducts();
@@ -120,5 +122,17 @@ export class CustomerDashboardComponent {
     if (storedCart) {
       this.cart = new Set(JSON.parse(storedCart));
     }
+  }
+
+  selectedProduct: any = {};
+  openModal(product: any) {
+    this.selectedProduct = product;  
+    const modal = new bootstrap.Modal(document.getElementById('productDetailsModal') as HTMLElement);
+    modal.show();  
+  }
+
+  closeModal(){
+    const modal = new bootstrap.Modal(document.getElementById('productDetailsModal') as HTMLElement);
+    modal.hide();
   }
 }

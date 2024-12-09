@@ -61,8 +61,8 @@ export class CartService {
     return this.http.post('https://localhost:7053/api/Cart/validateCard',data);
   }
 
-  invoice(data:any):Observable<any>{
-    return this.http.post('https://localhost:7053/api/Invoice/generateInvoice',data);
+  invoice(invoiceId:number):Observable<any>{
+    return this.http.get(`https://localhost:7053/api/Cart/generateInvoice/${invoiceId}`);
   }
 
 

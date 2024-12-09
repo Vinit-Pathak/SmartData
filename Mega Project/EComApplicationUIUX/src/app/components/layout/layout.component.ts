@@ -57,8 +57,8 @@ export class LayoutComponent {
     userType: new FormControl(UserType),
     address: new FormControl('', [Validators.required, Validators.minLength(10)]),
     file: new FormControl<File | null>(null),
-    state: new FormControl(0, Validators.required),
-    country: new FormControl(0, Validators.required),
+    state: new FormControl("", Validators.required),
+    country: new FormControl("", Validators.required),
     zipCode: new FormControl(0, [
       Validators.required,
       Validators.pattern(/^\d{6}$/) 
@@ -105,12 +105,14 @@ export class LayoutComponent {
     this.updateProfileForm.patchValue({ file });
     this.updateProfileForm.get('file')?.updateValueAndValidity();
   }
+
   fetchUserDetails() {
-    const email = sessionStorage.getItem('email');
-    this.userService.getUserByEmail(email).subscribe({
+    // const email = sessionStorage.getItem('email');
+    const userId = localStorage.getItem('id');
+    this.userService.getUserById(userId).subscribe({
       next: (res: any) => {
-        this.userDetails = res;
-        // console.log('User Details:', this.userDetails);
+        this.userDetails = res.data;
+        console.log('User Details:', this.userDetails);
       },
       error: (err: any) => {
         console.log(err);
@@ -195,11 +197,12 @@ export class LayoutComponent {
         dateOfBirth: this.userDetails.dateOfBirth || '',
         userType: this.userDetails.userType || UserType.Customer, 
         address: this.userDetails.address || '',
-        state: this.userDetails.state || 0,
-        country: this.userDetails.country || 0,
+        state: this.userDetails.state || '',
+        country: this.userDetails.country || '',
         zipCode: this.userDetails.zipCode || 0,
         isActive: this.userDetails.isActive ?? true, 
       });
+      console.log('User Details on click:', this.userDetails);
     } else {
       console.error('User details are not available.');
     }
