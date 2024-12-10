@@ -52,18 +52,19 @@ export class CartComponent {
   }
 
   paymentForm = new FormGroup({
-    cardNumber: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d{16}$/),
-    ]),
+    cardNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{16}$')]),
     expiryDate: new FormControl('', [
       Validators.required
     ]),
-    cvv: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d{3}$/),
-    ]),
+    cvv: new FormControl('',[Validators.required, Validators.pattern('^[0-9]{3}$')]),
   });
+
+  onKeyPress(event: KeyboardEvent) {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault(); 
+    }
+  }
 
   openPaymentModal() {
     const modalInstance = new bootstrap.Modal(this.paymentModal.nativeElement);

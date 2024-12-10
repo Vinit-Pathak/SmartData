@@ -97,7 +97,7 @@
         <form [formGroup]="paymentForm" >
           <div class="mb-3">
             <label for="cardNumber" class="form-label">Card Number</label>
-            <input type="text" formControlName="cardNumber" class="form-control" id="cardNumber" placeholder="Enter your card number" required>
+            <input type="text" maxlength="16" formControlName="cardNumber" class="form-control" id="cardNumber" placeholder="Enter your card number" (keypress)="onKeyPress($event)" required>
             <div *ngIf="paymentForm.get('cardNumber')?.touched && paymentForm.get('cardNumber')?.invalid" class="text-danger">
               <small *ngIf="paymentForm.get('cardNumber')?.errors?.['required']">Card number is required.</small>
               <small *ngIf="paymentForm.get('cardNumber')?.errors?.['pattern']">Card number must be 16 digits.</small>
@@ -114,7 +114,7 @@
             </div>
             <div class="col">
               <label for="cvv" class="form-label">CVV</label>
-              <input type="text" formControlName="cvv" class="form-control" id="cvv" placeholder="CVV" required>
+              <input type="text" maxlength="3" (keypress)="onKeyPress($event)" formControlName="cvv" class="form-control" id="cvv" placeholder="CVV" required>
               <div *ngIf="paymentForm.get('cvv')?.touched && paymentForm.get('cvv')?.invalid" class="text-danger">
                 <small *ngIf="paymentForm.get('cvv')?.errors?.['required']">CVV is required.</small>
                 <small *ngIf="paymentForm.get('cvv')?.errors?.['pattern']">CVV must be 3 digits.</small>

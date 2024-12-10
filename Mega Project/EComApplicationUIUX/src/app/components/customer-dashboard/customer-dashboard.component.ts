@@ -4,7 +4,6 @@ import { ToastrService } from 'ngx-toastr';
 import { ProductService } from '../../service/product/product.service';
 import { CartService } from '../../service/cart/cart.service';
 import { timeout } from 'rxjs';
-declare var bootstrap: any;
 
 @Component({
   selector: 'app-customer-dashboard',
@@ -124,15 +123,5 @@ export class CustomerDashboardComponent {
     }
   }
 
-  selectedProduct: any = {};
-  openModal(product: any) {
-    this.selectedProduct = product;  
-    const modal = new bootstrap.Modal(document.getElementById('productDetailsModal') as HTMLElement);
-    modal.show();  
-  }
-
-  closeModal(){
-    const modal = new bootstrap.Modal(document.getElementById('productDetailsModal') as HTMLElement);
-    modal.hide();
-  }
+  
 }

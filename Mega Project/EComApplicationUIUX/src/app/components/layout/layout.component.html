@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">EComApplication</a>
+    <a class="navbar-brand" routerLink="/customer-dashboard" >EComApplication</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,8 +35,8 @@
         </li>
       </ul>
 
-      <div class="dropdown">
-        <a class="nav-link d-flex align-items-center profile-img-container">
+      <!-- <div class="dropdown">
+        <a class="nav-link d-flex align-items-center profile-img-container" data-bs-toggle="dropdown" aria-expanded="false">
           <img [src]="imgUrl || 'https://ecomapplicationstorage.blob.core.windows.net/ecomapplication/profile-images/d74cd525-d4e0-4c09-b094-2aa50f375d42'" alt="User" class="rounded-circle profile-img" />
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
@@ -45,7 +45,32 @@
           <li><hr class="dropdown-divider" /></li>
           <li><button class="dropdown-item" (click)="logout('manual')">Logout</button></li>
         </ul>
+      </div> -->
+
+      <div class="dropdown d-flex align-items-center">
+        <button
+          class="btn btn-link d-flex align-items-center p-0"
+          id="userDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            [src]="imgUrl"
+            alt="User Image"
+            class="rounded-circle"
+            width="50"
+            height="50"
+            style="object-fit: cover;"
+          />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openUpdateProfileModal()">Update Profile</a></li>
+          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openChangePasswordModal()">Change Password</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item" (click)="logout('manual')">Logout</button></li>
+        </ul>
       </div>
+
     </div>
   </div>
 </nav>
@@ -88,13 +113,18 @@ aria-hidden="true"
                 type="text"
                 class="form-control"
                 id="updateFirstName"
+                minlength="2"
+                maxlength="20"
                 formControlName="firstName"
               />
-              <div *ngIf="updateProfileForm.get('firstName')?.hasError('required') && updateProfileForm.get('firstName')?.touched" class="text-danger small mt-1">
-                First Name is required.
+              <div *ngIf="updateProfileForm.get('firstName')?.errors?.['minlength']"  class="text-danger small mt-1">
+                First name must be at least 2 characters.
               </div>
-              <div *ngIf="updateProfileForm.get('firstName')?.hasError('minlength') && updateProfileForm.get('firstName')?.touched" class="text-danger small mt-1">
-                First Name must be at least 5 characters long.
+              <div *ngIf="updateProfileForm.get('firstName')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                First name must not exceed 20 characters.
+              </div>
+              <div *ngIf="updateProfileForm.get('firstName')?.errors?.['pattern']"  class="text-danger small mt-1">
+                First name can only contain letters with a single space between words.
               </div>
             </div>
           </div>
@@ -105,13 +135,18 @@ aria-hidden="true"
                 type="text"
                 class="form-control"
                 id="updateLastName"
+                minlength="2"
+                maxlength="20"
                 formControlName="lastName"
               />
-              <div *ngIf="updateProfileForm.get('lastName')?.hasError('required') && updateProfileForm.get('lastName')?.touched" class="text-danger small mt-1">
-                Last Name is required.
+              <div *ngIf="updateProfileForm.get('lastName')?.errors?.['minlength']"  class="text-danger small mt-1">
+                Last name must be at least 2 characters.
               </div>
-              <div *ngIf="updateProfileForm.get('lastName')?.hasError('minlength') && updateProfileForm.get('lastName')?.touched" class="text-danger small mt-1">
-                Last Name must be at least 5 characters long.
+              <div *ngIf="updateProfileForm.get('lastName')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                Last name must not exceed 20 characters.
+              </div>
+              <div *ngIf="updateProfileForm.get('lastName')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Last name can only contain letters with a single space between words.
               </div>
             </div>
           </div>
@@ -128,21 +163,23 @@ aria-hidden="true"
                 formControlName="email"
                 readonly
               />
+              <div *ngIf="updateProfileForm.get('email')?.touched" class="text-danger small mt-1">
+                Email cannot be changed
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="mb-3">
               <label for="updateMobile" class="form-label">Mobile</label>
               <input
-                type="text"
+                type="tel"
                 class="form-control"
                 id="updateMobile"
+                maxlength="10"
+                placeholder="Enter your mobile number"
+                (keypress)="onKeyPress($event)"
                 formControlName="mobile"
-                
               />
-              <div *ngIf="updateProfileForm.get('mobile')?.hasError('required') && updateProfileForm.get('mobile')?.touched" class="text-danger small mt-1">
-                Mobile number is required.
-              </div>
               <div *ngIf="updateProfileForm.get('mobile')?.hasError('pattern') && updateProfileForm.get('mobile')?.touched" class="text-danger small mt-1">
                 Mobile number must be a valid 10-digit number.
               </div>
@@ -161,9 +198,6 @@ aria-hidden="true"
                 formControlName="dateOfBirth"
                 [max]="todayDate"
               />
-              <div *ngIf="updateProfileForm.get('dateOfBirth')?.hasError('required') && updateProfileForm.get('dateOfBirth')?.touched" class="text-danger small mt-1">
-                Date of Birth is required.
-              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -196,18 +230,23 @@ aria-hidden="true"
           <div class="col-md-6">
             <div class="mb-3">
               <label for="updateAddress" class="form-label">Address</label>
-              <input
-                type="text"
+              <textarea
+                type=""
+                minlength="10"
+                maxlength="150"
                 class="form-control"
                 id="updateAddress"
                 formControlName="address"
-                
-              />
-              <div *ngIf="updateProfileForm.get('address')?.hasError('required') && updateProfileForm.get('address')?.touched" class="text-danger small mt-1">
-                Address is required.
-              </div>
-              <div *ngIf="updateProfileForm.get('address')?.hasError('minlength') && updateProfileForm.get('address')?.touched" class="text-danger small mt-1">
+                placeholder="Enter your address"
+              ></textarea>
+              <div *ngIf="updateProfileForm.get('address')?.errors?.['minlength']"  class="text-danger small mt-1">
                 Address must be at least 10 characters long.
+              </div>
+              <div *ngIf="updateProfileForm.get('address')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                Address cannot exceed 150 characters.
+              </div>
+              <div *ngIf="updateProfileForm.get('address')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Address can only contain letters, numbers, spaces, commas, periods, and hyphens.
               </div>
             </div>
           </div>
@@ -222,7 +261,7 @@ aria-hidden="true"
                 (change)="onFileSelected($event)"
                 
               />
-              <div *ngIf="updateProfileForm.get('file')?.hasError('required') && updateProfileForm.get('file')?.touched" class="text-danger small mt-1">
+              <div *ngIf="updateProfileForm.get('file')?.touched" class="text-danger small mt-1">
                 Profile Image is required.
               </div>
             </div>
@@ -237,21 +276,19 @@ aria-hidden="true"
                 class="form-control rounded-3"
                 id="registerState"
                 formControlName="state"
+                
                 required
               >
                 <option value="" disabled>Select State</option>
-                <option *ngFor="let item of allStateByCountryId " [value]="item.stateId">{{item.name}}</option>
+                <option *ngFor="let state of allState " [value]="state.stateId">{{state.name}}</option>
               </select>
-              <div *ngIf="updateProfileForm.get('state')?.hasError('required') && updateProfileForm.get('state')?.touched" class="text-danger small mt-1">
-                State is required.
-              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="mb-3">
               <label for="updateCountry" class="form-label">Country</label>
               <select
-                (change)="onChange(this.updateProfileForm.value.country)" 
+                (change)="getState(updateProfileForm.get('country')?.value)" 
                 name="country"
                 class="form-control rounded-3"
                 id="registerCountry"
@@ -261,9 +298,6 @@ aria-hidden="true"
                 <option value="" disabled>Select Country</option>
                 <option *ngFor="let item of allCountry " [value]="item.countryId" >{{item.name}}</option>
               </select>
-              <div *ngIf="updateProfileForm.get('country')?.hasError('required') && updateProfileForm.get('country')?.touched" class="text-danger small mt-1">
-                Country is required.
-              </div>
             </div>
           </div>
         </div>
@@ -276,19 +310,19 @@ aria-hidden="true"
                 type="number"
                 class="form-control rounded-3"
                 id="registerZipCode"
+                minlength="6"
+                maxlength="6"
                 formControlName="zipCode"
+                (keypress)="onKeyPress($event)"
                 placeholder="Enter your zip code"
                 
               />
-              <div *ngIf="updateProfileForm.get('zipCode')?.hasError('required') && updateProfileForm.get('zipCode')?.touched" class="text-danger small mt-1">
-                Zip Code is required.
-              </div>
-              <div *ngIf="updateProfileForm.get('zipCode')?.hasError('pattern') && updateProfileForm.get('zipCode')?.touched" class="text-danger small mt-1">
-                Zip Code must be a valid 6-digit number.
+              <div *ngIf="updateProfileForm.get('zipCode')?.errors?.['pattern'] &&  updateProfileForm.get('zipCode')?.touched" class="text-danger small mt-1">
+                Please enter a valid 6-digit ZIP code.
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="form-check mt-4">
               <input
                 type="checkbox"
@@ -301,12 +335,12 @@ aria-hidden="true"
                 I agree to the Terms & Conditions
               </label>
             </div>
-          </div>
+          </div> -->
         </div>
       
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="updateProfileForm.invalid">
+            <button type="submit" class="btn btn-primary w-100 mt-3">
               Save Changes
             </button>
           </div>
@@ -343,7 +377,7 @@ aria-hidden="true"
     </div>
     <div class="modal-body">
       <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="userName" class="form-label">User Name</label>
           <input
             type="text"
@@ -352,7 +386,7 @@ aria-hidden="true"
             formControlName="userName"
             required
           />
-        </div>
+        </div> -->
 
         <div class="mb-3">
           <label for="newPassword" class="form-label">New Password</label>
@@ -360,11 +394,12 @@ aria-hidden="true"
             type="password"
             class="form-control"
             id="newPassword"
+            minlength="8"
+            maxlength="15"
             formControlName="newPassword"
             required
-            [(ngModel)]="newPassword"
           />
-          <div
+          <!-- <div
               *ngIf="
                 changePasswordForm.get('newPassword')?.hasError('pattern') &&
                 changePasswordForm.get('newPassword')?.touched 
@@ -374,8 +409,28 @@ aria-hidden="true"
               Password must be at least 8 characters long, with at least 1
               uppercase letter, 1 lowercase letter, 1 digit, and 1 special
               character.
-            </div>
+            </div> -->
+
+            <div
+              *ngIf="
+                changePasswordForm.get('newPassword')?.invalid &&
+                changePasswordForm.get('newPassword')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+            <span
+            *ngIf="changePasswordForm.controls['newPassword'].errors?.['required']"
+            >This is required</span
+          >
+          <span
+            *ngIf="changePasswordForm.controls['newPassword'].errors?.['pattern']" 
+          >
+            Password must be at least 8 characters long, contain an
+            uppercase letter, a lowercase letter, a number, and a special
+            character
+          </span>
         </div>
+      </div>
 
         <div class="mb-3">
           <label for="confirmPassword" class="form-label">Confirm Password</label>
@@ -383,21 +438,23 @@ aria-hidden="true"
             type="password"
             class="form-control"
             id="confirmPassword"
+            minlength="8"
+            maxlength="15"
             formControlName="confirmPassword"
             required
-            [(ngModel)]="confirmPassword"
           />
           <div *ngIf="
-          changePasswordForm.get('newPassword')?.hasError('pattern') &&
-          changePasswordForm.get('newPassword')?.touched && (newPassword !== confirmPassword && confirmPassword) 
-        "
-        class="text-danger small mt-1">
-            Passwords must match
+                          changePasswordForm.get('confirmNewPassword')?.invalid &&
+                          changePasswordForm.get('confirmNewPassword')?.touched
+                        " class="text-danger">
+            Please confirm your new password
           </div>
-
+          <div *ngIf="newPasswordMismatch" class="text-danger">
+            Passwords do not match
+          </div>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100" [disabled]="changePasswordForm.invalid">
+        <button type="submit" class="btn btn-primary w-100">
           Update Password
         </button>
       </form>

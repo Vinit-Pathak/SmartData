@@ -17,8 +17,8 @@ export class ProductService {
     return this.http.get('https://localhost:7053/api/Product/getAllProducts')
   }
 
-  getProductById(Id: any):Observable<any>{
-    return this.http.get(`https://localhost:7053/api/Product/getProductById/${Id}`)
+  getProductByUserId(userId: any):Observable<any>{
+    return this.http.get(`https://localhost:7053/api/Product/getProductByUserId/${userId}`)
   }
 
   updateProduct(id:any,data:any):Observable<any>{

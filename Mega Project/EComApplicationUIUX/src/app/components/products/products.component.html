@@ -21,48 +21,113 @@
 
         <div class="form-fields">
           <div class="form-group">
-            <label for="productName" class="form-label">Product Name</label>
-            <input type="text" class="form-control" id="productName" formControlName="productName" placeholder="Enter product name" />
+            <label for="productName" class="form-label" >Product Name</label>
+            <input type="text" class="form-control" id="productName" minlength="3"
+            maxlength="30" formControlName="productName" placeholder="Enter product name" />
+            <div *ngIf="updateForm.get('productName')?.invalid && updateForm.get('productName')?.touched" class="invalid-feedback">
+              <div *ngIf="updateForm.get('productName')?.hasError('required')">Product name is required.</div>
+              <div *ngIf="updateForm.get('productName')?.hasError('minlength')">Product name must be at least 3 characters long.</div>
+              <div *ngIf="updateForm.get('productName')?.hasError('maxlength')">Product name must be at most 30 characters long.</div>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="productCode" class="form-label">Product Code</label>
-            <input type="text" class="form-control" id="productCode" formControlName="productCode" readonly placeholder="Enter product code" />
+            <input type="text" 
+            class="form-control" id="productCode" formControlName="productCode" readonly placeholder="Enter product code" />
+            
+              <div *ngIf="updateForm.get('productCode')?.invalid && updateForm.get('productCode')?.touched" class="invalid-feedback">
+                Product code cannot be changed.
+              </div>
+            
           </div>
 
           <div class="form-group">
             <label for="brand" class="form-label">Brand</label>
-            <input type="text" class="form-control" id="brand" formControlName="brand" placeholder="Enter brand name" />
+            <input type="text" 
+            maxlength="30"
+            minlength="2"
+            class="form-control" id="brand" formControlName="brand" placeholder="Enter brand name" />
+            
+              <div *ngIf="updateForm.get('brand')?.invalid && updateForm.get('brand')?.touched" class="invalid-feedback">
+                Brand is required.
+              </div>
+              <div *ngIf="updateForm.get('brand')?.hasError('minlength')" class="invalid-feedback">
+                Brand must be at least 2 characters long.
+              </div>
+              <div *ngIf="updateForm.get('brand')?.hasError('maxlength')" class="invalid-feedback">
+                Brand must be at most 30 characters long.
+              </div>
+          
           </div>
 
           <div class="form-group">
             <label for="category" class="form-label">Category</label>
-            <input type="text" class="form-control" id="category" formControlName="category" placeholder="Enter category name" />
+            <select
+              id="category"
+              class="form-control"
+              formControlName="category"
+              required
+            >
+              <option value="" selected disabled>Select a category</option>
+              <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            </select>
+            <div *ngIf="updateForm.get('category')?.invalid && updateForm.get('category')?.touched" class="invalid-feedback">
+              <div *ngIf="updateForm.get('category')?.hasError('required')">Category is required.</div>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="productImage" class="form-label">Product Image</label>
             <input type="file" class="form-control" id="productImage" formControlName="file" (change)="onFileSelected($event)" />
+            <div *ngIf="updateForm.get('file')?.invalid && updateForm.get('file')?.touched" class="invalid-feedback">
+              Product image is required.
+            </div>
           </div>
 
           <div class="form-group">
             <label for="sellingPrice" class="form-label">Selling Price</label>
-            <input type="number" class="form-control" id="sellingPrice" formControlName="sellingPrice" placeholder="Enter selling price" />
+            <input type="number" maxlength="6" class="form-control" [(ngModel)]="sellingPrice" id="sellingPrice" formControlName="sellingPrice" placeholder="Enter selling price" />
+            <div>
+              <div *ngIf="updateForm.get('sellingPrice')?.invalid && updateForm.get('sellingPrice')?.touched" class="invalid-feedback">
+                <div *ngIf="updateForm.get('sellingPrice')?.hasError('required')">Selling price is required.</div>
+              </div>
+              <div *ngIf="updateForm.controls['sellingPrice'].errors?.['max']" class="invalid-feedback">
+                Selling Price must be greater than Purchase Price.
+              </div>
+              <div *ngIf="updateForm.controls['sellingPrice'].errors?.['min']">
+                Selling Price must be greater than or equal to 1.
+              </div>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="purchasePrice" class="form-label">Purchase Price</label>
-            <input type="number" class="form-control" id="purchasePrice" formControlName="purchasePrice" placeholder="Enter purchase price" />
+            <input type="number" class="form-control" id="purchasePrice"                 maxlength="6"formControlName="purchasePrice" placeholder="Enter purchase price" />
+            <div *ngIf="updateForm.get('purchasePrice')?.invalid && updateForm.get('purchasePrice')?.touched" class="invalid-feedback">
+              <div *ngIf="updateForm.get('purchasePrice')?.hasError('required')">Purchase price is required.</div>
+              <div *ngIf="purchasePrice > sellingPrice" >Purchase Price must be less than Selling Price.</div>
+              <div *ngIf="updateForm.controls['purchasePrice'].errors?.['min']">Purchase Price must be greater than or equal to 1.</div>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="purchaseDate" class="form-label">Purchase Date</label>
-            <input type="date" class="form-control" id="purchaseDate" formControlName="purchaseDate" />
+            <input type="date" [min]="todayDate"class="form-control" id="purchaseDate" formControlName="purchaseDate" />
+            <div *ngIf="updateForm.get('purchaseDate')?.invalid && updateForm.get('purchaseDate')?.touched" class="invalid-feedback">
+                Purchase date is required.
+              </div>
           </div>
 
           <div class="form-group">
             <label for="stock" class="form-label">Stock</label>
-            <input type="number" class="form-control" id="stock" formControlName="stock" placeholder="Enter stock quantity" />
+            <input type="number" 
+            class="form-control" id="stock" formControlName="stock" placeholder="Enter stock quantity" />
+            <div *ngIf="updateForm.get('stock')?.invalid && updateForm.get('stock')?.touched" class="invalid-feedback">
+              <div *ngIf="updateForm.get('stock')?.hasError('required')">Stock is required.</div>
+              <div *ngIf="updateForm.get('stock')?.hasError('min')">Stock must be greater than or equal to 1.</div>
+              <div *ngIf="updateForm.get('stock')?.hasError('max')">Stock must be less than or equal to 10000.</div>
+            </div>
           </div>
         </div>
 
@@ -92,13 +157,16 @@
                 type="text" 
                 class="form-control" 
                 id="productName" 
+                minlength="3"
+                maxlength="30"
                 formControlName="productName" 
                 placeholder="Enter product name" 
                 [ngClass]="{ 'is-invalid': addForm.get('productName')?.invalid && addForm.get('productName')?.touched }"
               />
               <div *ngIf="addForm.get('productName')?.invalid && addForm.get('productName')?.touched" class="invalid-feedback">
                 <div *ngIf="addForm.get('productName')?.hasError('required')">Product name is required.</div>
-                <div *ngIf="addForm.get('productName')?.hasError('minlength')">Product name must be at least 5 characters long.</div>
+                <div *ngIf="addForm.get('productName')?.hasError('minlength')">Product name must be at least 3 characters long.</div>
+                <div *ngIf="addForm.get('productName')?.hasError('maxlength')">Product name must be at most 30 characters long.</div>
               </div>
             </div>
         
@@ -123,12 +191,20 @@
                 type="text" 
                 class="form-control" 
                 id="brand" 
+                maxlength="30"
+                minlength="2"
                 formControlName="brand" 
                 placeholder="Enter brand name" 
                 [ngClass]="{ 'is-invalid': addForm.get('brand')?.invalid && addForm.get('brand')?.touched }"
               />
               <div *ngIf="addForm.get('brand')?.invalid && addForm.get('brand')?.touched" class="invalid-feedback">
                 Brand is required.
+              </div>
+              <div *ngIf="addForm.get('brand')?.hasError('minlength')" class="invalid-feedback">
+                Brand must be at least 2 characters long.
+              </div>
+              <div *ngIf="addForm.get('brand')?.hasError('maxlength')" class="invalid-feedback">
+                Brand must be at most 30 characters long.
               </div>
             </div>
         
@@ -139,6 +215,7 @@
                 class="form-control" 
                 id="productImage" 
                 formControlName="file" 
+                required
                 (change)="onFileSelectedAdd($event)" 
                 [ngClass]="{ 'is-invalid': addForm.get('file')?.invalid && addForm.get('file')?.touched }"
               />
@@ -150,15 +227,23 @@
             <div class="form-group">
               <label for="sellingPrice" class="form-label">Selling Price</label>
               <input 
-                type="number" 
+                type="tel" 
                 class="form-control" 
                 id="sellingPrice" 
+                maxlength="6"
                 formControlName="sellingPrice" 
+                [(ngModel)]="sellingPrice"
                 placeholder="Enter selling price" 
                 [ngClass]="{ 'is-invalid': addForm.get('sellingPrice')?.invalid && addForm.get('sellingPrice')?.touched }"
               />
               <div *ngIf="addForm.get('sellingPrice')?.invalid && addForm.get('sellingPrice')?.touched" class="invalid-feedback">
                 <div *ngIf="addForm.get('sellingPrice')?.hasError('required')">Selling price is required.</div>
+                <div *ngIf="addForm.controls['sellingPrice'].errors?.['max']" class="invalid-feedback">
+                Selling Price must be greater than Purchase Price.
+                </div>
+                <div *ngIf="addForm.controls['sellingPrice'].errors?.['min']">
+                Selling Price must be greater than or equal to 1.
+                </div>
               </div>
             </div>
           </div>
@@ -166,32 +251,36 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="category" class="form-label">Category</label>
-              <input 
-                type="text" 
-                class="form-control" 
-                id="category" 
-                formControlName="category" 
-                placeholder="Enter category name" 
-                [ngClass]="{ 'is-invalid': addForm.get('category')?.invalid && addForm.get('category')?.touched }"
-              />
+              <select
+                id="category"
+                class="form-control"
+                formControlName="category"
+                required
+              >
+                <option value="" selected disabled>Select a category</option>
+                <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+              </select>
               <div *ngIf="addForm.get('category')?.invalid && addForm.get('category')?.touched" class="invalid-feedback">
                 <div *ngIf="addForm.get('category')?.hasError('required')">Category is required.</div>
-                <div *ngIf="addForm.get('category')?.hasError('minlength')">Category must be at least 5 characters long.</div>
               </div>
             </div>
         
             <div class="form-group">
               <label for="purchasePrice" class="form-label">Purchase Price</label>
               <input 
-                type="number" 
+                type="tel" 
+                maxlength="6"
                 class="form-control" 
                 id="purchasePrice" 
                 formControlName="purchasePrice" 
+                required
                 placeholder="Enter purchase price" 
                 [ngClass]="{ 'is-invalid': addForm.get('purchasePrice')?.invalid && addForm.get('purchasePrice')?.touched }"
               />
               <div *ngIf="addForm.get('purchasePrice')?.invalid && addForm.get('purchasePrice')?.touched" class="invalid-feedback">
                 <div *ngIf="addForm.get('purchasePrice')?.hasError('required')">Purchase price is required.</div>
+                <div *ngIf="purchasePrice > sellingPrice" >Purchase Price must be less than Selling Price.</div>
+                <div *ngIf="addForm.controls['purchasePrice'].errors?.['min']">Purchase Price must be greater than or equal to 1.</div>
               </div>
             </div>
         
@@ -201,6 +290,7 @@
                 type="date" 
                 class="form-control" 
                 id="purchaseDate" 
+                [min]="todayDate"
                 formControlName="purchaseDate" 
                 [ngClass]="{ 'is-invalid': addForm.get('purchaseDate')?.invalid && addForm.get('purchaseDate')?.touched }"
               />
@@ -212,22 +302,26 @@
             <div class="form-group">
               <label for="stock" class="form-label">Stock</label>
               <input 
-                type="number" 
+                type="tel" 
                 class="form-control" 
                 id="stock" 
+                max="1000"
+                min="6"
                 formControlName="stock" 
                 placeholder="Enter stock quantity" 
                 [ngClass]="{ 'is-invalid': addForm.get('stock')?.invalid && addForm.get('stock')?.touched }"
               />
               <div *ngIf="addForm.get('stock')?.invalid && addForm.get('stock')?.touched" class="invalid-feedback">
                 <div *ngIf="addForm.get('stock')?.hasError('required')">Stock is required.</div>
+                <div *ngIf="addForm.get('stock')?.hasError('min')">Stock must be greater than or equal to 1.</div>
+                <div *ngIf="addForm.get('stock')?.hasError('max')">Stock must be less than or equal to 10000.</div>
               </div>
             </div>
           </div>
         </div>
         
 
-        <button type="submit" class="btn btn-submit" (click)="onAdd()" [disabled]="addForm.invalid">
+        <button type="submit" class="btn btn-submit" (click)="onAdd()" [disabled]="addForm.invalid && purchasePrice> sellingPrice ">
           <i class="fas fa-save"></i> Add Product
         </button>
       </form>
@@ -247,14 +341,18 @@
             <p>Category: {{ product.category }}</p>
             <p>Brand: {{ product.brand }}</p>
             <p>Selling Price: ${{ product.sellingPrice }}</p>
-            <p>Stock: {{ product.stock }}</p>
+
+            <!-- <p>Stock: {{ product.stock }}</p> -->
           </div>
 
           <div class="product-card-actions">
             <button class="btn btn-info" (click)="onEdit(product)">
               <i class="fas fa-edit"></i> Edit
             </button>
-            <button class="btn btn-danger" (click)="onDelete(product.id)">
+            <button class="btn btn-secondary" (click)="openModal(product)">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-danger" (click)="confirmDeletion(product.id)">
               <i class="fas fa-trash-alt"></i> Delete
             </button>
           </div>
@@ -267,5 +365,30 @@
         No Product Available
       </div>
     </ng-template>
+  </div>
+</div>
+
+
+<div class="modal fade" #productDetailsModal id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productDetailsModalLabel">{{selectedProduct?.productName}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <img [src]="selectedProduct?.productImage" class="img-fluid mt-3 mb-3" alt="{{selectedProduct?.productName}}" style="height: 320px; width: 100%; object-fit: cover;">
+        <p><strong>Category:</strong> {{selectedProduct?.category}}</p>
+        <p><strong>Brand:</strong> {{selectedProduct?.brand}}</p>
+        <p><strong>Product Code:</strong> {{selectedProduct?.productCode}}</p>
+        <p><strong>Stock:</strong> {{selectedProduct?.stock}}</p>
+        <p><strong>Purchase Price:</strong> ${{selectedProduct?.purchasePrice}}</p>
+        <p><strong>Selling Price:</strong> ${{selectedProduct?.sellingPrice}}</p>
+        <!-- <p><strong>Purchase Date:</strong> {{selectedProduct?.purchaseDate | date: 'longDate'}}</p> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+      </div>
+    </div>
   </div>
 </div>

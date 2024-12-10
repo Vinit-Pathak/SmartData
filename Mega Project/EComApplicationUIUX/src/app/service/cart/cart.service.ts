@@ -16,7 +16,7 @@ export class CartService {
   cartItemCount$ : BehaviorSubject<number[]> = new BehaviorSubject<number[]>([]);
 
   setItemCount(){
-    debugger;
+
     const UserId = localStorage.getItem('id')
     this.getCartItemCount(Number(UserId)).subscribe({
       next: (res: any) => {

@@ -1,4 +1,4 @@
-
+/* 
 .navbar {
   background-color: #f8f9fa;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -58,13 +58,13 @@
   
 }
 
-.dropdown-menu .dropdown-item:hover {
+.dropdown-menu .dropdown-item {
   background-color: #f1f1f1;
   color: #007bff;
 }
 
 
-.profile-img-container:hover .dropdown-menu {
+.profile-img-container .dropdown-menu {
   display: block;
 }
 
@@ -121,4 +121,26 @@ body {
 .dropdown:hover .dropdown-menu {
   display: block;
   transition: opacity 0.2s ease;
+} */
+
+
+.navbar .dropdown img {
+  border-radius: 50%;
+  width: 40px; /* or any size you prefer */
+  height: 40px;
+  object-fit: cover; /* Prevents stretching and maintains aspect ratio */
 }
+.navbar{
+  background-color: white;
+}
+.pointer{
+  cursor: pointer;
+}
+.active:hover {
+  color: #007BFF;
+}
+nav.navbar {
+  background-color: #ffffff; /* White background */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+

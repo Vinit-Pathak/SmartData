@@ -29,9 +29,11 @@
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input
-              type="text"
+              type="username"
               class="form-control rounded-3"
               id="username"
+              minlength="10"
+              maxlength="20"
               formControlName="userName"
               placeholder="Enter your username"
               required
@@ -45,6 +47,15 @@
             >
               Invalid Username
             </div>
+            <!-- <div *ngIf="loginForm.get('userName')?.errors?.['required']">
+              Username is required.
+            </div> -->
+            <div *ngIf="loginForm.get('userName')?.errors?.['minlength']" class="text-danger small mt-1">
+              Username must be at least 10 characters.
+            </div>
+            <div *ngIf="loginForm.get('userName')?.errors?.['maxlength']" class="text-danger small mt-1">
+              Username must not exceed 20 characters.
+            </div>
           </div>
 
           <div class="mb-3 position-relative">
@@ -54,6 +65,8 @@
               class="form-control rounded-3"
               id="loginPassword"
               formControlName="password"
+              minlength="8"
+              maxlength="20"
               placeholder="Enter your password"
               required
             />
@@ -70,14 +83,22 @@
             ></i>
             <div
               *ngIf="
-                loginForm.get('password')?.hasError('pattern') &&
+                loginForm.get('password')?.invalid &&
                 loginForm.get('password')?.touched
               "
               class="text-danger small mt-1"
             >
-              Password must be at least 8 characters long, with at least 1
-              uppercase letter, 1 lowercase letter, 1 digit, and 1 special
-              character.
+            <span
+            *ngIf="loginForm.controls['password'].errors?.['required']"
+            >This is required</span
+          >
+          <span
+            *ngIf="loginForm.controls['password'].errors?.['pattern']" 
+          >
+            Password must be at least 8 characters long, contain an
+            uppercase letter, a lowercase letter, a number, and a special
+            character
+          </span>
             </div>
           </div>
 
@@ -120,6 +141,8 @@
               type="text"
               class="form-control rounded-3"
               id="otp"
+              minlength="6"
+              maxlength="6"
               formControlName="otp"
               placeholder="Enter OTP"
               required
@@ -130,7 +153,15 @@
               "
               class="text-danger small mt-1"
             >
-              OTP is required
+              <span
+              *ngIf="loginForm.controls['otp'].errors?.['otp']"
+              >otp is required</span>
+              <span *ngIf="loginForm.controls['otp'].errors?.['minlength']">
+                OTP must be 6 characters long.
+              </span>
+              <span *ngIf="loginForm.controls['otp'].errors?.['maxlength']">
+                OTP must be 6 characters long.
+              </span>
             </div>
           </div>
 
@@ -158,6 +189,8 @@
                 type="text"
                 class="form-control rounded-3"
                 id="registerFirstName"
+                minlength="2"
+                maxlength="20"
                 formControlName="firstName"
                 placeholder="Enter your first name"
                 required
@@ -165,8 +198,14 @@
               <div *ngIf="registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched" class="text-danger small mt-1">
                 First Name is required.
               </div>
-              <div *ngIf="registerForm.get('firstName')?.hasError('minlength') && registerForm.get('firstName')?.touched" class="text-danger small mt-1">
-                First Name must be at least 5 characters long.
+              <div *ngIf="registerForm.get('firstName')?.errors?.['minlength']"  class="text-danger small mt-1">
+                First name must be at least 2 characters.
+              </div>
+              <div *ngIf="registerForm.get('firstName')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                First name must not exceed 20 characters.
+              </div>
+              <div *ngIf="registerForm.get('firstName')?.errors?.['pattern']"  class="text-danger small mt-1">
+                First name can only contain letters with a single space between words.
               </div>
             </div>
         
@@ -176,6 +215,8 @@
                 type="text"
                 class="form-control rounded-3"
                 id="registerLastName"
+                minlength="2"
+                maxlength="20"
                 formControlName="lastName"
                 placeholder="Enter your last name"
                 required
@@ -183,8 +224,14 @@
               <div *ngIf="registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched" class="text-danger small mt-1">
                 Last Name is required.
               </div>
-              <div *ngIf="registerForm.get('lastName')?.hasError('minlength') && registerForm.get('lastName')?.touched" class="text-danger small mt-1">
-                Last Name must be at least 5 characters long.
+              <div *ngIf="registerForm.get('lastName')?.errors?.['minlength']"  class="text-danger small mt-1">
+                Last name must be at least 2 characters.
+              </div>
+              <div *ngIf="registerForm.get('lastName')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                Last name must not exceed 20 characters.
+              </div>
+              <div *ngIf="registerForm.get('lastName')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Last name can only contain letters with a single space between words.
               </div>
             </div>
         
@@ -194,6 +241,7 @@
                 type="email"
                 class="form-control rounded-3"
                 id="registerEmail"
+                maxlength="50"
                 formControlName="email"
                 placeholder="Enter your email"
                 required
@@ -201,26 +249,31 @@
               <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched" class="text-danger small mt-1">
                 Email is required.
               </div>
-              <div *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched" class="text-danger small mt-1">
-                Invalid email address.
+              <div *ngIf="registerForm.get('email')?.errors?.['email']"  class="text-danger small mt-1">
+                Please enter a valid email address.
+              </div>
+              <div *ngIf="registerForm.get('email')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                Email must not exceed 50 characters.
               </div>
             </div>
         
             <div class="mb-3">
               <label for="registerMobile" class="form-label">Mobile</label>
               <input
-                type="text"
+                type="tel"
                 class="form-control rounded-3"
                 id="registerMobile"
                 formControlName="mobile"
                 placeholder="Enter your mobile number"
+                maxlength="10"
+                (keypress)="onKeyPress($event)"
                 required
               />
               <div *ngIf="registerForm.get('mobile')?.hasError('required') && registerForm.get('mobile')?.touched" class="text-danger small mt-1">
                 Mobile number is required.
               </div>
-              <div *ngIf="registerForm.get('mobile')?.hasError('pattern') && registerForm.get('mobile')?.touched" class="text-danger small mt-1">
-                Mobile number must be a valid 10-digit number.
+              <div *ngIf="registerForm.get('mobile')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Please enter a valid 10-digit mobile number.
               </div>
             </div>
         
@@ -247,15 +300,18 @@
                 type="number"
                 class="form-control rounded-3"
                 id="registerZipCode"
+                minlength="6"
+                maxlength="6"
                 formControlName="zipCode"
                 placeholder="Enter your zip code"
+                (keypress)="onKeyPress($event)"
                 required
               />
               <div *ngIf="registerForm.get('zipCode')?.hasError('required') && registerForm.get('zipCode')?.touched" class="text-danger small mt-1">
                 Zip Code is required.
               </div>
-              <div *ngIf="registerForm.get('zipCode')?.hasError('pattern') && registerForm.get('zipCode')?.touched" class="text-danger small mt-1">
-                Zip Code must be a valid 6-digit number.
+              <div *ngIf="registerForm.get('zipcode')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Please enter a valid 6-digit ZIP code.
               </div>
             </div>
           </div>
@@ -295,19 +351,27 @@
         
             <div class="mb-3">
               <label for="registerAddress" class="form-label">Address</label>
-              <input
-                type="text"
+              <textarea
+                type=""
+                minlength="10"
+                maxlength="150"
                 class="form-control rounded-3"
                 id="registerAddress"
                 formControlName="address"
                 placeholder="Enter your address"
                 required
-              />
+              ></textarea>
               <div *ngIf="registerForm.get('address')?.hasError('required') && registerForm.get('address')?.touched" class="text-danger small mt-1">
                 Address is required.
               </div>
-              <div *ngIf="registerForm.get('address')?.hasError('minlength') && registerForm.get('address')?.touched" class="text-danger small mt-1">
+              <div *ngIf="registerForm.get('address')?.errors?.['minlength']"  class="text-danger small mt-1">
                 Address must be at least 10 characters long.
+              </div>
+              <div *ngIf="registerForm.get('address')?.errors?.['maxlength']"  class="text-danger small mt-1">
+                Address cannot exceed 150 characters.
+              </div>
+              <div *ngIf="registerForm.get('address')?.errors?.['pattern']"  class="text-danger small mt-1">
+                Address can only contain letters, numbers, spaces, commas, periods, and hyphens.
               </div>
             </div>
         
@@ -342,19 +406,19 @@
               </div>
             </div>
         
-            <div class="form-check mt-3">
+            <!-- <div class="form-check mt-3">
               <input type="checkbox" class="form-check-input" id="registerIsActive" formControlName="isActive" />
               <label for="registerIsActive" class="form-check-label">I agree to the Terms & Conditions</label>
               <div *ngIf="registerForm.get('isActive')?.invalid && registerForm.get('isActive')?.touched" class="text-danger small mt-1">
                 You must agree to the Terms & Conditions.
                 </div>
-            </div>
+            </div> -->
           </div>
         </div>
         
         <button
           type="submit"
-          [disabled]="isLogin ? loginForm.invalid : registerForm.invalid"
+          
           class="btn btn-primary w-100 rounded-3 py-2"
         >
           {{ isLogin ? "Login" : "Register" }}
@@ -417,7 +481,6 @@
           <button
             type="submit"
             class="btn btn-primary w-100 rounded-3 py-2"
-            [disabled]="forgotPasswordForm.invalid"
           >
             Submit
           </button>

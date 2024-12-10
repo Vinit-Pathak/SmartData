@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../service/user/user.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -15,7 +15,7 @@ import { CountryStateService } from '../../service/countryState/country-state.se
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   isLogin: boolean = true;
   password: string = '';
   confirmPassword: string = '';
@@ -26,45 +26,120 @@ export class LoginComponent {
   otpSent: boolean = false;
   countdown: number = 0;
   countdownInterval: any;
+  fileSizeError = false;
   todayDate=new Date().toISOString().split('T')[0];
+  passwordRgx: RegExp = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/
+
   router = inject(Router);
   toaster = inject(ToastrService);
   userService = inject(UserService);
   loaderService = inject(LoaderService)
   countryStateService = inject(CountryStateService)
 
+
+
+
   loginForm: FormGroup = new FormGroup({
-    userName: new FormControl('', [Validators.required]),
+    userName: new FormControl('', [Validators.required, Validators.maxLength(20)]),
     password: new FormControl('', [
       Validators.required,
-      
+      Validators.pattern(this.passwordRgx)
     ]),    
     userType: new FormControl(UserType.Customer, Validators.required),
-    otp: new FormControl('', [Validators.required, Validators.pattern(/^\d{6}$/)]),
+    otp: new FormControl('', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]),
   });
 
   registerForm = new FormGroup({
-    firstName: new FormControl('', [Validators.required,Validators.minLength(5)] ),
-    lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    mobile: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d{10}$/)
-    ]),
+    firstName: new FormControl('', [Validators.required,Validators.minLength(2), Validators.maxLength(20), Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/)] ),
+    lastName: new FormControl('', [Validators.required,Validators.minLength(2), Validators.maxLength(20), Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/)]),
+    email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(50)]),
+    mobile: new FormControl('',  [Validators.required, Validators.pattern(/^\d{10}$/)]),
     dateOfBirth: new FormControl('', Validators.required),
     userType: new FormControl(UserType.Customer, Validators.required),
-    file: new FormControl<File | null>(null),
-    address: new FormControl('', [Validators.required, Validators.minLength(10)]),
-    zipCode: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d{6}$/) 
-    ]),
+    file: new FormControl<File | null>(null, Validators.required),
+    address: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(150), Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)]),
+    zipCode:  new FormControl("", [Validators.required, Validators.pattern(/^\d{6}$/), Validators.minLength(6), Validators.maxLength(6)]),
     state: new FormControl("", Validators.required),
     country: new FormControl("", Validators.required),
-    isActive: new FormControl(false, Validators.required),
   });
-  
 
+
+  sanitizeField(fieldName: string): void {
+    this.registerForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        
+        const sanitizedValue = value
+          .replace(/[^A-Za-z\s]/g, '') 
+          .replace(/\s{2,}/g, ' '); 
+        if (value !== sanitizedValue) {
+          this.registerForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
+  }
+  
+  sanitizeFieldForOTP(fieldName: string): void {
+    this.loginForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        const sanitizedValue = value.replace(/[^0-9]/g, ''); 
+        if (value !== sanitizedValue) {
+          this.loginForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
+  }
+
+  sanitizeFieldForEmail(fieldName: string): void {
+    this.registerForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        const sanitizedValue = value
+          .replace(/[^A-Za-z0-9@._-]/g, '')
+          .replace(/\s{2,}/g, '') 
+          .trim(); 
+        if (value !== sanitizedValue) {
+          this.registerForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
+  }
+
+  sanitizeFieldForLoginForm(fieldName: string): void {
+    this.loginForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        const sanitizedValue = value
+          .replace(/[^A-Za-z0-9_\s]/g, '') 
+          .replace(/\s{2,}/g, ' ') 
+          .trim(); 
+        if (value !== sanitizedValue) {
+          this.loginForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
+  }
+
+  sanitizeFieldForForgetPasswordForm(fieldName: string): void {
+    this.forgotPasswordForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        const sanitizedValue = value
+          .replace(/[^A-Za-z0-9_\s]/g, '') 
+          .replace(/\s{2,}/g, ' ') 
+          .trim(); 
+        if (value !== sanitizedValue) {
+          this.forgotPasswordForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
+  }
 
   onFileSelected(event: Event) {
     const file = (event.target as HTMLInputElement).files?.[0];
@@ -72,10 +147,15 @@ export class LoginComponent {
     this.registerForm.get('file')?.updateValueAndValidity();
   }
 
-  constructor(){
-    this.getAllCountry();
-  }
 
+  ngOnInit(): void {
+    this.getAllCountry();
+    this.sanitizeField('firstName');
+    this.sanitizeField('lastName');
+    this.sanitizeFieldForEmail('email');
+    this.sanitizeFieldForOTP('otp');
+    // this.sanitizeFieldForForgetPasswordForm('email')
+  }
 
   forgotPasswordForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -99,6 +179,7 @@ export class LoginComponent {
       modal.style.display = 'none'; 
       overlay.classList.remove('visible'); 
     }
+    this.forgotPasswordForm.reset();
   }
   
 
@@ -153,7 +234,7 @@ export class LoginComponent {
     this.countryStateService.getAllCountry().subscribe({
       next : (res: any) => {
         this.allCountry = res
-        // console.log(this.allCountry)
+        
       },
       error : (error: any) =>{
         alert("I am in error")
@@ -186,6 +267,7 @@ export class LoginComponent {
 
   onLoginSubmit() {
     if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched();
       this.toaster.warning('Please fill in all required fields.', 'Warning', {
         timeOut: 3000,
         closeButton: true,
@@ -248,9 +330,14 @@ export class LoginComponent {
     });
   }
   
-  
 
   onRegisterSubmit() {
+
+    if (this.registerForm.invalid) {
+      this.registerForm.markAllAsTouched();
+      this.toaster.error("Please Fill And Correct All The fields", "Error");
+      return;
+    }
 
     const formData = new FormData();
     Object.keys(this.registerForm.controls).forEach(field => {
@@ -276,18 +363,26 @@ export class LoginComponent {
         }
       },
       error: (error: any) => {
-        const errorMessage =
-          error.error.message || 'An unexpected error occurred.';
-          this.loaderService.hide();
-        this.toaster.error(errorMessage, 'Error', {
-          timeOut: 3000,
-          closeButton: true,
-        });
+        if(error.error.statusCode == 409){
+          this.toaster.error("User Already Exist", "Error",{timeOut:3000, closeButton:true})
+          this.registerForm.reset()
+        }else{
+          this.toaster.error("Error In Registation", "Error",{timeOut:3000, closeButton:true})
+          console.log(error);
+        }
       },
     });
   }
 
+  onKeyPress(event: KeyboardEvent) {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault(); 
+    }
+  }
+
   sendOtp() {
+    debugger;
     if (this.countdown > 0) {
       return;
     }
