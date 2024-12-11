@@ -15,11 +15,11 @@ declare var bootstrap: any;
 })
 export class ProductsComponent implements OnInit {
   products: any[] = [];
-  role = sessionStorage.getItem('role');
+  role = localStorage.getItem('role');
   isUpdating = false;
   isAdding = false;
   imgUrl: string = '';
-  userDetails = JSON.parse(sessionStorage.getItem('userData') || '{}');
+  userDetails = JSON.parse(localStorage.getItem('userData') || '{}');
   todayDate=new Date().toISOString().split('T')[0];
   sellingPrice = 0;
   purchasePrice = 0;
@@ -220,6 +220,7 @@ export class ProductsComponent implements OnInit {
   onAdd() {
     if (this.addForm.invalid) {
       this.toastr.error('Please fill all required fields', 'Error');
+      this.addForm.markAllAsTouched();
       return;
     }else if((this.addForm.get('sellingPrice')?.value ?? 0) < (this.addForm.get('purchasePrice')?.value ?? 0)){
       this.toastr.error('Selling price cannot be less than purchase price', 'Error');

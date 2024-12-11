@@ -47,7 +47,7 @@ export class CartComponent {
 
     this.cartService.updateCartItemCount();
 
-    var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
+    var data = JSON.parse(localStorage.getItem('userData') || '{}');
     this.imgURL = data.profileImage;
   }
 
@@ -81,10 +81,6 @@ export class CartComponent {
   }
 
   onPaymentSubmit() {
-    // if (this.paymentForm.invalid) {
-    //   this.toasterService.error('Please enter valid card details.');
-    //   return;
-    // }
     if(this.paymentForm.valid){
       const expiryDate = this.paymentForm.get('expiryDate')?.value;
       const formattdExpiryDate = new Date (
@@ -127,74 +123,6 @@ export class CartComponent {
     }else{
       this.paymentForm.markAllAsTouched()
     }
-  //   const card = this.paymentForm.value;
-
-  //   this.cartService.validateCard(card).subscribe({
-  //     next: (res: any) => {
-  //       if (res.statusCode === 200) {
-  //         this.toasterService.success('Payment successful');
-  //         this.generateInvoice();
-  //         // this.clearCart();
-  //         // this.RemoveCartItem(this.cartItems.map((item) => item.cartId));
-  //         this.getCartDetails();
-  //         this.closePaymentModal();
-  //         this.router.navigateByUrl('invoice');
-
-  //       } else {
-  //         this.toasterService.error('Payment failed');
-  //       }
-  //     },
-  //     error: (error) => {
-  //       console.log(error);
-  //       this.toasterService.error('Error processing payment');
-  //     },
-  //   });
-  // }
-
-  // userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
-  // Id = localStorage.getItem('id');
-  // invoiceData:any;
-  // generateInvoice() {
-  //   var payload = {
-  //     userId: Number(this.Id),
-  //     address: this.userData.address,
-  //     state: this.userData.state,
-  //     country: this.userData.country,
-  //     zipCode: this.userData.zipCode,
-  //     Items : this.cartItems.map((item) => ({
-  //         productCode: item.productCode,
-  //         productName: item.productName,
-  //         productId: item.productId,
-  //         quantity: item.quantity,
-  //         price: item.price,
-        
-  //     })),
-  //   };
-  //   console.log('Payload for generating invoice:', payload);
-    
-  //   this.cartService.invoice(payload).subscribe({
-  //     next:(res:any)=>{
-  //       if(res.statusCode === 200){
-  //         debugger;
-  //         this.invoiceData = res.data;
-  //         console.log('Invoice generated successfully',res);
-  //         this.toasterService.success('Invoice generated successfully');
-  //         localStorage.setItem('invoiceData', JSON.stringify(this.invoiceData));
-  //         // this.clearCart();
-  //         this.cartItems.forEach((item:any)=>{
-  //           this.RemoveCartItem(item.cartId);
-  //         })
-  //         this.getCartDetails();
-  //         this.router.navigateByUrl('/invoice')
-  //       }else{
-  //         this.toasterService.error('Failed to generate invoice');
-  //       }
-  //     },
-  //     error:(error)=>{
-  //       console.log(error);
-  //       this.toasterService.error('Error generating invoice');
-  //     }
-  //   })
   }
 
   addItemToCart(item: any): void {
@@ -264,7 +192,7 @@ export class CartComponent {
     this.cartService.incrementToCart(payload).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200) {
-          console.log('Increment successful', res);
+          // console.log('Increment successful', res);
 
           this.getCartDetails();
           this.updateCartInLocalStorage();
@@ -295,8 +223,6 @@ export class CartComponent {
       this.cartService.decrementFromCart(payload).subscribe({
         next: (res: any) => {
           if (res.statusCode === 200) {
-            console.log('Decrement successful', res);
-
             this.getCartDetails();
             this.updateCartInLocalStorage();
             this.cartService.updateCartItemCount();
@@ -311,19 +237,6 @@ export class CartComponent {
       });
     } else {
       this.toasterService.error('Quantity cannot be less than 1');
-    }
-  }
-
-  removeCartFromLocalStorage(itemId: number): void {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      let cartArray = JSON.parse(storedCart);
-      // Filter out the item with the specific cartId
-      cartArray = cartArray.filter(
-        (cartItem: any) => cartItem.cartId !== itemId
-      );
-      localStorage.setItem('cart', JSON.stringify(cartArray));
-      this.cartService.updateCartItemCount();
     }
   }
 
@@ -350,41 +263,6 @@ export class CartComponent {
     }
   }
 
-  removeCartItemFromLocalStorage(item: any): void {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      let cartArray = JSON.parse(storedCart);
-      console.log('Cart before removing', cartArray);
-
-      cartArray = cartArray.filter(
-        (cartItem: any) => cartItem.cartId !== item.cartId
-      );
-
-      localStorage.setItem('cart', JSON.stringify(cartArray));
-      this.cart = new Set(cartArray);
-      console.log('Cart after removing', cartArray);
-    }
-  }
-
-  RemoveCartItem(cartId:any){
-    this.cartService.removeFromCart(cartId).subscribe({
-      next:(res:any)=>{
-        if(res.statusCode === 200){
-          console.log('I am in remove',res);
-          this.cartService.resetCartItemCount();
-          this.getCartDetails();
-          // this.toasterService.success('Item removed from cart');
-        }else{
-          this.toasterService.error('Failed to remove item from cart');
-        }
-      },
-      error:(error:Error)=>{
-        console.log(error);
-        this.toasterService.error('Error removing item from cart');
-      }
-    })
-  }
-
   removeCartItem(cartId: any): void {
     console.log('cartId', cartId);
     const isConfirm = confirm(
@@ -396,11 +274,7 @@ export class CartComponent {
           if (res.statusCode === 200) {
             console.log('I am in remove', res);
             this.cartService.resetCartItemCount();
-            // this.cartService.updateCartItemCount();
-            // this.removeCartFromLocalStorage(cartId);
-            // this.cartService.updateCartItemCount();
             this.getCartDetails();
-            this.toasterService.success('Item removed from cart');
           } else {
             this.toasterService.error('Failed to remove item from cart');
           }

@@ -13,6 +13,7 @@ import { timeout } from 'rxjs';
   styleUrl: './customer-dashboard.component.css',
 })
 export class CustomerDashboardComponent {
+
   products:any[] = [];
   userId:any;
   quantity: number = 1;
@@ -79,12 +80,6 @@ export class CustomerDashboardComponent {
           this.cartService.resetCartItemCount()
           this.cart.add(prodId);
           // this.updateCartInLocalStorage();
-          this.toasterService.success('Item Added Successfully', 'Success',{
-            timeOut: 2000,
-            progressBar: true,
-            progressAnimation: 'increasing',
-            closeButton: true
-          });
         }else{
           this.toasterService.error('Error while adding the item','Error', {
             timeOut: 2000,

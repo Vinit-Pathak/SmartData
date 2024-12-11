@@ -56,6 +56,13 @@
     animation: bounce 0.6s ease-in-out;
   }
   
+
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .product-card img {
     height: 300px;
     width: 100%;

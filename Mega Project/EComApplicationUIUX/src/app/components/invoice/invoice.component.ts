@@ -10,7 +10,7 @@ import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './invoice.component.html',
   styleUrls: ['./invoice.component.css'],
 })

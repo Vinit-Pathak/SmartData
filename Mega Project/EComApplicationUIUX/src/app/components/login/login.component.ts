@@ -191,6 +191,7 @@ export class LoginComponent implements OnInit{
         closeButton: true,
       });
       this.loaderService.hide();
+      this.forgotPasswordForm.markAllAsTouched();
       return;
     }
 
@@ -283,13 +284,13 @@ export class LoginComponent implements OnInit{
       next: (res: any) => {
         if (res.statusCode === 200 && res.data.isSuccess) {
           this.loaderService.hide();
-          sessionStorage.setItem('token', res.data.token);
-          sessionStorage.setItem('userData', JSON.stringify(res.data.data));
-          sessionStorage.setItem('role', res.data.data.userType);
-          sessionStorage.setItem('email', res.data.data.email);
+          localStorage.setItem('token', res.data.token);
+          localStorage.setItem('userData', JSON.stringify(res.data.data));
+          localStorage.setItem('role', res.data.data.userType);
+          localStorage.setItem('email', res.data.data.email);
           localStorage.setItem('id', res.data.id)
           const expiry = new Date(res.data.expiration);
-          sessionStorage.setItem('expiry', expiry.toISOString());
+          localStorage.setItem('expiry', expiry.toISOString());
   
           this.toaster.success('Login successful', 'Success', {
             timeOut: 3000,

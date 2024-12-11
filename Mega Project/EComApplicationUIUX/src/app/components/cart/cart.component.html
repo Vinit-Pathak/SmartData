@@ -10,7 +10,7 @@
     <div class="col-lg-8">
       <div class="card shadow-sm mb-4" *ngFor="let item of cartItems">
         <div class="row g-0 align-items-center">
-          <div class="col-md-4">
+          <div class="col-md-4 modify-spacing">
             <img
               [src]="item.productImage"
               (error)="item.productImage = 'https://ecomapplicationstorage.blob.core.windows.net/ecomapplication/profile-images/2dc40b7c-f132-4de7-91bd-641fc4f586a9'"
@@ -72,9 +72,9 @@
           <hr />
           <h6 class="mb-3">Delivery Address</h6>
           <p class="small text-muted">
-            <strong>{{users.firstName}} {{users.lastName}}</strong><br />
-            {{users.address}}<br />
-            {{users.zipCode}}
+            <strong>{{ users.firstName }} {{ users.lastName }}</strong><br />
+            {{ users.address }}<br />
+            {{ users.zipCode }}
           </p>
           <button class="btn btn-success w-100" (click)="openPaymentModal()">Proceed to Checkout</button>
         </div>
@@ -82,8 +82,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 <div class="modal fade" id="paymentModal" #paymentModal tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
@@ -94,7 +92,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closePaymentModal()"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="paymentForm" >
+        <form [formGroup]="paymentForm">
           <div class="mb-3">
             <label for="cardNumber" class="form-label">Card Number</label>
             <input type="text" maxlength="16" formControlName="cardNumber" class="form-control" id="cardNumber" placeholder="Enter your card number" (keypress)="onKeyPress($event)" required>
@@ -106,8 +104,7 @@
           <div class="row">
             <div class="col">
               <label for="expiryDate" class="form-label">Expiry Date (MM/YY)</label>
-              <input type="date" formControlName="expiryDate" class="form-control" id="expiryDate"
-              placeholder="Enter expiry date" required>
+              <input type="date" formControlName="expiryDate" class="form-control" id="expiryDate" placeholder="Enter expiry date" required>
               <div *ngIf="paymentForm.get('expiryDate')?.touched && paymentForm.get('expiryDate')?.invalid" class="text-danger">
                 <small *ngIf="paymentForm.get('expiryDate')?.errors?.['required']">Expiry date is required.</small>
               </div>
@@ -125,7 +122,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closePaymentModal()">Cancel</button>
-        <button type="button" class="btn btn-primary" (click)="onPaymentSubmit()" >Submit Payment</button>
+        <button type="button" class="btn btn-primary" (click)="onPaymentSubmit()">Submit Payment</button>
       </div>
     </div>
   </div>

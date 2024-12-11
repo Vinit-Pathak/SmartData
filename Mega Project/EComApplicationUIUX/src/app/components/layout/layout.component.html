@@ -1,30 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/customer-dashboard" >EComApplication</a>
+    <a class="navbar-brand" routerLink="/customer-dashboard">EComApplication</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav mx-auto">
         <li class="nav-item" *ngIf="userRole == 1">
-          <a class="nav-link" [routerLink]="['product']">
+          <a class="nav-link fs-5" [routerLink]="['product']">
             <i class="fas fa-store"></i> Product
           </a>
         </li>
         <li class="nav-item" *ngIf="userRole == 2">
-          <a class="nav-link" [routerLink]="['customer-dashboard']">
+          <a class="nav-link fs-5" [routerLink]="['customer-dashboard']">
             <i class="fas fa-store"></i> Market
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['profile']">
+          <a class="nav-link fs-5" [routerLink]="['profile']">
             <i class="fas fa-users"></i> Profile
           </a>
         </li>
       </ul>
 
-      <ul class="navbar-nav me-3 mt-2">
+      <ul class="navbar-nav me-4 mt-2">
         <li class="nav-item position-relative" *ngIf="userRole == 2">
           <a class="nav-link" [routerLink]="['cart']">
             <i class="fas fa-shopping-cart text-dark"></i>
@@ -34,18 +34,6 @@
           </a>
         </li>
       </ul>
-
-      <!-- <div class="dropdown">
-        <a class="nav-link d-flex align-items-center profile-img-container" data-bs-toggle="dropdown" aria-expanded="false">
-          <img [src]="imgUrl || 'https://ecomapplicationstorage.blob.core.windows.net/ecomapplication/profile-images/d74cd525-d4e0-4c09-b094-2aa50f375d42'" alt="User" class="rounded-circle profile-img" />
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openUpdateProfileModal()">Update Profile</a></li>
-          <li><a class="dropdown-item" style="cursor: pointer;" (click)="openChangePasswordModal()">Change Password</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><button class="dropdown-item" (click)="logout('manual')">Logout</button></li>
-        </ul>
-      </div> -->
 
       <div class="dropdown d-flex align-items-center">
         <button
@@ -377,16 +365,6 @@ aria-hidden="true"
     </div>
     <div class="modal-body">
       <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
-        <!-- <div class="mb-3">
-          <label for="userName" class="form-label">User Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="userName"
-            formControlName="userName"
-            required
-          />
-        </div> -->
 
         <div class="mb-3">
           <label for="newPassword" class="form-label">New Password</label>
@@ -399,17 +377,6 @@ aria-hidden="true"
             formControlName="newPassword"
             required
           />
-          <!-- <div
-              *ngIf="
-                changePasswordForm.get('newPassword')?.hasError('pattern') &&
-                changePasswordForm.get('newPassword')?.touched 
-              "
-              class="text-danger small mt-1"
-            >
-              Password must be at least 8 characters long, with at least 1
-              uppercase letter, 1 lowercase letter, 1 digit, and 1 special
-              character.
-            </div> -->
 
             <div
               *ngIf="
@@ -444,18 +411,18 @@ aria-hidden="true"
             required
           />
           <div *ngIf="
-                          changePasswordForm.get('confirmNewPassword')?.invalid &&
-                          changePasswordForm.get('confirmNewPassword')?.touched
+                          changePasswordForm.get('confirmPassword')?.invalid &&
+                          changePasswordForm.get('confirmPassword')?.touched
                         " class="text-danger">
             Please confirm your new password
           </div>
           <div *ngIf="newPasswordMismatch" class="text-danger">
-            Passwords do not match
+            Passwords does not match
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">
-          Update Password
+        <button type="submit" class="btn btn-primary w-100" [disabled]="changePasswordForm.invalid || newPasswordMismatch">
+          Change Password
         </button>
       </form>
     </div>

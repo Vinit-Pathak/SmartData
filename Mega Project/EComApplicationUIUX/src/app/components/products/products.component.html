@@ -361,7 +361,7 @@
     </div>
 
     <ng-template #noData>
-      <div class="alert alert-info text-center" role="alert">
+      <div class="alert alert-info text-center mt-3" role="alert">
         No Product Available
       </div>
     </ng-template>
@@ -377,7 +377,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <img [src]="selectedProduct?.productImage" class="img-fluid mt-3 mb-3" alt="{{selectedProduct?.productName}}" style="height: 320px; width: 100%; object-fit: cover;">
+        <img [src]="selectedProduct?.productImage" class="img-fluid mb-3" alt="{{selectedProduct?.productName}}" style="height: auto; width: 100%; object-fit: cover;">
         <p><strong>Category:</strong> {{selectedProduct?.category}}</p>
         <p><strong>Brand:</strong> {{selectedProduct?.brand}}</p>
         <p><strong>Product Code:</strong> {{selectedProduct?.productCode}}</p>

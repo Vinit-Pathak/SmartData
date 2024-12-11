@@ -24,8 +24,8 @@ declare var bootstrap: any;
 })
 export class LayoutComponent {
 
-  newPassword: any;
-  confirmPassword: any;
+  // newPassword: any;
+  // confirmPassword: any;
   userDetails: any;
   isUpdating = false;
   UserType = UserType;
@@ -66,7 +66,6 @@ export class LayoutComponent {
   });
 
   changePasswordForm = new FormGroup({
-    userName: new FormControl('', Validators.required),
     newPassword: new FormControl('', [
       Validators.required,
       Validators.pattern(this.passwordRgx)
@@ -79,22 +78,17 @@ export class LayoutComponent {
 
   ngOnInit(): void {
     this.cartService.cartItemCount$.subscribe((cartItem)=>{
-      this.cartItemCount = cartItem.length;
-      // console.log("Cart: ",cartItem);
-      
+      this.cartItemCount = cartItem.length;      
     })
-    this.userRole = sessionStorage.getItem('role') || '';
+    this.userRole = localStorage.getItem('role') || '';
     this.fetchUserDetails();
     this.checkTokenExpiry();
-    var data = JSON.parse(sessionStorage.getItem('userData') || '{}');
+    var data = JSON.parse(localStorage.getItem('userData') || '{}');
     this.imgUrl = data.profileImage;
-    // this.cartService.cartItemCount$.subscribe((count) => {
-    //   this.cartItemCount = count;
-    // });
 
     this.changePasswordForm.valueChanges.subscribe(() => {
       const newPassword = this.changePasswordForm.get('newPassword')?.value;
-      const confirmPassword = this.changePasswordForm.get('confirmNewPassword')?.value;
+      const confirmPassword = this.changePasswordForm.get('confirmPassword')?.value;
       this.newPasswordMismatch = newPassword !== confirmPassword;
     });
     this.cartService.updateCartItemCount();
@@ -139,8 +133,8 @@ export class LayoutComponent {
   }
 
   fetchUserDetails() {
-    // const email = sessionStorage.getItem('email');
-    const userId = localStorage.getItem('id');
+    // const email = localStorage.getItem('email');
+    const userId = Number(localStorage.getItem('id'));
     this.userService.getUserById(userId).subscribe({
       next: (res: any) => {
         this.userDetails = res.data;
@@ -202,11 +196,12 @@ export class LayoutComponent {
 
 
 
-    openUpdateProfileModal() {
+  openUpdateProfileModal() {
       const modalInstance = new bootstrap.Modal(
         this.updateProfileModal.nativeElement
       );
       modalInstance.show();
+      this.fetchUserDetails();
       this.OnProfileUpdate();
       
     }
@@ -220,7 +215,7 @@ export class LayoutComponent {
       );
 
       
-      const userId = this.userDetails.id || 0; 
+      const userId = Number(this.userDetails.id || 0); 
       
       this.updateProfileForm.patchValue({
         id: userId,
@@ -234,7 +229,6 @@ export class LayoutComponent {
         state: this.userDetails.state || '',
         country: this.userDetails.country || '',
         zipCode: this.userDetails.zipCode || 0,
-        // isActive: this.userDetails.isActive ?? true, 
       });
       
       console.log('User Details on click:', this.userDetails);
@@ -278,7 +272,7 @@ export class LayoutComponent {
     }
   
     
-    const userId = this.userDetails?.id || 0; 
+    const userId = Number(this.userDetails?.id || 0); 
     this.updateProfileForm.patchValue({ id: userId });
   
     
@@ -297,7 +291,7 @@ export class LayoutComponent {
       }
     });
 
-    const idOfUser = this.userDetails.id;
+    const idOfUser = Number(this.userDetails.id);
   
     this.userService.updateUser(idOfUser,formData).subscribe({
       next: (res: any) => {
@@ -306,7 +300,7 @@ export class LayoutComponent {
           closeButton: true,
         });
         console.log('Profile Updated:', res.data);
-        sessionStorage.setItem('userData', JSON.stringify(res.data));
+        localStorage.setItem('userData', JSON.stringify(res.data));
         this.imgUrl =res.data.profileImage;
         window.location.reload();
         this.closeUpdateProfileModal();
@@ -375,7 +369,7 @@ export class LayoutComponent {
   userProfileImage: string = 'default.png';
 
   checkTokenExpiry() {
-    const expiryTime = sessionStorage.getItem('expiry');
+    const expiryTime = localStorage.getItem('expiry');
 
     if (expiryTime) {
       const expireIn = new Date(expiryTime);
@@ -395,7 +389,8 @@ export class LayoutComponent {
   }
 
   logout(type: 'manual' | 'auto') {
-    sessionStorage.clear();
+    localStorage.clear();
+    localStorage.clear();
     this.router.navigate(['/']);
 
     if (type === 'auto') {

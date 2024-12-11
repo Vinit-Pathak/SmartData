@@ -20,7 +20,7 @@
         <p class="info">{{ invoice.firstName }} {{ invoice.lastName }}</p>
         <p class="info">{{ invoice.address }}, {{ invoice.state }}, {{ invoice.country }}</p>
         <p class="info">ZipCode: <strong>{{ invoice.zipCode }}</strong></p>
-        <p class="info"><i class="fa fa-phone"></i> Mobile: <strong>{{ invoice.mobile }}</strong></p>
+        <p class="info">Mobile: <strong>{{ invoice.mobile }}</strong></p>
       </div>
 
       <div class="invoice-details">
@@ -58,5 +58,6 @@
 
   <div class="footer">
     <p>Thank you for your business!</p>
+    <button class="btn btn-primary" [routerLink]="['customer-dashboard']">Back To Home</button>
   </div>
 </div>

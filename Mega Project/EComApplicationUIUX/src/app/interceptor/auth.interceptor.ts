@@ -8,7 +8,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const loaderService = inject(LoaderService);
   loaderService.show();
 
-  const token = sessionStorage.getItem('token');
+  const token = localStorage.getItem('token');
   const authReq = token ? req.clone({
     setHeaders: {
       Authorization: `Bearer ${token}`

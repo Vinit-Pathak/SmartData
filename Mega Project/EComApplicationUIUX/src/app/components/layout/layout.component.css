@@ -126,21 +126,47 @@ body {
 
 .navbar .dropdown img {
   border-radius: 50%;
-  width: 40px; /* or any size you prefer */
+  width: 40px; 
   height: 40px;
-  object-fit: cover; /* Prevents stretching and maintains aspect ratio */
+  object-fit: cover; 
 }
 .navbar{
   background-color: white;
 }
-.pointer{
-  cursor: pointer;
+
+.nav-link {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #333;
+}
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.navbar-brand:hover {
+  color: #007BFF;
 }
 .active:hover {
   color: #007BFF;
 }
 nav.navbar {
-  background-color: #ffffff; /* White background */
-  border-radius: 5px; /* Optional: rounded corners */
+  background-color: #ffffff; 
+  border-radius: 5px; 
 }
 

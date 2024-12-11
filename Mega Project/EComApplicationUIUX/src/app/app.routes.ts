@@ -8,6 +8,7 @@ import { authGuardGuard } from './guards/auth-guard.guard';
 import { CustomerDashboardComponent } from './components/customer-dashboard/customer-dashboard.component';
 import { CartComponent } from './components/cart/cart.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
+import { restrictGuard } from './guards/restrict.guard';
 
 export const routes: Routes = [
     {
@@ -17,7 +18,8 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canActivate:[restrictGuard]
     },
     {
         path:'',
