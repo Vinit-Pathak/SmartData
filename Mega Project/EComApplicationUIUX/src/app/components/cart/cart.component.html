@@ -33,7 +33,7 @@
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
-                <button class="btn btn-danger btn-sm" (click)="removeCartItem(item.cartId)">
+                <button class="btn btn-danger btn-sm" (click)="confirmDeletion(item.cartId)">
                   <i class="fas fa-trash-alt"></i> Remove
                 </button>
               </div>
@@ -76,7 +76,7 @@
             {{ users.address }}<br />
             {{ users.zipCode }}
           </p>
-          <button class="btn btn-success w-100" (click)="openPaymentModal()">Proceed to Checkout</button>
+          <button class="btn btn-success w-100" (click)="openAddressPopup()">Proceed to Checkout</button>
         </div>
       </div>
     </div>
@@ -123,6 +123,123 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closePaymentModal()">Cancel</button>
         <button type="button" class="btn btn-primary" (click)="onPaymentSubmit()">Submit Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="addressModal" class="modal fade" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addressModalLabel">Add / Edit Address</h5>
+        <button type="button" class="btn-close" (click)="closeAddressModal('addressModal')"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addressForm">
+          <!-- Address Field -->
+          <div class="mb-3">
+            <label for="registerAddress" class="form-label">Address</label>
+            <textarea
+              type=""
+              min="10"
+              max="150"
+              class="form-control"
+              id="registerAddress"
+              formControlName="address"
+              placeholder="Enter your address"
+              required
+            ></textarea>
+            <div
+              *ngIf="addressForm.get('address')?.touched && addressForm.get('address')?.invalid"
+              class="text-danger"
+            >
+              <!-- Required error -->
+              <div *ngIf="addressForm.get('address')?.errors?.['required']">
+                Address is required.
+              </div>
+              <!-- Min Length error -->
+              <div *ngIf="addressForm.get('address')?.errors?.['minlength']">
+                Address must be at least 10 characters long.
+              </div>
+              <!-- Max Length error -->
+              <div *ngIf="addressForm.get('address')?.errors?.['maxlength']">
+                Address cannot exceed 150 characters.
+              </div>
+              <!-- Pattern error -->
+              <div *ngIf="addressForm.get('address')?.errors?.['pattern']">
+                Address can only contain letters, numbers, spaces, commas, periods, and hyphens.
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- Zipcode Field -->
+          <div class="mb-3">
+            <label for="registerZipCode" class="form-label">ZIP Code</label>
+            <input
+              type="text"
+              minlength="6"
+              maxlength="6"
+              class="form-control"
+              id="registerZipCode"
+              formControlName="zipCode"
+              placeholder="Enter your ZIP code"
+              (keypress)="onKeyPress($event)"
+              required
+            />
+            <div
+              *ngIf="addressForm.get('zipCode')?.touched && addressForm.get('zipCode')?.invalid"
+              class="text-danger"
+            >
+              
+              <div *ngIf="addressForm.get('zipCode')?.errors?.['required']">
+                ZIP code is required.
+              </div>
+              
+              <div *ngIf="addressForm.get('zipCode')?.errors?.['pattern']">
+                Please enter a valid 6-digit ZIP code.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select (change)="getState(addressForm.value.country)" formControlName="country" name="country" class="form-control" id="country" required>
+                <option value="" disabled selected>Select a country</option>
+                <option *ngFor="let country of allCountry" [value]="country.countryId">{{ country.name }}</option>
+                
+            </select>
+            <div
+            *ngIf="addressForm.get('country')?.invalid && addressForm.get('country')?.touched"
+            class="text-danger small mt-1"
+          >
+            Country is required.
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="state" class="form-label">State</label>
+          <select formControlName="state" name="state" class="form-control" id="state" required>
+              <option selected disabled>Select a state</option>
+              <option *ngFor="let state of allState" [value]="state.stateId">{{ state.name }}</option>
+              
+          </select>
+          <div
+          *ngIf="addressForm.get('state')?.invalid && addressForm.get('state')?.touched"
+          class="text-danger small mt-1"
+        >
+          State is required.
+        </div>
+       </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeAddressModal('addressModal')">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveAddress()">Save</button>
       </div>
     </div>
   </div>
