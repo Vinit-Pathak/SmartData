@@ -8,7 +8,7 @@ import { UserType } from '../../models/user-type.enum';
 import { LoaderService } from '../../service/loader/loader.service';
 import { CountryStateService } from '../../service/countryState/country-state.service';
 
-@Component({
+@Component({  
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
@@ -80,18 +80,18 @@ export class LoginComponent implements OnInit{
     });
   }
   
-  sanitizeFieldForOTP(fieldName: string): void {
-    this.loginForm.get(fieldName)?.valueChanges.subscribe((value) => {
-      if (value) {
-        const sanitizedValue = value.replace(/[^0-9]/g, ''); 
-        if (value !== sanitizedValue) {
-          this.loginForm.get(fieldName)?.setValue(sanitizedValue, {
-            emitEvent: false, 
-          });
+    sanitizeFieldForOTP(fieldName: string): void {
+      this.loginForm.get(fieldName)?.valueChanges.subscribe((value) => {
+        if (value) {
+          const sanitizedValue = value.replace(/[^0-9]/g, ''); 
+          if (value !== sanitizedValue) {
+            this.loginForm.get(fieldName)?.setValue(sanitizedValue, {
+              emitEvent: false, 
+            });
+          }
         }
-      }
-    });
-  }
+      });
+    }
 
   sanitizeFieldForEmail(fieldName: string): void {
     this.registerForm.get(fieldName)?.valueChanges.subscribe((value) => {

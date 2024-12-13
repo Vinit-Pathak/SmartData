@@ -1,0 +1,211 @@
+
+<div class="container mt-5 pb-5 login-register">
+    <div class="card shadow-lg rounded-4">
+      <div class="card-body p-4">
+        <h5 class="card-title text-center mb-4">User Authentication</h5>
+  
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="onLoginSubmit()"
+        >
+          <!-- Login Form -->
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="username"
+                class="form-control rounded-3"
+                id="username"
+                minlength="10"
+                maxlength="20"
+                formControlName="userName"
+                placeholder="Enter your username"
+                required
+              />
+              <div
+                *ngIf="
+                  loginForm.get('userName')?.invalid &&
+                  loginForm.get('userName')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                Username is required
+              </div>
+              <div *ngIf="loginForm.get('userName')?.errors?.['minlength']" class="text-danger small mt-1">
+                Username must be at least 10 characters.
+              </div>
+              <div *ngIf="loginForm.get('userName')?.errors?.['maxlength']" class="text-danger small mt-1">
+                Username must not exceed 20 characters.
+              </div>
+            </div>
+  
+            <div class="mb-3 position-relative">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                class="form-control rounded-3"
+                id="loginPassword"
+                formControlName="password"
+                minlength="8"
+                maxlength="20"
+                placeholder="Enter your password"
+                required
+              />
+              <i
+                class="bi"
+                [ngClass]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"
+                (click)="togglePasswordVisibility()"
+                style="
+                  position: absolute;
+                  right: 14px;
+                  top: 54px;
+                  cursor: pointer;
+                "
+              ></i>
+              <div
+                *ngIf="
+                  loginForm.get('password')?.invalid &&
+                  loginForm.get('password')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+              <span
+              *ngIf="loginForm.controls['password'].errors?.['required']"
+              >This is required</span
+            >
+            <span
+              *ngIf="loginForm.controls['password'].errors?.['pattern']" 
+            >
+              Password must be at least 8 characters long, contain an
+              uppercase letter, a lowercase letter, a number, and a special
+              character
+            </span>
+              </div>
+            </div>
+
+            <div class="text-end mb-4">
+              <a
+                href="javascript:void(0)"
+                (click)="openForgotPassword()"
+                class="text-primary"
+              >
+                Forgot Password?
+              </a>
+            </div>
+  
+            <div *ngIf="otpSent" class="mb-3">
+              <label for="otp" class="form-label">Enter OTP</label>
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="otp"
+                minlength="6"
+                maxlength="6"
+                formControlName="otp"
+                placeholder="Enter OTP"
+                required
+              />
+              <div
+                *ngIf="
+                  loginForm.get('otp')?.invalid && loginForm.get('otp')?.touched
+                "
+                class="text-danger small mt-1"
+              >
+                <span
+                *ngIf="loginForm.controls['otp'].errors?.['otp']"
+                >otp is required</span>
+                <span *ngIf="loginForm.controls['otp'].errors?.['minlength']">
+                  OTP must be 6 characters long.
+                </span>
+                <span *ngIf="loginForm.controls['otp'].errors?.['maxlength']">
+                  OTP must be 6 characters long.
+                </span>
+              </div>
+            </div>
+  
+            <button
+              type="button"
+              class="btn btn-secondary w-100 rounded-3 py-2 mb-3"
+              (click)="sendOtp()"
+              [disabled]="
+                loginForm.get('userName')?.invalid ||
+                loginForm.get('password')?.invalid ||
+                countdown > 0
+              "
+            >
+              {{ countdown > 0 ? "Resend OTP (" + countdown + "s)" : "Send OTP" }}
+            </button>
+          
+          <button
+            type="submit"
+            class="btn btn-primary w-100 rounded-3 py-2"
+          >Login
+          </button>
+        </form>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div id="overlay" class="overlay"></div>
+
+<div
+  class="modal"
+  id="forgotPasswordModal"
+  tabindex="-1"
+  aria-labelledby="forgotPasswordModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="forgotPasswordModalLabel">
+          Forgot Password
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeForgotPassword()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          [formGroup]="forgotPasswordForm"
+          (ngSubmit)="onForgotPasswordSubmit()"
+        >
+          <div class="mb-3">
+            <label for="forgotPasswordEmail" class="form-label"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              class="form-control rounded-3"
+              id="forgotPasswordEmail"
+              formControlName="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div
+              *ngIf="
+                forgotPasswordForm.get('email')?.invalid &&
+                forgotPasswordForm.get('email')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              Invalid email address
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 rounded-3 py-2"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+
+.login-register {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .card {
+    background: linear-gradient(145deg, #e3f2fd, #ffffff);
+    border-radius: 1.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 3rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  h5.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  button.active {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    border-color: #0d6efd;
+    color: white;
+  }
+  
+  button {
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+  }
+  
+  button:hover {
+    background: linear-gradient(145deg, #0056b3, #007bff);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  .form-control {
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+    background-color: #fff;
+  }
+  
+  .text-danger {
+    font-size: 0.9rem;
+    color: #dc3545;
+    font-weight: 500;
+  }
+  
+  select.ng-touched.ng-invalid {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+  }
+  
+  label {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+  }
+  
+  .mt-3 {
+      margin-top: 3rem !important;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  form {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  
+  .overlay.visible {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+  .modal {
+    display: none;
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  
