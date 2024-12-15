@@ -1,12 +1,12 @@
 
-<div class="container mt-5 pb-5 login-register">
+<div class="container mt-2 pb-5 login-register">
     <div class="card shadow-lg rounded-4">
       <div class="card-body p-4">
         <h5 class="card-title text-center mb-4">User Authentication</h5>
   
         <form
           [formGroup]="loginForm"
-          (ngSubmit)="onLoginSubmit()"
+          (ngSubmit)="sendOtp()"
         >
           <!-- Login Form -->
             <div class="mb-3">
@@ -16,7 +16,7 @@
                 class="form-control rounded-3"
                 id="username"
                 minlength="10"
-                maxlength="20"
+                maxlength="25"
                 formControlName="userName"
                 placeholder="Enter your username"
                 required
@@ -70,7 +70,7 @@
               >
               <span
               *ngIf="loginForm.controls['password'].errors?.['required']"
-              >This is required</span
+              >Password is required</span
             >
             <span
               *ngIf="loginForm.controls['password'].errors?.['pattern']" 
@@ -92,48 +92,6 @@
               </a>
             </div>
   
-            <div *ngIf="otpSent" class="mb-3">
-              <label for="otp" class="form-label">Enter OTP</label>
-              <input
-                type="text"
-                class="form-control rounded-3"
-                id="otp"
-                minlength="6"
-                maxlength="6"
-                formControlName="otp"
-                placeholder="Enter OTP"
-                required
-              />
-              <div
-                *ngIf="
-                  loginForm.get('otp')?.invalid && loginForm.get('otp')?.touched
-                "
-                class="text-danger small mt-1"
-              >
-                <span
-                *ngIf="loginForm.controls['otp'].errors?.['otp']"
-                >otp is required</span>
-                <span *ngIf="loginForm.controls['otp'].errors?.['minlength']">
-                  OTP must be 6 characters long.
-                </span>
-                <span *ngIf="loginForm.controls['otp'].errors?.['maxlength']">
-                  OTP must be 6 characters long.
-                </span>
-              </div>
-            </div>
-  
-            <button
-              type="button"
-              class="btn btn-secondary w-100 rounded-3 py-2 mb-3"
-              (click)="sendOtp()"
-              [disabled]="
-                loginForm.get('userName')?.invalid ||
-                loginForm.get('password')?.invalid ||
-                countdown > 0
-              "
-            >
-              {{ countdown > 0 ? "Resend OTP (" + countdown + "s)" : "Send OTP" }}
-            </button>
           
           <button
             type="submit"
@@ -141,15 +99,80 @@
           >Login
           </button>
         </form>
+        
       </div>
     </div>
 </div>
 
 
+<!-- Verify OTP Modal -->
+<div
+  class="modal"
+  id="verifyOtpModal"
+  tabindex="-1"
+  aria-labelledby="verifyOtpModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="verifyOtpModalLabel">
+          Verify Otp
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeVerifyOtp()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          [formGroup]="verifyOtpForm"
+          (ngSubmit)="onLoginSubmit()"
+        >
+          <div class="mb-3">
+            <label for="forgotPasswordEmail" class="form-label"
+              >OTP</label
+            >
+            <input
+              type="tel"
+              class="form-control rounded-3"
+              id="verifyOtp"
+              maxlength="6"
+              minlength="6"
+              formControlName="otp"
+              (keypress)="onKeyPress($event)"
+              placeholder="Enter your otp"
+              required
+            />
+            <div
+              *ngIf="
+                verifyOtpForm.get('otp')?.invalid &&
+                verifyOtpForm.get('otp')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+              Invalid Otp
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 rounded-3 py-2"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div id="overlay" class="overlay"></div>
 
+<!-- Forgot Password Modal -->
 <div
   class="modal"
   id="forgotPasswordModal"

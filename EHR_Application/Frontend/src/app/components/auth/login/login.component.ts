@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { LoaderService } from '../../../others/services/loader/loader.service';
@@ -34,19 +34,43 @@ export class LoginComponent implements OnInit {
 
 
   loginForm: FormGroup = new FormGroup({
-    userName: new FormControl('', [Validators.required, Validators.maxLength(20)]),
+    userName: new FormControl('', [Validators.required, Validators.maxLength(25)]),
     password: new FormControl('', [
       Validators.required,
       Validators.pattern(this.passwordRgx)
     ]),    
-    otp: new FormControl('', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]),
   });
+
+
+  verifyOtpForm = new FormGroup({
+    userName: new FormControl(''),
+    otp: new FormControl('', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]),
+  })
 
   forgotPasswordForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
   })
 
 
+  openVerifyOtp(){
+    const modal = document.getElementById('verifyOtpModal');
+    const overlay = document.getElementById('overlay');
+  
+    if (modal != null && overlay != null) {
+      modal.style.display = 'block'; 
+      overlay.classList.add('visible'); 
+    }
+  }
+
+  closeVerifyOtp() {
+    const modal = document.getElementById('verifyOtpModal');
+    const overlay = document.getElementById('overlay');
+    if (modal != null && overlay != null) {
+      modal.style.display = 'none'; 
+      overlay.classList.remove('visible'); 
+    }
+    this.verifyOtpForm.reset();
+  }
 
   sanitizeFieldForOTP(fieldName: string): void {
     this.loginForm.get(fieldName)?.valueChanges.subscribe((value) => {
@@ -61,10 +85,16 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  
+  onKeyPress(event: KeyboardEvent) {  
+    const charCode = event.which ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault(); 
+    }
+  }
+
 
   onLoginSubmit(){
-    if (this.loginForm.invalid) {
+    if (this.verifyOtpForm.invalid) {
       this.loginForm.markAllAsTouched();
       this.toaster.warning('Please fill in all required fields.', 'Warning', {
         timeOut: 3000,
@@ -72,27 +102,28 @@ export class LoginComponent implements OnInit {
       });
       return;
     }
-
-    this.loginData = this.loginForm.value;
+    const userName = this.loginForm.get('userName')?.value;
+    this.loginData = this.verifyOtpForm.value;
+    this.loginData.userName = userName
     this.authService.login(this.loginData).subscribe({
       next: (res:any)=>{
         if(res.statusCode === 200 && res.isSuccess){
-          sessionStorage.setItem('token', res.data.token);
-          sessionStorage.setItem('userData', JSON.stringify(res.data.data));
-          localStorage.setItem('role', res.data.data.userTypeId);
+          sessionStorage.setItem('token', res.accessToken);
+          sessionStorage.setItem('userData', JSON.stringify(res.data));
+          sessionStorage.setItem('role', res.data.userTypeId);
 
-          const expiry = new Date(res.data.expiration);
-          localStorage.setItem('expiry', expiry.toISOString());
+          const expiry = new Date(res.expiration);
+          sessionStorage.setItem('expiry', expiry.toISOString());
   
           this.toaster.success('Login successful', 'Success', {
             timeOut: 2000,
             closeButton: true,
           });
-
-          if(res.data.data.userTypeId ===1){
-            this.router.navigateByUrl('patient-dashboard');
-          }else if(res.data.data.userTypeId ===2){
-            this.router.navigateByUrl('provider-dashboard');
+          this.closeVerifyOtp();
+          if(res.data.userTypeId ===1){
+            this.router.navigate(['/home/patient-dashboard']);
+          }else if(res.data.userTypeId ===2){
+            this.router.navigate(['/home/provider-dashboard']);
           }else{
             this.toaster.error('Unexpected role', 'Error', {
               timeOut: 2000,
@@ -185,7 +216,12 @@ export class LoginComponent implements OnInit {
   }
 
   sendOtp(){
-    if (this.countdown > 0) {
+    if(this.loginForm.invalid){
+      this.loginForm.markAllAsTouched();
+      this.toaster.warning('Please fill in all required fields.', 'Warning', {
+        timeOut: 3000,
+        closeButton: true,
+      });
       return;
     }
     this.loaderService.show();
@@ -203,14 +239,14 @@ export class LoginComponent implements OnInit {
     this.authService.sendOtp(userName, password).subscribe({
       next: (res: any) => {
         if(res.statusCode === 200){
+          this.loaderService.hide();
           this.toaster.success('OTP Sent Successfully', 'Success', {
             timeOut: 2000,
             closeButton: true,
           });
-          this.otpSent = true;
-          this.countdown = 20;
-          this.startCountdown();
+          this.openVerifyOtp();
         }else{
+          this.loaderService.hide();
           this.toaster.error('OTP Not Sent', 'Error', {
             timeOut: 2000,
             closeButton: true,
@@ -218,6 +254,7 @@ export class LoginComponent implements OnInit {
         }
       },
       error: (error:any) => {
+        this.loaderService.hide();
         this.toaster.error(
           error.error.message || 'Username & Password is invalid',
           'Error',
@@ -228,22 +265,6 @@ export class LoginComponent implements OnInit {
         );
       },
     })
-  }
-
-  startCountdown() {
-    this.countdownInterval = setInterval(() => {
-      if (this.countdown > 0) {
-        this.countdown--;
-      } else {
-        clearInterval(this.countdownInterval);
-      }
-    }, 1000);
-  }
-
-  ngOnDestroy() {
-    if (this.countdownInterval) {
-      clearInterval(this.countdownInterval);
-    }
   }
 
 }

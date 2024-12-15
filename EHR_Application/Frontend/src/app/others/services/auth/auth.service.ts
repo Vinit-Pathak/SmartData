@@ -22,4 +22,8 @@ export class AuthService {
     return this.http.get('https://localhost:7053/api/Auth/forgotPassword', { params });
   }
 
+  register(user:any):Observable<any>{
+    return this.http.post('https://localhost:7053/api/Auth/registration', user);
+  }
+
 }

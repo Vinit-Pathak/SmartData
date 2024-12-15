@@ -1,0 +1,146 @@
+<div *ngIf="user; else noData">
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-image-container">
+          <img [src]="imgUrl" alt="User Image" class="profile-image" 
+          (error)="onImageError($event)"/>
+        </div>
+        <div class="profile-info">
+          <h1 class="profile-name">{{ user.firstName }} {{ user.lastName }}</h1>
+          <p class="profile-role">{{ getUserType(user.userTypeId) }}</p>
+        </div>
+      </div>
+  
+      <div class="profile-details">
+        <div class="detail-item">
+          <strong>Email:</strong>
+          <span>{{ user.email }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Full Name:</strong>
+          <span>{{ user.firstName }} {{user.lastName}}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Address: </strong>
+          <span>{{ user.address }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Country: </strong>
+          <span>{{ user.countryName }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>State: </strong>
+          <span>{{ user.stateName }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Gender: </strong>
+          <span>{{ user.gender }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Date of Birth: </strong>
+          <span>{{ user.dateOfBirth | date: 'mediumDate' }}</span>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="btn btn-primary me-3 ">Update Profile</button>
+        <button class="btn btn-warning ms-3 " (click)="openChangePasswordModal()">Change Password</button>
+      </div>
+    </div>
+</div>
+  
+<ng-template #noData>
+  <div class="alert alert-warning text-center" role="alert">
+      Please log in to view your profile.
+  </div>
+</ng-template>
+
+
+
+<div
+class="modal fade"
+id="changePasswordModal"
+#changePasswordModal
+tabindex="-1"
+aria-labelledby="changePasswordModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="changePasswordModalLabel">
+        Change Password
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+        (click)="closeChangePasswordModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
+
+        <div class="mb-3">
+          <label for="newPassword" class="form-label">New Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="newPassword"
+            minlength="8"
+            maxlength="15"
+            formControlName="newPassword"
+            required
+          />
+
+            <div
+              *ngIf="
+                changePasswordForm.get('newPassword')?.invalid &&
+                changePasswordForm.get('newPassword')?.touched
+              "
+              class="text-danger small mt-1"
+            >
+            <span
+            *ngIf="changePasswordForm.controls['newPassword'].errors?.['required']"
+            >This is required</span
+          >
+          <span
+            *ngIf="changePasswordForm.controls['newPassword'].errors?.['pattern']" 
+          >
+            Password must be at least 8 characters long, contain an
+            uppercase letter, a lowercase letter, a number, and a special
+            character
+          </span>
+        </div>
+      </div>
+
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            minlength="8"
+            maxlength="15"
+            formControlName="confirmPassword"
+            required
+          />
+          <div *ngIf="
+                          changePasswordForm.get('confirmPassword')?.invalid &&
+                          changePasswordForm.get('confirmPassword')?.touched
+                        " class="text-danger">
+            Please confirm your new password
+          </div>
+          <div *ngIf="newPasswordMismatch" class="text-danger">
+            Passwords does not match
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="changePasswordForm.invalid || newPasswordMismatch">
+          Change Password
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,3 +1,269 @@
-<p>
-    Patient Registration
-</p>
+<div class="container mt-2 pb-5">
+    <div class="card shadow-lg rounded-4 border-0">
+        <div class="card-header text-center bg-primary text-white rounded-top">
+            <h3 class="mb-0">Patient Registration</h3>
+        </div>
+        <div class="card-body p-5">
+            <form [formGroup]="patientRegistrationForm" (ngSubmit)="onRegisterSubmit()">
+                <div class="row g-4">
+                    <!-- First Name -->
+                    <div class="col-md-6">
+                        <label for="registerFirstName" class="form-label fw-semibold">First Name</label>
+                        <input type="text" class="form-control rounded-pill shadow-sm" id="registerFirstName"
+                            formControlName="firstName" minlength="2" maxlength="20" placeholder="Enter first name"
+                            required />
+                        <div *ngIf="patientRegistrationForm.get('firstName')?.hasError('required') && patientRegistrationForm.get('firstName')?.touched"
+                            class="text-danger small mt-1">
+                            First Name is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('firstName')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            First name must be at least 2 characters.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('firstName')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            First name must not exceed 20 characters.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('firstName')?.errors?.['pattern']"
+                            class="text-danger small mt-1">
+                            First name can only contain letters with a single space between words.
+                        </div>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6">
+                        <label for="registerLastName" class="form-label fw-semibold">Last Name</label>
+                        <input type="text" class="form-control rounded-pill shadow-sm" id="registerLastName"
+                            formControlName="lastName" minlength="2" maxlength="20" placeholder="Enter last name"
+                            required />
+                        <div *ngIf="patientRegistrationForm.get('lastName')?.hasError('required') && patientRegistrationForm.get('lastName')?.touched"
+                            class="text-danger small mt-1">
+                            Last Name is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('lastName')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            Last name must be at least 2 characters.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('lastName')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            Last name must not exceed 20 characters.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('lastName')?.errors?.['pattern']"
+                            class="text-danger small mt-1">
+                            Last name can only contain letters with a single space between words.
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="col-md-6">
+                        <label for="registerDateOfBirth" class="form-label fw-semibold">Date of Birth</label>
+                        <input type="date" class="form-control rounded-pill shadow-sm" id="registerDateOfBirth"
+                            formControlName="dateOfBirth" [max]="todayDate" required />
+                        <div *ngIf="patientRegistrationForm.get('dateOfBirth')?.hasError('required') && patientRegistrationForm.get('dateOfBirth')?.touched"
+                            class="text-danger small mt-1">
+                            Date of Birth is required.
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="col-md-6">
+                        <label for="registerMobile" class="form-label fw-semibold">Mobile Number</label>
+                        <input type="tel" class="form-control rounded-pill shadow-sm" id="registerMobile"
+                            formControlName="mobile" maxlength="10" placeholder="Enter mobile number"
+                            (keypress)="onKeyPress($event)" required />
+                        <div *ngIf="patientRegistrationForm.get('mobile')?.hasError('required') && patientRegistrationForm.get('mobile')?.touched"
+                            class="text-danger small mt-1">
+                            Mobile number is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('mobile')?.errors?.['pattern']"
+                            class="text-danger small mt-1">
+                            Please enter a valid 10-digit mobile number.
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="registerEmail" class="form-label fw-semibold">Email Address</label>
+                        <input type="email" class="form-control rounded-pill shadow-sm" id="registerEmail"
+                            formControlName="email" maxlength="30" placeholder="Enter email address" maxlength="30"
+                            required />
+                        <div *ngIf="patientRegistrationForm.get('email')?.hasError('required') && patientRegistrationForm.get('email')?.touched"
+                            class="text-danger small mt-1">
+                            Email is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('email')?.errors?.['email']"
+                            class="text-danger small mt-1">
+                            Please enter a valid email address.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('email')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            Email must not exceed 30 characters.
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                        <label for="registerGender" class="form-label fw-semibold">Gender</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerGender" formControlName="gender"
+                            required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('gender')?.hasError('required') && patientRegistrationForm.get('gender')?.touched"
+                            class="text-danger small mt-1">
+                            Gender is required.
+                        </div>
+                    </div>
+
+                    <!-- Blood Group -->
+                    <div class="col-md-6">
+                        <label for="registerBloodGroup" class="form-label fw-semibold">Blood Group</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerBloodGroup"
+                            formControlName="bloodGroup" required>
+                            <option value="" disabled selected>Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('bloodGroup')?.hasError('required') && patientRegistrationForm.get('bloodGroup')?.touched"
+                            class="text-danger small mt-1">
+                            Blood Group is required.
+                        </div>
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div class="col-md-6">
+                        <label for="registerFile" class="form-label fw-semibold">Profile Image</label>
+                        <input type="file" class="form-control rounded-pill shadow-sm" id="registerFile"
+                            formControlName="file" (change)="onFileSelected($event)" required />
+                        <div *ngIf="patientRegistrationForm.get('file')?.hasError('required') && patientRegistrationForm.get('file')?.touched"
+                            class="text-danger small mt-1">
+                            Profile Image is required.
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-md-12">
+                        <label for="registerAddress" class="form-label fw-semibold">Address</label>
+                        <textarea class="form-control rounded-3 shadow-sm" id="registerAddress"
+                            formControlName="address" minlength="10" maxlength="150" rows="3"
+                            placeholder="Enter your address" required></textarea>
+                        <div *ngIf="patientRegistrationForm.get('address')?.hasError('required') && patientRegistrationForm.get('address')?.touched"
+                            class="text-danger small mt-1">
+                            Address is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('address')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            Address must be at least 10 characters long.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('address')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            Address cannot exceed 150 characters.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('address')?.errors?.['pattern']"
+                            class="text-danger small mt-1">
+                            Address can only contain letters, numbers, spaces, commas, periods, and hyphens.
+                        </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6">
+                        <label for="registerCity" class="form-label fw-semibold">City</label>
+                        <input type="text" class="form-control rounded-pill shadow-sm" id="registerCity"
+                            formControlName="city" placeholder="Enter your city" minlength="3" maxlength="15"
+                            required />
+                        <div *ngIf="patientRegistrationForm.get('city')?.hasError('required') && patientRegistrationForm.get('city')?.touched"
+                            class="text-danger small mt-1">
+                            City is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('city')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            City must be at least 3 characters long.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('city')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            City cannot exceed 15 characters.
+                        </div>
+                    </div>
+
+                    <!-- State -->
+                    <div class="col-md-6">
+                        <label for="registerState" class="form-label fw-semibold">State</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerState" formControlName="state"
+                            required>
+                            <option value="" disabled selected>Select State</option>
+                            <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}
+                            </option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('state')?.hasError('required') && patientRegistrationForm.get('state')?.touched"
+                            class="text-danger small mt-1">
+                            State is required.
+                        </div>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="col-md-6">
+                        <label for="registerCountry" class="form-label fw-semibold">Country</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerCountry"
+                            formControlName="country" (change)="onChange(patientRegistrationForm.value.country)"
+                            required>
+                            <option value="" disabled selected>Select Country</option>
+                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('country')?.hasError('required') && patientRegistrationForm.get('country')?.touched"
+                            class="text-danger small mt-1">
+                            Country is required.
+                        </div>
+                    </div>
+
+                    <!-- PIN Code -->
+                    <div class="col-md-6">
+                        <label for="registerPinCode" class="form-label fw-semibold">PIN Code</label>
+                        <input type="tel" class="form-control rounded-pill shadow-sm" id="registerPinCode"
+                            formControlName="pinCode" placeholder="Enter PIN code" minlength="6" maxlength="6"
+                            (keypress)="onKeyPress($event)" required />
+                        <div *ngIf="patientRegistrationForm.get('pinCode')?.hasError('required') && patientRegistrationForm.get('pinCode')?.touched"
+                            class="text-danger small mt-1">
+                            Pin Code is required.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('pincode')?.errors?.['pattern']"
+                            class="text-danger small mt-1">
+                            Please enter a valid 6-digit Pin code.
+                        </div>
+                        <div *ngIf="patientRegistrationForm.get('pincode')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            Pin code must be 6 digits long.
+                        </div>
+
+                    </div>
+
+                    <!-- User Type -->
+                    <div class="col-md-6">
+                        <label for="registerUserType" class="form-label fw-semibold">User Type</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerUserType"
+                            formControlName="userTypeId" required>
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="1">Patient</option>
+                            <option value="2">Provider</option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('userTypeId')?.hasError('required') && patientRegistrationForm.get('userTypeId')?.touched"
+                            class="text-danger small mt-1">
+                            User Type is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary rounded-pill px-5 py-2">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

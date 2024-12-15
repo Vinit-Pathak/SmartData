@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
-import { LoaderComponent } from "./shared/loader/loader.component";
 import { Subscription } from 'rxjs';
 import { LoaderService } from './others/services/loader/loader.service';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @Component({
   selector: 'app-root',
