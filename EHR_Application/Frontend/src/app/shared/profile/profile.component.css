@@ -118,3 +118,95 @@
     }
   }
   
+
+  /* Custom Modal Styling */
+.custom-modal-content {
+  border-radius: 12px;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+/* Modal Header */
+.custom-modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 15px;
+}
+
+.custom-modal-header .modal-title {
+  font-weight: bold;
+}
+
+.custom-modal-header .btn-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Form Inputs */
+.custom-form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+}
+
+.custom-form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Select Box */
+.custom-form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 12px 16px;
+}
+
+/* Error Text */
+.error-text {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.custom-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #218838;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 15px;
+  }
+  .custom-form-control, .custom-form-select {
+    font-size: 0.95rem;
+  }
+  .custom-btn {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

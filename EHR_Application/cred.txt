@@ -1,0 +1,14 @@
+Patient
+vinit@yopmail.com
+PT_YOGHARAJM100381
+@FCGY8Vh
+
+prajak@yopmail.com
+PT_PRAJAKD250283
+Prajak@123
+
+
+
+Provider
+harsh@yopmail.com
+PR_SUDHARSHANR030307  

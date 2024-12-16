@@ -248,7 +248,6 @@
                         <select class="form-select rounded-pill shadow-sm" id="registerUserType"
                             formControlName="userTypeId" required>
                             <option value="" disabled selected>Select User Type</option>
-                            <option value="1">Patient</option>
                             <option value="2">Provider</option>
                         </select>
                         <div *ngIf="providerRegistrationForm.get('userTypeId')?.hasError('required') && providerRegistrationForm.get('userTypeId')?.touched"
@@ -302,7 +301,7 @@
 
                     <!-- Registration Number -->
                     <div class="col-md-6">
-                        <label for="registerRegistrationNumber" class="form-label fw-semibold">Registratio Number</label>
+                        <label for="registerRegistrationNumber" class="form-label fw-semibold">Registration Number</label>
                         <input type="text" class="form-control rounded-pill shadow-sm" id="registerRegistration
                         Number" formControlName="registrationNumber" placeholder="Enter your registration number"
                             minlength="3" maxlength="20" required />

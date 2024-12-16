@@ -251,7 +251,6 @@
                             formControlName="userTypeId" required>
                             <option value="" disabled selected>Select User Type</option>
                             <option value="1">Patient</option>
-                            <option value="2">Provider</option>
                         </select>
                         <div *ngIf="patientRegistrationForm.get('userTypeId')?.hasError('required') && patientRegistrationForm.get('userTypeId')?.touched"
                             class="text-danger small mt-1">

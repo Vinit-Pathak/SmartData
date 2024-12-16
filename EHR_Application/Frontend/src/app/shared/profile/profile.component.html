@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="profile-actions">
-        <button class="btn btn-primary me-3 ">Update Profile</button>
+        <button class="btn btn-primary me-3 " (click)="openUpdateUserModal()">Update Profile</button>
         <button class="btn btn-warning ms-3 " (click)="openChangePasswordModal()">Change Password</button>
       </div>
     </div>
@@ -55,7 +55,7 @@
 </ng-template>
 
 
-
+<!-- Change Password Modal -->
 <div
 class="modal fade"
 id="changePasswordModal"
@@ -144,3 +144,301 @@ aria-hidden="true"
   </div>
 </div>
 </div>
+
+
+<!-- Update User Modal  -->
+<div
+  class="modal fade"
+  id="updateUserModal"
+  #updateUserModal
+  tabindex="-1"
+  aria-labelledby="updateUserModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content custom-modal-content">
+      <div class="modal-header custom-modal-header">
+        <h5 class="modal-title" id="updateUserModalLabel">
+          <i class="bi bi-pencil-square"></i> Update Profile
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="updateUserForm" (ngSubmit)="onUpdateUser()">
+          
+          <!-- Row for First Name and Last Name -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  class="form-control custom-form-control"
+                  formControlName="firstName"
+                  placeholder="Enter First Name"
+                />
+                <div *ngIf="updateUserForm.get('firstName')?.invalid && updateUserForm.get('firstName')?.touched" class="error-text">
+                  First name should be between 2 and 20 characters, and only contain letters.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-control custom-form-control"
+                  formControlName="lastName"
+                  placeholder="Enter Last Name"
+                />
+                <div *ngIf="updateUserForm.get('lastName')?.invalid && updateUserForm.get('lastName')?.touched" class="error-text">
+                  Last name should be between 2 and 20 characters, and only contain letters.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row for Mobile, Date of Birth, and Gender -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input
+                  type="text"
+                  id="mobile"
+                  class="form-control custom-form-control"
+                  formControlName="mobile"
+                  placeholder="Enter Mobile Number"
+                />
+                <div *ngIf="updateUserForm.get('mobile')?.invalid && updateUserForm.get('mobile')?.touched" class="error-text">
+                  Please enter a valid 10-digit mobile number.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                <input
+                  type="date"
+                  id="dateOfBirth"
+                  class="form-control custom-form-control"
+                  formControlName="dateOfBirth"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="gender" class="form-label">Gender</label>
+                <select
+                  id="gender"
+                  class="form-select custom-form-select"
+                  formControlName="gender"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row for Blood Group and Profile Picture -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="bloodGroup" class="form-label">Blood Group</label>
+                <input
+                  type="text"
+                  id="bloodGroup"
+                  class="form-control custom-form-control"
+                  formControlName="bloodGroup"
+                  placeholder="Enter Blood Group"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="file" class="form-label">Upload Profile Picture</label>
+                <input
+                  type="file"
+                  id="file"
+                  class="form-control custom-form-control"
+                  formControlName="file"
+                  (change)="onFileSelected($event)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Row for Address, City, State, and Country -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  id="address"
+                  class="form-control custom-form-control"
+                  formControlName="address"
+                  rows="3"
+                  placeholder="Enter Address"
+                ></textarea>
+                <div *ngIf="updateUserForm.get('address')?.invalid && updateUserForm.get('address')?.touched" class="error-text">
+                  Address should be between 10 and 150 characters.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="city" class="form-label">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control custom-form-control"
+                  formControlName="city"
+                  placeholder="Enter City"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="pinCode" class="form-label">Pin Code</label>
+                <input
+                  type="tel"
+                  id="pinCode"
+                  class="form-control custom-form-control"
+                  formControlName="pinCode"
+                  placeholder="Enter Pin Code"
+                />
+                <div *ngIf="updateUserForm.get('pinCode')?.invalid && updateUserForm.get('pinCode')?.touched" class="error-text">
+                  Please enter a valid 6-digit pin code.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row for Country and Pin Code -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select rounded-pill shadow-sm" id="country"
+                            formControlName="country" (change)="loadState(updateUserForm.get('country')?.value)"
+                            required>
+                            <option value="" disabled selected>Select Country</option>
+                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
+                        </select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select rounded-pill shadow-sm" id="state" formControlName="state"
+                            required>
+                            <option value="" disabled selected>Select State</option>
+                            <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}
+                            </option>
+                        </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row for Qualification, Specialization, Registration Number, and Visiting Charge -->
+           <!-- <div *ngIf="userdata.userTypeId === 2">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="qualification" class="form-label">Qualification</label>
+                  <input
+                    type="text"
+                    id="qualification"
+                    class="form-control custom-form-control"
+                    formControlName="qualification"
+                    placeholder="Enter Qualification"
+                  />
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="specializationId" class="form-label">Specialization</label>
+                  <input
+                    type="text"
+                    id="specializationId"
+                    class="form-control custom-form-control"
+                    formControlName="specializationId"
+                    placeholder="Enter Specialization"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="registrationNumber" class="form-label">Registration Number</label>
+                  <input
+                    type="text"
+                    id="registrationNumber"
+                    class="form-control custom-form-control"
+                    formControlName="registrationNumber"
+                    placeholder="Enter Registration Number"
+                  />
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="visitingCharge" class="form-label">Visiting Charge</label>
+                  <input
+                    type="number"
+                    id="visitingCharge"
+                    class="form-control custom-form-control"
+                    formControlName="visitingCharge"
+                    placeholder="Enter Visiting Charge"
+                  />
+                </div>
+              </div>
+            </div>
+           </div> -->
+        
+          <!-- Submit Button -->
+          <div class="d-flex justify-content-center mt-4">
+            <button
+              type="submit"
+              class="btn custom-btn"
+              [disabled]="updateUserForm.invalid"
+            >
+              Update Profile
+            </button>
+            <button
+            type="button"
+            class="btn custom-btn ms-3"
+            (click)="closeUpdateUserModal()"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

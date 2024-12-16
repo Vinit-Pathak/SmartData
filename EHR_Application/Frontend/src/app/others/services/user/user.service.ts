@@ -15,4 +15,12 @@ export class UserService {
   changePassword(data:any){
     return this.http.post(`https://localhost:7053/api/User/changePassword`, data);
   }
+
+  updateUser(data:any){
+    return this.http.put(`https://localhost:7053/api/User/updateUser`, data);
+  }
+  
+  getUserById(id: number) {
+    return this.http.get(`https://localhost:7053/api/User/getUserById/${id}`);
+  }
 }
