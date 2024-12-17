@@ -1,0 +1,144 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow rounded">
+                <div class="card-body">
+                    <h1 class="text-center mb-4">Patient Appointment Form</h1>
+                    <form [formGroup]="patientappoinmentform">
+
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="specializationId" class="font-weight-bold">Specialization</label>
+                                    <select id="specializationId" formControlName="specializationId"
+                                        class="form-control"
+                                        (change)="getproviderbyspecialisation(patientappoinmentform.get('specializationId')?.value)"
+                                        required>
+                                        <option value="" disabled selected>Select Specialization</option>
+                                        <option *ngFor="let specialisation of specialisationdata"
+                                            [value]="specialisation.specializationId">
+                                            {{ specialisation.specializationName }}
+                                        </option>
+                                    </select>
+                                    <div *ngIf="patientappoinmentform.get('specializationId')?.invalid && patientappoinmentform.get('specializationId')?.touched"
+                                        class="text-danger">
+                                        Specialization is required
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="providerId" class="font-weight-bold">Provider</label>
+                                    <select (change)="getSelectedProviderVisitingCharge()" id="providerId"
+                                        formControlName="providerId" class="form-control" required>
+                                        <option value="" disabled selected>Select Provider</option>
+                                        <option *ngFor="let provider of providerbyspecialisationdata"
+                                            [value]="provider.userId">
+                                            {{ provider.firstName + ' ' + provider.lastName }}
+                                        </option>
+                                    </select>
+                                    <div *ngIf="patientappoinmentform.get('providerId')?.invalid && patientappoinmentform.get('providerId')?.touched"
+                                        class="text-danger">
+                                        Provider is required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="appointmentDate" class="font-weight-bold">Appointment Date</label>
+                                    <input type="date" id="appointmentDate" formControlName="appointmentDate"
+                                        class="form-control" [min]="minDate" required>
+                                </div>
+                                <div *ngIf="patientappoinmentform.get('appointmentDate')?.invalid && patientappoinmentform.get('appointmentDate')?.touched"
+                                    class="text-danger">
+                                    Appointment Date is required
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="appointmentTime" class="font-weight-bold">Appointment Time</label>
+                                    <input type="time" id="appointmentTime" formControlName="appointmentTime"
+                                        class="form-control" [min]="minTime" required>
+                                </div>
+                                <div *ngIf="patientappoinmentform.get('appointmentTime')?.invalid && patientappoinmentform.get('appointmentTime')?.touched"
+                                    class="text-danger">
+                                    Appointment Time is required
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="chiefcomplaint" class="font-weight-bold">Chief Complaint</label>
+                                    <textarea id="chiefcomplaint" formControlName="chiefcomplaint" minlength="10" maxlength="150" class="form-control"
+                                        rows="4" required></textarea>
+                                </div>
+                                <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('required') && patientappoinmentform.get('chiefcomplaint')?.touched"
+                                    class="text-danger">
+                                    Chief Complaint is required
+
+                                </div>
+                                <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('minlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
+                                    class="text-danger">
+                                    Chief Complaint must be at least 10 characters
+                                </div>
+                                <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('maxlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
+                                    class="text-danger">
+                                    Chief Complaint must be at most 150 characters
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="visitingCharge" class="font-weight-bold">Visiting Charge</label>
+                                    <div class="fw-bold">{{ Fees | currency }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary w-50" (click)="openModal()">Proceed to
+                                Payment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content rounded custom-modal">
+
+
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title custom-modal-title">Payment</h5>
+                <button type="button" class="btn-close" (click)="CloseModal()" aria-label="Close"></button>
+            </div>
+
+
+            <div class="modal-body custom-modal-body">
+                <div class="form-group">
+                    <label for="visitingCharge" class="custom-label">Visiting Charge</label>
+                    <div class="custom-fee-amount">{{ Fees | currency }}</div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer custom-modal-footer">
+                <button type="button" class="btn btn-secondary custom-close-btn" (click)="CloseModal()">Close</button>
+                <button type="button" class="btn btn-primary custom-pay-btn">Pay</button>
+            </div>
+        </div>
+    </div>
+</div>

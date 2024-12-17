@@ -154,7 +154,7 @@
                         <textarea class="form-control rounded-3 shadow-sm" id="registerAddress"
                             formControlName="address" minlength="10" maxlength="150" rows="3"
                             placeholder="Enter your address" required></textarea>
-                            <div *ngIf="providerRegistrationForm.get('address')?.hasError('required') && providerRegistrationForm.get('address')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('address')?.hasError('required') && providerRegistrationForm.get('address')?.touched"
                             class="text-danger small mt-1">
                             Address is required.
                         </div>
@@ -243,11 +243,10 @@
                     </div>
 
                     <!-- User Type -->
-                    <div class="col-md-6">
+                    <div class="col-md-6" hidden>
                         <label for="registerUserType" class="form-label fw-semibold">User Type</label>
                         <select class="form-select rounded-pill shadow-sm" id="registerUserType"
                             formControlName="userTypeId" required>
-                            <option value="" disabled selected>Select User Type</option>
                             <option value="2">Provider</option>
                         </select>
                         <div *ngIf="providerRegistrationForm.get('userTypeId')?.hasError('required') && providerRegistrationForm.get('userTypeId')?.touched"
@@ -282,16 +281,7 @@
                         <select class="form-select rounded-pill shadow-sm" id="registerSpecialization"
                             formControlName="specializationId" required>
                             <option value="" disabled selected>Select Specialization</option>
-                            <option value="1">Cardiologists</option>
-                            <option value="2">Dermatologists</option>
-                            <option value="3">Neurologists</option>
-                            <option value="4">Pediatricians</option>
-                            <option value="5">Psychiatrists</option>
-                            <option value="6">Oncologists</option>
-                            <option value="7">Orthopedic Surgeons</option>
-                            <option value="8">Gynecologists</option>
-                            <option value="9">Radiologists</option>
-                            <option value="10">Endocrinologists</option>
+                            <option *ngFor="let item of allSpecialisation" [value]="item.specializationId">{{ item.specializationName }}
                         </select>
                         <div *ngIf="providerRegistrationForm.get('specializationId')?.hasError('required') && providerRegistrationForm.get('specializationId')?.touched"
                             class="text-danger small mt-1">

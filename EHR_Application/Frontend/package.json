@@ -20,6 +20,7 @@
     "@angular/router": "^18.2.0",
     "bootstrap": "^5.3.3",
     "ngx-toastr": "^19.0.0",
+    "razorpay": "^2.9.5",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.14.5",
     "tslib": "^2.3.0",

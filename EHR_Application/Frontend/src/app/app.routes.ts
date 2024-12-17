@@ -7,6 +7,8 @@ import { HomeComponent } from './components/org/home/home.component';
 import { PatientDashboardComponent } from './components/org/patient-dashboard/patient-dashboard.component';
 import { ProviderDashboardComponent } from './components/org/provider-dashboard/provider-dashboard.component';
 import { ProfileComponent } from './shared/profile/profile.component';
+import { GetPatientAppointmentComponent } from './components/org/patient/get-patient-appointment/get-patient-appointment.component';
+import { AddPatientAppointmentComponent } from './components/org/patient/add-patient-appointment/add-patient-appointment.component';
 
 export const routes: Routes = [
     {
@@ -38,16 +40,41 @@ export const routes: Routes = [
         children:[
             {
                 path:'patient-dashboard',
-                component: PatientDashboardComponent
+                component: PatientDashboardComponent,
+                children:[
+                    {
+                        path:'',
+                        redirectTo:'get-patient-appoinments',
+                        pathMatch:'full'
+                    },
+                    {
+                        path:'get-patient-appoinments',
+                        component: GetPatientAppointmentComponent
+                    },
+                    {
+                        path:'add-patient-appointment',
+                        component: AddPatientAppointmentComponent
+                    },
+                    {
+                        path:'profile',
+                        component: ProfileComponent
+                    }
+                ]
             },
             {
                 path:'provider-dashboard',
-                component: ProviderDashboardComponent
+                component: ProviderDashboardComponent,
+                children:[
+                    {
+                        path:'profile',
+                        component: ProfileComponent
+                    }
+                ]
             },
-            {
-                path:'profile',
-                component: ProfileComponent
-            }
+            // {
+            //     path:'profile',
+            //     component: ProfileComponent
+            // }
         ]
     }
 ];

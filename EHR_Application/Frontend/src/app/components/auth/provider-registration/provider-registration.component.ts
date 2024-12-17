@@ -6,6 +6,7 @@ import { LoaderService } from '../../../others/services/loader/loader.service';
 import { CountryStateService } from '../../../others/services/countryState/country-state.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../../others/services/user/user.service';
 
 @Component({
   selector: 'app-provider-registration',
@@ -21,6 +22,7 @@ export class ProviderRegistrationComponent {
   router = inject(Router);
   toaster = inject(ToastrService);
   authService = inject(AuthService);
+  userService = inject(UserService)
   loaderService = inject(LoaderService);
   countryStateService = inject(CountryStateService);
 
@@ -69,7 +71,7 @@ export class ProviderRegistrationComponent {
       Validators.minLength(6),
       Validators.maxLength(6),
     ]),
-    userTypeId: new FormControl('', Validators.required),
+    userTypeId: new FormControl(2, Validators.required),
     qualification: new FormControl('', 
     [Validators.required,
      Validators.minLength(2),
@@ -91,6 +93,7 @@ export class ProviderRegistrationComponent {
 
   ngOnInit() {
     this.getAllCountry();
+    this.getAllSpecialisation();
   }
 
   onKeyPress(event: KeyboardEvent) {  
@@ -134,6 +137,18 @@ export class ProviderRegistrationComponent {
     this.countryStateService.getStateByCountryId(countrId).subscribe({
       next : (res:any) => {
         this.allStateByCountryId = res
+      },
+      error : (error: any) => {
+        console.log("I am in error")
+      }
+    })
+  }
+
+  allSpecialisation : any [] = []
+  getAllSpecialisation(){
+    this.userService.getAllSpecialisation().subscribe({
+      next : (res: any) => {
+        this.allSpecialisation = res.data
       },
       error : (error: any) => {
         console.log("I am in error")

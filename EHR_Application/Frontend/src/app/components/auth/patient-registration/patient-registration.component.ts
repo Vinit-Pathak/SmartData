@@ -71,7 +71,7 @@ export class PatientRegistrationComponent implements OnInit {
       Validators.minLength(6),
       Validators.maxLength(6)
     ]),
-    userTypeId: new FormControl('', Validators.required),
+    userTypeId: new FormControl(1, Validators.required),
   });
   
   ngOnInit() {

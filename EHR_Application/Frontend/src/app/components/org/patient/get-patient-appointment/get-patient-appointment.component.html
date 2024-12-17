@@ -1,0 +1,53 @@
+<button class="btn btn-primary mx-2 my-2" [routerLink]="['../add-patient-appointment']">Add Appointment</button>
+
+<div *ngIf="appointments.length === 0" class="no-data">
+  <p>No appointments found.</p>
+</div>
+
+<div *ngIf="appointments.length > 0" class="appointment-list">
+  <div *ngFor="let appointment of appointments" class="appointment-card">
+    <div class="appointment-header">
+      <h3>{{ appointment.patientName }}</h3>
+      <span class="appointment-status">{{ appointment.appointmentStatus }}</span>
+    </div>
+    <div class="appointment-body">
+      <p><strong>Complaint:</strong> {{ appointment.chiefComplaint }}</p>
+      <p><strong>Provider:</strong>{{appointment.providerName}}</p>
+      <p><strong>Appointment Date:</strong> {{ appointment.appointmentDate | date:'longDate' }}</p>
+      <p><strong>Time:</strong> {{ appointment.appointmentTime }}</p>
+      <p><strong>Fee:</strong> ${{ appointment.fee }}</p>
+    </div>
+    <div class="appointment-footer">
+      <button class="btn btn-info" (click)="openModal(appointment)">View Details</button>
+      <button class="btn btn-danger">Cancel Appointment</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal  -->
+<div class="modal fade" id="appointmentDetailModal" tabindex="-1" aria-labelledby="appointmentDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentDetailModalLabel">Appointment Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Patient Name:</strong> {{ selectedAppointment?.patientName }}</p>
+          <p><strong>Provider Name:</strong> {{ selectedAppointment?.providerName }}</p>
+          <p><strong>Specialization:</strong> {{ selectedAppointment?.specializationName }}</p>
+          <p><strong>Complaint:</strong> {{ selectedAppointment?.chiefComplaint }}</p>
+          <p><strong>Appointment Date:</strong> {{ selectedAppointment?.appointmentDate | date:'longDate' }}</p>
+          <p><strong>Time:</strong> {{ selectedAppointment?.appointmentTime }}</p>
+          <p><strong>Fee:</strong> ${{ selectedAppointment?.fee }}</p>
+          <p><strong>Status:</strong> {{ selectedAppointment?.appointmentStatus }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>

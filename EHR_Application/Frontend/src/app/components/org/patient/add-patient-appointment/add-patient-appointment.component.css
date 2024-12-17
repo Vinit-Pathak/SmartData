@@ -1,0 +1,196 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    border-radius: 25px;
+    font-weight: 600;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.font-weight-bold {
+    font-weight: 600;
+}
+
+.form-control-plaintext {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    font-size: 1rem;
+    color: #333;
+}
+
+.fw-bold {
+    color: #28a745;
+    font-size: 22px;
+}
+
+
+.custom-modal {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+
+.custom-modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 30px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.custom-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.custom-modal-body {
+    padding: 20px;
+    color: #333;
+}
+
+.custom-label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.custom-fee-amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #28a745;
+}
+
+
+.custom-modal-footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+.custom-close-btn,
+.custom-pay-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.custom-close-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+.custom-pay-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.custom-close-btn:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+.custom-pay-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 767px) {
+    .custom-modal-header {
+        padding: 15px;
+    }
+
+    .custom-modal-body,
+    .custom-modal-footer {
+        padding: 15px;
+    }
+
+    .custom-close-btn,
+    .custom-pay-btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+
+    .custom-modal-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
