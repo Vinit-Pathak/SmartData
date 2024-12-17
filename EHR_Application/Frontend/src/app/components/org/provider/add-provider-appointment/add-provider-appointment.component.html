@@ -1,0 +1,90 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h2 class="fw-bold">Patient Appointment Form</h2>
+                    <p class="mb-0">Please fill in the details below to schedule an appointment.</p>
+                </div>
+                <div class="card-body p-5">
+                    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                        <!-- Patient Field -->
+                        <div class="mb-4">
+                            <label for="patient" class="form-label fw-semibold">Select Patient</label>
+                            <select 
+                                id="patient" 
+                                formControlName="patientId" 
+                                class="form-select" 
+                                aria-label="Select Patient">
+                                <option value="" disabled selected>Select a patient</option>
+                                <option *ngFor="let patient of patients" [value]="patient.userId">
+                                    {{ patient.firstName + ' ' + patient.lastName }}
+                                </option>
+                            </select>
+                            <div *ngIf="appointmentForm.get('patientId')?.invalid && appointmentForm.get('patientId')?.touched" class="text-danger mt-1">
+                                Please select a patient.
+                            </div>
+                        </div>
+                        
+                        <!-- Appointment Date Field -->
+                        <div class="mb-4">
+                            <label for="date" class="form-label fw-semibold">Appointment Date</label>
+                            <input 
+                                id="date" 
+                                type="date" 
+                                formControlName="appointmentDate" 
+                                class="form-control" />
+                            <div *ngIf="appointmentForm.get('appointmentDate')?.invalid && appointmentForm.get('appointmentDate')?.touched" class="text-danger mt-1">
+                                Please choose a valid date.
+                            </div>
+                        </div>
+
+                        <!-- Appointment Time Field -->
+                        <div class="mb-4">
+                            <label for="time" class="form-label fw-semibold">Appointment Time</label>
+                            <input 
+                                id="time" 
+                                type="time" 
+                                formControlName="appointmentTime" 
+                                class="form-control" />
+                            <div *ngIf="appointmentForm.get('appointmentTime')?.invalid && appointmentForm.get('appointmentTime')?.touched" class="text-danger mt-1">
+                                Please choose a valid time.
+                            </div>
+                        </div>
+
+                        <!-- Chief Complaint Field -->
+                        <div class="mb-4">
+                            <label for="chiefComplaint" class="form-label fw-semibold">Chief Complaint</label>
+                            <textarea 
+                                id="chiefComplaint" 
+                                formControlName="chiefComplaint" 
+                                rows="4" 
+                                minlength="10"
+                                maxlength="150"
+                                class="form-control" 
+                                placeholder="Describe the patient's complaint"></textarea>
+                            <div *ngIf="appointmentForm.get('chiefComplaint')?.invalid && appointmentForm.get('chiefComplaint')?.touched && appointmentForm.get('chiefComplaint')?.hasError('required')" class="text-danger mt-1">
+                                Chief complaint is required.
+                            </div>
+                            <div *ngIf="appointmentForm.get('chiefComplaint')?.hasError('minlength') && appointmentForm.get('chiefComplaint')?.touched" class="text-danger mt-1">
+                                Chief Complaint must be at least 10 characters
+                            </div>
+                            <div *ngIf="appointmentForm.get('chiefComplaint')?.hasError('maxlength') && appointmentForm.get('chiefComplaint')?.touched" class="text-danger mt-1">
+                                Chief Complaint must be at most 150 characters
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button 
+                                type="submit" 
+                                class="btn btn-primary btn-lg fw-bold shadow-sm">
+                                Schedule Appointment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

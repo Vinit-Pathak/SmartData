@@ -1,0 +1,14 @@
+.card-header {
+    border-bottom: 2px solid #ffffff33;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+button:disabled {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    cursor: not-allowed;
+}

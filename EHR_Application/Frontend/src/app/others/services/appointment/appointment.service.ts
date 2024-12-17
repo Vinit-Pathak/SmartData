@@ -28,4 +28,22 @@ export class AppointmentService {
   createPatientAppointment(appointment: any): Observable<any> {
     return this.http.post(`https://localhost:7053/api/Appointment/patientAppointment`, appointment)
   }
+
+  cancelPatientAppointment(appointmentId: number): Observable<any> {
+    return this.http.delete(`https://localhost:7053/api/Appointment/cancelPatientAppointment/${appointmentId}`)
+  }
+
+  // Provider Appointment Services
+
+  getProviderAppointment(userId:number): Observable<any> {
+    return this.http.get(`https://localhost:7053/api/Appointment/getProviderAppointment/${userId}`)
+  }
+
+  createProviderAppointment(appointment: any): Observable<any> {
+    return this.http.post(`https://localhost:7053/api/Appointment/providerAppointment`, appointment)
+  }
+
+  getAllPatients(): Observable<any> {
+    return this.http.get(`https://localhost:7053/api/Appointment/getAllPatients`)
+  }
 }

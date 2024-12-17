@@ -24,8 +24,9 @@ export class AddPatientAppointmentComponent {
   toastr = inject(ToastrService);
   Appointmentservice = inject(AppointmentService);
 
-  specialisationdata: any[] = [];
-  providerbyspecialisationdata: any[] = [];
+  allSpecialisation: any[] = [];
+  allProviders: any[] = [];
+
   patientdata: any = {};
   userdata = JSON.parse(sessionStorage.getItem('userData') || '{}');
   minDate = new Date();
@@ -36,9 +37,6 @@ export class AddPatientAppointmentComponent {
   constructor(private fb: FormBuilder) {
     this.minTime = this.calculateMinTime();
 
-    // this.patientappoinmentform = this.fb.group({
-      
-    // });
 
     this.appointmentTime = new Date();
     this.appointmentTime.setHours(this.appointmentTime.getHours() + 1);
@@ -60,9 +58,9 @@ export class AddPatientAppointmentComponent {
   });
 
   ngOnInit(): void {
-    // this.getallprovider();
-    this.getallspecialisation();
-    // this.getallprovider();
+
+    this.getAllSpecializations();
+
   }
 
   calculateMinTime(): string {
@@ -74,41 +72,37 @@ export class AddPatientAppointmentComponent {
       .padStart(2, '0')}`;
   }
 
-  getallprovider() {
-    this.Appointmentservice.getAllProviders().subscribe((res: any) => {
-      this.providerbyspecialisationdata = res.data;
-    });
+
+  getAllSpecializations(){
+    this.Appointmentservice.getAllSpecializations().subscribe({
+      next: (res: any) => {
+        if (res.statusCode === 200) {
+          this.allSpecialisation = res.data;
+        }
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    })
   }
 
-  getproviderbyspecialisation(specializationId: any): void {
-    if (specializationId === null || specializationId === 0) {
-      this.Appointmentservice.getAllProviders().subscribe((res: any) => {
-        this.providerbyspecialisationdata = res.data;
-      });
-    } else {
-      this.Appointmentservice.getProvidersBySpecialization(specializationId).subscribe((res: any) => {
-        this.providerbyspecialisationdata = res.data;
-      });
-    }
+  onChange(specialisationId:any){
+    this.Appointmentservice.getProvidersBySpecialization(specialisationId).subscribe({
+      next:(res:any)=>{
+        this.allProviders = res.data;
+      },
+      error:(error)=>{
+        console.log(error);
+      }
+    })
   }
 
-  getSelectedProviderVisitingCharge(): any {
-    
-    this.providerbyspecialisationdata.map((provider: any) => {
-      if (provider.userId == this.patientappoinmentform.get('providerId')?.value) {
-        console.log(provider.visitingCharge);
+  onChangeProvider(providerId:any){
+    this.allProviders.map((provider:any)=>{
+      if(provider.userId == providerId){
         this.Fees = provider.visitingCharge;
       }
-    });
-    return this.Fees ? this.Fees.visitingCharge : 0;
-  }
-
-
-  getallspecialisation() {
-    this.Appointmentservice.getAllSpecializations().subscribe((res: any) => {
-      this.specialisationdata = res.data;
-      console.log(this.specialisationdata);
-    });
+    })
   }
 
   openModal() {

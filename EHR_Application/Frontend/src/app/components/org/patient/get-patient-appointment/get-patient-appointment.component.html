@@ -19,7 +19,7 @@
     </div>
     <div class="appointment-footer">
       <button class="btn btn-info" (click)="openModal(appointment)">View Details</button>
-      <button class="btn btn-danger">Cancel Appointment</button>
+      <button class="btn btn-danger" (click)="deleteAppointment(appointment.appointmentId)">Cancel Appointment</button>
     </div>
   </div>
 </div>

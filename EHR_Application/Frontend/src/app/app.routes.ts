@@ -9,6 +9,8 @@ import { ProviderDashboardComponent } from './components/org/provider-dashboard/
 import { ProfileComponent } from './shared/profile/profile.component';
 import { GetPatientAppointmentComponent } from './components/org/patient/get-patient-appointment/get-patient-appointment.component';
 import { AddPatientAppointmentComponent } from './components/org/patient/add-patient-appointment/add-patient-appointment.component';
+import { GetProviderAppointmentComponent } from './components/org/provider/get-provider-appointment/get-provider-appointment.component';
+import { AddProviderAppointmentComponent } from './components/org/provider/add-provider-appointment/add-provider-appointment.component';
 
 export const routes: Routes = [
     {
@@ -65,6 +67,19 @@ export const routes: Routes = [
                 path:'provider-dashboard',
                 component: ProviderDashboardComponent,
                 children:[
+                    {
+                        path:'',
+                        redirectTo:'get-provider-appointments',
+                        pathMatch:'full'
+                    },
+                    {
+                        path:'get-provider-appointments',
+                        component: GetProviderAppointmentComponent
+                    },
+                    {
+                        path:'add-provider-appointment',
+                        component: AddProviderAppointmentComponent
+                    },
                     {
                         path:'profile',
                         component: ProfileComponent
