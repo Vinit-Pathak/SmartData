@@ -1,0 +1,212 @@
+
+.profile-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-container:hover {
+    transform: translateY(-10px);
+  }
+  
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .profile-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .profile-role {
+    font-size: 1.1rem;
+    color: #777;
+  }
+  
+  
+  .profile-details {
+    margin-bottom: 30px;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  
+  .detail-item strong {
+    font-weight: 600;
+  }
+  
+  .profile-actions {
+    text-align: center;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .btn-edit:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 20px;
+    }
+  
+    .profile-image-container {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .profile-name {
+      font-size: 1.7rem;
+    }
+  
+    .profile-role {
+      font-size: 1rem;
+    }
+  
+    .detail-item {
+      font-size: 1rem;
+    }
+  
+    .btn-edit {
+      font-size: 1rem;
+    }
+  }
+  
+
+  /* Custom Modal Styling */
+.custom-modal-content {
+  border-radius: 12px;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+/* Modal Header */
+.custom-modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 15px;
+}
+
+.custom-modal-header .modal-title {
+  font-weight: bold;
+}
+
+.custom-modal-header .btn-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Form Inputs */
+.custom-form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+}
+
+.custom-form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Select Box */
+.custom-form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 12px 16px;
+}
+
+/* Error Text */
+.error-text {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.custom-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #218838;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 15px;
+  }
+  .custom-form-control, .custom-form-select {
+    font-size: 0.95rem;
+  }
+  .custom-btn {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

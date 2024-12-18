@@ -1,60 +1,53 @@
-<!-- <button class="btn btn-primary" (click)="logout()">Logout</button> -->
-
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand">EHR Application</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          @if(userRole === 1){
-            <li class="nav-item">
-              <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard']">
-                <i class="fas fa-users"></i> Patient Dashboard
-              </a>
-            </li>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-primary ">EHR Application</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li *ngIf="userRole === 1" class="nav-item">
+          <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard']">
+            <i class="fas fa-users"></i> Patient Dashboard
+          </a>
+        </li>
+        <li *ngIf="userRole !== 1" class="nav-item">
+          <a class="nav-link fs-5" [routerLink]="['/home/provider-dashboard']">
+            <i class="fas fa-users"></i> Provider Dashboard
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard/profile']">
+            <i class="fas fa-user-circle"></i> Profile
+          </a>
+        </li> -->
+      </ul>
+
+      <div class="dropdown d-flex align-items-center">
+        <h5 class="me-3 mt-2">{{getUserType(userRole)}}</h5>
+        <button class="btn btn-link p-0" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img
+            [src]="imgUrl"
+            alt="User Image"
+            class="rounded-circle"
+            width="50"
+            height="50"
+            style="object-fit: cover;"
+          />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          @if (userRole === 1) {
+            <li><a class="dropdown-item" [routerLink]="['/home/patient-dashboard/patient-profile']">Update Profile</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/home/patient-dashboard/patient-profile']">Change Password</a></li>
           }@else {
-            <li class="nav-item">
-              <a class="nav-link fs-5" [routerLink]="['/home/provider-dashboard']">
-                <i class="fas fa-users"></i> Provider Dashboard
-              </a>
-            </li>
+            <li><a class="dropdown-item" [routerLink]="['/home/provider-dashboard/provider-profile']">Update Profile</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/home/provider-dashboard/provider-profile']">Change Password</a></li>
           }
-            <li class="nav-item">
-              <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard/profile']">
-                <i class="fas fa-users"></i> Profile
-              </a>
-            </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item" (click)="logout()">Logout</button></li>
         </ul>
-  
-  
-        <div class="dropdown d-flex align-items-center">
-          <button
-            class="btn btn-link d-flex align-items-center p-0"
-            id="userDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              [src]="imgUrl"
-              alt="User Image"
-              class="rounded-circle"
-              width="50"
-              height="50"
-              style="object-fit: cover;"
-            />
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" style="cursor: pointer;" [routerLink]="['/home/profile']">Update Profile</a></li>
-            <li><a class="dropdown-item" style="cursor: pointer;" [routerLink]="['/home/profile']">Change Password</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><button class="dropdown-item" (click)="logout()">Logout</button></li>
-          </ul>
-        </div>
-  
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>

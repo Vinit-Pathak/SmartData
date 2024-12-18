@@ -40,6 +40,11 @@ export class AddProviderAppointmentComponent implements OnInit {
   onSubmit(){
     if(this.appointmentForm.invalid){
       this.appointmentForm.markAllAsTouched();
+      this.toaster.error('Please fill all the required fields', 'Error',{
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
+      });
       return;
     }
 

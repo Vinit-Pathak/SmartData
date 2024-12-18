@@ -33,6 +33,10 @@ export class AppointmentService {
     return this.http.delete(`https://localhost:7053/api/Appointment/cancelPatientAppointment/${appointmentId}`)
   }
 
+  updatePatientAppointment(appointment: any): Observable<any> {
+    return this.http.put(`https://localhost:7053/api/Appointment/updatePatientAppointment`, appointment)
+  }
+
   // Provider Appointment Services
 
   getProviderAppointment(userId:number): Observable<any> {

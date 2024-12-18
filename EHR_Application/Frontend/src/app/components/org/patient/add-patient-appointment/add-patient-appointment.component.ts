@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AppointmentService } from '../../../../others/services/appointment/appointment.service';
 import { CommonModule } from '@angular/common';
+import { PaymentService } from '../../../../others/services/payment/payment.service';
+import { LoaderService } from '../../../../others/services/loader/loader.service';
 
 @Component({
   selector: 'app-add-patient-appointment',
@@ -23,6 +25,8 @@ export class AddPatientAppointmentComponent {
   router = inject(Router);
   toastr = inject(ToastrService);
   Appointmentservice = inject(AppointmentService);
+  paymentService = inject(PaymentService);
+  loader = inject(LoaderService);
 
   allSpecialisation: any[] = [];
   allProviders: any[] = [];
@@ -105,23 +109,73 @@ export class AddPatientAppointmentComponent {
     })
   }
 
-  openModal() {
+
+  onPayNow(){
     if(this.patientappoinmentform.invalid){
       this.patientappoinmentform.markAllAsTouched();
-    } else{
-
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'block';
-      }
+      return;
     }
+    this.paymentService.createOrder(this.Fees).subscribe((order:any)=>{
+
+      const options = {
+        key: 'rzp_test_j1n3HfglIVc3GS',  
+        amount: order.amount,
+        currency: order.currency,
+        order_id: order.id,
+        handler: (response: any) => {
+          this.bookAppointment(response.razorpay_payment_id, order.id);
+          // this.verifyPayment(response.razorpay_payment_id, order.id)
+        },
+      };
+
+      if (window.Razorpay) {
+        const razorpay = new Razorpay(options);
+        razorpay.open();
+      } else {
+        console.error('Razorpay SDK is not loaded properly');
+      }
+    })
   }
 
-  CloseModal() {
-    const modal = document.getElementById('myModal');
-    if (modal) {
-      modal.style.display = 'none';
+  verifyPayment(paymentId: any, orderId: any){
+    this.paymentService.verifyPayment(paymentId, orderId).subscribe({
+      next:(res:any)=>{
+        console.log(res);
+        
+      },
+      error:(error)=>{
+        console.log(error);
+      }
+    })
+  }
+
+  async bookAppointment(paymentId: any, orderId: any){
+    const appointmentData = this.patientappoinmentform.value;
+
+    const data = {
+      ...appointmentData,
+      patientId: Number(this.userdata.userId),
+      fee : this.Fees,
+      paymentId: paymentId,
+      orderId: orderId
     }
+
+    this.Appointmentservice.createPatientAppointment(data).subscribe({
+      next:(res:any)=>{
+        this.toastr.success('Appointment Booked Successfully','Success',{
+          timeOut: 3000,
+          progressBar: true,
+          progressAnimation: 'increasing',
+        });
+        window.location.reload();
+        this.router.navigate(['/home/patient-dashboard'])
+      },
+      error:(error)=>{
+        this.toastr.error('Something went wrong');
+        console.log(error);
+        
+      }
+    })
   }
 
   // Pay()
@@ -161,27 +215,27 @@ export class AddPatientAppointmentComponent {
   //   this.onSubmit();
   // }
 
-  onSubmit() {
-    if (this.patientappoinmentform.invalid) {
-      return;
-    }
+  // onSubmit() {
+  //   if (this.patientappoinmentform.invalid) {
+  //     return;
+  //   }
 
-    const formValues = this.patientappoinmentform.value;
-    formValues.appointmentTime = this.appointmentTime.toISOString();
-    this.Appointmentservice.createPatientAppointment(formValues).subscribe({
-      next: (res: any) => {
-        if (res.statusCode === 200) {
-          console.log(res);
-          this.patientdata = res.data;
-          this.toastr.success('Appoinment Booked Successfully');
-          // this.router.navigate(['/patient']);
-        } else {
-          this.toastr.error(res.message);
-        }
-      },
-      error: (error) => {
-        console.error(error);
-      },
-    });
-  }
+  //   const formValues = this.patientappoinmentform.value;
+  //   formValues.appointmentTime = this.appointmentTime.toISOString();
+  //   this.Appointmentservice.createPatientAppointment(formValues).subscribe({
+  //     next: (res: any) => {
+  //       if (res.statusCode === 200) {
+  //         console.log(res);
+  //         this.patientdata = res.data;
+  //         this.toastr.success('Appoinment Booked Successfully');
+  //         // this.router.navigate(['/patient']);
+  //       } else {
+  //         this.toastr.error(res.message);
+  //       }
+  //     },
+  //     error: (error) => {
+  //       console.error(error);
+  //     },
+  //   });
+  // }
 }

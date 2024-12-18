@@ -31,12 +31,5 @@ export class GetProviderAppointmentComponent implements OnInit {
     })
   }
 
-  openModal(appointment: any): void {
-    this.selectedAppointment = appointment;
-    console.log(this.selectedAppointment);
-    const modal = new bootstrap.Modal(document.getElementById('appointmentDetailModal') as HTMLElement);
-    modal.show();
-  }
-
-  deleteAppointment(id: number): void {}
+  
 }

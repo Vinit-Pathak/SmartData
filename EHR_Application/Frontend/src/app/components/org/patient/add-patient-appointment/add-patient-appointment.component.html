@@ -7,7 +7,7 @@
                     <p class="mb-0">Fill out the details below to schedule your appointment.</p>
                 </div>
                 <div class="card-body p-5">
-                    <form [formGroup]="patientappoinmentform">
+                    <form [formGroup]="patientappoinmentform" >
                         <!-- Specialization and Provider -->
                         <div class="row mb-4">
                             <div class="col-md-6">
@@ -103,7 +103,7 @@
 
                         <!-- Proceed to Payment -->
                         <div class="text-center mt-4">
-                            <button type="button" class="btn btn-primary btn-lg px-5" (click)="openModal()">Proceed to Payment</button>
+                            <button type="button" class="btn btn-primary btn-lg px-5" (click)="onPayNow()" >Proceed to Payment</button>
                         </div>
                     </form>
                 </div>
@@ -113,7 +113,7 @@
 </div>
 
 <!-- Payment Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content rounded-4">
             <div class="modal-header bg-primary text-white">
@@ -132,4 +132,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

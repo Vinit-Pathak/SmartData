@@ -1,0 +1,369 @@
+<div *ngIf="user; else noData">
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image-container">
+                <img [src]="imgUrl" alt="User Image" class="profile-image" (error)="onImageError($event)" />
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">{{ user.firstName }} {{ user.lastName }}</h1>
+                <p class="profile-role">{{ getUserType(user.userTypeId) }}</p>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="detail-item">
+                <strong>Email:</strong>
+                <span>{{ user.email }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Full Name:</strong>
+                <span>{{ user.firstName }} {{user.lastName}}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Address: </strong>
+                <span>{{ user.address }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>State: </strong>
+                <span>{{ user.stateName }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Qualification</strong>
+                <span>{{ user.qualification }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Specialization</strong>
+                <span>{{ user.specialisationName}}</span>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button class="btn btn-primary me-3 " (click)="openUpdateUserModal()">Update Profile</button>
+            <button class="btn btn-warning ms-3 " (click)="openChangePasswordModal()">Change Password</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #noData>
+    <div class="alert alert-warning text-center" role="alert">
+        Please log in to view your profile.
+    </div>
+</ng-template>
+
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="changePasswordModal" #changePasswordModal tabindex="-1"
+    aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changePasswordModalLabel">
+                    Change Password
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="closeChangePasswordModal()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
+
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newPassword" minlength="8" maxlength="15"
+                            formControlName="newPassword" required />
+
+                        <div *ngIf="
+                changePasswordForm.get('newPassword')?.invalid &&
+                changePasswordForm.get('newPassword')?.touched
+              " class="text-danger small mt-1">
+                            <span *ngIf="changePasswordForm.controls['newPassword'].errors?.['required']">This is
+                                required</span>
+                            <span *ngIf="changePasswordForm.controls['newPassword'].errors?.['pattern']">
+                                Password must be at least 8 characters long, contain an
+                                uppercase letter, a lowercase letter, a number, and a special
+                                character
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" minlength="8" maxlength="15"
+                            formControlName="confirmPassword" required />
+                        <div *ngIf="
+                          changePasswordForm.get('confirmPassword')?.invalid &&
+                          changePasswordForm.get('confirmPassword')?.touched
+                        " class="text-danger">
+                            Please confirm your new password
+                        </div>
+                        <div *ngIf="newPasswordMismatch" class="text-danger">
+                            Passwords does not match
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100"
+                        [disabled]="changePasswordForm.invalid || newPasswordMismatch">
+                        Change Password
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Update User Modal  -->
+<div class="modal fade" id="updateUserModal" #updateUserModal tabindex="-1" aria-labelledby="updateUserModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header custom-modal-header">
+                <h5 class="modal-title" id="updateUserModalLabel">
+                    <i class="bi bi-pencil-square"></i> Update Profile
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="updateUserForm" (ngSubmit)="onUpdateUser()">
+
+                    <!-- Row for First Name and Last Name -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" class="form-control custom-form-control"
+                                    formControlName="firstName" placeholder="Enter First Name" />
+                                <div *ngIf="updateUserForm.get('firstName')?.invalid && updateUserForm.get('firstName')?.touched"
+                                    class="error-text">
+                                    First name should be between 2 and 20 characters, and only contain letters.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" class="form-control custom-form-control"
+                                    formControlName="lastName" placeholder="Enter Last Name" />
+                                <div *ngIf="updateUserForm.get('lastName')?.invalid && updateUserForm.get('lastName')?.touched"
+                                    class="error-text">
+                                    Last name should be between 2 and 20 characters, and only contain letters.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row for Mobile, Date of Birth, and Gender -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="mobile" class="form-label">Mobile</label>
+                                <input type="text" id="mobile" class="form-control custom-form-control"
+                                    formControlName="mobile" placeholder="Enter Mobile Number" />
+                                <div *ngIf="updateUserForm.get('mobile')?.invalid && updateUserForm.get('mobile')?.touched"
+                                    class="error-text">
+                                    Please enter a valid 10-digit mobile number.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                <input type="date" id="dateOfBirth" class="form-control custom-form-control"
+                                    formControlName="dateOfBirth" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="gender" class="form-label">Gender</label>
+                                <select id="gender" class="form-select custom-form-select" formControlName="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row for Blood Group and Profile Picture -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="bloodGroup" class="form-label">Blood Group</label>
+                                <select class="form-select rounded-pill shadow-sm" id="registerBloodGroup"
+                                    formControlName="bloodGroup" required>
+                                    <option value="" disabled selected>Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="file" class="form-label">Upload Profile Picture</label>
+                                <input type="file" id="file" class="form-control custom-form-control"
+                                    formControlName="file" (change)="onFileSelected($event)" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row for Address, City, State, and Country -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea id="address" class="form-control custom-form-control"
+                                    formControlName="address" rows="3" placeholder="Enter Address"></textarea>
+                                <div *ngIf="updateUserForm.get('address')?.invalid && updateUserForm.get('address')?.touched"
+                                    class="error-text">
+                                    Address should be between 10 and 150 characters.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" id="city" class="form-control custom-form-control"
+                                    formControlName="city" placeholder="Enter City" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="pinCode" class="form-label">Pin Code</label>
+                                <input type="tel" id="pinCode" class="form-control custom-form-control"
+                                    formControlName="pinCode" placeholder="Enter Pin Code" />
+                                <div *ngIf="updateUserForm.get('pinCode')?.invalid && updateUserForm.get('pinCode')?.touched"
+                                    class="error-text">
+                                    Please enter a valid 6-digit pin code.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row for Country and Pin Code -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select rounded-pill shadow-sm" id="country"
+                                    formControlName="country" (change)="loadState(updateUserForm.get('country')?.value)"
+                                    required>
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select rounded-pill shadow-sm" id="state" formControlName="state"
+                                    required>
+                                    <option value="" disabled selected>Select State</option>
+                                    <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name
+                                        }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row for Qualification, Specialization, Registration Number, and Visiting Charge -->
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="qualification" class="form-label">Qualification</label>
+                                <input type="text" id="qualification" minlength="3" maxlength="20"
+                                    class="form-control custom-form-control" formControlName="qualification"
+                                    placeholder="Enter Qualification" />
+                                <div *ngIf="updateUserForm.get('qualification')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Qualification must be at least 3 characters long.
+                                </div>
+                                <div *ngIf="updateUserForm.get('qualification')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    Qualification cannot exceed 20 characters.
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="specializationId" class="form-label">Specialization</label>
+                                <select class="form-select rounded-pill shadow-sm" id="specialization"
+                                    formControlName="specializationId" required>
+                                    <option value="" disabled selected>Select Specialization</option>
+                                    <option *ngFor="let item of allSpecialisation" [value]="item.specializationId">{{
+                                        item.specializationName }}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="registrationNumber" class="form-label">Registration Number</label>
+                                <input type="text" id="registrationNumber" class="form-control custom-form-control"
+                                    minlength="3" maxlength="20" formControlName="registrationNumber"
+                                    placeholder="Enter Registration Number" />
+                                <div *ngIf="updateUserForm.get('registrationNumber')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Registration Number must be at least 3 characters long.
+                                </div>
+                                <div *ngIf="updateUserForm.get('registrationNumber')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    Registration Number cannot exceed 20 characters.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="visitingCharge" class="form-label">Visiting Charge</label>
+                                <input type="tel" minlength="2" maxlength="6" (keypress)="onKeyPress($event)"
+                                    id="visitingCharge" class="form-control custom-form-control"
+                                    formControlName="visitingCharge" placeholder="Enter Visiting Charge" />
+                                <div *ngIf="updateUserForm.get('visitingCharge')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
+                                    Please enter a valid visiting charge.
+                                </div>
+                                <div *ngIf="updateUserForm.get('visitingCharge')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Visiting charge must be at least 2 digits long.
+                                </div>
+                                <div *ngIf="updateUserForm.get('visitingCharge')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    Visiting charge cannot exceed 6 digits.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn custom-btn" [disabled]="updateUserForm.invalid">
+                            Update Profile
+                        </button>
+                        <button type="button" class="btn custom-btn ms-3" (click)="closeUpdateUserModal()">
+                            Close
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

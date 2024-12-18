@@ -6,11 +6,14 @@ import { ProviderRegistrationComponent } from './components/auth/provider-regist
 import { HomeComponent } from './components/org/home/home.component';
 import { PatientDashboardComponent } from './components/org/patient-dashboard/patient-dashboard.component';
 import { ProviderDashboardComponent } from './components/org/provider-dashboard/provider-dashboard.component';
-import { ProfileComponent } from './shared/profile/profile.component';
 import { GetPatientAppointmentComponent } from './components/org/patient/get-patient-appointment/get-patient-appointment.component';
 import { AddPatientAppointmentComponent } from './components/org/patient/add-patient-appointment/add-patient-appointment.component';
 import { GetProviderAppointmentComponent } from './components/org/provider/get-provider-appointment/get-provider-appointment.component';
 import { AddProviderAppointmentComponent } from './components/org/provider/add-provider-appointment/add-provider-appointment.component';
+import { ProfileComponent } from './components/org/patient/profile/profile.component';
+import { PatientProfileComponent } from './components/org/patient/patient-profile/patient-profile.component';
+import { ProviderProfileComponent } from './components/org/provider/provider-profile/provider-profile.component';
+import { AddSoapNotesComponent } from './components/org/provider/add-soap-notes/add-soap-notes.component';
 
 export const routes: Routes = [
     {
@@ -58,8 +61,8 @@ export const routes: Routes = [
                         component: AddPatientAppointmentComponent
                     },
                     {
-                        path:'profile',
-                        component: ProfileComponent
+                        path:'patient-profile',
+                        component: PatientProfileComponent
                     }
                 ]
             },
@@ -81,8 +84,12 @@ export const routes: Routes = [
                         component: AddProviderAppointmentComponent
                     },
                     {
-                        path:'profile',
-                        component: ProfileComponent
+                        path:'provider-profile',
+                        component: ProviderProfileComponent
+                    },
+                    {
+                        path:'complete-appointment/:id',
+                        component: AddSoapNotesComponent
                     }
                 ]
             },

@@ -28,5 +28,8 @@ export class UserService {
     return this.http.get(`https://localhost:7053/api/Appointment/getAllSpecialisation`);
   }
 
+  updateProvider(data:any){
+    return this.http.put(`https://localhost:7053/api/User/updateProvider`, data);
+  }
 
 }
