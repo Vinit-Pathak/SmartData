@@ -1,11 +1,11 @@
 <button class="btn btn-primary mx-2 my-2" [routerLink]="['../add-patient-appointment']">Add Appointment</button>
 
-<div *ngIf="appointments.length === 0" class="no-data">
+<div *ngIf="filterAppointments.length === 0" class="no-data">
   <p>No appointments found.</p>
 </div>
 
-<div *ngIf="appointments.length > 0" class="appointment-list">
-  <div *ngFor="let appointment of appointments" class="appointment-card">
+<div *ngIf="filterAppointments.length > 0" class="appointment-list">
+  <div *ngFor="let appointment of filterAppointments" class="appointment-card">
     <div class="appointment-header">
       <h3>PR-{{ appointment.providerName }}</h3>
         <span class="appointment-status" [ngClass]="{
@@ -71,12 +71,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="updateAppointmentForm" (ngSubmit)="onUpdateAppointment()">
+        <form [formGroup]="updateAppointmentForm" >
 
           <!-- Appointment Date -->
           <div class="mb-3">
             <label for="appointmentDate" class="form-label">Appointment Date</label>
-            <input id="appointmentDate" type="date" class="form-control" formControlName="appointmentDate" />
+            <input id="appointmentDate" type="date" [min]="todayDate" class="form-control" formControlName="appointmentDate" />
             <div
               *ngIf="updateAppointmentForm.get('appointmentDate')?.invalid && updateAppointmentForm.get('appointmentDate')?.touched"
               class="text-danger">
@@ -103,14 +103,22 @@
             <div
               *ngIf="updateAppointmentForm.get('chiefComplaint')?.invalid && updateAppointmentForm.get('chiefComplaint')?.touched"
               class="text-danger">
-              Chief complaint is required (min 5 characters, max 200).
+              Chief complaint is required
+            </div>
+            <div *ngIf="updateAppointmentForm.get('chiefComplaint')?.hasError('minlength') && updateAppointmentForm.get('chiefComplaint')?.touched"
+              class="text-danger">
+              Chief complaint must be at least 5 characters
+            </div>
+            <div *ngIf="updateAppointmentForm.get('chiefComplaint')?.hasError('maxlength') && updateAppointmentForm.get('chiefComplaint')?.touched"
+              class="text-danger">
+              Chief complaint must be at most 150 characters
             </div>
           </div>
 
           <!-- Modal Footer -->
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" [disabled]="updateAppointmentForm.invalid">Submit</button>
+            <button type="submit" class="btn btn-primary" (click)="onUpdateAppointment()">Submit</button>
           </div>
         </form>
       </div>

@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label for="appointmentDate" class="fw-bold">Appointment Date</label>
                                     <input type="date" id="appointmentDate" formControlName="appointmentDate"
-                                        class="form-control" [min]="minDate">
+                                        class="form-control" [min]="todayDate">
                                     <div *ngIf="patientappoinmentform.get('appointmentDate')?.invalid && patientappoinmentform.get('appointmentDate')?.touched"
                                         class="text-danger mt-1">
                                         Appointment Date is required
@@ -77,7 +77,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="chiefcomplaint" class="fw-bold">Chief Complaint</label>
-                                    <textarea id="chiefcomplaint" formControlName="chiefcomplaint" minlength="10"
+                                    <textarea id="chiefcomplaint" formControlName="chiefcomplaint" minlength="5"
                                         maxlength="150" class="form-control" rows="4" placeholder="Describe the complaint in detail"></textarea>
                                     <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('required') && patientappoinmentform.get('chiefcomplaint')?.touched"
                                         class="text-danger mt-1">
@@ -85,7 +85,7 @@
                                     </div>
                                     <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('minlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
                                         class="text-danger mt-1">
-                                        Chief Complaint must be at least 10 characters
+                                        Chief Complaint must be at least 5 characters
                                     </div>
                                     <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('maxlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
                                         class="text-danger mt-1">

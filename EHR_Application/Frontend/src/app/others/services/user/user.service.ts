@@ -28,6 +28,10 @@ export class UserService {
     return this.http.get(`https://localhost:7053/api/Appointment/getAllSpecialisation`);
   }
 
+  getUserDetailsByAppointmentId(appointmentId: number) {
+    return this.http.get(`https://localhost:7053/api/User/getUserDetailsByAppointmentId/${appointmentId}`);
+  }
+
   updateProvider(data:any){
     return this.http.put(`https://localhost:7053/api/User/updateProvider`, data);
   }

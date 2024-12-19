@@ -32,7 +32,8 @@ export class NavbarComponent {
         'Logout Successful',
         {
           timeOut: 2000,
-          closeButton: true,
+          progressBar: true,
+          progressAnimation: 'increasing',
         }
       );
   }

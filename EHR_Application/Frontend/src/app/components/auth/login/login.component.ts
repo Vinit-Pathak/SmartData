@@ -97,8 +97,9 @@ export class LoginComponent implements OnInit {
     if (this.verifyOtpForm.invalid) {
       this.loginForm.markAllAsTouched();
       this.toaster.warning('Please fill in all required fields.', 'Warning', {
-        timeOut: 3000,
-        closeButton: true,
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
       });
       return;
     }
@@ -117,7 +118,8 @@ export class LoginComponent implements OnInit {
   
           this.toaster.success('Login successful', 'Success', {
             timeOut: 2000,
-            closeButton: true,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
           this.closeVerifyOtp();
           if(res.data.userTypeId ===1){
@@ -127,7 +129,8 @@ export class LoginComponent implements OnInit {
           }else{
             this.toaster.error('Unexpected role', 'Error', {
               timeOut: 2000,
-              closeButton: true,
+              progressBar: true,
+              progressAnimation: 'increasing',
             });
           }
         }else{

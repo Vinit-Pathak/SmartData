@@ -27,7 +27,7 @@ export class AddPatientAppointmentComponent {
   Appointmentservice = inject(AppointmentService);
   paymentService = inject(PaymentService);
   loader = inject(LoaderService);
-
+  todayDate = new Date().toISOString().split('T')[0];
   allSpecialisation: any[] = [];
   allProviders: any[] = [];
 
@@ -55,7 +55,7 @@ export class AddPatientAppointmentComponent {
       specializationId: new FormControl('', [Validators.required]),
       appointmentTime: new FormControl('', [Validators.required]),
       chiefcomplaint: new FormControl('', [Validators.required,
-      Validators.minLength(10),
+      Validators.minLength(5),
       Validators.maxLength(150),
       Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/),
       ]),
@@ -112,6 +112,11 @@ export class AddPatientAppointmentComponent {
 
   onPayNow(){
     if(this.patientappoinmentform.invalid){
+      this.toastr.error('Please fill all the required fields', 'Error',{
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
+      });
       this.patientappoinmentform.markAllAsTouched();
       return;
     }
@@ -136,7 +141,6 @@ export class AddPatientAppointmentComponent {
       }
     })
   }
-
   verifyPayment(paymentId: any, orderId: any){
     this.paymentService.verifyPayment(paymentId, orderId).subscribe({
       next:(res:any)=>{
@@ -147,9 +151,10 @@ export class AddPatientAppointmentComponent {
         console.log(error);
       }
     })
-  }
+  } 
 
   async bookAppointment(paymentId: any, orderId: any){
+
     const appointmentData = this.patientappoinmentform.value;
 
     const data = {
@@ -159,7 +164,6 @@ export class AddPatientAppointmentComponent {
       paymentId: paymentId,
       orderId: orderId
     }
-
     this.Appointmentservice.createPatientAppointment(data).subscribe({
       next:(res:any)=>{
         this.toastr.success('Appointment Booked Successfully','Success',{
@@ -167,8 +171,7 @@ export class AddPatientAppointmentComponent {
           progressBar: true,
           progressAnimation: 'increasing',
         });
-        window.location.reload();
-        this.router.navigate(['/home/patient-dashboard'])
+        this.router.navigateByUrl('/home/patient-dashboard/get-patient-appointments')
       },
       error:(error)=>{
         this.toastr.error('Something went wrong');
@@ -178,64 +181,4 @@ export class AddPatientAppointmentComponent {
     })
   }
 
-  // Pay()
-  // {
-  //   const amount: number = (this.Fees);
-  //   this.onPayNow(Math.floor(amount));
-  // }
-
-  // onPayNow(amount: number) {
-  //   debugger;
-
-  //   this.paymentService.createOrder(amount).subscribe((order:any) => {
-  //     console.log('API request sent' , amount);
-  //     console.log(order)
-  //     const options: any = {
-  //       key:'rzp_test_KMY5pBLSVhJH3u', // Replace with your Razorpay Key ID
-  //       amount: amount * 100, // Amount in paise
-  //       currency: 'INR',
-  //       name: 'SDN Company',
-  //       description: 'Payment for Order',
-  //       order_id: order.orderId,
-  //       handler: (response: any) => {
-  //         // this.verifyPayment(response);
-  //       },
-  //       prefill: {
-  //         name: 'Customer Name',
-  //         email: 'customer@example.com',
-  //       },
-  //       theme: {
-  //         color: '#F37254'
-  //       }
-  //     };
-
-  //     const rzp1 :any = new Razorpay(options);
-  //     rzp1.open();
-  //   });
-  //   this.onSubmit();
-  // }
-
-  // onSubmit() {
-  //   if (this.patientappoinmentform.invalid) {
-  //     return;
-  //   }
-
-  //   const formValues = this.patientappoinmentform.value;
-  //   formValues.appointmentTime = this.appointmentTime.toISOString();
-  //   this.Appointmentservice.createPatientAppointment(formValues).subscribe({
-  //     next: (res: any) => {
-  //       if (res.statusCode === 200) {
-  //         console.log(res);
-  //         this.patientdata = res.data;
-  //         this.toastr.success('Appoinment Booked Successfully');
-  //         // this.router.navigate(['/patient']);
-  //       } else {
-  //         this.toastr.error(res.message);
-  //       }
-  //     },
-  //     error: (error) => {
-  //       console.error(error);
-  //     },
-  //   });
-  // }
 }

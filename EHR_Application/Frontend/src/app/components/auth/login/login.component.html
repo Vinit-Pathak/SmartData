@@ -156,6 +156,9 @@
             >
               Invalid Otp
             </div>
+            <div *ngIf="verifyOtpForm.get('otp')?.errors?.['minlength']" class="text-danger small mt-1">
+              OTP must be 6 characters.
+            </div>
           </div>
           <button
             type="submit"

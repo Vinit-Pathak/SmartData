@@ -129,7 +129,11 @@ export class PatientRegistrationComponent implements OnInit {
 
   onRegisterSubmit(){
     if (this.patientRegistrationForm.invalid) {
-      this.toaster.error("Please Fill And Correct All The fields", "Error");
+      this.toaster.error("Please Fill And Correct All The fields", "Error",{
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
+      });
       this.patientRegistrationForm.markAllAsTouched();
       return;
     }
@@ -145,8 +149,9 @@ export class PatientRegistrationComponent implements OnInit {
       next: (res: any) => {
         if (res.statusCode === 200) {
           this.toaster.success('Patient Registered Successfully', 'Success', {
-            timeOut: 3000,
-            closeButton: true,
+            timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
           });
           this.loaderService.hide();
           this.patientRegistrationForm.reset();

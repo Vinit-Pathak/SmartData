@@ -69,7 +69,7 @@
                     <div class="col-md-6">
                         <label for="registerMobile" class="form-label fw-semibold">Mobile Number</label>
                         <input type="tel" class="form-control rounded-pill shadow-sm" id="registerMobile"
-                            formControlName="mobile" maxlength="10" placeholder="Enter mobile number"
+                            formControlName="mobile" minlength="10" maxlength="10" placeholder="Enter mobile number"
                             (keypress)="onKeyPress($event)" required />
                         <div *ngIf="patientRegistrationForm.get('mobile')?.hasError('required') && patientRegistrationForm.get('mobile')?.touched"
                             class="text-danger small mt-1">

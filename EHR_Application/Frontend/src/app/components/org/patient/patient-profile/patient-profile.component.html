@@ -133,10 +133,16 @@
               <div class="form-group">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" id="firstName" class="form-control custom-form-control" formControlName="firstName"
-                  placeholder="Enter First Name" />
+                  minlength="2" maxlength="20" placeholder="Enter First Name" />
                 <div *ngIf="updateUserForm.get('firstName')?.invalid && updateUserForm.get('firstName')?.touched"
                   class="error-text">
-                  First name should be between 2 and 20 characters, and only contain letters.
+                  First Name is required
+                </div>
+                <div *ngIf="updateUserForm.get('firstName')?.errors?.['minlength']" class="text-danger small mt-1">
+                  First name must be at least 2 characters.
+                </div>
+                <div *ngIf="updateUserForm.get('firstName')?.errors?.['maxlength']" class="text-danger small mt-1">
+                  First name must not exceed 20 characters.
                 </div>
               </div>
             </div>
@@ -148,7 +154,13 @@
                   placeholder="Enter Last Name" />
                 <div *ngIf="updateUserForm.get('lastName')?.invalid && updateUserForm.get('lastName')?.touched"
                   class="error-text">
-                  Last name should be between 2 and 20 characters, and only contain letters.
+                  Last Name is required
+                </div>
+                <div *ngIf="updateUserForm.get('lastName')?.errors?.['minlength']" class="text-danger small mt-1">
+                  Last name must be at least 2 characters.
+                </div>
+                <div *ngIf="updateUserForm.get('lastName')?.errors?.['maxlength']" class="text-danger small mt-1">
+                  Last name must not exceed 20 characters.
                 </div>
               </div>
             </div>
@@ -159,9 +171,9 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="mobile" class="form-label">Mobile</label>
-                <input type="text" id="mobile" class="form-control custom-form-control" formControlName="mobile"
+                <input type="tel" id="mobile" minlength="10" maxlength="10" class="form-control custom-form-control" formControlName="mobile"
                   placeholder="Enter Mobile Number" />
-                <div *ngIf="updateUserForm.get('mobile')?.invalid && updateUserForm.get('mobile')?.touched"
+                <div *ngIf="updateUserForm.get('mobile')?.invalid && updateUserForm.get('mobile')?.touched && updateUserForm.get('mobile')?.errors?.['pattern']"
                   class="error-text">
                   Please enter a valid 10-digit mobile number.
                 </div>
@@ -173,6 +185,9 @@
                 <label for="dateOfBirth" class="form-label">Date of Birth</label>
                 <input type="date" id="dateOfBirth" class="form-control custom-form-control"
                   formControlName="dateOfBirth" />
+                  <div *ngIf="updateUserForm.get('dateOfBirth')?.invalid && updateUserForm.get('dateOfBirth')?.touched" class="error-text">
+                    Date of Birth is required.
+                  </div>
               </div>
             </div>
 
@@ -185,6 +200,9 @@
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
+                <div *ngIf="updateUserForm.get('gender')?.invalid && updateUserForm.get('gender')?.touched" class="error-text">
+                  Gender is required.
+                </div>
               </div>
             </div>
           </div>
@@ -194,7 +212,8 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="bloodGroup" class="form-label">Blood Group</label>
-                <select class="form-select rounded-pill shadow-sm" id="bloodGroup" formControlName="bloodGroup" required>
+                <select class="form-select rounded-pill shadow-sm" id="bloodGroup" formControlName="bloodGroup"
+                  required>
                   <option value="" disabled selected>Select Blood Group</option>
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
@@ -205,6 +224,9 @@
                   <option value="AB+">AB+</option>
                   <option value="AB-">AB-</option>
                 </select>
+                <div *ngIf="updateUserForm.get('bloodGroup')?.invalid && updateUserForm.get('bloodGroup')?.touched" class="error-text">
+                  Blood Group is required.
+                </div>
               </div>
             </div>
 
@@ -213,6 +235,9 @@
                 <label for="file" class="form-label">Upload Profile Picture</label>
                 <input type="file" id="file" class="form-control custom-form-control" formControlName="file"
                   (change)="onFileSelected($event)" />
+                <div *ngIf="updateUserForm.get('file')?.invalid && updateUserForm.get('file')?.touched" class="error-text">
+                  Profile Picture is required.
+                </div>
               </div>
             </div>
           </div>
@@ -222,11 +247,17 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="address" class="form-label">Address</label>
-                <textarea id="address" class="form-control custom-form-control" formControlName="address" rows="3"
+                <textarea id="address" class="form-control custom-form-control" formControlName="address" rows="3" minlength="10" maxlength="150"
                   placeholder="Enter Address"></textarea>
                 <div *ngIf="updateUserForm.get('address')?.invalid && updateUserForm.get('address')?.touched"
                   class="error-text">
-                  Address should be between 10 and 150 characters.
+                  Address is required
+                </div>
+                <div *ngIf="updateUserForm.get('address')?.errors?.['minlength']" class="text-danger small mt-1">
+                  Address must be at least 10 characters.
+                </div>
+                <div *ngIf="updateUserForm.get('address')?.errors?.['maxlength']" class="text-danger small mt-1">
+                  Address must not exceed 150 characters.
                 </div>
               </div>
             </div>
@@ -237,16 +268,22 @@
                 <input type="text" id="city" class="form-control custom-form-control" formControlName="city"
                   placeholder="Enter City" />
               </div>
+              <div *ngIf="updateUserForm.get('city')?.invalid && updateUserForm.get('city')?.touched" class="error-text">
+                City is required.
+              </div>
             </div>
 
             <div class="col-md-3">
               <div class="form-group">
                 <label for="pinCode" class="form-label">Pin Code</label>
-                <input type="tel" id="pinCode" class="form-control custom-form-control" formControlName="pinCode"
+                <input type="tel" id="pinCode" class="form-control custom-form-control" formControlName="pinCode" minlength="6" maxlength="6"
                   placeholder="Enter Pin Code" />
                 <div *ngIf="updateUserForm.get('pinCode')?.invalid && updateUserForm.get('pinCode')?.touched"
                   class="error-text">
                   Please enter a valid 6-digit pin code.
+                </div>
+                <div *ngIf="updateUserForm.get('pinCode')?.errors?.['pattern']" class="text-danger small mt-1">
+                  Pin code must be a 6-digit number.
                 </div>
               </div>
             </div>
@@ -262,6 +299,10 @@
                   <option value="" disabled selected>Select Country</option>
                   <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
                 </select>
+                <div *ngIf="updateUserForm.get('country')?.invalid && updateUserForm.get('country')?.touched"
+                  class="error-text">
+                  Country is required
+                </div>
               </div>
             </div>
 
@@ -273,6 +314,10 @@
                   <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}
                   </option>
                 </select>
+                <div *ngIf="updateUserForm.get('state')?.invalid && updateUserForm.get('state')?.touched"
+                  class="error-text">
+                  State is required
+                </div>
               </div>
             </div>
           </div>

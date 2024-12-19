@@ -159,7 +159,11 @@ export class ProviderRegistrationComponent {
   onRegisterSubmit(){
     if (this.providerRegistrationForm.invalid) {
       this.providerRegistrationForm.markAllAsTouched();
-      this.toaster.error("Please Fill And Correct All The fields", "Error");
+      this.toaster.error("Please Fill And Correct All The fields", "Error",{
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
+      });
       return;
     }
 
@@ -173,8 +177,9 @@ export class ProviderRegistrationComponent {
       next: (res: any) => {
         if (res.statusCode === 200) {
           this.toaster.success('Patient Registered Successfully', 'Success', {
-            timeOut: 3000,
-            closeButton: true,
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
           this.loaderService.hide();
           this.providerRegistrationForm.reset();

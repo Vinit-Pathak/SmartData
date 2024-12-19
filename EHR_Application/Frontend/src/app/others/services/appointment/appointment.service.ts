@@ -29,7 +29,7 @@ export class AppointmentService {
     return this.http.post(`https://localhost:7053/api/Appointment/patientAppointment`, appointment)
   }
 
-  cancelPatientAppointment(appointmentId: number): Observable<any> {
+  cancelAppointment(appointmentId: number): Observable<any> {
     return this.http.delete(`https://localhost:7053/api/Appointment/cancelPatientAppointment/${appointmentId}`)
   }
 
@@ -49,5 +49,13 @@ export class AppointmentService {
 
   getAllPatients(): Observable<any> {
     return this.http.get(`https://localhost:7053/api/Appointment/getAllPatients`)
+  }
+
+  addSoapNotes(data:any): Observable<any> {
+    return this.http.post(`https://localhost:7053/api/Appointment/addSoapNotes`, data)
+  }
+
+  getSoapNote(appointmentId: number): Observable<any> {
+    return this.http.get(`https://localhost:7053/api/Appointment/soapDetails/${appointmentId}`)
   }
 }

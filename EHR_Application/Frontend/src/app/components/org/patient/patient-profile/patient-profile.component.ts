@@ -161,7 +161,8 @@ export class PatientProfileComponent {
     if (!this.userdata.userName) {
       this.toaster.error('Invalid Username', 'Error', {
         timeOut: 2000,
-        closeButton: true,
+        progressBar: true,
+        progressAnimation: 'increasing',
       });
       return;
     }
@@ -171,14 +172,16 @@ export class PatientProfileComponent {
         if (res.statusCode !== 200) {
           this.toaster.error(res.message, 'Error', {
             timeOut: 2000,
-            closeButton: true,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
           return;
         }
 
         this.toaster.success('Password Changed Successfully', 'Success', {
           timeOut: 2000,
-          closeButton: true,
+          progressBar: true,
+          progressAnimation: 'increasing',
         });
         this.changePasswordForm.reset();
         this.closeChangePasswordModal();
@@ -269,8 +272,9 @@ export class PatientProfileComponent {
     debugger;
     if (this.updateUserForm.invalid) {
       this.toaster.error('Please fill in all required fields.', 'Error', {
-        timeOut: 3000,
-        closeButton: true,
+        timeOut: 2000,
+        progressBar: true,
+        progressAnimation: 'increasing',
       });
       return;
     }
@@ -298,8 +302,9 @@ export class PatientProfileComponent {
       next: (res: any) => {
         if (res.statusCode === 200) {
           this.toaster.success('Profile Updated Successfully', 'Success', {
-            timeOut: 3000,
-            closeButton: true,
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
           window.location.reload();
           console.log('Profile Updated:', res.data);
@@ -307,8 +312,9 @@ export class PatientProfileComponent {
           this.closeUpdateUserModal();
         } else {
           this.toaster.error('Failed to update profile', 'Error', {
-            timeOut: 3000,
-            closeButton: true,
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
         }
       },
@@ -320,8 +326,9 @@ export class PatientProfileComponent {
             'Failed to update profile. Please try again later.',
           'Error',
           {
-            timeOut: 3000,
-            closeButton: true,
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
           }
         );
       },

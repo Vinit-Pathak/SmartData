@@ -14,6 +14,10 @@ import { ProfileComponent } from './components/org/patient/profile/profile.compo
 import { PatientProfileComponent } from './components/org/patient/patient-profile/patient-profile.component';
 import { ProviderProfileComponent } from './components/org/provider/provider-profile/provider-profile.component';
 import { AddSoapNotesComponent } from './components/org/provider/add-soap-notes/add-soap-notes.component';
+import { AllAppointmentsComponent } from './components/org/provider/all-appointments/all-appointments.component';
+import { PatientPastAppointmentComponent } from './components/org/patient/patient-past-appointment/patient-past-appointment.component';
+import { loginGuard } from './others/guards/login.guard';
+import { authGuard } from './others/guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -49,20 +53,28 @@ export const routes: Routes = [
                 children:[
                     {
                         path:'',
-                        redirectTo:'get-patient-appoinments',
+                        redirectTo:'get-patient-appointments',
                         pathMatch:'full'
                     },
                     {
-                        path:'get-patient-appoinments',
-                        component: GetPatientAppointmentComponent
+                        path:'get-patient-appointments',
+                        component: GetPatientAppointmentComponent,
+                        canActivate:[loginGuard]
                     },
                     {
                         path:'add-patient-appointment',
-                        component: AddPatientAppointmentComponent
+                        component: AddPatientAppointmentComponent,
+                        canActivate:[loginGuard]
                     },
                     {
                         path:'patient-profile',
-                        component: PatientProfileComponent
+                        component: PatientProfileComponent,
+                        canActivate:[loginGuard]
+                    },
+                    {
+                        path:'past-appointments',
+                        component:PatientPastAppointmentComponent,
+                        canActivate:[loginGuard]
                     }
                 ]
             },
@@ -77,19 +89,27 @@ export const routes: Routes = [
                     },
                     {
                         path:'get-provider-appointments',
-                        component: GetProviderAppointmentComponent
+                        component: GetProviderAppointmentComponent,
+                        canActivate:[loginGuard]
                     },
                     {
                         path:'add-provider-appointment',
-                        component: AddProviderAppointmentComponent
+                        component: AddProviderAppointmentComponent,
+                        canActivate:[loginGuard]
                     },
                     {
                         path:'provider-profile',
-                        component: ProviderProfileComponent
+                        component: ProviderProfileComponent,
+                        canActivate:[loginGuard]
                     },
                     {
-                        path:'complete-appointment/:id',
-                        component: AddSoapNotesComponent
+                        path:'complete-appointment/:appointmentId',
+                        component: AddSoapNotesComponent,
+                        canActivate:[loginGuard]
+                    },{
+                        path:'past-appointments',
+                        component:AllAppointmentsComponent,
+                        canActivate:[loginGuard]
                     }
                 ]
             },

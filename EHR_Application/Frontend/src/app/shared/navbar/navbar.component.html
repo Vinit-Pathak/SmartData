@@ -17,11 +17,16 @@
             <i class="fas fa-users"></i> Provider Dashboard
           </a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard/profile']">
-            <i class="fas fa-user-circle"></i> Profile
+        <li *ngIf="userRole === 1" class="nav-item">
+          <a class="nav-link fs-5" [routerLink]="['/home/patient-dashboard/past-appointments']">
+            <i class="fas fa-user-circle"></i> Past Appointment
           </a>
-        </li> -->
+        </li>
+        <li *ngIf="userRole !== 1" class="nav-item">
+          <a class="nav-link fs-5" [routerLink]="['/home/provider-dashboard/past-appointments']">
+            <i class="fas fa-user-circle"></i> Past Appointment
+          </a>
+        </li>
       </ul>
 
       <div class="dropdown d-flex align-items-center">

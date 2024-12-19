@@ -5,7 +5,7 @@ import { AppointmentService } from '../../../../others/services/appointment/appo
 declare var bootstrap: any;
 import Swal from 'sweetalert2'
 import { ToastrService } from 'ngx-toastr';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-get-patient-appointment',
@@ -19,8 +19,9 @@ export class GetPatientAppointmentComponent implements OnInit {
   appointments: any[] = [];
   selectedAppointment: any = {};
   userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
-  minDate = new Date();
+  todayDate = new Date().toISOString().split('T')[0];
   isUpdating : boolean = false;
+  filterAppointments: any[] = [];
   appointmentService = inject(AppointmentService);
   toaster = inject(ToastrService);
   minTime: any;
@@ -35,6 +36,7 @@ export class GetPatientAppointmentComponent implements OnInit {
   getAllAppointmentsByPatientId() {
     this.appointmentService.getPatientAppointment(Number(this.userData.userId)).subscribe((res: any) => {
       this.appointments = res.data;
+      this.filterAppointments = this.appointments.filter((appointment: any) => appointment.appointmentStatus === "Scheduled");
       console.log(this.appointments);
       
     });
@@ -53,7 +55,7 @@ export class GetPatientAppointmentComponent implements OnInit {
     appointmentId: new FormControl(0),
     appointmentDate: new FormControl(''),
     appointmentTime: new FormControl(''),
-    chiefComplaint: new FormControl('')
+    chiefComplaint: new FormControl('', [Validators.required,Validators.minLength(5), Validators.maxLength(150)]),
   })
 
 
@@ -69,13 +71,15 @@ export class GetPatientAppointmentComponent implements OnInit {
     const modalElement = document.getElementById('appointmentModal') as HTMLElement;
     const modal = bootstrap.Modal.getInstance(modalElement); 
     modal.hide(); 
+    this.updateAppointmentForm.reset();
   }
 
   onUpdateAppointment(){
     if(this.updateAppointmentForm.invalid){
       this.toaster.error('Please fill all the fields', 'Error', {
         timeOut: 2000,
-        closeButton: true
+        progressBar: true,
+        progressAnimation: 'increasing',
       });
       return;
     }
@@ -85,14 +89,17 @@ export class GetPatientAppointmentComponent implements OnInit {
       next:(res:any)=>{
         if(res.statusCode == 200){
           this.toaster.success('Appointment Updated Successfully', 'Success', {
-            timeOut: 2000,  
-            closeButton: true
+            timeOut: 2000,
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
+          window.location.reload();
          this.closeUpdateModal()
         }else{
           this.toaster.error('Error updating appointment', 'Error', {
             timeOut: 2000,
-            closeButton: true
+            progressBar: true,
+            progressAnimation: 'increasing',
           });
         }
       },
@@ -115,7 +122,7 @@ export class GetPatientAppointmentComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         // Proceed with the deletion if confirmed
-        this.appointmentService.cancelPatientAppointment(id).subscribe(
+        this.appointmentService.cancelAppointment(id).subscribe(
           (response) => {
             console.log('login response', response);
             if (response.statusCode == 200) {

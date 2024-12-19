@@ -1,0 +1,86 @@
+<form [formGroup]="appointmentStatusForm" class="mb-4">
+    <label for="appointmentStatus" class="form-label"><b>Filter Status</b></label>
+    <select
+    (change)="appointmentStatusFiltered(appointmentStatusForm.get('appointmentStatus')?.value)"
+    name="appointmentStatus"
+    id="appointmentStatus"
+    formControlName="appointmentStatus"
+    class="form-select custom-dropdown"
+    >
+    <option value="" selected>All</option>
+    <option value="Completed">Completed</option>
+    <option value="Cancelled">Cancelled</option>
+  </select>
+</form>
+
+<div *ngIf="filteredAppointments.length === 0" class="no-data">
+    <p>No appointments found.</p>
+  </div>
+  
+  <div *ngIf="filteredAppointments.length > 0" class="appointment-list">
+    <div *ngFor="let appointment of filteredAppointments" class="appointment-card">
+      <div class="appointment-header">
+        <h3>PR-{{ appointment.providerName }}</h3>
+        <span class="appointment-status" [ngClass]="{
+          'status-scheduled': appointment.appointmentStatus === 'Scheduled',
+          'status-completed': appointment.appointmentStatus === 'Completed',
+          'status-cancelled': appointment.appointmentStatus === 'Cancelled'
+        }">
+          {{ appointment.appointmentStatus }}
+        </span>
+      </div>
+      <div class="appointment-body">
+        <p><strong>Complaint:</strong> {{ appointment.chiefComplaint }}</p>
+        <p><strong>Appointment Date:</strong> {{ appointment.appointmentDate | date:'longDate' }}</p>
+        <p><strong>Appointment Time:</strong> {{ appointment.appointmentTime  }}</p>
+        <p><strong>Fee: </strong> {{ appointment.fee | currency }}</p>
+
+      </div>
+      <div *ngIf="appointment.appointmentStatus === 'Completed'" class="appointment-footer">
+        <button class="btn btn-warning" (click)="viewSoapNote(appointment.appointmentId)">View</button>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div
+  class="modal fade"
+  id="soapNoteModal"
+  tabindex="-1"
+  aria-labelledby="soapNoteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="soapNoteModalLabel">SOAP Note</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Objective:</strong> {{ soapNotesData?.objective }}</p>
+        <p><strong>Subjective:</strong> {{ soapNotesData?.subjective }}</p>
+        <p><strong>Plan:</strong> {{ soapNotesData?.plan }}</p>
+        <p><strong>Assessment:</strong> {{ soapNotesData?.assessment }}</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  
