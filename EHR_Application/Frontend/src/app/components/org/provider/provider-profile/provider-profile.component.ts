@@ -47,6 +47,8 @@ export class ProviderProfileComponent {
     this.getAllSpecialisation();
     this.sanitizeField('firstName');
     this.sanitizeField('lastName');
+    this.sanitizeField('city');
+    this.sanitizeField('qualification');
     this.changePasswordForm.valueChanges.subscribe(() => {
       const newPassword = this.changePasswordForm.get('newPassword')?.value;
       const confirmPassword =
@@ -224,49 +226,58 @@ export class ProviderProfileComponent {
   updateUserForm = new FormGroup({
     userId: new FormControl(0),
     firstName: new FormControl('', [
+      Validators.required,
       Validators.minLength(2),
       Validators.maxLength(20),
       Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
     ]),
     lastName: new FormControl('', [
+      Validators.required,
       Validators.minLength(2),
       Validators.maxLength(20),
       Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
     ]),
-    mobile: new FormControl('', [Validators.pattern(/^\d{10}$/)]),
-    dateOfBirth: new FormControl(''),
-    gender: new FormControl(''),
-    bloodGroup: new FormControl(''),
+    mobile: new FormControl('', [Validators.required,Validators.pattern(/^\d{10}$/)]),
+    dateOfBirth: new FormControl('', Validators.required),
+    gender: new FormControl('', Validators.required),
+    bloodGroup: new FormControl('', Validators.required),
     file: new FormControl<File | null>(null),
     address: new FormControl('', [
+      Validators.required,
       Validators.minLength(10),
       Validators.maxLength(150),
       Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/),
     ]),
     city: new FormControl('', [
+      Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
     ]),
-    state: new FormControl(''),
-    country: new FormControl(''),
+    state: new FormControl('', Validators.required),
+    country: new FormControl('', Validators.required),
     pinCode: new FormControl('', [
+      Validators.required,
       Validators.pattern(/^\d{6}$/),
       Validators.minLength(6),
       Validators.maxLength(6),
     ]),
 
-    // provider specific fields
+    
     qualification: new FormControl('', [
       Validators.required,
       Validators.minLength(2),
       Validators.maxLength(20),
+      Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
     ]),
     specializationId: new FormControl('', Validators.required),
     registrationNumber: new FormControl('', [
+      Validators.required,
       Validators.minLength(2),
       Validators.maxLength(20),
+      Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
     ]),
     visitingCharge: new FormControl('', [
+      Validators.required,
       Validators.minLength(2),
       Validators.maxLength(6),
       Validators.pattern(/^\d{1,6}$/),
@@ -355,7 +366,7 @@ export class ProviderProfileComponent {
       },
       error: (err: any) => {
         console.error('Error updating profile:', err);
-        // window.location.reload();
+        
         this.toaster.error(
           err?.error?.message ||
             'Failed to update profile. Please try again later.',
@@ -376,7 +387,7 @@ export class ProviderProfileComponent {
     this.countryState.getAllCountry().subscribe({
       next: (res: any) => {
         this.allCountry = res;
-        // console.log(this.allCountry)
+        
       },
       error: (error: any) => {
         alert('I am in error');
@@ -396,7 +407,7 @@ export class ProviderProfileComponent {
   }
 
   onChange(countrId: any) {
-    // console.log(countrId)
+    
     this.countryState.getStateByCountryId(countrId).subscribe({
       next: (res: any) => {
         this.allStateByCountryId = res;

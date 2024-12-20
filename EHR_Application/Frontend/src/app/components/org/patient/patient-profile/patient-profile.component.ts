@@ -320,7 +320,7 @@ export class PatientProfileComponent {
       },
       error: (err: any) => {
         console.error('Error updating profile:', err);
-        // window.location.reload();
+        
         this.toaster.error(
           err?.error?.message ||
             'Failed to update profile. Please try again later.',
@@ -341,7 +341,7 @@ export class PatientProfileComponent {
     this.countryState.getAllCountry().subscribe({
       next: (res: any) => {
         this.allCountry = res;
-        // console.log(this.allCountry)
+        
       },
       error: (error: any) => {
         alert('I am in error');
@@ -361,7 +361,7 @@ export class PatientProfileComponent {
   }
 
   onChange(countrId: any) {
-    // console.log(countrId)
+    
     this.countryState.getStateByCountryId(countrId).subscribe({
       next: (res: any) => {
         this.allStateByCountryId = res;

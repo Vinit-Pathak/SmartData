@@ -76,13 +76,32 @@ export class PatientRegistrationComponent implements OnInit {
   
   ngOnInit() {
     this.getAllCountry();
-  }
+    this.sanitizeField('firstName');
+    this.sanitizeField('lastName');
+    this.sanitizeField('city')
+  } 
 
   onKeyPress(event: KeyboardEvent) {  
     const charCode = event.which ? event.which : event.keyCode;
     if (charCode < 48 || charCode > 57) {
       event.preventDefault(); 
     }
+  }
+
+  sanitizeField(fieldName: string): void {
+    this.patientRegistrationForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        
+        const sanitizedValue = value
+          .replace(/[^A-Za-z\s]/g, '') 
+          .replace(/\s{2,}/g, ' '); 
+        if (value !== sanitizedValue) {
+          this.patientRegistrationForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
   }
 
   onFileSelected(event: Event) {

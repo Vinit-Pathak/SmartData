@@ -44,42 +44,36 @@
   
 
 
-  <div
-  class="modal fade"
-  id="soapNoteModal"
-  tabindex="-1"
-  aria-labelledby="soapNoteModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="soapNoteModalLabel">SOAP Note</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Objective:</strong> {{ soapNotesData?.objective }}</p>
-        <p><strong>Subjective:</strong> {{ soapNotesData?.subjective }}</p>
-        <p><strong>Plan:</strong> {{ soapNotesData?.plan }}</p>
-        <p><strong>Assessment:</strong> {{ soapNotesData?.assessment }}</p>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
+  <div class="modal fade" id="soapNoteModal" tabindex="-1" aria-labelledby="soapNoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content custom-modal-content">
+        <div class="modal-header custom-modal-header">
+          <h5 class="modal-title" id="soapNoteModalLabel">SOAP Note</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body custom-modal-body">
+          <div class="soap-note-section">
+            <p><strong>Objective:</strong> {{ soapNotesData?.objective }}</p>
+          </div>
+          <div class="soap-note-section">
+            <p><strong>Subjective:</strong> {{ soapNotesData?.subjective }}</p>
+          </div>
+          <div class="soap-note-section">
+            <p><strong>Plan:</strong> {{ soapNotesData?.plan }}</p>
+          </div>
+          <div class="soap-note-section">
+            <p><strong>Assessment:</strong> {{ soapNotesData?.assessment }}</p>
+          </div>
+        </div>
+        <div class="modal-footer custom-modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 
   

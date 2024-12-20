@@ -26,7 +26,7 @@
                         </div>
                         <div *ngIf="patientRegistrationForm.get('firstName')?.errors?.['pattern']"
                             class="text-danger small mt-1">
-                            First name can only contain letters with a single space between words.
+                            First name can only contain letters.
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@
                         </div>
                         <div *ngIf="patientRegistrationForm.get('lastName')?.errors?.['pattern']"
                             class="text-danger small mt-1">
-                            Last name can only contain letters with a single space between words.
+                            Last name can only contain letters.
                         </div>
                     </div>
 
@@ -173,6 +173,37 @@
                         </div>
                     </div>
 
+
+                    <!-- Country -->
+                    <div class="col-md-6">
+                        <label for="registerCountry" class="form-label fw-semibold">Country</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerCountry"
+                            formControlName="country" (change)="onChange(patientRegistrationForm.value.country)"
+                            required>
+                            <option value="" disabled selected>Select Country</option>
+                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('country')?.hasError('required') && patientRegistrationForm.get('country')?.touched"
+                            class="text-danger small mt-1">
+                            Country is required.
+                        </div>
+                    </div>
+
+                    <!-- State -->
+                    <div class="col-md-6">
+                        <label for="registerState" class="form-label fw-semibold">State</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerState" formControlName="state"
+                            required>
+                            <option value="" disabled selected>Select State</option>
+                            <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}
+                            </option>
+                        </select>
+                        <div *ngIf="patientRegistrationForm.get('state')?.hasError('required') && patientRegistrationForm.get('state')?.touched"
+                            class="text-danger small mt-1">
+                            State is required.
+                        </div>
+                    </div>
+
                     <!-- City -->
                     <div class="col-md-6">
                         <label for="registerCity" class="form-label fw-semibold">City</label>
@@ -193,36 +224,6 @@
                         </div>
                     </div>
 
-                    <!-- State -->
-                    <div class="col-md-6">
-                        <label for="registerState" class="form-label fw-semibold">State</label>
-                        <select class="form-select rounded-pill shadow-sm" id="registerState" formControlName="state"
-                            required>
-                            <option value="" disabled selected>Select State</option>
-                            <option *ngFor="let item of allStateByCountryId" [value]="item.stateId">{{ item.name }}
-                            </option>
-                        </select>
-                        <div *ngIf="patientRegistrationForm.get('state')?.hasError('required') && patientRegistrationForm.get('state')?.touched"
-                            class="text-danger small mt-1">
-                            State is required.
-                        </div>
-                    </div>
-
-                    <!-- Country -->
-                    <div class="col-md-6">
-                        <label for="registerCountry" class="form-label fw-semibold">Country</label>
-                        <select class="form-select rounded-pill shadow-sm" id="registerCountry"
-                            formControlName="country" (change)="onChange(patientRegistrationForm.value.country)"
-                            required>
-                            <option value="" disabled selected>Select Country</option>
-                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
-                        </select>
-                        <div *ngIf="patientRegistrationForm.get('country')?.hasError('required') && patientRegistrationForm.get('country')?.touched"
-                            class="text-danger small mt-1">
-                            Country is required.
-                        </div>
-                    </div>
-
                     <!-- PIN Code -->
                     <div class="col-md-6">
                         <label for="registerPinCode" class="form-label fw-semibold">PIN Code</label>
@@ -231,15 +232,11 @@
                             (keypress)="onKeyPress($event)" required />
                         <div *ngIf="patientRegistrationForm.get('pinCode')?.hasError('required') && patientRegistrationForm.get('pinCode')?.touched"
                             class="text-danger small mt-1">
-                            Pin Code is required.
+                            Pincode is required.
                         </div>
-                        <div *ngIf="patientRegistrationForm.get('pincode')?.errors?.['pattern']"
+                        <div *ngIf="patientRegistrationForm.get('pinCode')?.errors?.['pattern']"
                             class="text-danger small mt-1">
-                            Please enter a valid 6-digit Pin code.
-                        </div>
-                        <div *ngIf="patientRegistrationForm.get('pincode')?.errors?.['minlength']"
-                            class="text-danger small mt-1">
-                            Pin code must be 6 digits long.
+                            Please enter a valid 6-digit pincode.
                         </div>
 
                     </div>

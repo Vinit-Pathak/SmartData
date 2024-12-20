@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
 
   loginForm: FormGroup = new FormGroup({
-    userName: new FormControl('', [Validators.required, Validators.maxLength(25)]),
+    userName: new FormControl('', [Validators.required, Validators.maxLength(25), Validators.minLength(10)]),
     password: new FormControl('', [
       Validators.required,
       Validators.pattern(this.passwordRgx)
@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
   })
 
   forgotPasswordForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [Validators.required,
+      Validators.email,
+      Validators.maxLength(30)]),
   })
 
 

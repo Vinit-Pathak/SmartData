@@ -61,7 +61,7 @@ export class ProviderRegistrationComponent {
     city: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.maxLength(15),
+      Validators.maxLength(20),
     ]),
     state: new FormControl('', Validators.required),
     country: new FormControl('', Validators.required),
@@ -75,13 +75,15 @@ export class ProviderRegistrationComponent {
     qualification: new FormControl('', 
     [Validators.required,
      Validators.minLength(2),
-     Validators.maxLength(20), 
+     Validators.maxLength(20),
+     Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/), 
     ]),
     specializationId: new FormControl('', Validators.required),
     registrationNumber: new FormControl('', [
       Validators.required,
       Validators.minLength(2),
       Validators.maxLength(20),
+      Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
     ]),
     visitingCharge: new FormControl('', [
       Validators.required,
@@ -94,6 +96,10 @@ export class ProviderRegistrationComponent {
   ngOnInit() {
     this.getAllCountry();
     this.getAllSpecialisation();
+    this.sanitizeField('firstName');
+    this.sanitizeField('lastName');
+    this.sanitizeField('city');
+    this.sanitizeField('qualification');
   }
 
   onKeyPress(event: KeyboardEvent) {  
@@ -101,6 +107,22 @@ export class ProviderRegistrationComponent {
     if (charCode < 48 || charCode > 57) {
       event.preventDefault(); 
     }
+  }
+
+  sanitizeField(fieldName: string): void {
+    this.providerRegistrationForm.get(fieldName)?.valueChanges.subscribe((value) => {
+      if (value) {
+        
+        const sanitizedValue = value
+          .replace(/[^A-Za-z\s]/g, '') 
+          .replace(/\s{2,}/g, ' '); 
+        if (value !== sanitizedValue) {
+          this.providerRegistrationForm.get(fieldName)?.setValue(sanitizedValue, {
+            emitEvent: false, 
+          });
+        }
+      }
+    });
   }
 
   onFileSelected(event: Event) {

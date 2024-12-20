@@ -53,8 +53,8 @@ export class GetPatientAppointmentComponent implements OnInit {
 
   updateAppointmentForm = new FormGroup({
     appointmentId: new FormControl(0),
-    appointmentDate: new FormControl(''),
-    appointmentTime: new FormControl(''),
+    appointmentDate: new FormControl('',[Validators.required]),
+    appointmentTime: new FormControl('',[Validators.required]),
     chiefComplaint: new FormControl('', [Validators.required,Validators.minLength(5), Validators.maxLength(150)]),
   })
 
@@ -121,7 +121,6 @@ export class GetPatientAppointmentComponent implements OnInit {
       cancelButtonText: 'No, keep it',
     }).then((result) => {
       if (result.isConfirmed) {
-        // Proceed with the deletion if confirmed
         this.appointmentService.cancelAppointment(id).subscribe(
           (response) => {
             console.log('login response', response);
@@ -143,7 +142,6 @@ export class GetPatientAppointmentComponent implements OnInit {
           }
         );
       } else {
-        // If the user cancels, do nothing
         console.log('Appointment deletion canceled');
       }
     });

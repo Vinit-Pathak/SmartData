@@ -12,6 +12,7 @@ import { AppointmentService } from '../../../../others/services/appointment/appo
 import { CommonModule } from '@angular/common';
 import { PaymentService } from '../../../../others/services/payment/payment.service';
 import { LoaderService } from '../../../../others/services/loader/loader.service';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-add-patient-appointment',
@@ -30,6 +31,8 @@ export class AddPatientAppointmentComponent {
   todayDate = new Date().toISOString().split('T')[0];
   allSpecialisation: any[] = [];
   allProviders: any[] = [];
+  isTimeValid = true; 
+  isTimeInRange = true; 
 
   patientdata: any = {};
   userdata = JSON.parse(sessionStorage.getItem('userData') || '{}');
@@ -48,8 +51,21 @@ export class AddPatientAppointmentComponent {
     this.appointmentTime.setSeconds(0);
   }
 
+
+  openWaitingModal(): void {
+    const modalElement = document.getElementById('waitingModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  }
+
+  closeWaitingModal(): void {
+    const modalElement = document.getElementById('waitingModal');
+    const modal = bootstrap.Modal.getInstance(modalElement); 
+    modal.hide();
+  }
+
   patientappoinmentform = new FormGroup({
-    appointmentDate: new FormControl('', [Validators.required]),
+      appointmentDate: new FormControl('', [Validators.required]),
       providerId: new FormControl('', Validators.required),
       patientId: new FormControl(this.userdata.userId, Validators.required),
       specializationId: new FormControl('', [Validators.required]),
@@ -57,7 +73,7 @@ export class AddPatientAppointmentComponent {
       chiefcomplaint: new FormControl('', [Validators.required,
       Validators.minLength(5),
       Validators.maxLength(150),
-      Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/),
+      Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)
       ]),
   });
 
@@ -129,7 +145,7 @@ export class AddPatientAppointmentComponent {
         order_id: order.id,
         handler: (response: any) => {
           this.bookAppointment(response.razorpay_payment_id, order.id);
-          // this.verifyPayment(response.razorpay_payment_id, order.id)
+          
         },
       };
 
@@ -154,6 +170,7 @@ export class AddPatientAppointmentComponent {
   } 
 
   async bookAppointment(paymentId: any, orderId: any){
+    this.openWaitingModal();
 
     const appointmentData = this.patientappoinmentform.value;
 
@@ -166,6 +183,7 @@ export class AddPatientAppointmentComponent {
     }
     this.Appointmentservice.createPatientAppointment(data).subscribe({
       next:(res:any)=>{
+        this.closeWaitingModal();
         this.toastr.success('Appointment Booked Successfully','Success',{
           timeOut: 3000,
           progressBar: true,
@@ -180,5 +198,82 @@ export class AddPatientAppointmentComponent {
       }
     })
   }
+
+
+
+  onChangeTime(event: Event): void {
+    const selectedTime = (event.target as HTMLInputElement).value;
+    const currentTime = new Date();
+    
+    
+    const minAllowedTime = new Date(currentTime.getTime() + 60 * 60 * 1000); 
+    const formattedMinTime = this.formatTime(minAllowedTime);
+    
+    
+    const maxTime = '20:00';
+    
+    const minTime = '08:00';
+  
+    
+    if (selectedTime < minTime || selectedTime > maxTime) {
+      this.isTimeInRange = false;
+    } else {
+      this.isTimeInRange = true;
+    }
+  
+    
+    if (selectedTime < formattedMinTime) {
+      this.isTimeValid = false;
+      console.log("Time must be at least 1 hour later than the current time.");
+    } else {
+      this.isTimeValid = true;
+      console.log("Time is valid.");
+    }
+  }
+  formatTime(date: Date): string {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
+  
+  onChangeDate(): void {
+    const time = this.patientappoinmentform.get('appointmentTime')?.value;
+    if (time) {
+      const date = this.patientappoinmentform.get('appointmentDate')?.value;
+      
+      const selectedDate = date ? new Date(date) : new Date();
+      const today = new Date();
+  
+      
+      selectedDate.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0);
+  
+      if (selectedDate.getTime() === today.getTime()) {
+        const selectedTime = time;
+  
+        
+        const now = new Date();
+        now.setHours(now.getHours() + 1);
+        const nextHour = now.getHours().toString().padStart(2, '0');
+        const nextMinutes = now.getMinutes().toString().padStart(2, '0');
+        const nextTime = `${nextHour}:${nextMinutes}`;
+  
+        
+        const selectedDateTime = new Date(`${today.toDateString()} ${selectedTime}`);
+        const nextDateTime = new Date(`${today.toDateString()} ${nextTime}`);
+  
+        
+        if (selectedDateTime < nextDateTime) {
+          this.isTimeValid = false;
+          console.log("Selected time is less than the next hour time");
+        } else {
+          this.isTimeValid = true;
+          console.log("Selected time is valid");
+        }
+      }
+    }
+  }
+
 
 }

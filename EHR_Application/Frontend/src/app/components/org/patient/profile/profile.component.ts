@@ -35,8 +35,8 @@ export class ProfileComponent {
     this.loadUserProfile();
     this.fetchUserDetails();
     this.getAllCountry();
-    // this.loadState(this.updateData.country);
-    // this.onChange(this.updateData.country);
+    
+    
     this.sanitizeField('firstName');
     this.sanitizeField('lastName');
     this.changePasswordForm.valueChanges.subscribe(() => {
@@ -315,7 +315,7 @@ export class ProfileComponent {
       },
       error: (err: any) => {
         console.error('Error updating profile:', err);
-        // window.location.reload();
+        
         this.toaster.error(
           err?.error?.message ||
             'Failed to update profile. Please try again later.',
@@ -341,7 +341,7 @@ export class ProfileComponent {
     this.countryState.getAllCountry().subscribe({
       next : (res: any) => {
         this.allCountry = res
-        // console.log(this.allCountry)
+        
       },
       error : (error: any) =>{
         alert("I am in error")
@@ -358,19 +358,19 @@ export class ProfileComponent {
   loadState(countryId: any){
     this.countryState.getStateByCountryId(countryId).subscribe((data: any)=>{
           this.allState = data;
-          // console.log(data)
-          // Set the selected state in the form
-          // if (this.updateData) {
-          //   this.updateUserForm.patchValue({
-          //     state: this.updateData.state
-          //   });
-          // }
-          // this.isStateLoaded = true;
+          
+          
+          
+          
+          
+          
+          
+          
         });
   }
 
   onChange(countrId : any){
-    // console.log(countrId)
+    
     this.countryState.getStateByCountryId(countrId).subscribe({
       next : (res:any) => {
         this.allStateByCountryId = res

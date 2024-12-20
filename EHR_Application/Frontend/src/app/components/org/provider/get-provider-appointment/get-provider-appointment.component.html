@@ -23,7 +23,8 @@
       </div>
       <div class="appointment-footer">
         <button class="btn btn-warning" [routerLink]="['/home/provider-dashboard/complete-appointment',appointment.appointmentId]">Go To Appointment</button>
-        <button class="btn btn-danger ms-2" (click)="cancelAppointment(appointment.appointmentId)">Cancel Appointment</button>
+        <button class="btn btn-info" [routerLink]="['/home/provider-dashboard/chat',appointment.patientId]">Chat</button>
+        <button class="btn btn-danger" (click)="cancelAppointment(appointment.appointmentId)">Cancel Appointment</button>
       </div>
     </div>
   </div>

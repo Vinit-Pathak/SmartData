@@ -46,7 +46,7 @@ export class GetProviderAppointmentComponent implements OnInit {
         cancelButtonText: 'No, keep it',
       }).then((result) => {
         if (result.isConfirmed) {
-          // Proceed with the deletion if confirmed
+          
           this.appointmentService.cancelAppointment(id).subscribe(
             (response) => {
               if (response.statusCode == 200) {
@@ -69,7 +69,7 @@ export class GetProviderAppointmentComponent implements OnInit {
             }
           );
         }  else if (result.dismiss === Swal.DismissReason.cancel) {
-          // Swal.fire('Cancelled', 'Your item is safe.', 'info');
+          
         }
       });
     }

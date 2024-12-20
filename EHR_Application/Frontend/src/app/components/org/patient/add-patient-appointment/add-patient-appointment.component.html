@@ -7,14 +7,14 @@
                     <p class="mb-0">Fill out the details below to schedule your appointment.</p>
                 </div>
                 <div class="card-body p-5">
-                    <form [formGroup]="patientappoinmentform" >
+                    <form [formGroup]="patientappoinmentform">
                         <!-- Specialization and Provider -->
                         <div class="row mb-4">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="specializationId" class="fw-bold">Specialization</label>
-                                    <select id="specializationId" formControlName="specializationId"
-                                        class="form-select" (change)="onChange(patientappoinmentform.get('specializationId')?.value)">
+                                    <select id="specializationId" formControlName="specializationId" class="form-select"
+                                        (change)="onChange(patientappoinmentform.get('specializationId')?.value)">
                                         <option value="" disabled selected>Select Specialization</option>
                                         <option *ngFor="let specialisation of allSpecialisation"
                                             [value]="specialisation.specializationId">
@@ -30,11 +30,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="providerId" class="fw-bold">Provider</label>
-                                    <select id="providerId" formControlName="providerId"
-                                        class="form-select" (change)="onChangeProvider(patientappoinmentform.get('providerId')?.value)">
+                                    <select id="providerId" formControlName="providerId" class="form-select"
+                                        (change)="onChangeProvider(patientappoinmentform.get('providerId')?.value)">
                                         <option value="" disabled selected>Select Provider</option>
-                                        <option *ngFor="let provider of allProviders"
-                                            [value]="provider.userId">
+                                        <option *ngFor="let provider of allProviders" [value]="provider.userId">
                                             {{ provider.firstName + ' ' + provider.lastName }}
                                         </option>
                                     </select>
@@ -51,7 +50,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="appointmentDate" class="fw-bold">Appointment Date</label>
-                                    <input type="date" id="appointmentDate" formControlName="appointmentDate"
+                                    <input (input)="onChangeDate()" type="date" id="appointmentDate" formControlName="appointmentDate"
                                         class="form-control" [min]="todayDate">
                                     <div *ngIf="patientappoinmentform.get('appointmentDate')?.invalid && patientappoinmentform.get('appointmentDate')?.touched"
                                         class="text-danger mt-1">
@@ -62,12 +61,22 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="appointmentTime" class="fw-bold">Appointment Time</label>
-                                    <input type="time" id="appointmentTime" formControlName="appointmentTime"
+                                    <input (input)="onChangeTime($event)" type="time" id="appointmentTime" formControlName="appointmentTime"
                                         class="form-control" [min]="minTime">
-                                    <div *ngIf="patientappoinmentform.get('appointmentTime')?.invalid && patientappoinmentform.get('appointmentTime')?.touched"
-                                        class="text-danger mt-1">
-                                        Appointment Time is required
-                                    </div>
+                                        <div
+                                        style="font-size: 13px"
+                                        *ngIf="patientappoinmentform.controls['appointmentTime'].touched || patientappoinmentform.controls['appointmentTime'].dirty"
+                                      >
+                                        <div *ngIf="patientappoinmentform.controls['appointmentTime'].hasError('required')">
+                                          <div class="text-danger">*Time is required</div>
+                                        </div>
+                                        <div *ngIf="!isTimeValid && patientappoinmentform.controls['appointmentTime'].touched">
+                                          <div class="text-danger">*Time must be at least 1 hour later than the current time</div>
+                                        </div>
+                                        <div *ngIf="!isTimeInRange && patientappoinmentform.controls['appointmentTime'].touched">
+                                          <div class="text-danger">*Time must be between 08:00 and 20:00</div>
+                                        </div>  
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -78,18 +87,24 @@
                                 <div class="form-group">
                                     <label for="chiefcomplaint" class="fw-bold">Chief Complaint</label>
                                     <textarea id="chiefcomplaint" formControlName="chiefcomplaint" minlength="5"
-                                        maxlength="150" class="form-control" rows="4" placeholder="Describe the complaint in detail"></textarea>
+                                        maxlength="150" class="form-control" rows="4"
+                                        placeholder="Describe the complaint in detail"></textarea>
                                     <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('required') && patientappoinmentform.get('chiefcomplaint')?.touched"
-                                        class="text-danger mt-1">
-                                        Chief Complaint is required
+                                        class="text-danger small mt-1">
+                                        Chiefcomplaint is required.
                                     </div>
-                                    <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('minlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
-                                        class="text-danger mt-1">
-                                        Chief Complaint must be at least 5 characters
+                                    <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.errors?.['minlength']"
+                                        class="text-danger small mt-1">
+                                        Chiefcomplaint must be at least 5 characters long.
                                     </div>
-                                    <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.hasError('maxlength') && patientappoinmentform.get('chiefcomplaint')?.touched"
-                                        class="text-danger mt-1">
-                                        Chief Complaint must be at most 150 characters
+                                    <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.errors?.['maxlength']"
+                                        class="text-danger small mt-1">
+                                        Chiefcomplaint cannot exceed 150 characters.
+                                    </div>
+                                    <div *ngIf="patientappoinmentform.get('chiefcomplaint')?.errors?.['pattern']"
+                                        class="text-danger small mt-1">
+                                        Chiefcomplaint can only contain letters, numbers, spaces, commas, periods, and
+                                        hyphens.
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +118,8 @@
 
                         <!-- Proceed to Payment -->
                         <div class="text-center mt-4">
-                            <button type="button" class="btn btn-primary btn-lg px-5" (click)="onPayNow()" >Proceed to Payment</button>
+                            <button type="button" class="btn btn-primary btn-lg px-5" (click)="onPayNow()">Proceed to
+                                Payment</button>
                         </div>
                     </form>
                 </div>
@@ -112,24 +128,22 @@
     </div>
 </div>
 
-<!-- Payment Modal -->
-<!-- <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content rounded-4">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
-                <button type="button" class="btn-close" (click)="CloseModal()" aria-label="Close"></button>
+
+<div class="modal fade" id="waitingModal" tabindex="-1" aria-labelledby="waitingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="waitingModalLabel">Booking Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <label for="visitingCharge" class="fw-bold">Visiting Charge</label>
-                    <div class="fw-bold fs-4">{{ Fees | currency }}</div>
+                <p>Please wait, your appointment is getting booked...</p>
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="CloseModal()">Close</button>
-                <button type="button" class="btn btn-primary">Pay</button>
             </div>
         </div>
     </div>
-</div> -->
+</div>

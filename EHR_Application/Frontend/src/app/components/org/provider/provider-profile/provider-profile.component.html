@@ -129,11 +129,24 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" id="firstName" class="form-control custom-form-control"
-                                    formControlName="firstName" placeholder="Enter First Name" />
-                                <div *ngIf="updateUserForm.get('firstName')?.invalid && updateUserForm.get('firstName')?.touched"
-                                    class="error-text">
-                                    First name should be between 2 and 20 characters, and only contain letters.
+                                <input type="text" minlength="2" maxlength="20" id="firstName"
+                                    class="form-control custom-form-control" formControlName="firstName"
+                                    placeholder="Enter First Name" />
+                                <div *ngIf="updateUserForm.get('firstName')?.hasError('required') && updateUserForm.get('firstName')?.touched"
+                                    class="text-danger small mt-1">
+                                    First Name is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('firstName')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    First name must be at least 2 characters.
+                                </div>
+                                <div *ngIf="updateUserForm.get('firstName')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    First name must not exceed 20 characters.
+                                </div>
+                                <div *ngIf="updateUserForm.get('firstName')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
+                                    First name can only contain letters.
                                 </div>
                             </div>
                         </div>
@@ -143,9 +156,21 @@
                                 <label for="lastName" class="form-label">Last Name</label>
                                 <input type="text" id="lastName" class="form-control custom-form-control"
                                     formControlName="lastName" placeholder="Enter Last Name" />
-                                <div *ngIf="updateUserForm.get('lastName')?.invalid && updateUserForm.get('lastName')?.touched"
-                                    class="error-text">
-                                    Last name should be between 2 and 20 characters, and only contain letters.
+                                <div *ngIf="updateUserForm.get('lastName')?.hasError('required') && updateUserForm.get('lastName')?.touched"
+                                    class="text-danger small mt-1">
+                                    Last Name is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('lastName')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Last name must be at least 2 characters.
+                                </div>
+                                <div *ngIf="updateUserForm.get('lastName')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    Last name must not exceed 20 characters.
+                                </div>
+                                <div *ngIf="updateUserForm.get('lastName')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
+                                    Last name can only contain letters.
                                 </div>
                             </div>
                         </div>
@@ -158,8 +183,12 @@
                                 <label for="mobile" class="form-label">Mobile</label>
                                 <input type="text" id="mobile" class="form-control custom-form-control"
                                     formControlName="mobile" placeholder="Enter Mobile Number" />
-                                <div *ngIf="updateUserForm.get('mobile')?.invalid && updateUserForm.get('mobile')?.touched"
-                                    class="error-text">
+                                <div *ngIf="updateUserForm.get('mobile')?.hasError('required') && updateUserForm.get('mobile')?.touched"
+                                    class="text-danger small mt-1">
+                                    Mobile number is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('mobile')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
                                     Please enter a valid 10-digit mobile number.
                                 </div>
                             </div>
@@ -170,6 +199,10 @@
                                 <label for="dateOfBirth" class="form-label">Date of Birth</label>
                                 <input type="date" id="dateOfBirth" class="form-control custom-form-control"
                                     formControlName="dateOfBirth" />
+                                <div *ngIf="updateUserForm.get('dateOfBirth')?.hasError('required') && updateUserForm.get('dateOfBirth')?.touched"
+                                    class="text-danger small mt-1">
+                                    Date of Birth is required.
+                                </div>
                             </div>
                         </div>
 
@@ -182,6 +215,10 @@
                                     <option value="Female">Female</option>
                                     <option value="Other">Other</option>
                                 </select>
+                                <div *ngIf="updateUserForm.get('gender')?.hasError('required') && updateUserForm.get('gender')?.touched"
+                                    class="text-danger small mt-1">
+                                    Gender is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -203,6 +240,10 @@
                                     <option value="AB+">AB+</option>
                                     <option value="AB-">AB-</option>
                                 </select>
+                                <div *ngIf="updateUserForm.get('bloodGroup')?.hasError('required') && updateUserForm.get('bloodGroup')?.touched"
+                                    class="text-danger small mt-1">
+                                    Blood Group is required.
+                                </div>
                             </div>
                         </div>
 
@@ -211,6 +252,10 @@
                                 <label for="file" class="form-label">Upload Profile Picture</label>
                                 <input type="file" id="file" class="form-control custom-form-control"
                                     formControlName="file" (change)="onFileSelected($event)" />
+                                <div *ngIf="updateUserForm.get('file')?.hasError('required') && updateUserForm.get('file')?.touched"
+                                    class="text-danger small mt-1">
+                                    Profile Image is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -221,10 +266,23 @@
                             <div class="form-group">
                                 <label for="address" class="form-label">Address</label>
                                 <textarea id="address" class="form-control custom-form-control"
-                                    formControlName="address" rows="3" placeholder="Enter Address"></textarea>
-                                <div *ngIf="updateUserForm.get('address')?.invalid && updateUserForm.get('address')?.touched"
-                                    class="error-text">
-                                    Address should be between 10 and 150 characters.
+                                    formControlName="address" minlength="10" maxlength="150" rows="3"
+                                    placeholder="Enter Address"></textarea>
+                                <div *ngIf="updateUserForm.get('address')?.hasError('required') && updateUserForm.get('address')?.touched"
+                                    class="text-danger small mt-1">
+                                    Address is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('address')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Address must be at least 10 characters long.
+                                </div>
+                                <div *ngIf="updateUserForm.get('address')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    Address cannot exceed 150 characters.
+                                </div>
+                                <div *ngIf="updateUserForm.get('address')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
+                                    Address can only contain letters, numbers, spaces, commas, periods, and hyphens.
                                 </div>
                             </div>
                         </div>
@@ -233,24 +291,45 @@
                             <div class="form-group">
                                 <label for="city" class="form-label">City</label>
                                 <input type="text" id="city" class="form-control custom-form-control"
-                                    formControlName="city" placeholder="Enter City" />
+                                    formControlName="city" minlength="3" maxlength="20" placeholder="Enter City" />
+                                <div *ngIf="updateUserForm.get('city')?.hasError('required') && updateUserForm.get('city')?.touched"
+                                    class="text-danger small mt-1">
+                                    City is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('city')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    City must be at least 3 characters long.
+                                </div>
+                                <div *ngIf="updateUserForm.get('city')?.errors?.['maxlength']"
+                                    class="text-danger small mt-1">
+                                    City cannot exceed 20 characters.
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="pinCode" class="form-label">Pin Code</label>
-                                <input type="tel" id="pinCode" class="form-control custom-form-control"
-                                    formControlName="pinCode" placeholder="Enter Pin Code" />
-                                <div *ngIf="updateUserForm.get('pinCode')?.invalid && updateUserForm.get('pinCode')?.touched"
-                                    class="error-text">
-                                    Please enter a valid 6-digit pin code.
+                                <input type="tel" id="pinCode" minlength="6" maxlength="6"
+                                    class="form-control custom-form-control" formControlName="pinCode"
+                                    placeholder="Enter Pin Code" />
+                                <div *ngIf="updateUserForm.get('pinCode')?.hasError('required') && updateUserForm.get('pinCode')?.touched"
+                                    class="text-danger small mt-1">
+                                    Pin Code is required.
+                                </div>
+                                <div *ngIf="updateUserForm.get('pincode')?.errors?.['pattern']"
+                                    class="text-danger small mt-1">
+                                    Please enter a valid 6-digit Pin code.
+                                </div>
+                                <div *ngIf="updateUserForm.get('pincode')?.errors?.['minlength']"
+                                    class="text-danger small mt-1">
+                                    Pin code must be 6 digits long.
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Row for Country and Pin Code -->
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -262,6 +341,10 @@
                                     <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}
                                     </option>
                                 </select>
+                                <div *ngIf="updateUserForm.get('country')?.hasError('required') && updateUserForm.get('country')?.touched"
+                                    class="text-danger small mt-1">
+                                    Country is required.
+                                </div>
                             </div>
                         </div>
 
@@ -275,6 +358,10 @@
                                         }}
                                     </option>
                                 </select>
+                                <div *ngIf="updateUserForm.get('state')?.hasError('required') && updateUserForm.get('state')?.touched"
+                                    class="text-danger small mt-1">
+                                    State is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -288,6 +375,10 @@
                                 <input type="text" id="qualification" minlength="3" maxlength="20"
                                     class="form-control custom-form-control" formControlName="qualification"
                                     placeholder="Enter Qualification" />
+                                <div *ngIf="updateUserForm.get('qualification')?.hasError('required') && updateUserForm.get('qualification')?.touched"
+                                    class="text-danger small mt-1">
+                                    Qualification is required.
+                                </div>
                                 <div *ngIf="updateUserForm.get('qualification')?.errors?.['minlength']"
                                     class="text-danger small mt-1">
                                     Qualification must be at least 3 characters long.
@@ -309,6 +400,10 @@
                                     <option *ngFor="let item of allSpecialisation" [value]="item.specializationId">{{
                                         item.specializationName }}
                                 </select>
+                                <div *ngIf="updateUserForm.get('specializationId')?.hasError('required') && updateUserForm.get('specializationId')?.touched"
+                                    class="text-danger small mt-1">
+                                    Specialization is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,6 +415,10 @@
                                 <input type="text" id="registrationNumber" class="form-control custom-form-control"
                                     minlength="3" maxlength="20" formControlName="registrationNumber"
                                     placeholder="Enter Registration Number" />
+                                <div *ngIf="updateUserForm.get('registrationNumber')?.hasError('required') && updateUserForm.get('registrationNumber')?.touched"
+                                    class="text-danger small mt-1">
+                                    Registration Number is required.
+                                </div>
                                 <div *ngIf="updateUserForm.get('registrationNumber')?.errors?.['minlength']"
                                     class="text-danger small mt-1">
                                     Registration Number must be at least 3 characters long.
@@ -337,6 +436,10 @@
                                 <input type="tel" minlength="2" maxlength="6" (keypress)="onKeyPress($event)"
                                     id="visitingCharge" class="form-control custom-form-control"
                                     formControlName="visitingCharge" placeholder="Enter Visiting Charge" />
+                                <div *ngIf="updateUserForm.get('visitingCharge')?.hasError('required') && updateUserForm.get('visitingCharge')?.touched"
+                                    class="text-danger small mt-1">
+                                    Visiting Charge is required.
+                                </div>
                                 <div *ngIf="updateUserForm.get('visitingCharge')?.errors?.['pattern']"
                                     class="text-danger small mt-1">
                                     Please enter a valid visiting charge.

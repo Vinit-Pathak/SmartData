@@ -12,7 +12,7 @@
                         <input type="text" class="form-control rounded-pill shadow-sm" id="registerFirstName"
                             formControlName="firstName" minlength="2" maxlength="20" placeholder="Enter first name"
                             required />
-                            <div *ngIf="providerRegistrationForm.get('firstName')?.hasError('required') && providerRegistrationForm.get('firstName')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('firstName')?.hasError('required') && providerRegistrationForm.get('firstName')?.touched"
                             class="text-danger small mt-1">
                             First Name is required.
                         </div>
@@ -26,7 +26,7 @@
                         </div>
                         <div *ngIf="providerRegistrationForm.get('firstName')?.errors?.['pattern']"
                             class="text-danger small mt-1">
-                            First name can only contain letters with a single space between words.
+                            First name can only contain letters.
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                         <input type="text" class="form-control rounded-pill shadow-sm" id="registerLastName"
                             formControlName="lastName" minlength="2" maxlength="20" placeholder="Enter last name"
                             required />
-                            <div *ngIf="providerRegistrationForm.get('lastName')?.hasError('required') && providerRegistrationForm.get('lastName')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('lastName')?.hasError('required') && providerRegistrationForm.get('lastName')?.touched"
                             class="text-danger small mt-1">
                             Last Name is required.
                         </div>
@@ -50,7 +50,7 @@
                         </div>
                         <div *ngIf="providerRegistrationForm.get('lastName')?.errors?.['pattern']"
                             class="text-danger small mt-1">
-                            Last name can only contain letters with a single space between words.
+                            Last name can only contain letters.
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
                         <label for="registerDateOfBirth" class="form-label fw-semibold">Date of Birth</label>
                         <input type="date" class="form-control rounded-pill shadow-sm" id="registerDateOfBirth"
                             formControlName="dateOfBirth" [max]="todayDate" required />
-                            <div *ngIf="providerRegistrationForm.get('dateOfBirth')?.hasError('required') && providerRegistrationForm.get('dateOfBirth')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('dateOfBirth')?.hasError('required') && providerRegistrationForm.get('dateOfBirth')?.touched"
                             class="text-danger small mt-1">
                             Date of Birth is required.
                         </div>
@@ -71,7 +71,7 @@
                         <input type="tel" class="form-control rounded-pill shadow-sm" id="registerMobile"
                             formControlName="mobile" maxlength="10" (keypress)="onKeyPress($event)"
                             placeholder="Enter mobile number" required />
-                            <div *ngIf="providerRegistrationForm.get('mobile')?.hasError('required') && providerRegistrationForm.get('mobile')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('mobile')?.hasError('required') && providerRegistrationForm.get('mobile')?.touched"
                             class="text-danger small mt-1">
                             Mobile number is required.
                         </div>
@@ -86,7 +86,7 @@
                         <label for="registerEmail" class="form-label fw-semibold">Email Address</label>
                         <input type="email" class="form-control rounded-pill shadow-sm" id="registerEmail"
                             formControlName="email" maxlength="30" placeholder="Enter email address" required />
-                            <div *ngIf="providerRegistrationForm.get('email')?.hasError('required') && providerRegistrationForm.get('email')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('email')?.hasError('required') && providerRegistrationForm.get('email')?.touched"
                             class="text-danger small mt-1">
                             Email is required.
                         </div>
@@ -142,7 +142,7 @@
                         <label for="registerFile" class="form-label fw-semibold">Profile Image</label>
                         <input type="file" class="form-control rounded-pill shadow-sm" id="registerFile"
                             formControlName="file" (change)="onFileSelected($event)" required />
-                            <div *ngIf="providerRegistrationForm.get('file')?.hasError('required') && providerRegistrationForm.get('file')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('file')?.hasError('required') && providerRegistrationForm.get('file')?.touched"
                             class="text-danger small mt-1">
                             Profile Image is required.
                         </div>
@@ -172,23 +172,18 @@
                         </div>
                     </div>
 
-                    <!-- City -->
+                    <!-- Country -->
                     <div class="col-md-6">
-                        <label for="registerCity" class="form-label fw-semibold">City</label>
-                        <input type="text" class="form-control rounded-pill shadow-sm" id="registerCity"
-                            formControlName="city" placeholder="Enter your city" minlength="3" maxlength="15"
-                            required />
-                            <div *ngIf="providerRegistrationForm.get('city')?.hasError('required') && providerRegistrationForm.get('city')?.touched"
+                        <label for="registerCountry" class="form-label fw-semibold">Country</label>
+                        <select class="form-select rounded-pill shadow-sm" id="registerCountry"
+                            formControlName="country" (change)="onChange(providerRegistrationForm.value.country)"
+                            required>
+                            <option value="" disabled selected>Select Country</option>
+                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
+                        </select>
+                        <div *ngIf="providerRegistrationForm.get('country')?.hasError('required') && providerRegistrationForm.get('country')?.touched"
                             class="text-danger small mt-1">
-                            City is required.
-                        </div>
-                        <div *ngIf="providerRegistrationForm.get('city')?.errors?.['minlength']"
-                            class="text-danger small mt-1">
-                            City must be at least 3 characters long.
-                        </div>
-                        <div *ngIf="providerRegistrationForm.get('city')?.errors?.['maxlength']"
-                            class="text-danger small mt-1">
-                            City cannot exceed 15 characters.
+                            Country is required.
                         </div>
                     </div>
 
@@ -207,18 +202,23 @@
                         </div>
                     </div>
 
-                    <!-- Country -->
+                    <!-- City -->
                     <div class="col-md-6">
-                        <label for="registerCountry" class="form-label fw-semibold">Country</label>
-                        <select class="form-select rounded-pill shadow-sm" id="registerCountry"
-                            formControlName="country" (change)="onChange(providerRegistrationForm.value.country)"
-                            required>
-                            <option value="" disabled selected>Select Country</option>
-                            <option *ngFor="let item of allCountry" [value]="item.countryId">{{ item.name }}</option>
-                        </select>
-                        <div *ngIf="providerRegistrationForm.get('country')?.hasError('required') && providerRegistrationForm.get('country')?.touched"
+                        <label for="registerCity" class="form-label fw-semibold">City</label>
+                        <input type="text" class="form-control rounded-pill shadow-sm" id="registerCity"
+                            formControlName="city" placeholder="Enter your city" minlength="3" maxlength="20"
+                            required />
+                        <div *ngIf="providerRegistrationForm.get('city')?.hasError('required') && providerRegistrationForm.get('city')?.touched"
                             class="text-danger small mt-1">
-                            Country is required.
+                            City is required.
+                        </div>
+                        <div *ngIf="providerRegistrationForm.get('city')?.errors?.['minlength']"
+                            class="text-danger small mt-1">
+                            City must be at least 3 characters long.
+                        </div>
+                        <div *ngIf="providerRegistrationForm.get('city')?.errors?.['maxlength']"
+                            class="text-danger small mt-1">
+                            City cannot exceed 20 characters.
                         </div>
                     </div>
 
@@ -228,7 +228,7 @@
                         <input type="tel" class="form-control rounded-pill shadow-sm" id="registerPinCode"
                             formControlName="pinCode" placeholder="Enter PIN code" minlength="6" maxlength="6"
                             (keypress)="onKeyPress($event)" required />
-                            <div *ngIf="providerRegistrationForm.get('pinCode')?.hasError('required') && providerRegistrationForm.get('pinCode')?.touched"
+                        <div *ngIf="providerRegistrationForm.get('pinCode')?.hasError('required') && providerRegistrationForm.get('pinCode')?.touched"
                             class="text-danger small mt-1">
                             Pin Code is required.
                         </div>
@@ -281,7 +281,8 @@
                         <select class="form-select rounded-pill shadow-sm" id="registerSpecialization"
                             formControlName="specializationId" required>
                             <option value="" disabled selected>Select Specialization</option>
-                            <option *ngFor="let item of allSpecialisation" [value]="item.specializationId">{{ item.specializationName }}
+                            <option *ngFor="let item of allSpecialisation" [value]="item.specializationId">{{
+                                item.specializationName }}
                         </select>
                         <div *ngIf="providerRegistrationForm.get('specializationId')?.hasError('required') && providerRegistrationForm.get('specializationId')?.touched"
                             class="text-danger small mt-1">
@@ -291,11 +292,13 @@
 
                     <!-- Registration Number -->
                     <div class="col-md-6">
-                        <label for="registerRegistrationNumber" class="form-label fw-semibold">Registration Number</label>
+                        <label for="registerRegistrationNumber" class="form-label fw-semibold">Registration
+                            Number</label>
                         <input type="text" class="form-control rounded-pill shadow-sm" id="registerRegistration
                         Number" formControlName="registrationNumber" placeholder="Enter your registration number"
                             minlength="3" maxlength="20" required />
-                        <div *ngIf="providerRegistrationForm.get('registrationNumber')?.hasError('required') && providerRegistrationForm.get('registrationNumber')?.touched" class="text-danger small mt-1">
+                        <div *ngIf="providerRegistrationForm.get('registrationNumber')?.hasError('required') && providerRegistrationForm.get('registrationNumber')?.touched"
+                            class="text-danger small mt-1">
                             Registration Number is required.
                         </div>
                         <div *ngIf="providerRegistrationForm.get('registrationNumber')?.errors?.['minlength']"
@@ -312,9 +315,10 @@
                     <div class="col-md-6">
                         <label for="registerVisitingCharge" class="form-label fw-semibold">Visiting Charge</label>
                         <input type="tel" class="form-control rounded-pill shadow-sm" id="registerVisitingCharge"
-                            formControlName="visitingCharge" placeholder="Enter your visiting charge" minlength="2" maxlength="6"
-                            required (keypress)="onKeyPress($event)"  />
-                        <div *ngIf="providerRegistrationForm.get('visitingCharge')?.hasError('required') && providerRegistrationForm.get('visitingCharge')?.touched" class="text-danger small mt-1">
+                            formControlName="visitingCharge" placeholder="Enter your visiting charge" minlength="2"
+                            maxlength="6" required (keypress)="onKeyPress($event)" />
+                        <div *ngIf="providerRegistrationForm.get('visitingCharge')?.hasError('required') && providerRegistrationForm.get('visitingCharge')?.touched"
+                            class="text-danger small mt-1">
                             Visiting Charge is required.
                         </div>
                         <div *ngIf="providerRegistrationForm.get('visitingCharge')?.errors?.['pattern']"

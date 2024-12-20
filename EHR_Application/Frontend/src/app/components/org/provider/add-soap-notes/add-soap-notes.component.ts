@@ -68,23 +68,22 @@ export class AddSoapNotesComponent implements OnInit {
 
   soapForm = new FormGroup({
     appointmentId: new FormControl(''),
-    subjective: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
-    objective: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
-    assessment: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
-    plan: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
+    subjective: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300),Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)]),
+    objective: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300),Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)]),
+    assessment: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300),Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)]),
+    plan: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300),Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/)]),
   });
 
-  openModal(){
-    const modalInstance = new bootstrap.Modal(
-      this.soapNotesModal.nativeElement
-    );
-    modalInstance.show();
+  openModal(): void {
+    const modalElement = document.getElementById('soapNotesModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
   }
-  closeModal(){
-    const modalInstance = new bootstrap.Modal(
-      this.soapNotesModal.nativeElement
-    );
-    modalInstance.hide();
+
+  closeModal(): void {
+    const modalElement = document.getElementById('soapNotesModal');
+    const modal = bootstrap.Modal.getInstance(modalElement); 
+    modal.hide();
   }
 
   submitSoapNotes(){
@@ -93,19 +92,18 @@ export class AddSoapNotesComponent implements OnInit {
       this.soapForm.markAllAsTouched();
       return;
     }
+    this.closeModal();
     var soapData = this.soapForm.value;
     soapData.appointmentId = this.appointmentId;
     this.appointmentService.addSoapNotes(soapData).subscribe({
       next:(res:any)=>{
-        this.closeModal();
+        
         this.toaster.success("Soap Notes Added Successfully", "Success", {
           timeOut: 2000,
           progressBar: true,
           progressAnimation: 'increasing',
         });
-        // this.soapForm.reset();
-        this.router.navigateByUrl('/home/provider-dashboard/get-provider-appointments');
-        // window.location.reload();  
+        this.router.navigateByUrl('/home/provider-dashboard/get-provider-appointments'); 
       },
       error:(err:any)=>{
         this.toaster.error(err.error.message);
