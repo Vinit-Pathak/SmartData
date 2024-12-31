@@ -74,16 +74,16 @@ export class ProviderRegistrationComponent {
     userTypeId: new FormControl(2, Validators.required),
     qualification: new FormControl('', 
     [Validators.required,
-     Validators.minLength(2),
+     Validators.minLength(3),
      Validators.maxLength(20),
-     Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/), 
+     Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/),
     ]),
     specializationId: new FormControl('', Validators.required),
     registrationNumber: new FormControl('', [
       Validators.required,
-      Validators.minLength(2),
+      Validators.minLength(3),
       Validators.maxLength(20),
-      Validators.pattern(/^[A-Za-z]+(?: [A-Za-z]+)*\s*$/),
+      Validators.pattern(/^[a-zA-Z0-9\s,.-]+$/),
     ]),
     visitingCharge: new FormControl('', [
       Validators.required,
@@ -180,12 +180,12 @@ export class ProviderRegistrationComponent {
 
   onRegisterSubmit(){
     if (this.providerRegistrationForm.invalid) {
-      this.providerRegistrationForm.markAllAsTouched();
       this.toaster.error("Please Fill And Correct All The fields", "Error",{
         timeOut: 2000,
         progressBar: true,
         progressAnimation: 'increasing',
       });
+      this.providerRegistrationForm.markAllAsTouched();
       return;
     }
 
@@ -198,7 +198,7 @@ export class ProviderRegistrationComponent {
     this.authService.register(formData).subscribe({
       next: (res: any) => {
         if (res.statusCode === 200) {
-          this.toaster.success('Patient Registered Successfully', 'Success', {
+          this.toaster.success('Provider Registered Successfully', 'Success', {
             timeOut: 2000,
             progressBar: true,
             progressAnimation: 'increasing',
@@ -208,7 +208,7 @@ export class ProviderRegistrationComponent {
           this.router.navigate(['/auth/login']);
         } else {
           this.loaderService.hide();
-          this.toaster.error('Patient Registration Failed', 'Error', {
+          this.toaster.error('Provider Registration Failed', 'Error', {
             timeOut: 3000,
             closeButton: true,
           });
@@ -216,7 +216,7 @@ export class ProviderRegistrationComponent {
       },
       error: (error: any) => {
         if(error.error.statusCode == 409){
-          this.toaster.error("Patient Already Exist", "Error",{timeOut:3000, closeButton:true})
+          this.toaster.error("Provider Already Exist", "Error",{timeOut:3000, closeButton:true})
           this.providerRegistrationForm.reset()
         }else{
           this.toaster.error("Error In Registation", "Error",{timeOut:3000, closeButton:true})
