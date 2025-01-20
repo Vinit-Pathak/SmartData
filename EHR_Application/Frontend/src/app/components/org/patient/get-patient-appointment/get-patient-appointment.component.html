@@ -24,7 +24,6 @@
       <p><strong>Fee:</strong> ${{ appointment.fee }}</p>
     </div>
     <div class="appointment-footer">
-      <!-- <button class="btn btn-info" (click)="openModal(appointment)">View Details</button> -->
       <button class="btn btn-warning" (click)="openUpdateModal(appointment)">Update Appointment</button>
       <button class="btn btn-info" [routerLink]="['/home/patient-dashboard/chat',appointment.providerId]">Chat</button>
       <button class="btn btn-danger" (click)="deleteAppointment(appointment.appointmentId)">Cancel Appointment</button>
@@ -74,7 +73,6 @@
       <div class="modal-body">
         <form [formGroup]="updateAppointmentForm" >
 
-          <!-- Appointment Date -->
           <div class="mb-3">
             <label for="appointmentDate" class="form-label">Appointment Date</label>
             <input id="appointmentDate" type="date" [min]="todayDate" class="form-control" formControlName="appointmentDate" />
@@ -85,7 +83,6 @@
             </div>
           </div>
 
-          <!-- Appointment Time -->
           <div class="mb-3">
             <label for="appointmentTime" class="form-label">Appointment Time</label>
             <input id="appointmentTime" type="time" class="form-control" formControlName="appointmentTime" />
@@ -96,7 +93,6 @@
             </div>
           </div>
 
-          <!-- Chief Complaint -->
           <div class="mb-3">
             <label for="chiefComplaint" class="form-label">Chief Complaint</label>
             <textarea minlength="5" maxlength="150" id="chiefComplaint" class="form-control"
@@ -116,7 +112,6 @@
             </div>
           </div>
 
-          <!-- Modal Footer -->
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary" (click)="onUpdateAppointment()">Submit</button>
