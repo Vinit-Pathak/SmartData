@@ -1,0 +1,33 @@
+<div class="card shadow">
+  <div class="card-header bg-warning text-white text-center">
+    <h4 class="mb-0">Waiting Room</h4>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li
+        *ngFor="let appointment of (waitingRoom$ | async)"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <strong>Mr.{{ appointment.patientName }}</strong> has appointment with <strong> Dr. {{ appointment.doctorName }}</strong> on
+          <br />
+          <small class="text-muted">
+            {{ appointment.date }} at {{ appointment.time }}
+          </small>
+        </div>
+        <button
+          class="btn btn-primary btn-sm"
+          (click)="moveToOPD(appointment.id)"
+        >
+          Move to OT
+        </button>
+      </li>
+    </ul>
+    <div *ngIf="!(waitingRoom$ | async)?.length" class="text-center mt-2 text-muted">
+      No patients in waiting room.
+    </div>
+    <div *ngIf="((waitingRoom$ | async)?.length ?? 0) >= 5" class="text-center mt-3 text-danger">
+      Waiting Room limit reached.
+    </div>
+  </div>
+</div>

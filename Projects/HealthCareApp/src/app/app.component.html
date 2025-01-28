@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">HealthCareApp</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4">
+  <h1 class="text-center text-primary mb-4">Healthcare Management System</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <app-add-appointment></app-add-appointment>
+    </div>
+    <div class="col-md-9">
+      <app-appointment-list></app-appointment-list>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3">
+    © 2023 HealthCareApp
+  </div>
+</footer>

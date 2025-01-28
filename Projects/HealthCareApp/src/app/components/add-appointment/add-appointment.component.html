@@ -1,0 +1,42 @@
+<div class="card shadow custom-card-width">
+  <div class="card-header bg-primary text-white">
+    <h4 class="mb-0">Add Appointment</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="appointmentForm" (ngSubmit)="addAppointment()">
+      <div class="mb-3">
+        <label for="patientName" class="form-label">Patient Name</label>
+        <input id="patientName" class="form-control" formControlName="patientName" placeholder="Enter patient name" />
+        <div *ngIf="appointmentForm.get('patientName')?.invalid && appointmentForm.get('patientName')?.touched"
+          class="text-danger">
+          Patient Name is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="doctorName" class="form-label">Doctor Name</label>
+        <input id="doctorName" class="form-control" formControlName="doctorName" placeholder="Enter doctor name" />
+        <div *ngIf="appointmentForm.get('doctorName')?.invalid && appointmentForm.get('doctorName')?.touched"
+          class="text-danger">
+          Doctor Name is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" id="date" class="form-control" formControlName="date" [min]="minDate" />
+        <div *ngIf="appointmentForm.get('date')?.invalid && appointmentForm.get('date')?.touched" class="text-danger">
+          Date is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" id="time" class="form-control" formControlName="time" />
+        <div *ngIf="appointmentForm.get('time')?.invalid && appointmentForm.get('time')?.touched" class="text-danger">
+          Time is required.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="appointmentForm.invalid">
+        Add Appointment
+      </button>
+    </form>
+  </div>
+</div>
