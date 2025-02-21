@@ -44,7 +44,8 @@ WITH EmployeeCTE AS (
 )
 
 
-SELECT *         
+SELECT * 
+        
 FROM    EmployeeCTE 
 
 
@@ -217,3 +218,4 @@ from
 
 ------------
 
+select * from Agents

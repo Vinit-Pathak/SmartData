@@ -53,12 +53,12 @@ VALUES (1, 'John', 55000),
        (2, 'Jane', 60000),
        (4, 'Alice', 80000);
 
-
-
+	   select * from Registers
+	   drop database AssessmentOpenTokJwt
 select * from SourceTable
 select * from TargetTable
 
-
+select * from INFORMATION_SCHEMA.TABLES
 
 /* Merge Statement */
 

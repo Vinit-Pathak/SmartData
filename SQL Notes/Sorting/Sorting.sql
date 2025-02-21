@@ -91,7 +91,6 @@ begin
 
 set nocount on
 
-
 select	*
 from	Patient
 

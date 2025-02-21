@@ -89,6 +89,21 @@ SELECT Id as EmployeeID,
 FROM   Employee 
        LEFT JOIN Projects ON Employee.Id = Projects.EmployeeId;
 
+	   SELECT * FROM CartDetails iNNER JOIN Products ON CartDetails.productId = Products.ID
+	   SELECT	Products.id as productId ,
+				productImage,
+				productName,
+				brand,
+				sellingPrice,
+				quantity
+	   FROM  Products
+	   LEFT JOIN CartDetails ON CartDetails.productId = Products.ID
+	   LEFT JOIN CartMaster ON CartMaster.id = CartDetails.cartId
+
+	   SELECT * FROM Products
+	   SELECT * FROM CartDetails
+	   select * from CartMaster
+
 /*
 Right Outer Join in SQL Server
 

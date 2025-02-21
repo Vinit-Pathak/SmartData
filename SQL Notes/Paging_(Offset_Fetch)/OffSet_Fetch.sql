@@ -19,7 +19,6 @@ OFFSET 2 ROWS  -- Skip the Provider rows
 FETCH NEXT 5 ROWS ONLY;  -- Retrieve the next 5 rows
 
 
-
 DECLARE @PageNumber INT = 3;  -- The page number you want to retrieve
 DECLARE @PageSize INT = 4;    -- Number of rows per page
 
@@ -30,10 +29,6 @@ offset @PageNumber rows
 fetch next @PageSize rows only
 
 -- i want logic for paging and sorting
-
-
-
-
 
 DECLARE @PageNumber INT = 4;  -- The page number you want to retrieve
 DECLARE @PageSize INT = 8;    -- Number of rows per page

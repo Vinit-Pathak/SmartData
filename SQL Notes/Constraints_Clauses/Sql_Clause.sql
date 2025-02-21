@@ -1,4 +1,4 @@
--------------------------------
+	-------------------------------
 --  Clauses in SQL Server:
 /*------------------------------
 The SQL Server supports the following clauses

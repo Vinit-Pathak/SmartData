@@ -106,14 +106,14 @@ END
 -- To execute the above function call it like below
 
 SELECT dbo.SVF1(5)
- 
+
 
 -- Write a Scalar Function to get the date difference.
 
 
 /*
 
-SELECT dbo.CalculateAge ('03/20/2002')
+SELECT dbo.CalculateAge ('02/29/1988')
 SELECT dbo.CalculateAge ('02/29/1988') AS AGE
 
 */
@@ -319,12 +319,12 @@ RETURN (SELECT * FROM Student WHERE Branch = @Branch)
 
 -- calling function
 
-SELECT * FROM FN_GetStudentDetailsByGender('male')
+SELECT * FROM FN_GetStudentDetailsByGender('Male')
 
 
 */
 
-CREATE OR ALTER FUNCTION FN_GetStudentDetailsByGender
+ALTER FUNCTION FN_GetStudentDetailsByGender
 (
   @Gender VARCHAR(50)
 )
