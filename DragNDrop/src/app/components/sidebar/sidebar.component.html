@@ -1,0 +1,29 @@
+<nav class="sidebar-nav">
+  <div class="drop-zone-wrapper">
+    <div 
+      cdkDropList 
+      id="sidebarChapter1"
+      [cdkDropListData]="dropZoneData" 
+      [cdkDropListConnectedTo]="['chapter2List']"  
+      class="drop-zone" 
+      (cdkDropListDropped)="drop($event, 'chapter1')"
+    >
+      <p>Drop here for Chapter 1</p>
+    </div>
+    <a routerLink="/chapter1" class="sidebar-link">Chapter 1</a>
+  </div>
+
+  <div class="drop-zone-wrapper">
+    <div 
+      cdkDropList 
+      id="sidebarChapter2"
+      [cdkDropListData]="dropZoneData" 
+      [cdkDropListConnectedTo]="['chapter1List']"  
+      class="drop-zone" 
+      (cdkDropListDropped)="drop($event, 'chapter2')"
+    >
+      <p>Drop here for Chapter 2</p>
+    </div>
+    <a routerLink="/chapter2" class="sidebar-link">Chapter 2</a>
+  </div>
+</nav>

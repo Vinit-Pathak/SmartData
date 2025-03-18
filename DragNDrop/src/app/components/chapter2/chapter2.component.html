@@ -1,0 +1,16 @@
+<h2 class="chapter-header">Chapter 2</h2>
+<div
+  cdkDropList
+  id="chapter2List"
+  [cdkDropListData]="boxService.chapter2Boxes"
+  [cdkDropListConnectedTo]="['sidebarChapter1']"
+  class="chapter-container"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let box of boxService.chapter2Boxes" 
+       cdkDrag 
+       [cdkDragData]="box" 
+       class="chapter-box">
+    <p class="box-content">{{ box.content }}</p>
+  </div>
+</div>
